@@ -1202,8 +1202,8 @@
 	"kind" : "cmakeFiles",
 	"paths" : 
 	{
-		"build" : "E:/Clion_for_STM32/TwisterDriver/cmake-build-debug",
-		"source" : "E:/Clion_for_STM32/TwisterDriver"
+		"build" : "E:/Clion_for_STM32/TwisterDriver/Software/cmake-build-debug",
+		"source" : "E:/Clion_for_STM32/TwisterDriver/Software"
 	},
 	"version" : 
 	{

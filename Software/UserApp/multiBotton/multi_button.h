@@ -10,11 +10,6 @@
 #include "string.h"
 #include "main.h"
 
-#define NFCMODE     1
-#define MANMODE     2
-#define STEPCUP     1
-#define STEPBOX     2
-
 //According to your need to modify the constants.
 #define TICKS_INTERVAL    5    //ms
 #define DEBOUNCE_TICKS    2    //MAX 8

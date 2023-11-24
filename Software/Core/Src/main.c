@@ -84,12 +84,27 @@ static void MX_TIM8_Init(void);
 void StartDefaultTask(void const * argument);
 
 /* USER CODE BEGIN PFP */
+void ButtonTask(void const *argument);
 
+void LCDTask(void const *argument);
+
+void UARTTask(void const *argument);
+
+void CANTask(void const *argument);
+
+void FOCTask(void const *argument);
+
+void ServoTask(void const *argument);
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-
+osThreadId ButtonTaskHandle;
+osThreadId LCDTaskHandle;
+osThreadId UARTTaskHandle;
+osThreadId CANTaskHandle;
+osThreadId FOCTaskHandle;
+osThreadId ServoTaskHandle;
 /* USER CODE END 0 */
 
 /**
@@ -138,19 +153,19 @@ int main(void)
   /* USER CODE END 2 */
 
   /* USER CODE BEGIN RTOS_MUTEX */
-  /* add mutexes, ... */
+    /* add mutexes, ... */
   /* USER CODE END RTOS_MUTEX */
 
   /* USER CODE BEGIN RTOS_SEMAPHORES */
-  /* add semaphores, ... */
+    /* add semaphores, ... */
   /* USER CODE END RTOS_SEMAPHORES */
 
   /* USER CODE BEGIN RTOS_TIMERS */
-  /* start timers, add new ones, ... */
+    /* start timers, add new ones, ... */
   /* USER CODE END RTOS_TIMERS */
 
   /* USER CODE BEGIN RTOS_QUEUES */
-  /* add queues, ... */
+    /* add queues, ... */
   /* USER CODE END RTOS_QUEUES */
 
   /* Create the thread(s) */
@@ -159,7 +174,7 @@ int main(void)
   defaultTaskHandle = osThreadCreate(osThread(defaultTask), NULL);
 
   /* USER CODE BEGIN RTOS_THREADS */
-  /* add threads, ... */
+    /* add threads, ... */
   /* USER CODE END RTOS_THREADS */
 
   /* Start scheduler */
@@ -167,12 +182,11 @@ int main(void)
   /* We should never get here as control is now taken by the scheduler */
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-  while (1)
-  {
+    while (1) {
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-  }
+    }
   /* USER CODE END 3 */
 }
 
@@ -507,17 +521,17 @@ static void MX_SPI1_Init(void)
   hspi1.Instance = SPI1;
   hspi1.Init.Mode = SPI_MODE_MASTER;
   hspi1.Init.Direction = SPI_DIRECTION_2LINES;
-  hspi1.Init.DataSize = SPI_DATASIZE_4BIT;
-  hspi1.Init.CLKPolarity = SPI_POLARITY_LOW;
+  hspi1.Init.DataSize = SPI_DATASIZE_8BIT;
+  hspi1.Init.CLKPolarity = SPI_POLARITY_HIGH;
   hspi1.Init.CLKPhase = SPI_PHASE_1EDGE;
   hspi1.Init.NSS = SPI_NSS_SOFT;
-  hspi1.Init.BaudRatePrescaler = SPI_BAUDRATEPRESCALER_4;
+  hspi1.Init.BaudRatePrescaler = SPI_BAUDRATEPRESCALER_8;
   hspi1.Init.FirstBit = SPI_FIRSTBIT_MSB;
   hspi1.Init.TIMode = SPI_TIMODE_DISABLE;
   hspi1.Init.CRCCalculation = SPI_CRCCALCULATION_DISABLE;
   hspi1.Init.CRCPolynomial = 7;
   hspi1.Init.CRCLength = SPI_CRC_LENGTH_DATASIZE;
-  hspi1.Init.NSSPMode = SPI_NSS_PULSE_ENABLE;
+  hspi1.Init.NSSPMode = SPI_NSS_PULSE_DISABLE;
   if (HAL_SPI_Init(&hspi1) != HAL_OK)
   {
     Error_Handler();
@@ -548,7 +562,7 @@ static void MX_TIM1_Init(void)
 
   /* USER CODE END TIM1_Init 1 */
   htim1.Instance = TIM1;
-  htim1.Init.Prescaler = 160;
+  htim1.Init.Prescaler = 6;
   htim1.Init.CounterMode = TIM_COUNTERMODE_UP;
   htim1.Init.Period = 1000;
   htim1.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
@@ -627,7 +641,7 @@ static void MX_TIM2_Init(void)
 
   /* USER CODE END TIM2_Init 1 */
   htim2.Instance = TIM2;
-  htim2.Init.Prescaler = 160;
+  htim2.Init.Prescaler = 4;
   htim2.Init.CounterMode = TIM_COUNTERMODE_UP;
   htim2.Init.Period = 1000;
   htim2.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
@@ -977,11 +991,30 @@ static void MX_GPIO_Init(void)
 void StartDefaultTask(void const * argument)
 {
   /* USER CODE BEGIN 5 */
-  /* Infinite loop */
-  for(;;)
-  {
-    osDelay(1);
-  }
+
+    osThreadDef(ButtonTask, ButtonTask, osPriorityNormal, 0, 128);
+//    osThreadDef(LCDTask, LCDTask, osPriorityNormal, 0, 512);
+    osThreadDef(UARTTask, UARTTask, osPriorityNormal, 0, 512);
+    osThreadDef(CANTask, CANTask, osPriorityNormal, 0, 512);
+    osThreadDef(FOCTask, FOCTask, osPriorityAboveNormal, 0, 512);
+    osThreadDef(ServoTask, ServoTask, osPriorityAboveNormal, 0, 512);
+
+    portENTER_CRITICAL();
+    ButtonTaskHandle = osThreadCreate(osThread(ButtonTask), NULL);
+//    LCDTaskHandle = osThreadCreate(osThread(LCDTask), NULL);
+//    UARTTaskHandle = osThreadCreate(osThread(UARTTask), NULL);
+//    CANTaskHandle = osThreadCreate(osThread(CANTask), NULL);
+    FOCTaskHandle = osThreadCreate(osThread(FOCTask), NULL);
+//    ServoTaskHandle = osThreadCreate(osThread(ServoTask), NULL);
+    portEXIT_CRITICAL();
+
+    uart3_printf("Hello World!\n");
+
+    /* Infinite loop */
+    for (;;) {
+        HAL_GPIO_TogglePin(LED_GPIO_Port, LED_Pin);
+        osDelay(500);
+    }
   /* USER CODE END 5 */
 }
 
@@ -992,11 +1025,10 @@ void StartDefaultTask(void const * argument)
 void Error_Handler(void)
 {
   /* USER CODE BEGIN Error_Handler_Debug */
-  /* User can add his own implementation to report the HAL error return state */
-  __disable_irq();
-  while (1)
-  {
-  }
+    /* User can add his own implementation to report the HAL error return state */
+    __disable_irq();
+    while (1) {
+    }
   /* USER CODE END Error_Handler_Debug */
 }
 

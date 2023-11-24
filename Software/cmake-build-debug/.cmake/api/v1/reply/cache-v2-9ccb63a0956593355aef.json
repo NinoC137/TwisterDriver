@@ -163,7 +163,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "e:/Clion_for_STM32/TwisterDriver/cmake-build-debug"
+			"value" : "e:/Clion_for_STM32/TwisterDriver/Software/cmake-build-debug"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -719,7 +719,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "E:/Clion_for_STM32/TwisterDriver/cmake-build-debug/CMakeFiles/pkgRedirects"
+			"value" : "E:/Clion_for_STM32/TwisterDriver/Software/cmake-build-debug/CMakeFiles/pkgRedirects"
 		},
 		{
 			"name" : "CMAKE_GENERATOR",
@@ -779,7 +779,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "E:/Clion_for_STM32/TwisterDriver"
+			"value" : "E:/Clion_for_STM32/TwisterDriver/Software"
 		},
 		{
 			"name" : "CMAKE_INSTALL_PREFIX",
@@ -1411,7 +1411,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "E:/Clion_for_STM32/TwisterDriver/cmake-build-debug"
+			"value" : "E:/Clion_for_STM32/TwisterDriver/Software/cmake-build-debug"
 		},
 		{
 			"name" : "TwisterDriver_IS_TOP_LEVEL",
@@ -1435,7 +1435,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "E:/Clion_for_STM32/TwisterDriver"
+			"value" : "E:/Clion_for_STM32/TwisterDriver/Software"
 		}
 	],
 	"kind" : "cache",

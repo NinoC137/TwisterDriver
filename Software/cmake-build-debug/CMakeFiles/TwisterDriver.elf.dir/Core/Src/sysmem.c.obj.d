@@ -1,5 +1,5 @@
 CMakeFiles/TwisterDriver.elf.dir/Core/Src/sysmem.c.obj: \
- E\:\Clion_for_STM32\TwisterDriver\Core\Src\sysmem.c \
+ E\:\Clion_for_STM32\TwisterDriver\Software\Core\Src\sysmem.c \
  e\:\compiler\arm-none-eabi\include\errno.h \
  e\:\compiler\arm-none-eabi\include\sys\errno.h \
  e\:\compiler\arm-none-eabi\include\sys\reent.h \

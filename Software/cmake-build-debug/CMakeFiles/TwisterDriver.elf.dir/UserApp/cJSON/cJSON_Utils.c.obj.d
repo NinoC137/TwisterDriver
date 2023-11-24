@@ -1,5 +1,5 @@
 CMakeFiles/TwisterDriver.elf.dir/UserApp/cJSON/cJSON_Utils.c.obj: \
- E\:\Clion_for_STM32\TwisterDriver\UserApp\cJSON\cJSON_Utils.c \
+ E\:\Clion_for_STM32\TwisterDriver\Software\UserApp\cJSON\cJSON_Utils.c \
  e\:\compiler\arm-none-eabi\include\ctype.h \
  e\:\compiler\arm-none-eabi\include\_ansi.h \
  e\:\compiler\arm-none-eabi\include\newlib.h \
@@ -43,5 +43,5 @@ CMakeFiles/TwisterDriver.elf.dir/UserApp/cJSON/cJSON_Utils.c.obj: \
  e\:\compiler\arm-none-eabi\include\sys\syslimits.h \
  e\:\compiler\arm-none-eabi\include\math.h \
  e\:\compiler\lib\gcc\arm-none-eabi\10.2.1\include\float.h \
- E\:\Clion_for_STM32\TwisterDriver\UserApp\cJSON\cJSON_Utils.h \
- E\:\Clion_for_STM32\TwisterDriver\UserApp\cJSON\cJSON.h
+ E\:\Clion_for_STM32\TwisterDriver\Software\UserApp\cJSON\cJSON_Utils.h \
+ E\:\Clion_for_STM32\TwisterDriver\Software\UserApp\cJSON\cJSON.h

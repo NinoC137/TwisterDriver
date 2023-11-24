@@ -1,5 +1,5 @@
 #include "FOC.h"
-#include "cmsis_os.h"
+#include "main.h"
 
 #define _constrain(amt, low, high) ((amt)<(low)?(low):((amt)>(high)?(high):(amt)))
 
@@ -7,7 +7,7 @@ float shaft_angle = 0.0f, open_loop_timestamp = 0.0f;
 float zero_electric_angle = 0.0f;
 float voltage_power_supply = 12.0f;
 
-int PP, DIR;
+int PP, DIR = 1;
 
 //传感器数值
 float angle_pi;
@@ -86,8 +86,8 @@ void setTorque(float Uq, float angle_el) {
     angle_el = _normalizeAngle(angle_el);
 
     // 帕克逆变换
-    float Ualpha = -Uq * (float) _sin(angle_el);
-    float Ubeta = Uq * (float) _cos(angle_el);
+    float Ualpha = -Uq * (float) sin(angle_el);
+    float Ubeta = Uq * (float) cos(angle_el);
 
     //克拉克逆变换
     float Ua = Ualpha + voltage_power_supply / 2;
@@ -120,8 +120,8 @@ void FOC_SVPWM(float Uq, float Ud, float angle) {
     // find the sector we are in currently
     sector = floor(angle / _PI_3) + 1;
     // calculate the duty cycles
-    float T1 = _SQRT3 * _sin(sector * _PI_3 - angle) * Uout;
-    float T2 = _SQRT3 * _sin(angle - (sector - 1.0f) * _PI_3) * Uout;
+    float T1 = _SQRT3 * sin(sector * _PI_3 - angle) * Uout;
+    float T2 = _SQRT3 * sin(angle - (sector - 1.0f) * _PI_3) * Uout;
     // two versions possible
 //    float T0 = 0; // pulled to 0 - better for low power supply voltage
     float T0 = 1 - T1 - T2; // modulation_centered around driver->voltage_limit/2
@@ -180,8 +180,8 @@ void FOC_Clarke_Park(float Ia, float Ib, float Ic, float angle, float *Id, float
     float i_beta = _1_SQRT3 * a + _2_SQRT3 * b;
 
     // Park transform
-    float ct = _cos(angle);
-    float st = _sin(angle);
+    float ct = cos(angle);
+    float st = sin(angle);
     *Id = i_alpha * ct + i_beta * st;
     *Iq = i_beta * ct - i_alpha * st;
 
@@ -192,8 +192,8 @@ void FOC_Clarke_Park(float Ia, float Ib, float Ic, float angle, float *Id, float
 void setPhaseVoltage(float Uq, float Ud, float angle_elec) {
     angle_elec = _normalizeAngle(angle_elec);
     // 帕克逆变换
-    float Ualpha = -Uq * _sin(angle_elec);
-    float Ubeta = Uq * _cos(angle_elec);
+    float Ualpha = -Uq * sin(angle_elec);
+    float Ubeta = Uq * cos(angle_elec);
 
     // 克拉克逆变换
     float Ua = Ualpha + voltage_power_supply / 2;
@@ -217,7 +217,7 @@ float velocityOpenLoop(float target_velocity) {
 
     // 使用早前设置的voltage_power_supply的1/3作为Uq值，这个值会直接影响输出力矩
     // 最大只能设置为Uq = voltage_power_supply/2，否则ua,ub,uc会超出供电电压限幅
-    float Uq = voltage_power_supply / 8.0f;
+    float Uq = voltage_power_supply / 10.0f;
 
 #if FOC_MODE == SPWM
     setPhaseVoltage(Uq, 0, _electricalAngle(shaft_angle, 7));

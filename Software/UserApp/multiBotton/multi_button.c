@@ -227,25 +227,25 @@ uint8_t read_KEY6_GPIO() {
 }
 
 void KEY1_PRESS_DOWN_Handler(void *btn){
-
+    HAL_UART_Transmit(&huart3, "key1 press\n", sizeof("key1 press\n") - 1, 0xffff);
 }
 
 void KEY2_PRESS_DOWN_Handler(void *btn){
-
+    HAL_UART_Transmit(&huart3, "key2 press\n", sizeof("key1 press\n") - 1, 0xffff);
 }
 
 void KEY3_PRESS_DOWN_Handler(void *btn) {
-
+    HAL_UART_Transmit(&huart3, "key3 press\n", sizeof("key1 press\n") - 1, 0xffff);
 }
 
 void KEY4_PRESS_DOWN_Handler(void *btn) {
-
+    HAL_UART_Transmit(&huart3, "key4 press\n", sizeof("key1 press\n") - 1, 0xffff);
 }
 
 void KEY5_PRESS_DOWN_Handler(void *btn) {
-
+    HAL_UART_Transmit(&huart3, "key5 press\n", sizeof("key1 press\n") - 1, 0xffff);
 }
 
 void KEY6_PRESS_DOWN_Handler(void *btn) {
-
+    HAL_UART_Transmit(&huart3, "Encoder press\n", sizeof("Encoder press\n") - 1, 0xffff);
 }

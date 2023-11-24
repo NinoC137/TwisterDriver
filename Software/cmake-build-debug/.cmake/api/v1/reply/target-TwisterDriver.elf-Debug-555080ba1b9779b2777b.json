@@ -174,63 +174,63 @@
 			[
 				{
 					"backtrace" : 12,
-					"path" : "E:/Clion_for_STM32/TwisterDriver/Core/Inc"
+					"path" : "E:/Clion_for_STM32/TwisterDriver/Software/Core/Inc"
 				},
 				{
 					"backtrace" : 12,
-					"path" : "E:/Clion_for_STM32/TwisterDriver/Drivers/STM32G4xx_HAL_Driver/Inc"
+					"path" : "E:/Clion_for_STM32/TwisterDriver/Software/Drivers/STM32G4xx_HAL_Driver/Inc"
 				},
 				{
 					"backtrace" : 12,
-					"path" : "E:/Clion_for_STM32/TwisterDriver/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy"
+					"path" : "E:/Clion_for_STM32/TwisterDriver/Software/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy"
 				},
 				{
 					"backtrace" : 12,
-					"path" : "E:/Clion_for_STM32/TwisterDriver/Drivers/CMSIS/Device/ST/STM32G4xx/Include"
+					"path" : "E:/Clion_for_STM32/TwisterDriver/Software/Drivers/CMSIS/Device/ST/STM32G4xx/Include"
 				},
 				{
 					"backtrace" : 12,
-					"path" : "E:/Clion_for_STM32/TwisterDriver/Drivers/CMSIS/Include"
+					"path" : "E:/Clion_for_STM32/TwisterDriver/Software/Drivers/CMSIS/Include"
 				},
 				{
 					"backtrace" : 12,
-					"path" : "E:/Clion_for_STM32/TwisterDriver/Middlewares/Third_Party/FreeRTOS/Source/include"
+					"path" : "E:/Clion_for_STM32/TwisterDriver/Software/Middlewares/Third_Party/FreeRTOS/Source/include"
 				},
 				{
 					"backtrace" : 12,
-					"path" : "E:/Clion_for_STM32/TwisterDriver/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS"
+					"path" : "E:/Clion_for_STM32/TwisterDriver/Software/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS"
 				},
 				{
 					"backtrace" : 12,
-					"path" : "E:/Clion_for_STM32/TwisterDriver/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F"
+					"path" : "E:/Clion_for_STM32/TwisterDriver/Software/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F"
 				},
 				{
 					"backtrace" : 12,
-					"path" : "E:/Clion_for_STM32/TwisterDriver/UserApp/FOC"
+					"path" : "E:/Clion_for_STM32/TwisterDriver/Software/UserApp/FOC"
 				},
 				{
 					"backtrace" : 12,
-					"path" : "E:/Clion_for_STM32/TwisterDriver/UserApp/MT6701"
+					"path" : "E:/Clion_for_STM32/TwisterDriver/Software/UserApp/MT6701"
 				},
 				{
 					"backtrace" : 12,
-					"path" : "E:/Clion_for_STM32/TwisterDriver/UserApp/retarget"
+					"path" : "E:/Clion_for_STM32/TwisterDriver/Software/UserApp/retarget"
 				},
 				{
 					"backtrace" : 12,
-					"path" : "E:/Clion_for_STM32/TwisterDriver/UserApp/cJSON"
+					"path" : "E:/Clion_for_STM32/TwisterDriver/Software/UserApp/cJSON"
 				},
 				{
 					"backtrace" : 12,
-					"path" : "E:/Clion_for_STM32/TwisterDriver/UserApp/Servo"
+					"path" : "E:/Clion_for_STM32/TwisterDriver/Software/UserApp/Servo"
 				},
 				{
 					"backtrace" : 12,
-					"path" : "E:/Clion_for_STM32/TwisterDriver/UserApp/LCD"
+					"path" : "E:/Clion_for_STM32/TwisterDriver/Software/UserApp/LCD"
 				},
 				{
 					"backtrace" : 12,
-					"path" : "E:/Clion_for_STM32/TwisterDriver/UserApp/multiBotton"
+					"path" : "E:/Clion_for_STM32/TwisterDriver/Software/UserApp/multiBotton"
 				}
 			],
 			"language" : "C",
@@ -291,14 +291,16 @@
 				144,
 				146,
 				148,
-				151,
+				150,
 				152,
+				154,
 				156,
 				158,
 				160,
 				162,
-				165,
-				167
+				164,
+				167,
+				169
 			]
 		},
 		{
@@ -379,63 +381,63 @@
 			[
 				{
 					"backtrace" : 12,
-					"path" : "E:/Clion_for_STM32/TwisterDriver/Core/Inc"
+					"path" : "E:/Clion_for_STM32/TwisterDriver/Software/Core/Inc"
 				},
 				{
 					"backtrace" : 12,
-					"path" : "E:/Clion_for_STM32/TwisterDriver/Drivers/STM32G4xx_HAL_Driver/Inc"
+					"path" : "E:/Clion_for_STM32/TwisterDriver/Software/Drivers/STM32G4xx_HAL_Driver/Inc"
 				},
 				{
 					"backtrace" : 12,
-					"path" : "E:/Clion_for_STM32/TwisterDriver/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy"
+					"path" : "E:/Clion_for_STM32/TwisterDriver/Software/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy"
 				},
 				{
 					"backtrace" : 12,
-					"path" : "E:/Clion_for_STM32/TwisterDriver/Drivers/CMSIS/Device/ST/STM32G4xx/Include"
+					"path" : "E:/Clion_for_STM32/TwisterDriver/Software/Drivers/CMSIS/Device/ST/STM32G4xx/Include"
 				},
 				{
 					"backtrace" : 12,
-					"path" : "E:/Clion_for_STM32/TwisterDriver/Drivers/CMSIS/Include"
+					"path" : "E:/Clion_for_STM32/TwisterDriver/Software/Drivers/CMSIS/Include"
 				},
 				{
 					"backtrace" : 12,
-					"path" : "E:/Clion_for_STM32/TwisterDriver/Middlewares/Third_Party/FreeRTOS/Source/include"
+					"path" : "E:/Clion_for_STM32/TwisterDriver/Software/Middlewares/Third_Party/FreeRTOS/Source/include"
 				},
 				{
 					"backtrace" : 12,
-					"path" : "E:/Clion_for_STM32/TwisterDriver/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS"
+					"path" : "E:/Clion_for_STM32/TwisterDriver/Software/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS"
 				},
 				{
 					"backtrace" : 12,
-					"path" : "E:/Clion_for_STM32/TwisterDriver/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F"
+					"path" : "E:/Clion_for_STM32/TwisterDriver/Software/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F"
 				},
 				{
 					"backtrace" : 12,
-					"path" : "E:/Clion_for_STM32/TwisterDriver/UserApp/FOC"
+					"path" : "E:/Clion_for_STM32/TwisterDriver/Software/UserApp/FOC"
 				},
 				{
 					"backtrace" : 12,
-					"path" : "E:/Clion_for_STM32/TwisterDriver/UserApp/MT6701"
+					"path" : "E:/Clion_for_STM32/TwisterDriver/Software/UserApp/MT6701"
 				},
 				{
 					"backtrace" : 12,
-					"path" : "E:/Clion_for_STM32/TwisterDriver/UserApp/retarget"
+					"path" : "E:/Clion_for_STM32/TwisterDriver/Software/UserApp/retarget"
 				},
 				{
 					"backtrace" : 12,
-					"path" : "E:/Clion_for_STM32/TwisterDriver/UserApp/cJSON"
+					"path" : "E:/Clion_for_STM32/TwisterDriver/Software/UserApp/cJSON"
 				},
 				{
 					"backtrace" : 12,
-					"path" : "E:/Clion_for_STM32/TwisterDriver/UserApp/Servo"
+					"path" : "E:/Clion_for_STM32/TwisterDriver/Software/UserApp/Servo"
 				},
 				{
 					"backtrace" : 12,
-					"path" : "E:/Clion_for_STM32/TwisterDriver/UserApp/LCD"
+					"path" : "E:/Clion_for_STM32/TwisterDriver/Software/UserApp/LCD"
 				},
 				{
 					"backtrace" : 12,
-					"path" : "E:/Clion_for_STM32/TwisterDriver/UserApp/multiBotton"
+					"path" : "E:/Clion_for_STM32/TwisterDriver/Software/UserApp/multiBotton"
 				}
 			],
 			"language" : "ASM",
@@ -470,7 +472,7 @@
 			},
 			{
 				"backtrace" : 3,
-				"fragment" : "-Wl,-gc-sections,--print-memory-usage,-Map=E:/Clion_for_STM32/TwisterDriver/cmake-build-debug/TwisterDriver.map",
+				"fragment" : "-Wl,-gc-sections,--print-memory-usage,-Map=E:/Clion_for_STM32/TwisterDriver/Software/cmake-build-debug/TwisterDriver.map",
 				"role" : "flags"
 			},
 			{
@@ -495,7 +497,7 @@
 			},
 			{
 				"backtrace" : 5,
-				"fragment" : "E:/Clion_for_STM32/TwisterDriver/STM32G431RBTX_FLASH.ld",
+				"fragment" : "E:/Clion_for_STM32/TwisterDriver/Software/STM32G431RBTX_FLASH.ld",
 				"role" : "flags"
 			}
 		],
@@ -613,16 +615,16 @@
 				145,
 				147,
 				149,
-				150,
+				151,
 				153,
-				154,
 				155,
 				157,
 				159,
 				161,
 				163,
-				166,
-				168
+				165,
+				168,
+				170
 			]
 		},
 		{
@@ -676,14 +678,16 @@
 				144,
 				146,
 				148,
-				151,
+				150,
 				152,
+				154,
 				156,
 				158,
 				160,
 				162,
-				165,
-				167
+				164,
+				167,
+				169
 			]
 		},
 		{
@@ -694,8 +698,8 @@
 				15,
 				40,
 				84,
-				164,
-				169
+				166,
+				171
 			]
 		}
 	],
@@ -1501,34 +1505,46 @@
 		},
 		{
 			"backtrace" : 1,
-			"path" : "UserApp/LCD/lcd.h",
+			"compileGroupIndex" : 0,
+			"path" : "UserApp/LCD/fonts.c",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "UserApp/LCD/fonts.h",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "UserApp/LCD/lcd_dma.c",
+			"path" : "UserApp/LCD/gui.c",
 			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "UserApp/LCD/gui.h",
+			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "UserApp/LCD/lcd_init.c",
+			"path" : "UserApp/LCD/image.c",
 			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 1,
-			"path" : "UserApp/LCD/lcd_init.h",
+			"path" : "UserApp/LCD/image.h",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
-			"path" : "UserApp/LCD/lcdfont.h",
-			"sourceGroupIndex" : 0
+			"compileGroupIndex" : 0,
+			"path" : "UserApp/LCD/st7735.c",
+			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 1,
-			"path" : "UserApp/LCD/pic.h",
+			"path" : "UserApp/LCD/st7735.h",
 			"sourceGroupIndex" : 0
 		},
 		{

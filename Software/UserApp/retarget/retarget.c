@@ -13,7 +13,7 @@ extern UART_HandleTypeDef huart2;
 extern osMutexId printfMutex;
 
 void uart_printf(const char* format, ...) {
-    osMutexWait(printfMutex, portMAX_DELAY);
+//    osMutexWait(printfMutex, portMAX_DELAY);
     char buffer[128];  // 缓冲区用于存储格式化后的字符串
     va_list args;
     va_start(args, format);
@@ -24,11 +24,11 @@ void uart_printf(const char* format, ...) {
     for (size_t i = 0; buffer[i] != '\0'; ++i) {
         HAL_UART_Transmit(&huart1, (uint8_t *)&buffer[i], 1, HAL_MAX_DELAY);
     }
-    osMutexRelease(printfMutex);
+//    osMutexRelease(printfMutex);
 }
 
-void uart2_printf(const char* format, ...) {
-    osMutexWait(printfMutex, portMAX_DELAY);
+void uart3_printf(const char* format, ...) {
+//    osMutexWait(printfMutex, portMAX_DELAY);
     char buffer[64];  // 缓冲区用于存储格式化后的字符串
     va_list args;
     va_start(args, format);
@@ -37,9 +37,9 @@ void uart2_printf(const char* format, ...) {
     va_end(args);
 
     for (size_t i = 0; buffer[i] != '\0'; ++i) {
-        HAL_UART_Transmit(&huart2, (uint8_t *) &buffer[i], 1, HAL_MAX_DELAY);
+        HAL_UART_Transmit(&huart3, (uint8_t *) &buffer[i], 1, HAL_MAX_DELAY);
     }
-    osMutexRelease(printfMutex);
+//    osMutexRelease(printfMutex);
 }
 
 void ReformatBuffer(uint8_t *buffer, float *afterReformat) {

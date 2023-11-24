@@ -1,4 +1,5 @@
 #include "MT6701.h"
+#include "main.h"
 
 unsigned char mt6701_write_reg(unsigned char reg, unsigned char value)
 {

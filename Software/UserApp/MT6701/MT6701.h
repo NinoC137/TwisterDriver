@@ -2,7 +2,6 @@
 #define __MT6701_H__
 
 #include <stdio.h>
-#include "main.h"
 
 #define MT6701_SLAVE_ADDR         0x06 << 1
 #define MT6701_Timeout            50

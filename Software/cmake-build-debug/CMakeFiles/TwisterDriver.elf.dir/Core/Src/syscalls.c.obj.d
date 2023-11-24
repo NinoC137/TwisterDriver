@@ -1,5 +1,5 @@
 CMakeFiles/TwisterDriver.elf.dir/Core/Src/syscalls.c.obj: \
- E\:\Clion_for_STM32\TwisterDriver\Core\Src\syscalls.c \
+ E\:\Clion_for_STM32\TwisterDriver\Software\Core\Src\syscalls.c \
  e\:\compiler\arm-none-eabi\include\sys\stat.h \
  e\:\compiler\arm-none-eabi\include\_ansi.h \
  e\:\compiler\arm-none-eabi\include\newlib.h \

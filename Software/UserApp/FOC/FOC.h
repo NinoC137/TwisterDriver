@@ -8,14 +8,27 @@ enum Mode{
 //FOC模式设定   ---     SVPWM未测试
 #define FOC_MODE 0
 
-#include "main.h"
-
 #include "MT6701.h"
 #include "hardware_api.h"
 
 #include "FOC_math.h"
 #include "my_PID.h"
 #include "Filter.h"
+
+typedef enum{
+    OPEN_LOOP_POSITION_CONTROL = 0,
+    OPEN_LOOP_SPEED_CONTROL,
+    TORQUE_CONTROL,
+    SPEED_CONTROL,
+    POSITION_CONTROL,
+    SPRING,
+    SPRING_WITH_DAMP,
+    DAMP,
+    KNOB,
+    ZERO_RESISTANCE
+} FOC_CONTROL_MODE;
+
+#define FOC_CONTROL_MODE_NUM 10
 
 #define VOLTAGE_LIMIT (voltage_power_supply / 3)
 

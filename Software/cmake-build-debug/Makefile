@@ -56,10 +56,10 @@ RM = "E:\CLion\CLion 2022.3.2\bin\cmake\win\x64\bin\cmake.exe" -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = E:\Clion_for_STM32\TwisterDriver
+CMAKE_SOURCE_DIR = E:\Clion_for_STM32\TwisterDriver\Software
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = E:\Clion_for_STM32\TwisterDriver\cmake-build-debug
+CMAKE_BINARY_DIR = E:\Clion_for_STM32\TwisterDriver\Software\cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -86,9 +86,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start E:\Clion_for_STM32\TwisterDriver\cmake-build-debug\CMakeFiles E:\Clion_for_STM32\TwisterDriver\cmake-build-debug\\CMakeFiles\progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start E:\Clion_for_STM32\TwisterDriver\Software\cmake-build-debug\CMakeFiles E:\Clion_for_STM32\TwisterDriver\Software\cmake-build-debug\\CMakeFiles\progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start E:\Clion_for_STM32\TwisterDriver\cmake-build-debug\CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start E:\Clion_for_STM32\TwisterDriver\Software\cmake-build-debug\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -1264,53 +1264,101 @@ UserApp/FOC/my_PID.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\TwisterDriver.elf.dir\build.make CMakeFiles/TwisterDriver.elf.dir/UserApp/FOC/my_PID.c.s
 .PHONY : UserApp/FOC/my_PID.c.s
 
-UserApp/LCD/lcd_dma.obj: UserApp/LCD/lcd_dma.c.obj
-.PHONY : UserApp/LCD/lcd_dma.obj
+UserApp/LCD/fonts.obj: UserApp/LCD/fonts.c.obj
+.PHONY : UserApp/LCD/fonts.obj
 
 # target to build an object file
-UserApp/LCD/lcd_dma.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\TwisterDriver.elf.dir\build.make CMakeFiles/TwisterDriver.elf.dir/UserApp/LCD/lcd_dma.c.obj
-.PHONY : UserApp/LCD/lcd_dma.c.obj
+UserApp/LCD/fonts.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\TwisterDriver.elf.dir\build.make CMakeFiles/TwisterDriver.elf.dir/UserApp/LCD/fonts.c.obj
+.PHONY : UserApp/LCD/fonts.c.obj
 
-UserApp/LCD/lcd_dma.i: UserApp/LCD/lcd_dma.c.i
-.PHONY : UserApp/LCD/lcd_dma.i
+UserApp/LCD/fonts.i: UserApp/LCD/fonts.c.i
+.PHONY : UserApp/LCD/fonts.i
 
 # target to preprocess a source file
-UserApp/LCD/lcd_dma.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\TwisterDriver.elf.dir\build.make CMakeFiles/TwisterDriver.elf.dir/UserApp/LCD/lcd_dma.c.i
-.PHONY : UserApp/LCD/lcd_dma.c.i
+UserApp/LCD/fonts.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\TwisterDriver.elf.dir\build.make CMakeFiles/TwisterDriver.elf.dir/UserApp/LCD/fonts.c.i
+.PHONY : UserApp/LCD/fonts.c.i
 
-UserApp/LCD/lcd_dma.s: UserApp/LCD/lcd_dma.c.s
-.PHONY : UserApp/LCD/lcd_dma.s
+UserApp/LCD/fonts.s: UserApp/LCD/fonts.c.s
+.PHONY : UserApp/LCD/fonts.s
 
 # target to generate assembly for a file
-UserApp/LCD/lcd_dma.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\TwisterDriver.elf.dir\build.make CMakeFiles/TwisterDriver.elf.dir/UserApp/LCD/lcd_dma.c.s
-.PHONY : UserApp/LCD/lcd_dma.c.s
+UserApp/LCD/fonts.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\TwisterDriver.elf.dir\build.make CMakeFiles/TwisterDriver.elf.dir/UserApp/LCD/fonts.c.s
+.PHONY : UserApp/LCD/fonts.c.s
 
-UserApp/LCD/lcd_init.obj: UserApp/LCD/lcd_init.c.obj
-.PHONY : UserApp/LCD/lcd_init.obj
+UserApp/LCD/gui.obj: UserApp/LCD/gui.c.obj
+.PHONY : UserApp/LCD/gui.obj
 
 # target to build an object file
-UserApp/LCD/lcd_init.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\TwisterDriver.elf.dir\build.make CMakeFiles/TwisterDriver.elf.dir/UserApp/LCD/lcd_init.c.obj
-.PHONY : UserApp/LCD/lcd_init.c.obj
+UserApp/LCD/gui.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\TwisterDriver.elf.dir\build.make CMakeFiles/TwisterDriver.elf.dir/UserApp/LCD/gui.c.obj
+.PHONY : UserApp/LCD/gui.c.obj
 
-UserApp/LCD/lcd_init.i: UserApp/LCD/lcd_init.c.i
-.PHONY : UserApp/LCD/lcd_init.i
+UserApp/LCD/gui.i: UserApp/LCD/gui.c.i
+.PHONY : UserApp/LCD/gui.i
 
 # target to preprocess a source file
-UserApp/LCD/lcd_init.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\TwisterDriver.elf.dir\build.make CMakeFiles/TwisterDriver.elf.dir/UserApp/LCD/lcd_init.c.i
-.PHONY : UserApp/LCD/lcd_init.c.i
+UserApp/LCD/gui.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\TwisterDriver.elf.dir\build.make CMakeFiles/TwisterDriver.elf.dir/UserApp/LCD/gui.c.i
+.PHONY : UserApp/LCD/gui.c.i
 
-UserApp/LCD/lcd_init.s: UserApp/LCD/lcd_init.c.s
-.PHONY : UserApp/LCD/lcd_init.s
+UserApp/LCD/gui.s: UserApp/LCD/gui.c.s
+.PHONY : UserApp/LCD/gui.s
 
 # target to generate assembly for a file
-UserApp/LCD/lcd_init.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\TwisterDriver.elf.dir\build.make CMakeFiles/TwisterDriver.elf.dir/UserApp/LCD/lcd_init.c.s
-.PHONY : UserApp/LCD/lcd_init.c.s
+UserApp/LCD/gui.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\TwisterDriver.elf.dir\build.make CMakeFiles/TwisterDriver.elf.dir/UserApp/LCD/gui.c.s
+.PHONY : UserApp/LCD/gui.c.s
+
+UserApp/LCD/image.obj: UserApp/LCD/image.c.obj
+.PHONY : UserApp/LCD/image.obj
+
+# target to build an object file
+UserApp/LCD/image.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\TwisterDriver.elf.dir\build.make CMakeFiles/TwisterDriver.elf.dir/UserApp/LCD/image.c.obj
+.PHONY : UserApp/LCD/image.c.obj
+
+UserApp/LCD/image.i: UserApp/LCD/image.c.i
+.PHONY : UserApp/LCD/image.i
+
+# target to preprocess a source file
+UserApp/LCD/image.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\TwisterDriver.elf.dir\build.make CMakeFiles/TwisterDriver.elf.dir/UserApp/LCD/image.c.i
+.PHONY : UserApp/LCD/image.c.i
+
+UserApp/LCD/image.s: UserApp/LCD/image.c.s
+.PHONY : UserApp/LCD/image.s
+
+# target to generate assembly for a file
+UserApp/LCD/image.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\TwisterDriver.elf.dir\build.make CMakeFiles/TwisterDriver.elf.dir/UserApp/LCD/image.c.s
+.PHONY : UserApp/LCD/image.c.s
+
+UserApp/LCD/st7735.obj: UserApp/LCD/st7735.c.obj
+.PHONY : UserApp/LCD/st7735.obj
+
+# target to build an object file
+UserApp/LCD/st7735.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\TwisterDriver.elf.dir\build.make CMakeFiles/TwisterDriver.elf.dir/UserApp/LCD/st7735.c.obj
+.PHONY : UserApp/LCD/st7735.c.obj
+
+UserApp/LCD/st7735.i: UserApp/LCD/st7735.c.i
+.PHONY : UserApp/LCD/st7735.i
+
+# target to preprocess a source file
+UserApp/LCD/st7735.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\TwisterDriver.elf.dir\build.make CMakeFiles/TwisterDriver.elf.dir/UserApp/LCD/st7735.c.i
+.PHONY : UserApp/LCD/st7735.c.i
+
+UserApp/LCD/st7735.s: UserApp/LCD/st7735.c.s
+.PHONY : UserApp/LCD/st7735.s
+
+# target to generate assembly for a file
+UserApp/LCD/st7735.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\TwisterDriver.elf.dir\build.make CMakeFiles/TwisterDriver.elf.dir/UserApp/LCD/st7735.c.s
+.PHONY : UserApp/LCD/st7735.c.s
 
 UserApp/MT6701/MT6701.obj: UserApp/MT6701/MT6701.c.obj
 .PHONY : UserApp/MT6701/MT6701.obj
@@ -1607,12 +1655,18 @@ help:
 	@echo ... UserApp/FOC/my_PID.obj
 	@echo ... UserApp/FOC/my_PID.i
 	@echo ... UserApp/FOC/my_PID.s
-	@echo ... UserApp/LCD/lcd_dma.obj
-	@echo ... UserApp/LCD/lcd_dma.i
-	@echo ... UserApp/LCD/lcd_dma.s
-	@echo ... UserApp/LCD/lcd_init.obj
-	@echo ... UserApp/LCD/lcd_init.i
-	@echo ... UserApp/LCD/lcd_init.s
+	@echo ... UserApp/LCD/fonts.obj
+	@echo ... UserApp/LCD/fonts.i
+	@echo ... UserApp/LCD/fonts.s
+	@echo ... UserApp/LCD/gui.obj
+	@echo ... UserApp/LCD/gui.i
+	@echo ... UserApp/LCD/gui.s
+	@echo ... UserApp/LCD/image.obj
+	@echo ... UserApp/LCD/image.i
+	@echo ... UserApp/LCD/image.s
+	@echo ... UserApp/LCD/st7735.obj
+	@echo ... UserApp/LCD/st7735.i
+	@echo ... UserApp/LCD/st7735.s
 	@echo ... UserApp/MT6701/MT6701.obj
 	@echo ... UserApp/MT6701/MT6701.i
 	@echo ... UserApp/MT6701/MT6701.s

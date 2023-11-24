@@ -1,4 +1,4 @@
-"E:\CLion\CLion 2022.3.2\bin\cmake\win\x64\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=C:/MinGW/bin/make.exe -DCMAKE_C_COMPILER=E:/Compiler/bin/arm-none-eabi-gcc.exe -DCMAKE_CXX_COMPILER=E:/Compiler/bin/arm-none-eabi-g++.exe -G "CodeBlocks - MinGW Makefiles" -S E:\Clion_for_STM32\TwisterDriver -B E:\Clion_for_STM32\TwisterDriver\cmake-build-debug
+"E:\CLion\CLion 2022.3.2\bin\cmake\win\x64\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=C:/MinGW/bin/make.exe -DCMAKE_C_COMPILER=E:/Compiler/bin/arm-none-eabi-gcc.exe -DCMAKE_CXX_COMPILER=E:/Compiler/bin/arm-none-eabi-g++.exe -G "CodeBlocks - MinGW Makefiles" -S E:\Clion_for_STM32\TwisterDriver\Software -B E:\Clion_for_STM32\TwisterDriver\Software\cmake-build-debug
 -- The C compiler identification is GNU 10.2.1
 -- The CXX compiler identification is GNU 10.2.1
 -- The ASM compiler identification is GNU
@@ -16,4 +16,4 @@
 -- Minimal optimization, debug info included
 -- Configuring done
 -- Generating done
--- Build files have been written to: E:/Clion_for_STM32/TwisterDriver/cmake-build-debug
+-- Build files have been written to: E:/Clion_for_STM32/TwisterDriver/Software/cmake-build-debug

@@ -31,10 +31,12 @@ extern "C" {
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
+#include "cmsis_os.h"
+
 #include "FOC.h"
 #include "Servo.h"
-#include "lcd.h"
 #include "multi_button.h"
+#include "gui.h"
 #include "retarget.h"
 #include "cJSON.h"
 /* USER CODE END Includes */
@@ -63,6 +65,7 @@ extern SPI_HandleTypeDef hspi1;
 extern DMA_HandleTypeDef hdma_spi1_tx;
 
 extern UART_HandleTypeDef huart1;
+extern UART_HandleTypeDef huart3;
 /* USER CODE END EM */
 
 void HAL_TIM_MspPostInit(TIM_HandleTypeDef *htim);

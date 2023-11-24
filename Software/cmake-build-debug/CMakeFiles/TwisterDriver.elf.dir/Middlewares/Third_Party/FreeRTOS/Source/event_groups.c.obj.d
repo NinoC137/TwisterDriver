@@ -1,5 +1,5 @@
 CMakeFiles/TwisterDriver.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/event_groups.c.obj: \
- E\:\Clion_for_STM32\TwisterDriver\Middlewares\Third_Party\FreeRTOS\Source\event_groups.c \
+ E\:\Clion_for_STM32\TwisterDriver\Software\Middlewares\Third_Party\FreeRTOS\Source\event_groups.c \
  e\:\compiler\arm-none-eabi\include\stdlib.h \
  e\:\compiler\arm-none-eabi\include\machine\ieeefp.h \
  e\:\compiler\arm-none-eabi\include\_ansi.h \
@@ -17,20 +17,20 @@ CMakeFiles/TwisterDriver.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/event_g
  e\:\compiler\arm-none-eabi\include\sys\cdefs.h \
  e\:\compiler\arm-none-eabi\include\machine\stdlib.h \
  e\:\compiler\arm-none-eabi\include\alloca.h \
- E\:\Clion_for_STM32\TwisterDriver\Middlewares\Third_Party\FreeRTOS\Source\include/FreeRTOS.h \
+ E\:\Clion_for_STM32\TwisterDriver\Software\Middlewares\Third_Party\FreeRTOS\Source\include/FreeRTOS.h \
  e\:\compiler\lib\gcc\arm-none-eabi\10.2.1\include\stdint.h \
  e\:\compiler\arm-none-eabi\include\stdint.h \
  e\:\compiler\arm-none-eabi\include\sys\_intsup.h \
  e\:\compiler\arm-none-eabi\include\sys\_stdint.h \
- E\:\Clion_for_STM32\TwisterDriver\Core\Inc/FreeRTOSConfig.h \
- E\:\Clion_for_STM32\TwisterDriver\Middlewares\Third_Party\FreeRTOS\Source\include/projdefs.h \
- E\:\Clion_for_STM32\TwisterDriver\Middlewares\Third_Party\FreeRTOS\Source\include/portable.h \
- E\:\Clion_for_STM32\TwisterDriver\Middlewares\Third_Party\FreeRTOS\Source\include/deprecated_definitions.h \
- E\:\Clion_for_STM32\TwisterDriver\Middlewares\Third_Party\FreeRTOS\Source\portable\GCC\ARM_CM4F/portmacro.h \
- E\:\Clion_for_STM32\TwisterDriver\Middlewares\Third_Party\FreeRTOS\Source\include/mpu_wrappers.h \
- E\:\Clion_for_STM32\TwisterDriver\Middlewares\Third_Party\FreeRTOS\Source\include/task.h \
- E\:\Clion_for_STM32\TwisterDriver\Middlewares\Third_Party\FreeRTOS\Source\include/list.h \
- E\:\Clion_for_STM32\TwisterDriver\Middlewares\Third_Party\FreeRTOS\Source\include/timers.h \
- E\:\Clion_for_STM32\TwisterDriver\Middlewares\Third_Party\FreeRTOS\Source\include/task.h \
- E\:\Clion_for_STM32\TwisterDriver\Middlewares\Third_Party\FreeRTOS\Source\include/event_groups.h \
- E\:\Clion_for_STM32\TwisterDriver\Middlewares\Third_Party\FreeRTOS\Source\include/timers.h
+ E\:\Clion_for_STM32\TwisterDriver\Software\Core\Inc/FreeRTOSConfig.h \
+ E\:\Clion_for_STM32\TwisterDriver\Software\Middlewares\Third_Party\FreeRTOS\Source\include/projdefs.h \
+ E\:\Clion_for_STM32\TwisterDriver\Software\Middlewares\Third_Party\FreeRTOS\Source\include/portable.h \
+ E\:\Clion_for_STM32\TwisterDriver\Software\Middlewares\Third_Party\FreeRTOS\Source\include/deprecated_definitions.h \
+ E\:\Clion_for_STM32\TwisterDriver\Software\Middlewares\Third_Party\FreeRTOS\Source\portable\GCC\ARM_CM4F/portmacro.h \
+ E\:\Clion_for_STM32\TwisterDriver\Software\Middlewares\Third_Party\FreeRTOS\Source\include/mpu_wrappers.h \
+ E\:\Clion_for_STM32\TwisterDriver\Software\Middlewares\Third_Party\FreeRTOS\Source\include/task.h \
+ E\:\Clion_for_STM32\TwisterDriver\Software\Middlewares\Third_Party\FreeRTOS\Source\include/list.h \
+ E\:\Clion_for_STM32\TwisterDriver\Software\Middlewares\Third_Party\FreeRTOS\Source\include/timers.h \
+ E\:\Clion_for_STM32\TwisterDriver\Software\Middlewares\Third_Party\FreeRTOS\Source\include/task.h \
+ E\:\Clion_for_STM32\TwisterDriver\Software\Middlewares\Third_Party\FreeRTOS\Source\include/event_groups.h \
+ E\:\Clion_for_STM32\TwisterDriver\Software\Middlewares\Third_Party\FreeRTOS\Source\include/timers.h

@@ -14,7 +14,7 @@
 
 void uart_printf(const char *format, ...);
 
-void uart2_printf(const char* format, ...);
+void uart3_printf(const char* format, ...);
 
 void ReformatBuffer(uint8_t *buffer, float *afterReformat);
 

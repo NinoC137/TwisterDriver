@@ -52,10 +52,10 @@ RM = "E:\CLion\CLion 2022.3.2\bin\cmake\win\x64\bin\cmake.exe" -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = E:\Clion_for_STM32\TwisterDriver
+CMAKE_SOURCE_DIR = E:\Clion_for_STM32\TwisterDriver\Software
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = E:\Clion_for_STM32\TwisterDriver\cmake-build-debug
+CMAKE_BINARY_DIR = E:\Clion_for_STM32\TwisterDriver\Software\cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/TwisterDriver.elf.dir/depend.make
@@ -69,787 +69,815 @@ include CMakeFiles/TwisterDriver.elf.dir/progress.make
 include CMakeFiles/TwisterDriver.elf.dir/flags.make
 
 CMakeFiles/TwisterDriver.elf.dir/Core/Src/app_freertos.c.obj: CMakeFiles/TwisterDriver.elf.dir/flags.make
-CMakeFiles/TwisterDriver.elf.dir/Core/Src/app_freertos.c.obj: E:/Clion_for_STM32/TwisterDriver/Core/Src/app_freertos.c
+CMakeFiles/TwisterDriver.elf.dir/Core/Src/app_freertos.c.obj: E:/Clion_for_STM32/TwisterDriver/Software/Core/Src/app_freertos.c
 CMakeFiles/TwisterDriver.elf.dir/Core/Src/app_freertos.c.obj: CMakeFiles/TwisterDriver.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\Clion_for_STM32\TwisterDriver\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/TwisterDriver.elf.dir/Core/Src/app_freertos.c.obj"
-	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/TwisterDriver.elf.dir/Core/Src/app_freertos.c.obj -MF CMakeFiles\TwisterDriver.elf.dir\Core\Src\app_freertos.c.obj.d -o CMakeFiles\TwisterDriver.elf.dir\Core\Src\app_freertos.c.obj -c E:\Clion_for_STM32\TwisterDriver\Core\Src\app_freertos.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\Clion_for_STM32\TwisterDriver\Software\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/TwisterDriver.elf.dir/Core/Src/app_freertos.c.obj"
+	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/TwisterDriver.elf.dir/Core/Src/app_freertos.c.obj -MF CMakeFiles\TwisterDriver.elf.dir\Core\Src\app_freertos.c.obj.d -o CMakeFiles\TwisterDriver.elf.dir\Core\Src\app_freertos.c.obj -c E:\Clion_for_STM32\TwisterDriver\Software\Core\Src\app_freertos.c
 
 CMakeFiles/TwisterDriver.elf.dir/Core/Src/app_freertos.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/TwisterDriver.elf.dir/Core/Src/app_freertos.c.i"
-	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E E:\Clion_for_STM32\TwisterDriver\Core\Src\app_freertos.c > CMakeFiles\TwisterDriver.elf.dir\Core\Src\app_freertos.c.i
+	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E E:\Clion_for_STM32\TwisterDriver\Software\Core\Src\app_freertos.c > CMakeFiles\TwisterDriver.elf.dir\Core\Src\app_freertos.c.i
 
 CMakeFiles/TwisterDriver.elf.dir/Core/Src/app_freertos.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/TwisterDriver.elf.dir/Core/Src/app_freertos.c.s"
-	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S E:\Clion_for_STM32\TwisterDriver\Core\Src\app_freertos.c -o CMakeFiles\TwisterDriver.elf.dir\Core\Src\app_freertos.c.s
+	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S E:\Clion_for_STM32\TwisterDriver\Software\Core\Src\app_freertos.c -o CMakeFiles\TwisterDriver.elf.dir\Core\Src\app_freertos.c.s
 
 CMakeFiles/TwisterDriver.elf.dir/Core/Src/main.c.obj: CMakeFiles/TwisterDriver.elf.dir/flags.make
-CMakeFiles/TwisterDriver.elf.dir/Core/Src/main.c.obj: E:/Clion_for_STM32/TwisterDriver/Core/Src/main.c
+CMakeFiles/TwisterDriver.elf.dir/Core/Src/main.c.obj: E:/Clion_for_STM32/TwisterDriver/Software/Core/Src/main.c
 CMakeFiles/TwisterDriver.elf.dir/Core/Src/main.c.obj: CMakeFiles/TwisterDriver.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\Clion_for_STM32\TwisterDriver\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/TwisterDriver.elf.dir/Core/Src/main.c.obj"
-	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/TwisterDriver.elf.dir/Core/Src/main.c.obj -MF CMakeFiles\TwisterDriver.elf.dir\Core\Src\main.c.obj.d -o CMakeFiles\TwisterDriver.elf.dir\Core\Src\main.c.obj -c E:\Clion_for_STM32\TwisterDriver\Core\Src\main.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\Clion_for_STM32\TwisterDriver\Software\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/TwisterDriver.elf.dir/Core/Src/main.c.obj"
+	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/TwisterDriver.elf.dir/Core/Src/main.c.obj -MF CMakeFiles\TwisterDriver.elf.dir\Core\Src\main.c.obj.d -o CMakeFiles\TwisterDriver.elf.dir\Core\Src\main.c.obj -c E:\Clion_for_STM32\TwisterDriver\Software\Core\Src\main.c
 
 CMakeFiles/TwisterDriver.elf.dir/Core/Src/main.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/TwisterDriver.elf.dir/Core/Src/main.c.i"
-	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E E:\Clion_for_STM32\TwisterDriver\Core\Src\main.c > CMakeFiles\TwisterDriver.elf.dir\Core\Src\main.c.i
+	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E E:\Clion_for_STM32\TwisterDriver\Software\Core\Src\main.c > CMakeFiles\TwisterDriver.elf.dir\Core\Src\main.c.i
 
 CMakeFiles/TwisterDriver.elf.dir/Core/Src/main.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/TwisterDriver.elf.dir/Core/Src/main.c.s"
-	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S E:\Clion_for_STM32\TwisterDriver\Core\Src\main.c -o CMakeFiles\TwisterDriver.elf.dir\Core\Src\main.c.s
+	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S E:\Clion_for_STM32\TwisterDriver\Software\Core\Src\main.c -o CMakeFiles\TwisterDriver.elf.dir\Core\Src\main.c.s
 
 CMakeFiles/TwisterDriver.elf.dir/Core/Src/stm32g4xx_hal_msp.c.obj: CMakeFiles/TwisterDriver.elf.dir/flags.make
-CMakeFiles/TwisterDriver.elf.dir/Core/Src/stm32g4xx_hal_msp.c.obj: E:/Clion_for_STM32/TwisterDriver/Core/Src/stm32g4xx_hal_msp.c
+CMakeFiles/TwisterDriver.elf.dir/Core/Src/stm32g4xx_hal_msp.c.obj: E:/Clion_for_STM32/TwisterDriver/Software/Core/Src/stm32g4xx_hal_msp.c
 CMakeFiles/TwisterDriver.elf.dir/Core/Src/stm32g4xx_hal_msp.c.obj: CMakeFiles/TwisterDriver.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\Clion_for_STM32\TwisterDriver\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/TwisterDriver.elf.dir/Core/Src/stm32g4xx_hal_msp.c.obj"
-	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/TwisterDriver.elf.dir/Core/Src/stm32g4xx_hal_msp.c.obj -MF CMakeFiles\TwisterDriver.elf.dir\Core\Src\stm32g4xx_hal_msp.c.obj.d -o CMakeFiles\TwisterDriver.elf.dir\Core\Src\stm32g4xx_hal_msp.c.obj -c E:\Clion_for_STM32\TwisterDriver\Core\Src\stm32g4xx_hal_msp.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\Clion_for_STM32\TwisterDriver\Software\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/TwisterDriver.elf.dir/Core/Src/stm32g4xx_hal_msp.c.obj"
+	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/TwisterDriver.elf.dir/Core/Src/stm32g4xx_hal_msp.c.obj -MF CMakeFiles\TwisterDriver.elf.dir\Core\Src\stm32g4xx_hal_msp.c.obj.d -o CMakeFiles\TwisterDriver.elf.dir\Core\Src\stm32g4xx_hal_msp.c.obj -c E:\Clion_for_STM32\TwisterDriver\Software\Core\Src\stm32g4xx_hal_msp.c
 
 CMakeFiles/TwisterDriver.elf.dir/Core/Src/stm32g4xx_hal_msp.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/TwisterDriver.elf.dir/Core/Src/stm32g4xx_hal_msp.c.i"
-	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E E:\Clion_for_STM32\TwisterDriver\Core\Src\stm32g4xx_hal_msp.c > CMakeFiles\TwisterDriver.elf.dir\Core\Src\stm32g4xx_hal_msp.c.i
+	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E E:\Clion_for_STM32\TwisterDriver\Software\Core\Src\stm32g4xx_hal_msp.c > CMakeFiles\TwisterDriver.elf.dir\Core\Src\stm32g4xx_hal_msp.c.i
 
 CMakeFiles/TwisterDriver.elf.dir/Core/Src/stm32g4xx_hal_msp.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/TwisterDriver.elf.dir/Core/Src/stm32g4xx_hal_msp.c.s"
-	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S E:\Clion_for_STM32\TwisterDriver\Core\Src\stm32g4xx_hal_msp.c -o CMakeFiles\TwisterDriver.elf.dir\Core\Src\stm32g4xx_hal_msp.c.s
+	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S E:\Clion_for_STM32\TwisterDriver\Software\Core\Src\stm32g4xx_hal_msp.c -o CMakeFiles\TwisterDriver.elf.dir\Core\Src\stm32g4xx_hal_msp.c.s
 
 CMakeFiles/TwisterDriver.elf.dir/Core/Src/stm32g4xx_it.c.obj: CMakeFiles/TwisterDriver.elf.dir/flags.make
-CMakeFiles/TwisterDriver.elf.dir/Core/Src/stm32g4xx_it.c.obj: E:/Clion_for_STM32/TwisterDriver/Core/Src/stm32g4xx_it.c
+CMakeFiles/TwisterDriver.elf.dir/Core/Src/stm32g4xx_it.c.obj: E:/Clion_for_STM32/TwisterDriver/Software/Core/Src/stm32g4xx_it.c
 CMakeFiles/TwisterDriver.elf.dir/Core/Src/stm32g4xx_it.c.obj: CMakeFiles/TwisterDriver.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\Clion_for_STM32\TwisterDriver\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/TwisterDriver.elf.dir/Core/Src/stm32g4xx_it.c.obj"
-	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/TwisterDriver.elf.dir/Core/Src/stm32g4xx_it.c.obj -MF CMakeFiles\TwisterDriver.elf.dir\Core\Src\stm32g4xx_it.c.obj.d -o CMakeFiles\TwisterDriver.elf.dir\Core\Src\stm32g4xx_it.c.obj -c E:\Clion_for_STM32\TwisterDriver\Core\Src\stm32g4xx_it.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\Clion_for_STM32\TwisterDriver\Software\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/TwisterDriver.elf.dir/Core/Src/stm32g4xx_it.c.obj"
+	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/TwisterDriver.elf.dir/Core/Src/stm32g4xx_it.c.obj -MF CMakeFiles\TwisterDriver.elf.dir\Core\Src\stm32g4xx_it.c.obj.d -o CMakeFiles\TwisterDriver.elf.dir\Core\Src\stm32g4xx_it.c.obj -c E:\Clion_for_STM32\TwisterDriver\Software\Core\Src\stm32g4xx_it.c
 
 CMakeFiles/TwisterDriver.elf.dir/Core/Src/stm32g4xx_it.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/TwisterDriver.elf.dir/Core/Src/stm32g4xx_it.c.i"
-	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E E:\Clion_for_STM32\TwisterDriver\Core\Src\stm32g4xx_it.c > CMakeFiles\TwisterDriver.elf.dir\Core\Src\stm32g4xx_it.c.i
+	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E E:\Clion_for_STM32\TwisterDriver\Software\Core\Src\stm32g4xx_it.c > CMakeFiles\TwisterDriver.elf.dir\Core\Src\stm32g4xx_it.c.i
 
 CMakeFiles/TwisterDriver.elf.dir/Core/Src/stm32g4xx_it.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/TwisterDriver.elf.dir/Core/Src/stm32g4xx_it.c.s"
-	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S E:\Clion_for_STM32\TwisterDriver\Core\Src\stm32g4xx_it.c -o CMakeFiles\TwisterDriver.elf.dir\Core\Src\stm32g4xx_it.c.s
+	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S E:\Clion_for_STM32\TwisterDriver\Software\Core\Src\stm32g4xx_it.c -o CMakeFiles\TwisterDriver.elf.dir\Core\Src\stm32g4xx_it.c.s
 
 CMakeFiles/TwisterDriver.elf.dir/Core/Src/syscalls.c.obj: CMakeFiles/TwisterDriver.elf.dir/flags.make
-CMakeFiles/TwisterDriver.elf.dir/Core/Src/syscalls.c.obj: E:/Clion_for_STM32/TwisterDriver/Core/Src/syscalls.c
+CMakeFiles/TwisterDriver.elf.dir/Core/Src/syscalls.c.obj: E:/Clion_for_STM32/TwisterDriver/Software/Core/Src/syscalls.c
 CMakeFiles/TwisterDriver.elf.dir/Core/Src/syscalls.c.obj: CMakeFiles/TwisterDriver.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\Clion_for_STM32\TwisterDriver\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/TwisterDriver.elf.dir/Core/Src/syscalls.c.obj"
-	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/TwisterDriver.elf.dir/Core/Src/syscalls.c.obj -MF CMakeFiles\TwisterDriver.elf.dir\Core\Src\syscalls.c.obj.d -o CMakeFiles\TwisterDriver.elf.dir\Core\Src\syscalls.c.obj -c E:\Clion_for_STM32\TwisterDriver\Core\Src\syscalls.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\Clion_for_STM32\TwisterDriver\Software\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/TwisterDriver.elf.dir/Core/Src/syscalls.c.obj"
+	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/TwisterDriver.elf.dir/Core/Src/syscalls.c.obj -MF CMakeFiles\TwisterDriver.elf.dir\Core\Src\syscalls.c.obj.d -o CMakeFiles\TwisterDriver.elf.dir\Core\Src\syscalls.c.obj -c E:\Clion_for_STM32\TwisterDriver\Software\Core\Src\syscalls.c
 
 CMakeFiles/TwisterDriver.elf.dir/Core/Src/syscalls.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/TwisterDriver.elf.dir/Core/Src/syscalls.c.i"
-	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E E:\Clion_for_STM32\TwisterDriver\Core\Src\syscalls.c > CMakeFiles\TwisterDriver.elf.dir\Core\Src\syscalls.c.i
+	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E E:\Clion_for_STM32\TwisterDriver\Software\Core\Src\syscalls.c > CMakeFiles\TwisterDriver.elf.dir\Core\Src\syscalls.c.i
 
 CMakeFiles/TwisterDriver.elf.dir/Core/Src/syscalls.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/TwisterDriver.elf.dir/Core/Src/syscalls.c.s"
-	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S E:\Clion_for_STM32\TwisterDriver\Core\Src\syscalls.c -o CMakeFiles\TwisterDriver.elf.dir\Core\Src\syscalls.c.s
+	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S E:\Clion_for_STM32\TwisterDriver\Software\Core\Src\syscalls.c -o CMakeFiles\TwisterDriver.elf.dir\Core\Src\syscalls.c.s
 
 CMakeFiles/TwisterDriver.elf.dir/Core/Src/sysmem.c.obj: CMakeFiles/TwisterDriver.elf.dir/flags.make
-CMakeFiles/TwisterDriver.elf.dir/Core/Src/sysmem.c.obj: E:/Clion_for_STM32/TwisterDriver/Core/Src/sysmem.c
+CMakeFiles/TwisterDriver.elf.dir/Core/Src/sysmem.c.obj: E:/Clion_for_STM32/TwisterDriver/Software/Core/Src/sysmem.c
 CMakeFiles/TwisterDriver.elf.dir/Core/Src/sysmem.c.obj: CMakeFiles/TwisterDriver.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\Clion_for_STM32\TwisterDriver\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/TwisterDriver.elf.dir/Core/Src/sysmem.c.obj"
-	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/TwisterDriver.elf.dir/Core/Src/sysmem.c.obj -MF CMakeFiles\TwisterDriver.elf.dir\Core\Src\sysmem.c.obj.d -o CMakeFiles\TwisterDriver.elf.dir\Core\Src\sysmem.c.obj -c E:\Clion_for_STM32\TwisterDriver\Core\Src\sysmem.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\Clion_for_STM32\TwisterDriver\Software\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/TwisterDriver.elf.dir/Core/Src/sysmem.c.obj"
+	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/TwisterDriver.elf.dir/Core/Src/sysmem.c.obj -MF CMakeFiles\TwisterDriver.elf.dir\Core\Src\sysmem.c.obj.d -o CMakeFiles\TwisterDriver.elf.dir\Core\Src\sysmem.c.obj -c E:\Clion_for_STM32\TwisterDriver\Software\Core\Src\sysmem.c
 
 CMakeFiles/TwisterDriver.elf.dir/Core/Src/sysmem.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/TwisterDriver.elf.dir/Core/Src/sysmem.c.i"
-	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E E:\Clion_for_STM32\TwisterDriver\Core\Src\sysmem.c > CMakeFiles\TwisterDriver.elf.dir\Core\Src\sysmem.c.i
+	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E E:\Clion_for_STM32\TwisterDriver\Software\Core\Src\sysmem.c > CMakeFiles\TwisterDriver.elf.dir\Core\Src\sysmem.c.i
 
 CMakeFiles/TwisterDriver.elf.dir/Core/Src/sysmem.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/TwisterDriver.elf.dir/Core/Src/sysmem.c.s"
-	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S E:\Clion_for_STM32\TwisterDriver\Core\Src\sysmem.c -o CMakeFiles\TwisterDriver.elf.dir\Core\Src\sysmem.c.s
+	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S E:\Clion_for_STM32\TwisterDriver\Software\Core\Src\sysmem.c -o CMakeFiles\TwisterDriver.elf.dir\Core\Src\sysmem.c.s
 
 CMakeFiles/TwisterDriver.elf.dir/Core/Src/system_stm32g4xx.c.obj: CMakeFiles/TwisterDriver.elf.dir/flags.make
-CMakeFiles/TwisterDriver.elf.dir/Core/Src/system_stm32g4xx.c.obj: E:/Clion_for_STM32/TwisterDriver/Core/Src/system_stm32g4xx.c
+CMakeFiles/TwisterDriver.elf.dir/Core/Src/system_stm32g4xx.c.obj: E:/Clion_for_STM32/TwisterDriver/Software/Core/Src/system_stm32g4xx.c
 CMakeFiles/TwisterDriver.elf.dir/Core/Src/system_stm32g4xx.c.obj: CMakeFiles/TwisterDriver.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\Clion_for_STM32\TwisterDriver\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/TwisterDriver.elf.dir/Core/Src/system_stm32g4xx.c.obj"
-	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/TwisterDriver.elf.dir/Core/Src/system_stm32g4xx.c.obj -MF CMakeFiles\TwisterDriver.elf.dir\Core\Src\system_stm32g4xx.c.obj.d -o CMakeFiles\TwisterDriver.elf.dir\Core\Src\system_stm32g4xx.c.obj -c E:\Clion_for_STM32\TwisterDriver\Core\Src\system_stm32g4xx.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\Clion_for_STM32\TwisterDriver\Software\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/TwisterDriver.elf.dir/Core/Src/system_stm32g4xx.c.obj"
+	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/TwisterDriver.elf.dir/Core/Src/system_stm32g4xx.c.obj -MF CMakeFiles\TwisterDriver.elf.dir\Core\Src\system_stm32g4xx.c.obj.d -o CMakeFiles\TwisterDriver.elf.dir\Core\Src\system_stm32g4xx.c.obj -c E:\Clion_for_STM32\TwisterDriver\Software\Core\Src\system_stm32g4xx.c
 
 CMakeFiles/TwisterDriver.elf.dir/Core/Src/system_stm32g4xx.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/TwisterDriver.elf.dir/Core/Src/system_stm32g4xx.c.i"
-	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E E:\Clion_for_STM32\TwisterDriver\Core\Src\system_stm32g4xx.c > CMakeFiles\TwisterDriver.elf.dir\Core\Src\system_stm32g4xx.c.i
+	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E E:\Clion_for_STM32\TwisterDriver\Software\Core\Src\system_stm32g4xx.c > CMakeFiles\TwisterDriver.elf.dir\Core\Src\system_stm32g4xx.c.i
 
 CMakeFiles/TwisterDriver.elf.dir/Core/Src/system_stm32g4xx.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/TwisterDriver.elf.dir/Core/Src/system_stm32g4xx.c.s"
-	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S E:\Clion_for_STM32\TwisterDriver\Core\Src\system_stm32g4xx.c -o CMakeFiles\TwisterDriver.elf.dir\Core\Src\system_stm32g4xx.c.s
+	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S E:\Clion_for_STM32\TwisterDriver\Software\Core\Src\system_stm32g4xx.c -o CMakeFiles\TwisterDriver.elf.dir\Core\Src\system_stm32g4xx.c.s
 
 CMakeFiles/TwisterDriver.elf.dir/Core/Startup/startup_stm32g431rbtx.s.obj: CMakeFiles/TwisterDriver.elf.dir/flags.make
-CMakeFiles/TwisterDriver.elf.dir/Core/Startup/startup_stm32g431rbtx.s.obj: E:/Clion_for_STM32/TwisterDriver/Core/Startup/startup_stm32g431rbtx.s
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\Clion_for_STM32\TwisterDriver\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building ASM object CMakeFiles/TwisterDriver.elf.dir/Core/Startup/startup_stm32g431rbtx.s.obj"
-	E:\Compiler\bin\arm-none-eabi-gcc.exe $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles\TwisterDriver.elf.dir\Core\Startup\startup_stm32g431rbtx.s.obj -c E:\Clion_for_STM32\TwisterDriver\Core\Startup\startup_stm32g431rbtx.s
+CMakeFiles/TwisterDriver.elf.dir/Core/Startup/startup_stm32g431rbtx.s.obj: E:/Clion_for_STM32/TwisterDriver/Software/Core/Startup/startup_stm32g431rbtx.s
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\Clion_for_STM32\TwisterDriver\Software\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building ASM object CMakeFiles/TwisterDriver.elf.dir/Core/Startup/startup_stm32g431rbtx.s.obj"
+	E:\Compiler\bin\arm-none-eabi-gcc.exe $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles\TwisterDriver.elf.dir\Core\Startup\startup_stm32g431rbtx.s.obj -c E:\Clion_for_STM32\TwisterDriver\Software\Core\Startup\startup_stm32g431rbtx.s
 
 CMakeFiles/TwisterDriver.elf.dir/Core/Startup/startup_stm32g431rbtx.s.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing ASM source to CMakeFiles/TwisterDriver.elf.dir/Core/Startup/startup_stm32g431rbtx.s.i"
-	E:\Compiler\bin\arm-none-eabi-gcc.exe $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -E E:\Clion_for_STM32\TwisterDriver\Core\Startup\startup_stm32g431rbtx.s > CMakeFiles\TwisterDriver.elf.dir\Core\Startup\startup_stm32g431rbtx.s.i
+	E:\Compiler\bin\arm-none-eabi-gcc.exe $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -E E:\Clion_for_STM32\TwisterDriver\Software\Core\Startup\startup_stm32g431rbtx.s > CMakeFiles\TwisterDriver.elf.dir\Core\Startup\startup_stm32g431rbtx.s.i
 
 CMakeFiles/TwisterDriver.elf.dir/Core/Startup/startup_stm32g431rbtx.s.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling ASM source to assembly CMakeFiles/TwisterDriver.elf.dir/Core/Startup/startup_stm32g431rbtx.s.s"
-	E:\Compiler\bin\arm-none-eabi-gcc.exe $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -S E:\Clion_for_STM32\TwisterDriver\Core\Startup\startup_stm32g431rbtx.s -o CMakeFiles\TwisterDriver.elf.dir\Core\Startup\startup_stm32g431rbtx.s.s
+	E:\Compiler\bin\arm-none-eabi-gcc.exe $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -S E:\Clion_for_STM32\TwisterDriver\Software\Core\Startup\startup_stm32g431rbtx.s -o CMakeFiles\TwisterDriver.elf.dir\Core\Startup\startup_stm32g431rbtx.s.s
 
 CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal.c.obj: CMakeFiles/TwisterDriver.elf.dir/flags.make
-CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal.c.obj: E:/Clion_for_STM32/TwisterDriver/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal.c
+CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal.c.obj: E:/Clion_for_STM32/TwisterDriver/Software/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal.c
 CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal.c.obj: CMakeFiles/TwisterDriver.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\Clion_for_STM32\TwisterDriver\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal.c.obj"
-	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal.c.obj -MF CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal.c.obj.d -o CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal.c.obj -c E:\Clion_for_STM32\TwisterDriver\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\Clion_for_STM32\TwisterDriver\Software\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal.c.obj"
+	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal.c.obj -MF CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal.c.obj.d -o CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal.c.obj -c E:\Clion_for_STM32\TwisterDriver\Software\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal.c
 
 CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal.c.i"
-	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E E:\Clion_for_STM32\TwisterDriver\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal.c > CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal.c.i
+	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E E:\Clion_for_STM32\TwisterDriver\Software\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal.c > CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal.c.i
 
 CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal.c.s"
-	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S E:\Clion_for_STM32\TwisterDriver\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal.c -o CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal.c.s
+	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S E:\Clion_for_STM32\TwisterDriver\Software\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal.c -o CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal.c.s
 
 CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_adc.c.obj: CMakeFiles/TwisterDriver.elf.dir/flags.make
-CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_adc.c.obj: E:/Clion_for_STM32/TwisterDriver/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_adc.c
+CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_adc.c.obj: E:/Clion_for_STM32/TwisterDriver/Software/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_adc.c
 CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_adc.c.obj: CMakeFiles/TwisterDriver.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\Clion_for_STM32\TwisterDriver\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_adc.c.obj"
-	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_adc.c.obj -MF CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_adc.c.obj.d -o CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_adc.c.obj -c E:\Clion_for_STM32\TwisterDriver\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_adc.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\Clion_for_STM32\TwisterDriver\Software\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_adc.c.obj"
+	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_adc.c.obj -MF CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_adc.c.obj.d -o CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_adc.c.obj -c E:\Clion_for_STM32\TwisterDriver\Software\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_adc.c
 
 CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_adc.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_adc.c.i"
-	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E E:\Clion_for_STM32\TwisterDriver\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_adc.c > CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_adc.c.i
+	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E E:\Clion_for_STM32\TwisterDriver\Software\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_adc.c > CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_adc.c.i
 
 CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_adc.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_adc.c.s"
-	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S E:\Clion_for_STM32\TwisterDriver\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_adc.c -o CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_adc.c.s
+	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S E:\Clion_for_STM32\TwisterDriver\Software\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_adc.c -o CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_adc.c.s
 
 CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_adc_ex.c.obj: CMakeFiles/TwisterDriver.elf.dir/flags.make
-CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_adc_ex.c.obj: E:/Clion_for_STM32/TwisterDriver/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_adc_ex.c
+CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_adc_ex.c.obj: E:/Clion_for_STM32/TwisterDriver/Software/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_adc_ex.c
 CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_adc_ex.c.obj: CMakeFiles/TwisterDriver.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\Clion_for_STM32\TwisterDriver\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_adc_ex.c.obj"
-	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_adc_ex.c.obj -MF CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_adc_ex.c.obj.d -o CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_adc_ex.c.obj -c E:\Clion_for_STM32\TwisterDriver\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_adc_ex.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\Clion_for_STM32\TwisterDriver\Software\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_adc_ex.c.obj"
+	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_adc_ex.c.obj -MF CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_adc_ex.c.obj.d -o CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_adc_ex.c.obj -c E:\Clion_for_STM32\TwisterDriver\Software\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_adc_ex.c
 
 CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_adc_ex.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_adc_ex.c.i"
-	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E E:\Clion_for_STM32\TwisterDriver\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_adc_ex.c > CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_adc_ex.c.i
+	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E E:\Clion_for_STM32\TwisterDriver\Software\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_adc_ex.c > CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_adc_ex.c.i
 
 CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_adc_ex.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_adc_ex.c.s"
-	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S E:\Clion_for_STM32\TwisterDriver\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_adc_ex.c -o CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_adc_ex.c.s
+	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S E:\Clion_for_STM32\TwisterDriver\Software\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_adc_ex.c -o CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_adc_ex.c.s
 
 CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_cortex.c.obj: CMakeFiles/TwisterDriver.elf.dir/flags.make
-CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_cortex.c.obj: E:/Clion_for_STM32/TwisterDriver/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_cortex.c
+CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_cortex.c.obj: E:/Clion_for_STM32/TwisterDriver/Software/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_cortex.c
 CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_cortex.c.obj: CMakeFiles/TwisterDriver.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\Clion_for_STM32\TwisterDriver\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building C object CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_cortex.c.obj"
-	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_cortex.c.obj -MF CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_cortex.c.obj.d -o CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_cortex.c.obj -c E:\Clion_for_STM32\TwisterDriver\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_cortex.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\Clion_for_STM32\TwisterDriver\Software\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building C object CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_cortex.c.obj"
+	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_cortex.c.obj -MF CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_cortex.c.obj.d -o CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_cortex.c.obj -c E:\Clion_for_STM32\TwisterDriver\Software\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_cortex.c
 
 CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_cortex.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_cortex.c.i"
-	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E E:\Clion_for_STM32\TwisterDriver\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_cortex.c > CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_cortex.c.i
+	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E E:\Clion_for_STM32\TwisterDriver\Software\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_cortex.c > CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_cortex.c.i
 
 CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_cortex.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_cortex.c.s"
-	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S E:\Clion_for_STM32\TwisterDriver\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_cortex.c -o CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_cortex.c.s
+	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S E:\Clion_for_STM32\TwisterDriver\Software\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_cortex.c -o CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_cortex.c.s
 
 CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma.c.obj: CMakeFiles/TwisterDriver.elf.dir/flags.make
-CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma.c.obj: E:/Clion_for_STM32/TwisterDriver/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma.c
+CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma.c.obj: E:/Clion_for_STM32/TwisterDriver/Software/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma.c
 CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma.c.obj: CMakeFiles/TwisterDriver.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\Clion_for_STM32\TwisterDriver\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building C object CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma.c.obj"
-	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma.c.obj -MF CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_dma.c.obj.d -o CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_dma.c.obj -c E:\Clion_for_STM32\TwisterDriver\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_dma.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\Clion_for_STM32\TwisterDriver\Software\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building C object CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma.c.obj"
+	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma.c.obj -MF CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_dma.c.obj.d -o CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_dma.c.obj -c E:\Clion_for_STM32\TwisterDriver\Software\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_dma.c
 
 CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma.c.i"
-	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E E:\Clion_for_STM32\TwisterDriver\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_dma.c > CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_dma.c.i
+	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E E:\Clion_for_STM32\TwisterDriver\Software\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_dma.c > CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_dma.c.i
 
 CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma.c.s"
-	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S E:\Clion_for_STM32\TwisterDriver\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_dma.c -o CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_dma.c.s
+	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S E:\Clion_for_STM32\TwisterDriver\Software\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_dma.c -o CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_dma.c.s
 
 CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma_ex.c.obj: CMakeFiles/TwisterDriver.elf.dir/flags.make
-CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma_ex.c.obj: E:/Clion_for_STM32/TwisterDriver/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma_ex.c
+CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma_ex.c.obj: E:/Clion_for_STM32/TwisterDriver/Software/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma_ex.c
 CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma_ex.c.obj: CMakeFiles/TwisterDriver.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\Clion_for_STM32\TwisterDriver\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building C object CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma_ex.c.obj"
-	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma_ex.c.obj -MF CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_dma_ex.c.obj.d -o CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_dma_ex.c.obj -c E:\Clion_for_STM32\TwisterDriver\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_dma_ex.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\Clion_for_STM32\TwisterDriver\Software\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building C object CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma_ex.c.obj"
+	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma_ex.c.obj -MF CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_dma_ex.c.obj.d -o CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_dma_ex.c.obj -c E:\Clion_for_STM32\TwisterDriver\Software\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_dma_ex.c
 
 CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma_ex.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma_ex.c.i"
-	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E E:\Clion_for_STM32\TwisterDriver\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_dma_ex.c > CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_dma_ex.c.i
+	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E E:\Clion_for_STM32\TwisterDriver\Software\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_dma_ex.c > CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_dma_ex.c.i
 
 CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma_ex.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma_ex.c.s"
-	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S E:\Clion_for_STM32\TwisterDriver\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_dma_ex.c -o CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_dma_ex.c.s
+	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S E:\Clion_for_STM32\TwisterDriver\Software\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_dma_ex.c -o CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_dma_ex.c.s
 
 CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c.obj: CMakeFiles/TwisterDriver.elf.dir/flags.make
-CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c.obj: E:/Clion_for_STM32/TwisterDriver/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c
+CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c.obj: E:/Clion_for_STM32/TwisterDriver/Software/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c
 CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c.obj: CMakeFiles/TwisterDriver.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\Clion_for_STM32\TwisterDriver\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building C object CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c.obj"
-	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c.obj -MF CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_exti.c.obj.d -o CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_exti.c.obj -c E:\Clion_for_STM32\TwisterDriver\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_exti.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\Clion_for_STM32\TwisterDriver\Software\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building C object CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c.obj"
+	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c.obj -MF CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_exti.c.obj.d -o CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_exti.c.obj -c E:\Clion_for_STM32\TwisterDriver\Software\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_exti.c
 
 CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c.i"
-	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E E:\Clion_for_STM32\TwisterDriver\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_exti.c > CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_exti.c.i
+	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E E:\Clion_for_STM32\TwisterDriver\Software\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_exti.c > CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_exti.c.i
 
 CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c.s"
-	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S E:\Clion_for_STM32\TwisterDriver\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_exti.c -o CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_exti.c.s
+	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S E:\Clion_for_STM32\TwisterDriver\Software\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_exti.c -o CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_exti.c.s
 
 CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_fdcan.c.obj: CMakeFiles/TwisterDriver.elf.dir/flags.make
-CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_fdcan.c.obj: E:/Clion_for_STM32/TwisterDriver/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_fdcan.c
+CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_fdcan.c.obj: E:/Clion_for_STM32/TwisterDriver/Software/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_fdcan.c
 CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_fdcan.c.obj: CMakeFiles/TwisterDriver.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\Clion_for_STM32\TwisterDriver\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building C object CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_fdcan.c.obj"
-	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_fdcan.c.obj -MF CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_fdcan.c.obj.d -o CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_fdcan.c.obj -c E:\Clion_for_STM32\TwisterDriver\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_fdcan.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\Clion_for_STM32\TwisterDriver\Software\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building C object CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_fdcan.c.obj"
+	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_fdcan.c.obj -MF CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_fdcan.c.obj.d -o CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_fdcan.c.obj -c E:\Clion_for_STM32\TwisterDriver\Software\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_fdcan.c
 
 CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_fdcan.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_fdcan.c.i"
-	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E E:\Clion_for_STM32\TwisterDriver\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_fdcan.c > CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_fdcan.c.i
+	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E E:\Clion_for_STM32\TwisterDriver\Software\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_fdcan.c > CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_fdcan.c.i
 
 CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_fdcan.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_fdcan.c.s"
-	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S E:\Clion_for_STM32\TwisterDriver\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_fdcan.c -o CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_fdcan.c.s
+	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S E:\Clion_for_STM32\TwisterDriver\Software\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_fdcan.c -o CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_fdcan.c.s
 
 CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash.c.obj: CMakeFiles/TwisterDriver.elf.dir/flags.make
-CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash.c.obj: E:/Clion_for_STM32/TwisterDriver/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash.c
+CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash.c.obj: E:/Clion_for_STM32/TwisterDriver/Software/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash.c
 CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash.c.obj: CMakeFiles/TwisterDriver.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\Clion_for_STM32\TwisterDriver\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building C object CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash.c.obj"
-	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash.c.obj -MF CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_flash.c.obj.d -o CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_flash.c.obj -c E:\Clion_for_STM32\TwisterDriver\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_flash.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\Clion_for_STM32\TwisterDriver\Software\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building C object CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash.c.obj"
+	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash.c.obj -MF CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_flash.c.obj.d -o CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_flash.c.obj -c E:\Clion_for_STM32\TwisterDriver\Software\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_flash.c
 
 CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash.c.i"
-	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E E:\Clion_for_STM32\TwisterDriver\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_flash.c > CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_flash.c.i
+	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E E:\Clion_for_STM32\TwisterDriver\Software\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_flash.c > CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_flash.c.i
 
 CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash.c.s"
-	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S E:\Clion_for_STM32\TwisterDriver\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_flash.c -o CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_flash.c.s
+	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S E:\Clion_for_STM32\TwisterDriver\Software\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_flash.c -o CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_flash.c.s
 
 CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash_ex.c.obj: CMakeFiles/TwisterDriver.elf.dir/flags.make
-CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash_ex.c.obj: E:/Clion_for_STM32/TwisterDriver/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash_ex.c
+CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash_ex.c.obj: E:/Clion_for_STM32/TwisterDriver/Software/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash_ex.c
 CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash_ex.c.obj: CMakeFiles/TwisterDriver.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\Clion_for_STM32\TwisterDriver\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building C object CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash_ex.c.obj"
-	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash_ex.c.obj -MF CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_flash_ex.c.obj.d -o CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_flash_ex.c.obj -c E:\Clion_for_STM32\TwisterDriver\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_flash_ex.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\Clion_for_STM32\TwisterDriver\Software\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building C object CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash_ex.c.obj"
+	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash_ex.c.obj -MF CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_flash_ex.c.obj.d -o CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_flash_ex.c.obj -c E:\Clion_for_STM32\TwisterDriver\Software\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_flash_ex.c
 
 CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash_ex.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash_ex.c.i"
-	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E E:\Clion_for_STM32\TwisterDriver\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_flash_ex.c > CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_flash_ex.c.i
+	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E E:\Clion_for_STM32\TwisterDriver\Software\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_flash_ex.c > CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_flash_ex.c.i
 
 CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash_ex.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash_ex.c.s"
-	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S E:\Clion_for_STM32\TwisterDriver\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_flash_ex.c -o CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_flash_ex.c.s
+	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S E:\Clion_for_STM32\TwisterDriver\Software\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_flash_ex.c -o CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_flash_ex.c.s
 
 CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash_ramfunc.c.obj: CMakeFiles/TwisterDriver.elf.dir/flags.make
-CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash_ramfunc.c.obj: E:/Clion_for_STM32/TwisterDriver/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash_ramfunc.c
+CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash_ramfunc.c.obj: E:/Clion_for_STM32/TwisterDriver/Software/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash_ramfunc.c
 CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash_ramfunc.c.obj: CMakeFiles/TwisterDriver.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\Clion_for_STM32\TwisterDriver\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building C object CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash_ramfunc.c.obj"
-	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash_ramfunc.c.obj -MF CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_flash_ramfunc.c.obj.d -o CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_flash_ramfunc.c.obj -c E:\Clion_for_STM32\TwisterDriver\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_flash_ramfunc.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\Clion_for_STM32\TwisterDriver\Software\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building C object CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash_ramfunc.c.obj"
+	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash_ramfunc.c.obj -MF CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_flash_ramfunc.c.obj.d -o CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_flash_ramfunc.c.obj -c E:\Clion_for_STM32\TwisterDriver\Software\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_flash_ramfunc.c
 
 CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash_ramfunc.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash_ramfunc.c.i"
-	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E E:\Clion_for_STM32\TwisterDriver\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_flash_ramfunc.c > CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_flash_ramfunc.c.i
+	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E E:\Clion_for_STM32\TwisterDriver\Software\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_flash_ramfunc.c > CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_flash_ramfunc.c.i
 
 CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash_ramfunc.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash_ramfunc.c.s"
-	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S E:\Clion_for_STM32\TwisterDriver\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_flash_ramfunc.c -o CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_flash_ramfunc.c.s
+	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S E:\Clion_for_STM32\TwisterDriver\Software\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_flash_ramfunc.c -o CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_flash_ramfunc.c.s
 
 CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_gpio.c.obj: CMakeFiles/TwisterDriver.elf.dir/flags.make
-CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_gpio.c.obj: E:/Clion_for_STM32/TwisterDriver/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_gpio.c
+CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_gpio.c.obj: E:/Clion_for_STM32/TwisterDriver/Software/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_gpio.c
 CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_gpio.c.obj: CMakeFiles/TwisterDriver.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\Clion_for_STM32\TwisterDriver\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building C object CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_gpio.c.obj"
-	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_gpio.c.obj -MF CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_gpio.c.obj.d -o CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_gpio.c.obj -c E:\Clion_for_STM32\TwisterDriver\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_gpio.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\Clion_for_STM32\TwisterDriver\Software\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building C object CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_gpio.c.obj"
+	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_gpio.c.obj -MF CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_gpio.c.obj.d -o CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_gpio.c.obj -c E:\Clion_for_STM32\TwisterDriver\Software\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_gpio.c
 
 CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_gpio.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_gpio.c.i"
-	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E E:\Clion_for_STM32\TwisterDriver\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_gpio.c > CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_gpio.c.i
+	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E E:\Clion_for_STM32\TwisterDriver\Software\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_gpio.c > CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_gpio.c.i
 
 CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_gpio.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_gpio.c.s"
-	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S E:\Clion_for_STM32\TwisterDriver\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_gpio.c -o CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_gpio.c.s
+	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S E:\Clion_for_STM32\TwisterDriver\Software\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_gpio.c -o CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_gpio.c.s
 
 CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_i2c.c.obj: CMakeFiles/TwisterDriver.elf.dir/flags.make
-CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_i2c.c.obj: E:/Clion_for_STM32/TwisterDriver/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_i2c.c
+CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_i2c.c.obj: E:/Clion_for_STM32/TwisterDriver/Software/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_i2c.c
 CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_i2c.c.obj: CMakeFiles/TwisterDriver.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\Clion_for_STM32\TwisterDriver\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building C object CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_i2c.c.obj"
-	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_i2c.c.obj -MF CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_i2c.c.obj.d -o CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_i2c.c.obj -c E:\Clion_for_STM32\TwisterDriver\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_i2c.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\Clion_for_STM32\TwisterDriver\Software\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building C object CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_i2c.c.obj"
+	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_i2c.c.obj -MF CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_i2c.c.obj.d -o CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_i2c.c.obj -c E:\Clion_for_STM32\TwisterDriver\Software\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_i2c.c
 
 CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_i2c.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_i2c.c.i"
-	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E E:\Clion_for_STM32\TwisterDriver\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_i2c.c > CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_i2c.c.i
+	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E E:\Clion_for_STM32\TwisterDriver\Software\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_i2c.c > CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_i2c.c.i
 
 CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_i2c.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_i2c.c.s"
-	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S E:\Clion_for_STM32\TwisterDriver\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_i2c.c -o CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_i2c.c.s
+	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S E:\Clion_for_STM32\TwisterDriver\Software\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_i2c.c -o CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_i2c.c.s
 
 CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_i2c_ex.c.obj: CMakeFiles/TwisterDriver.elf.dir/flags.make
-CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_i2c_ex.c.obj: E:/Clion_for_STM32/TwisterDriver/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_i2c_ex.c
+CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_i2c_ex.c.obj: E:/Clion_for_STM32/TwisterDriver/Software/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_i2c_ex.c
 CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_i2c_ex.c.obj: CMakeFiles/TwisterDriver.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\Clion_for_STM32\TwisterDriver\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building C object CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_i2c_ex.c.obj"
-	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_i2c_ex.c.obj -MF CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_i2c_ex.c.obj.d -o CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_i2c_ex.c.obj -c E:\Clion_for_STM32\TwisterDriver\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_i2c_ex.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\Clion_for_STM32\TwisterDriver\Software\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building C object CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_i2c_ex.c.obj"
+	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_i2c_ex.c.obj -MF CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_i2c_ex.c.obj.d -o CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_i2c_ex.c.obj -c E:\Clion_for_STM32\TwisterDriver\Software\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_i2c_ex.c
 
 CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_i2c_ex.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_i2c_ex.c.i"
-	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E E:\Clion_for_STM32\TwisterDriver\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_i2c_ex.c > CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_i2c_ex.c.i
+	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E E:\Clion_for_STM32\TwisterDriver\Software\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_i2c_ex.c > CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_i2c_ex.c.i
 
 CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_i2c_ex.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_i2c_ex.c.s"
-	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S E:\Clion_for_STM32\TwisterDriver\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_i2c_ex.c -o CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_i2c_ex.c.s
+	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S E:\Clion_for_STM32\TwisterDriver\Software\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_i2c_ex.c -o CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_i2c_ex.c.s
 
 CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr.c.obj: CMakeFiles/TwisterDriver.elf.dir/flags.make
-CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr.c.obj: E:/Clion_for_STM32/TwisterDriver/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr.c
+CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr.c.obj: E:/Clion_for_STM32/TwisterDriver/Software/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr.c
 CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr.c.obj: CMakeFiles/TwisterDriver.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\Clion_for_STM32\TwisterDriver\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building C object CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr.c.obj"
-	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr.c.obj -MF CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_pwr.c.obj.d -o CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_pwr.c.obj -c E:\Clion_for_STM32\TwisterDriver\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_pwr.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\Clion_for_STM32\TwisterDriver\Software\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building C object CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr.c.obj"
+	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr.c.obj -MF CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_pwr.c.obj.d -o CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_pwr.c.obj -c E:\Clion_for_STM32\TwisterDriver\Software\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_pwr.c
 
 CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr.c.i"
-	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E E:\Clion_for_STM32\TwisterDriver\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_pwr.c > CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_pwr.c.i
+	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E E:\Clion_for_STM32\TwisterDriver\Software\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_pwr.c > CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_pwr.c.i
 
 CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr.c.s"
-	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S E:\Clion_for_STM32\TwisterDriver\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_pwr.c -o CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_pwr.c.s
+	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S E:\Clion_for_STM32\TwisterDriver\Software\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_pwr.c -o CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_pwr.c.s
 
 CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr_ex.c.obj: CMakeFiles/TwisterDriver.elf.dir/flags.make
-CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr_ex.c.obj: E:/Clion_for_STM32/TwisterDriver/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr_ex.c
+CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr_ex.c.obj: E:/Clion_for_STM32/TwisterDriver/Software/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr_ex.c
 CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr_ex.c.obj: CMakeFiles/TwisterDriver.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\Clion_for_STM32\TwisterDriver\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building C object CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr_ex.c.obj"
-	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr_ex.c.obj -MF CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_pwr_ex.c.obj.d -o CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_pwr_ex.c.obj -c E:\Clion_for_STM32\TwisterDriver\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_pwr_ex.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\Clion_for_STM32\TwisterDriver\Software\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building C object CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr_ex.c.obj"
+	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr_ex.c.obj -MF CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_pwr_ex.c.obj.d -o CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_pwr_ex.c.obj -c E:\Clion_for_STM32\TwisterDriver\Software\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_pwr_ex.c
 
 CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr_ex.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr_ex.c.i"
-	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E E:\Clion_for_STM32\TwisterDriver\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_pwr_ex.c > CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_pwr_ex.c.i
+	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E E:\Clion_for_STM32\TwisterDriver\Software\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_pwr_ex.c > CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_pwr_ex.c.i
 
 CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr_ex.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr_ex.c.s"
-	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S E:\Clion_for_STM32\TwisterDriver\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_pwr_ex.c -o CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_pwr_ex.c.s
+	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S E:\Clion_for_STM32\TwisterDriver\Software\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_pwr_ex.c -o CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_pwr_ex.c.s
 
 CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c.obj: CMakeFiles/TwisterDriver.elf.dir/flags.make
-CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c.obj: E:/Clion_for_STM32/TwisterDriver/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c
+CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c.obj: E:/Clion_for_STM32/TwisterDriver/Software/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c
 CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c.obj: CMakeFiles/TwisterDriver.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\Clion_for_STM32\TwisterDriver\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building C object CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c.obj"
-	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c.obj -MF CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_rcc.c.obj.d -o CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_rcc.c.obj -c E:\Clion_for_STM32\TwisterDriver\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_rcc.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\Clion_for_STM32\TwisterDriver\Software\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building C object CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c.obj"
+	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c.obj -MF CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_rcc.c.obj.d -o CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_rcc.c.obj -c E:\Clion_for_STM32\TwisterDriver\Software\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_rcc.c
 
 CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c.i"
-	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E E:\Clion_for_STM32\TwisterDriver\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_rcc.c > CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_rcc.c.i
+	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E E:\Clion_for_STM32\TwisterDriver\Software\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_rcc.c > CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_rcc.c.i
 
 CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c.s"
-	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S E:\Clion_for_STM32\TwisterDriver\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_rcc.c -o CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_rcc.c.s
+	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S E:\Clion_for_STM32\TwisterDriver\Software\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_rcc.c -o CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_rcc.c.s
 
 CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc_ex.c.obj: CMakeFiles/TwisterDriver.elf.dir/flags.make
-CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc_ex.c.obj: E:/Clion_for_STM32/TwisterDriver/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc_ex.c
+CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc_ex.c.obj: E:/Clion_for_STM32/TwisterDriver/Software/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc_ex.c
 CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc_ex.c.obj: CMakeFiles/TwisterDriver.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\Clion_for_STM32\TwisterDriver\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building C object CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc_ex.c.obj"
-	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc_ex.c.obj -MF CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_rcc_ex.c.obj.d -o CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_rcc_ex.c.obj -c E:\Clion_for_STM32\TwisterDriver\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_rcc_ex.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\Clion_for_STM32\TwisterDriver\Software\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building C object CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc_ex.c.obj"
+	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc_ex.c.obj -MF CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_rcc_ex.c.obj.d -o CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_rcc_ex.c.obj -c E:\Clion_for_STM32\TwisterDriver\Software\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_rcc_ex.c
 
 CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc_ex.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc_ex.c.i"
-	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E E:\Clion_for_STM32\TwisterDriver\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_rcc_ex.c > CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_rcc_ex.c.i
+	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E E:\Clion_for_STM32\TwisterDriver\Software\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_rcc_ex.c > CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_rcc_ex.c.i
 
 CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc_ex.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc_ex.c.s"
-	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S E:\Clion_for_STM32\TwisterDriver\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_rcc_ex.c -o CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_rcc_ex.c.s
+	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S E:\Clion_for_STM32\TwisterDriver\Software\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_rcc_ex.c -o CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_rcc_ex.c.s
 
 CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_spi.c.obj: CMakeFiles/TwisterDriver.elf.dir/flags.make
-CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_spi.c.obj: E:/Clion_for_STM32/TwisterDriver/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_spi.c
+CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_spi.c.obj: E:/Clion_for_STM32/TwisterDriver/Software/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_spi.c
 CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_spi.c.obj: CMakeFiles/TwisterDriver.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\Clion_for_STM32\TwisterDriver\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building C object CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_spi.c.obj"
-	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_spi.c.obj -MF CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_spi.c.obj.d -o CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_spi.c.obj -c E:\Clion_for_STM32\TwisterDriver\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_spi.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\Clion_for_STM32\TwisterDriver\Software\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building C object CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_spi.c.obj"
+	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_spi.c.obj -MF CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_spi.c.obj.d -o CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_spi.c.obj -c E:\Clion_for_STM32\TwisterDriver\Software\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_spi.c
 
 CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_spi.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_spi.c.i"
-	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E E:\Clion_for_STM32\TwisterDriver\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_spi.c > CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_spi.c.i
+	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E E:\Clion_for_STM32\TwisterDriver\Software\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_spi.c > CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_spi.c.i
 
 CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_spi.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_spi.c.s"
-	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S E:\Clion_for_STM32\TwisterDriver\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_spi.c -o CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_spi.c.s
+	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S E:\Clion_for_STM32\TwisterDriver\Software\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_spi.c -o CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_spi.c.s
 
 CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_spi_ex.c.obj: CMakeFiles/TwisterDriver.elf.dir/flags.make
-CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_spi_ex.c.obj: E:/Clion_for_STM32/TwisterDriver/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_spi_ex.c
+CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_spi_ex.c.obj: E:/Clion_for_STM32/TwisterDriver/Software/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_spi_ex.c
 CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_spi_ex.c.obj: CMakeFiles/TwisterDriver.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\Clion_for_STM32\TwisterDriver\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building C object CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_spi_ex.c.obj"
-	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_spi_ex.c.obj -MF CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_spi_ex.c.obj.d -o CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_spi_ex.c.obj -c E:\Clion_for_STM32\TwisterDriver\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_spi_ex.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\Clion_for_STM32\TwisterDriver\Software\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building C object CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_spi_ex.c.obj"
+	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_spi_ex.c.obj -MF CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_spi_ex.c.obj.d -o CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_spi_ex.c.obj -c E:\Clion_for_STM32\TwisterDriver\Software\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_spi_ex.c
 
 CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_spi_ex.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_spi_ex.c.i"
-	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E E:\Clion_for_STM32\TwisterDriver\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_spi_ex.c > CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_spi_ex.c.i
+	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E E:\Clion_for_STM32\TwisterDriver\Software\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_spi_ex.c > CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_spi_ex.c.i
 
 CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_spi_ex.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_spi_ex.c.s"
-	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S E:\Clion_for_STM32\TwisterDriver\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_spi_ex.c -o CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_spi_ex.c.s
+	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S E:\Clion_for_STM32\TwisterDriver\Software\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_spi_ex.c -o CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_spi_ex.c.s
 
 CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_tim.c.obj: CMakeFiles/TwisterDriver.elf.dir/flags.make
-CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_tim.c.obj: E:/Clion_for_STM32/TwisterDriver/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_tim.c
+CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_tim.c.obj: E:/Clion_for_STM32/TwisterDriver/Software/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_tim.c
 CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_tim.c.obj: CMakeFiles/TwisterDriver.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\Clion_for_STM32\TwisterDriver\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building C object CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_tim.c.obj"
-	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_tim.c.obj -MF CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_tim.c.obj.d -o CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_tim.c.obj -c E:\Clion_for_STM32\TwisterDriver\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_tim.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\Clion_for_STM32\TwisterDriver\Software\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building C object CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_tim.c.obj"
+	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_tim.c.obj -MF CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_tim.c.obj.d -o CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_tim.c.obj -c E:\Clion_for_STM32\TwisterDriver\Software\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_tim.c
 
 CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_tim.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_tim.c.i"
-	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E E:\Clion_for_STM32\TwisterDriver\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_tim.c > CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_tim.c.i
+	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E E:\Clion_for_STM32\TwisterDriver\Software\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_tim.c > CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_tim.c.i
 
 CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_tim.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_tim.c.s"
-	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S E:\Clion_for_STM32\TwisterDriver\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_tim.c -o CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_tim.c.s
+	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S E:\Clion_for_STM32\TwisterDriver\Software\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_tim.c -o CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_tim.c.s
 
 CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_tim_ex.c.obj: CMakeFiles/TwisterDriver.elf.dir/flags.make
-CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_tim_ex.c.obj: E:/Clion_for_STM32/TwisterDriver/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_tim_ex.c
+CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_tim_ex.c.obj: E:/Clion_for_STM32/TwisterDriver/Software/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_tim_ex.c
 CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_tim_ex.c.obj: CMakeFiles/TwisterDriver.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\Clion_for_STM32\TwisterDriver\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building C object CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_tim_ex.c.obj"
-	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_tim_ex.c.obj -MF CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_tim_ex.c.obj.d -o CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_tim_ex.c.obj -c E:\Clion_for_STM32\TwisterDriver\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_tim_ex.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\Clion_for_STM32\TwisterDriver\Software\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building C object CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_tim_ex.c.obj"
+	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_tim_ex.c.obj -MF CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_tim_ex.c.obj.d -o CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_tim_ex.c.obj -c E:\Clion_for_STM32\TwisterDriver\Software\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_tim_ex.c
 
 CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_tim_ex.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_tim_ex.c.i"
-	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E E:\Clion_for_STM32\TwisterDriver\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_tim_ex.c > CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_tim_ex.c.i
+	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E E:\Clion_for_STM32\TwisterDriver\Software\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_tim_ex.c > CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_tim_ex.c.i
 
 CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_tim_ex.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_tim_ex.c.s"
-	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S E:\Clion_for_STM32\TwisterDriver\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_tim_ex.c -o CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_tim_ex.c.s
+	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S E:\Clion_for_STM32\TwisterDriver\Software\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_tim_ex.c -o CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_tim_ex.c.s
 
 CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c.obj: CMakeFiles/TwisterDriver.elf.dir/flags.make
-CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c.obj: E:/Clion_for_STM32/TwisterDriver/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c
+CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c.obj: E:/Clion_for_STM32/TwisterDriver/Software/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c
 CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c.obj: CMakeFiles/TwisterDriver.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\Clion_for_STM32\TwisterDriver\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building C object CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c.obj"
-	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c.obj -MF CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_uart.c.obj.d -o CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_uart.c.obj -c E:\Clion_for_STM32\TwisterDriver\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_uart.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\Clion_for_STM32\TwisterDriver\Software\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building C object CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c.obj"
+	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c.obj -MF CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_uart.c.obj.d -o CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_uart.c.obj -c E:\Clion_for_STM32\TwisterDriver\Software\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_uart.c
 
 CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c.i"
-	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E E:\Clion_for_STM32\TwisterDriver\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_uart.c > CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_uart.c.i
+	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E E:\Clion_for_STM32\TwisterDriver\Software\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_uart.c > CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_uart.c.i
 
 CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c.s"
-	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S E:\Clion_for_STM32\TwisterDriver\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_uart.c -o CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_uart.c.s
+	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S E:\Clion_for_STM32\TwisterDriver\Software\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_uart.c -o CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_uart.c.s
 
 CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart_ex.c.obj: CMakeFiles/TwisterDriver.elf.dir/flags.make
-CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart_ex.c.obj: E:/Clion_for_STM32/TwisterDriver/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart_ex.c
+CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart_ex.c.obj: E:/Clion_for_STM32/TwisterDriver/Software/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart_ex.c
 CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart_ex.c.obj: CMakeFiles/TwisterDriver.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\Clion_for_STM32\TwisterDriver\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Building C object CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart_ex.c.obj"
-	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart_ex.c.obj -MF CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_uart_ex.c.obj.d -o CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_uart_ex.c.obj -c E:\Clion_for_STM32\TwisterDriver\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_uart_ex.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\Clion_for_STM32\TwisterDriver\Software\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Building C object CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart_ex.c.obj"
+	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart_ex.c.obj -MF CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_uart_ex.c.obj.d -o CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_uart_ex.c.obj -c E:\Clion_for_STM32\TwisterDriver\Software\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_uart_ex.c
 
 CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart_ex.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart_ex.c.i"
-	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E E:\Clion_for_STM32\TwisterDriver\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_uart_ex.c > CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_uart_ex.c.i
+	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E E:\Clion_for_STM32\TwisterDriver\Software\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_uart_ex.c > CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_uart_ex.c.i
 
 CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart_ex.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart_ex.c.s"
-	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S E:\Clion_for_STM32\TwisterDriver\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_uart_ex.c -o CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_uart_ex.c.s
+	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S E:\Clion_for_STM32\TwisterDriver\Software\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_uart_ex.c -o CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_uart_ex.c.s
 
 CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_adc.c.obj: CMakeFiles/TwisterDriver.elf.dir/flags.make
-CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_adc.c.obj: E:/Clion_for_STM32/TwisterDriver/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_adc.c
+CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_adc.c.obj: E:/Clion_for_STM32/TwisterDriver/Software/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_adc.c
 CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_adc.c.obj: CMakeFiles/TwisterDriver.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\Clion_for_STM32\TwisterDriver\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Building C object CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_adc.c.obj"
-	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_adc.c.obj -MF CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_ll_adc.c.obj.d -o CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_ll_adc.c.obj -c E:\Clion_for_STM32\TwisterDriver\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_ll_adc.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\Clion_for_STM32\TwisterDriver\Software\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Building C object CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_adc.c.obj"
+	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_adc.c.obj -MF CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_ll_adc.c.obj.d -o CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_ll_adc.c.obj -c E:\Clion_for_STM32\TwisterDriver\Software\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_ll_adc.c
 
 CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_adc.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_adc.c.i"
-	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E E:\Clion_for_STM32\TwisterDriver\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_ll_adc.c > CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_ll_adc.c.i
+	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E E:\Clion_for_STM32\TwisterDriver\Software\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_ll_adc.c > CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_ll_adc.c.i
 
 CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_adc.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_adc.c.s"
-	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S E:\Clion_for_STM32\TwisterDriver\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_ll_adc.c -o CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_ll_adc.c.s
+	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S E:\Clion_for_STM32\TwisterDriver\Software\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_ll_adc.c -o CMakeFiles\TwisterDriver.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_ll_adc.c.s
 
 CMakeFiles/TwisterDriver.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.c.obj: CMakeFiles/TwisterDriver.elf.dir/flags.make
-CMakeFiles/TwisterDriver.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.c.obj: E:/Clion_for_STM32/TwisterDriver/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.c
+CMakeFiles/TwisterDriver.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.c.obj: E:/Clion_for_STM32/TwisterDriver/Software/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.c
 CMakeFiles/TwisterDriver.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.c.obj: CMakeFiles/TwisterDriver.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\Clion_for_STM32\TwisterDriver\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_34) "Building C object CMakeFiles/TwisterDriver.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.c.obj"
-	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/TwisterDriver.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.c.obj -MF CMakeFiles\TwisterDriver.elf.dir\Middlewares\Third_Party\FreeRTOS\Source\CMSIS_RTOS\cmsis_os.c.obj.d -o CMakeFiles\TwisterDriver.elf.dir\Middlewares\Third_Party\FreeRTOS\Source\CMSIS_RTOS\cmsis_os.c.obj -c E:\Clion_for_STM32\TwisterDriver\Middlewares\Third_Party\FreeRTOS\Source\CMSIS_RTOS\cmsis_os.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\Clion_for_STM32\TwisterDriver\Software\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_34) "Building C object CMakeFiles/TwisterDriver.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.c.obj"
+	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/TwisterDriver.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.c.obj -MF CMakeFiles\TwisterDriver.elf.dir\Middlewares\Third_Party\FreeRTOS\Source\CMSIS_RTOS\cmsis_os.c.obj.d -o CMakeFiles\TwisterDriver.elf.dir\Middlewares\Third_Party\FreeRTOS\Source\CMSIS_RTOS\cmsis_os.c.obj -c E:\Clion_for_STM32\TwisterDriver\Software\Middlewares\Third_Party\FreeRTOS\Source\CMSIS_RTOS\cmsis_os.c
 
 CMakeFiles/TwisterDriver.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/TwisterDriver.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.c.i"
-	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E E:\Clion_for_STM32\TwisterDriver\Middlewares\Third_Party\FreeRTOS\Source\CMSIS_RTOS\cmsis_os.c > CMakeFiles\TwisterDriver.elf.dir\Middlewares\Third_Party\FreeRTOS\Source\CMSIS_RTOS\cmsis_os.c.i
+	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E E:\Clion_for_STM32\TwisterDriver\Software\Middlewares\Third_Party\FreeRTOS\Source\CMSIS_RTOS\cmsis_os.c > CMakeFiles\TwisterDriver.elf.dir\Middlewares\Third_Party\FreeRTOS\Source\CMSIS_RTOS\cmsis_os.c.i
 
 CMakeFiles/TwisterDriver.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/TwisterDriver.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.c.s"
-	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S E:\Clion_for_STM32\TwisterDriver\Middlewares\Third_Party\FreeRTOS\Source\CMSIS_RTOS\cmsis_os.c -o CMakeFiles\TwisterDriver.elf.dir\Middlewares\Third_Party\FreeRTOS\Source\CMSIS_RTOS\cmsis_os.c.s
+	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S E:\Clion_for_STM32\TwisterDriver\Software\Middlewares\Third_Party\FreeRTOS\Source\CMSIS_RTOS\cmsis_os.c -o CMakeFiles\TwisterDriver.elf.dir\Middlewares\Third_Party\FreeRTOS\Source\CMSIS_RTOS\cmsis_os.c.s
 
 CMakeFiles/TwisterDriver.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/croutine.c.obj: CMakeFiles/TwisterDriver.elf.dir/flags.make
-CMakeFiles/TwisterDriver.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/croutine.c.obj: E:/Clion_for_STM32/TwisterDriver/Middlewares/Third_Party/FreeRTOS/Source/croutine.c
+CMakeFiles/TwisterDriver.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/croutine.c.obj: E:/Clion_for_STM32/TwisterDriver/Software/Middlewares/Third_Party/FreeRTOS/Source/croutine.c
 CMakeFiles/TwisterDriver.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/croutine.c.obj: CMakeFiles/TwisterDriver.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\Clion_for_STM32\TwisterDriver\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_35) "Building C object CMakeFiles/TwisterDriver.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/croutine.c.obj"
-	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/TwisterDriver.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/croutine.c.obj -MF CMakeFiles\TwisterDriver.elf.dir\Middlewares\Third_Party\FreeRTOS\Source\croutine.c.obj.d -o CMakeFiles\TwisterDriver.elf.dir\Middlewares\Third_Party\FreeRTOS\Source\croutine.c.obj -c E:\Clion_for_STM32\TwisterDriver\Middlewares\Third_Party\FreeRTOS\Source\croutine.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\Clion_for_STM32\TwisterDriver\Software\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_35) "Building C object CMakeFiles/TwisterDriver.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/croutine.c.obj"
+	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/TwisterDriver.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/croutine.c.obj -MF CMakeFiles\TwisterDriver.elf.dir\Middlewares\Third_Party\FreeRTOS\Source\croutine.c.obj.d -o CMakeFiles\TwisterDriver.elf.dir\Middlewares\Third_Party\FreeRTOS\Source\croutine.c.obj -c E:\Clion_for_STM32\TwisterDriver\Software\Middlewares\Third_Party\FreeRTOS\Source\croutine.c
 
 CMakeFiles/TwisterDriver.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/croutine.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/TwisterDriver.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/croutine.c.i"
-	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E E:\Clion_for_STM32\TwisterDriver\Middlewares\Third_Party\FreeRTOS\Source\croutine.c > CMakeFiles\TwisterDriver.elf.dir\Middlewares\Third_Party\FreeRTOS\Source\croutine.c.i
+	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E E:\Clion_for_STM32\TwisterDriver\Software\Middlewares\Third_Party\FreeRTOS\Source\croutine.c > CMakeFiles\TwisterDriver.elf.dir\Middlewares\Third_Party\FreeRTOS\Source\croutine.c.i
 
 CMakeFiles/TwisterDriver.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/croutine.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/TwisterDriver.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/croutine.c.s"
-	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S E:\Clion_for_STM32\TwisterDriver\Middlewares\Third_Party\FreeRTOS\Source\croutine.c -o CMakeFiles\TwisterDriver.elf.dir\Middlewares\Third_Party\FreeRTOS\Source\croutine.c.s
+	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S E:\Clion_for_STM32\TwisterDriver\Software\Middlewares\Third_Party\FreeRTOS\Source\croutine.c -o CMakeFiles\TwisterDriver.elf.dir\Middlewares\Third_Party\FreeRTOS\Source\croutine.c.s
 
 CMakeFiles/TwisterDriver.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/event_groups.c.obj: CMakeFiles/TwisterDriver.elf.dir/flags.make
-CMakeFiles/TwisterDriver.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/event_groups.c.obj: E:/Clion_for_STM32/TwisterDriver/Middlewares/Third_Party/FreeRTOS/Source/event_groups.c
+CMakeFiles/TwisterDriver.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/event_groups.c.obj: E:/Clion_for_STM32/TwisterDriver/Software/Middlewares/Third_Party/FreeRTOS/Source/event_groups.c
 CMakeFiles/TwisterDriver.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/event_groups.c.obj: CMakeFiles/TwisterDriver.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\Clion_for_STM32\TwisterDriver\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "Building C object CMakeFiles/TwisterDriver.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/event_groups.c.obj"
-	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/TwisterDriver.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/event_groups.c.obj -MF CMakeFiles\TwisterDriver.elf.dir\Middlewares\Third_Party\FreeRTOS\Source\event_groups.c.obj.d -o CMakeFiles\TwisterDriver.elf.dir\Middlewares\Third_Party\FreeRTOS\Source\event_groups.c.obj -c E:\Clion_for_STM32\TwisterDriver\Middlewares\Third_Party\FreeRTOS\Source\event_groups.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\Clion_for_STM32\TwisterDriver\Software\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "Building C object CMakeFiles/TwisterDriver.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/event_groups.c.obj"
+	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/TwisterDriver.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/event_groups.c.obj -MF CMakeFiles\TwisterDriver.elf.dir\Middlewares\Third_Party\FreeRTOS\Source\event_groups.c.obj.d -o CMakeFiles\TwisterDriver.elf.dir\Middlewares\Third_Party\FreeRTOS\Source\event_groups.c.obj -c E:\Clion_for_STM32\TwisterDriver\Software\Middlewares\Third_Party\FreeRTOS\Source\event_groups.c
 
 CMakeFiles/TwisterDriver.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/event_groups.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/TwisterDriver.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/event_groups.c.i"
-	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E E:\Clion_for_STM32\TwisterDriver\Middlewares\Third_Party\FreeRTOS\Source\event_groups.c > CMakeFiles\TwisterDriver.elf.dir\Middlewares\Third_Party\FreeRTOS\Source\event_groups.c.i
+	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E E:\Clion_for_STM32\TwisterDriver\Software\Middlewares\Third_Party\FreeRTOS\Source\event_groups.c > CMakeFiles\TwisterDriver.elf.dir\Middlewares\Third_Party\FreeRTOS\Source\event_groups.c.i
 
 CMakeFiles/TwisterDriver.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/event_groups.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/TwisterDriver.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/event_groups.c.s"
-	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S E:\Clion_for_STM32\TwisterDriver\Middlewares\Third_Party\FreeRTOS\Source\event_groups.c -o CMakeFiles\TwisterDriver.elf.dir\Middlewares\Third_Party\FreeRTOS\Source\event_groups.c.s
+	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S E:\Clion_for_STM32\TwisterDriver\Software\Middlewares\Third_Party\FreeRTOS\Source\event_groups.c -o CMakeFiles\TwisterDriver.elf.dir\Middlewares\Third_Party\FreeRTOS\Source\event_groups.c.s
 
 CMakeFiles/TwisterDriver.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/list.c.obj: CMakeFiles/TwisterDriver.elf.dir/flags.make
-CMakeFiles/TwisterDriver.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/list.c.obj: E:/Clion_for_STM32/TwisterDriver/Middlewares/Third_Party/FreeRTOS/Source/list.c
+CMakeFiles/TwisterDriver.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/list.c.obj: E:/Clion_for_STM32/TwisterDriver/Software/Middlewares/Third_Party/FreeRTOS/Source/list.c
 CMakeFiles/TwisterDriver.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/list.c.obj: CMakeFiles/TwisterDriver.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\Clion_for_STM32\TwisterDriver\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_37) "Building C object CMakeFiles/TwisterDriver.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/list.c.obj"
-	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/TwisterDriver.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/list.c.obj -MF CMakeFiles\TwisterDriver.elf.dir\Middlewares\Third_Party\FreeRTOS\Source\list.c.obj.d -o CMakeFiles\TwisterDriver.elf.dir\Middlewares\Third_Party\FreeRTOS\Source\list.c.obj -c E:\Clion_for_STM32\TwisterDriver\Middlewares\Third_Party\FreeRTOS\Source\list.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\Clion_for_STM32\TwisterDriver\Software\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_37) "Building C object CMakeFiles/TwisterDriver.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/list.c.obj"
+	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/TwisterDriver.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/list.c.obj -MF CMakeFiles\TwisterDriver.elf.dir\Middlewares\Third_Party\FreeRTOS\Source\list.c.obj.d -o CMakeFiles\TwisterDriver.elf.dir\Middlewares\Third_Party\FreeRTOS\Source\list.c.obj -c E:\Clion_for_STM32\TwisterDriver\Software\Middlewares\Third_Party\FreeRTOS\Source\list.c
 
 CMakeFiles/TwisterDriver.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/list.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/TwisterDriver.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/list.c.i"
-	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E E:\Clion_for_STM32\TwisterDriver\Middlewares\Third_Party\FreeRTOS\Source\list.c > CMakeFiles\TwisterDriver.elf.dir\Middlewares\Third_Party\FreeRTOS\Source\list.c.i
+	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E E:\Clion_for_STM32\TwisterDriver\Software\Middlewares\Third_Party\FreeRTOS\Source\list.c > CMakeFiles\TwisterDriver.elf.dir\Middlewares\Third_Party\FreeRTOS\Source\list.c.i
 
 CMakeFiles/TwisterDriver.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/list.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/TwisterDriver.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/list.c.s"
-	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S E:\Clion_for_STM32\TwisterDriver\Middlewares\Third_Party\FreeRTOS\Source\list.c -o CMakeFiles\TwisterDriver.elf.dir\Middlewares\Third_Party\FreeRTOS\Source\list.c.s
+	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S E:\Clion_for_STM32\TwisterDriver\Software\Middlewares\Third_Party\FreeRTOS\Source\list.c -o CMakeFiles\TwisterDriver.elf.dir\Middlewares\Third_Party\FreeRTOS\Source\list.c.s
 
 CMakeFiles/TwisterDriver.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c.obj: CMakeFiles/TwisterDriver.elf.dir/flags.make
-CMakeFiles/TwisterDriver.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c.obj: E:/Clion_for_STM32/TwisterDriver/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c
+CMakeFiles/TwisterDriver.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c.obj: E:/Clion_for_STM32/TwisterDriver/Software/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c
 CMakeFiles/TwisterDriver.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c.obj: CMakeFiles/TwisterDriver.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\Clion_for_STM32\TwisterDriver\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_38) "Building C object CMakeFiles/TwisterDriver.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c.obj"
-	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/TwisterDriver.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c.obj -MF CMakeFiles\TwisterDriver.elf.dir\Middlewares\Third_Party\FreeRTOS\Source\portable\GCC\ARM_CM4F\port.c.obj.d -o CMakeFiles\TwisterDriver.elf.dir\Middlewares\Third_Party\FreeRTOS\Source\portable\GCC\ARM_CM4F\port.c.obj -c E:\Clion_for_STM32\TwisterDriver\Middlewares\Third_Party\FreeRTOS\Source\portable\GCC\ARM_CM4F\port.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\Clion_for_STM32\TwisterDriver\Software\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_38) "Building C object CMakeFiles/TwisterDriver.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c.obj"
+	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/TwisterDriver.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c.obj -MF CMakeFiles\TwisterDriver.elf.dir\Middlewares\Third_Party\FreeRTOS\Source\portable\GCC\ARM_CM4F\port.c.obj.d -o CMakeFiles\TwisterDriver.elf.dir\Middlewares\Third_Party\FreeRTOS\Source\portable\GCC\ARM_CM4F\port.c.obj -c E:\Clion_for_STM32\TwisterDriver\Software\Middlewares\Third_Party\FreeRTOS\Source\portable\GCC\ARM_CM4F\port.c
 
 CMakeFiles/TwisterDriver.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/TwisterDriver.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c.i"
-	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E E:\Clion_for_STM32\TwisterDriver\Middlewares\Third_Party\FreeRTOS\Source\portable\GCC\ARM_CM4F\port.c > CMakeFiles\TwisterDriver.elf.dir\Middlewares\Third_Party\FreeRTOS\Source\portable\GCC\ARM_CM4F\port.c.i
+	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E E:\Clion_for_STM32\TwisterDriver\Software\Middlewares\Third_Party\FreeRTOS\Source\portable\GCC\ARM_CM4F\port.c > CMakeFiles\TwisterDriver.elf.dir\Middlewares\Third_Party\FreeRTOS\Source\portable\GCC\ARM_CM4F\port.c.i
 
 CMakeFiles/TwisterDriver.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/TwisterDriver.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c.s"
-	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S E:\Clion_for_STM32\TwisterDriver\Middlewares\Third_Party\FreeRTOS\Source\portable\GCC\ARM_CM4F\port.c -o CMakeFiles\TwisterDriver.elf.dir\Middlewares\Third_Party\FreeRTOS\Source\portable\GCC\ARM_CM4F\port.c.s
+	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S E:\Clion_for_STM32\TwisterDriver\Software\Middlewares\Third_Party\FreeRTOS\Source\portable\GCC\ARM_CM4F\port.c -o CMakeFiles\TwisterDriver.elf.dir\Middlewares\Third_Party\FreeRTOS\Source\portable\GCC\ARM_CM4F\port.c.s
 
 CMakeFiles/TwisterDriver.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.obj: CMakeFiles/TwisterDriver.elf.dir/flags.make
-CMakeFiles/TwisterDriver.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.obj: E:/Clion_for_STM32/TwisterDriver/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c
+CMakeFiles/TwisterDriver.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.obj: E:/Clion_for_STM32/TwisterDriver/Software/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c
 CMakeFiles/TwisterDriver.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.obj: CMakeFiles/TwisterDriver.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\Clion_for_STM32\TwisterDriver\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_39) "Building C object CMakeFiles/TwisterDriver.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.obj"
-	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/TwisterDriver.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.obj -MF CMakeFiles\TwisterDriver.elf.dir\Middlewares\Third_Party\FreeRTOS\Source\portable\MemMang\heap_4.c.obj.d -o CMakeFiles\TwisterDriver.elf.dir\Middlewares\Third_Party\FreeRTOS\Source\portable\MemMang\heap_4.c.obj -c E:\Clion_for_STM32\TwisterDriver\Middlewares\Third_Party\FreeRTOS\Source\portable\MemMang\heap_4.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\Clion_for_STM32\TwisterDriver\Software\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_39) "Building C object CMakeFiles/TwisterDriver.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.obj"
+	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/TwisterDriver.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.obj -MF CMakeFiles\TwisterDriver.elf.dir\Middlewares\Third_Party\FreeRTOS\Source\portable\MemMang\heap_4.c.obj.d -o CMakeFiles\TwisterDriver.elf.dir\Middlewares\Third_Party\FreeRTOS\Source\portable\MemMang\heap_4.c.obj -c E:\Clion_for_STM32\TwisterDriver\Software\Middlewares\Third_Party\FreeRTOS\Source\portable\MemMang\heap_4.c
 
 CMakeFiles/TwisterDriver.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/TwisterDriver.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.i"
-	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E E:\Clion_for_STM32\TwisterDriver\Middlewares\Third_Party\FreeRTOS\Source\portable\MemMang\heap_4.c > CMakeFiles\TwisterDriver.elf.dir\Middlewares\Third_Party\FreeRTOS\Source\portable\MemMang\heap_4.c.i
+	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E E:\Clion_for_STM32\TwisterDriver\Software\Middlewares\Third_Party\FreeRTOS\Source\portable\MemMang\heap_4.c > CMakeFiles\TwisterDriver.elf.dir\Middlewares\Third_Party\FreeRTOS\Source\portable\MemMang\heap_4.c.i
 
 CMakeFiles/TwisterDriver.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/TwisterDriver.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.s"
-	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S E:\Clion_for_STM32\TwisterDriver\Middlewares\Third_Party\FreeRTOS\Source\portable\MemMang\heap_4.c -o CMakeFiles\TwisterDriver.elf.dir\Middlewares\Third_Party\FreeRTOS\Source\portable\MemMang\heap_4.c.s
+	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S E:\Clion_for_STM32\TwisterDriver\Software\Middlewares\Third_Party\FreeRTOS\Source\portable\MemMang\heap_4.c -o CMakeFiles\TwisterDriver.elf.dir\Middlewares\Third_Party\FreeRTOS\Source\portable\MemMang\heap_4.c.s
 
 CMakeFiles/TwisterDriver.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/queue.c.obj: CMakeFiles/TwisterDriver.elf.dir/flags.make
-CMakeFiles/TwisterDriver.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/queue.c.obj: E:/Clion_for_STM32/TwisterDriver/Middlewares/Third_Party/FreeRTOS/Source/queue.c
+CMakeFiles/TwisterDriver.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/queue.c.obj: E:/Clion_for_STM32/TwisterDriver/Software/Middlewares/Third_Party/FreeRTOS/Source/queue.c
 CMakeFiles/TwisterDriver.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/queue.c.obj: CMakeFiles/TwisterDriver.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\Clion_for_STM32\TwisterDriver\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_40) "Building C object CMakeFiles/TwisterDriver.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/queue.c.obj"
-	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/TwisterDriver.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/queue.c.obj -MF CMakeFiles\TwisterDriver.elf.dir\Middlewares\Third_Party\FreeRTOS\Source\queue.c.obj.d -o CMakeFiles\TwisterDriver.elf.dir\Middlewares\Third_Party\FreeRTOS\Source\queue.c.obj -c E:\Clion_for_STM32\TwisterDriver\Middlewares\Third_Party\FreeRTOS\Source\queue.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\Clion_for_STM32\TwisterDriver\Software\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_40) "Building C object CMakeFiles/TwisterDriver.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/queue.c.obj"
+	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/TwisterDriver.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/queue.c.obj -MF CMakeFiles\TwisterDriver.elf.dir\Middlewares\Third_Party\FreeRTOS\Source\queue.c.obj.d -o CMakeFiles\TwisterDriver.elf.dir\Middlewares\Third_Party\FreeRTOS\Source\queue.c.obj -c E:\Clion_for_STM32\TwisterDriver\Software\Middlewares\Third_Party\FreeRTOS\Source\queue.c
 
 CMakeFiles/TwisterDriver.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/queue.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/TwisterDriver.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/queue.c.i"
-	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E E:\Clion_for_STM32\TwisterDriver\Middlewares\Third_Party\FreeRTOS\Source\queue.c > CMakeFiles\TwisterDriver.elf.dir\Middlewares\Third_Party\FreeRTOS\Source\queue.c.i
+	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E E:\Clion_for_STM32\TwisterDriver\Software\Middlewares\Third_Party\FreeRTOS\Source\queue.c > CMakeFiles\TwisterDriver.elf.dir\Middlewares\Third_Party\FreeRTOS\Source\queue.c.i
 
 CMakeFiles/TwisterDriver.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/queue.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/TwisterDriver.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/queue.c.s"
-	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S E:\Clion_for_STM32\TwisterDriver\Middlewares\Third_Party\FreeRTOS\Source\queue.c -o CMakeFiles\TwisterDriver.elf.dir\Middlewares\Third_Party\FreeRTOS\Source\queue.c.s
+	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S E:\Clion_for_STM32\TwisterDriver\Software\Middlewares\Third_Party\FreeRTOS\Source\queue.c -o CMakeFiles\TwisterDriver.elf.dir\Middlewares\Third_Party\FreeRTOS\Source\queue.c.s
 
 CMakeFiles/TwisterDriver.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c.obj: CMakeFiles/TwisterDriver.elf.dir/flags.make
-CMakeFiles/TwisterDriver.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c.obj: E:/Clion_for_STM32/TwisterDriver/Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c
+CMakeFiles/TwisterDriver.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c.obj: E:/Clion_for_STM32/TwisterDriver/Software/Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c
 CMakeFiles/TwisterDriver.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c.obj: CMakeFiles/TwisterDriver.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\Clion_for_STM32\TwisterDriver\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_41) "Building C object CMakeFiles/TwisterDriver.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c.obj"
-	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/TwisterDriver.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c.obj -MF CMakeFiles\TwisterDriver.elf.dir\Middlewares\Third_Party\FreeRTOS\Source\stream_buffer.c.obj.d -o CMakeFiles\TwisterDriver.elf.dir\Middlewares\Third_Party\FreeRTOS\Source\stream_buffer.c.obj -c E:\Clion_for_STM32\TwisterDriver\Middlewares\Third_Party\FreeRTOS\Source\stream_buffer.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\Clion_for_STM32\TwisterDriver\Software\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_41) "Building C object CMakeFiles/TwisterDriver.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c.obj"
+	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/TwisterDriver.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c.obj -MF CMakeFiles\TwisterDriver.elf.dir\Middlewares\Third_Party\FreeRTOS\Source\stream_buffer.c.obj.d -o CMakeFiles\TwisterDriver.elf.dir\Middlewares\Third_Party\FreeRTOS\Source\stream_buffer.c.obj -c E:\Clion_for_STM32\TwisterDriver\Software\Middlewares\Third_Party\FreeRTOS\Source\stream_buffer.c
 
 CMakeFiles/TwisterDriver.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/TwisterDriver.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c.i"
-	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E E:\Clion_for_STM32\TwisterDriver\Middlewares\Third_Party\FreeRTOS\Source\stream_buffer.c > CMakeFiles\TwisterDriver.elf.dir\Middlewares\Third_Party\FreeRTOS\Source\stream_buffer.c.i
+	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E E:\Clion_for_STM32\TwisterDriver\Software\Middlewares\Third_Party\FreeRTOS\Source\stream_buffer.c > CMakeFiles\TwisterDriver.elf.dir\Middlewares\Third_Party\FreeRTOS\Source\stream_buffer.c.i
 
 CMakeFiles/TwisterDriver.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/TwisterDriver.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c.s"
-	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S E:\Clion_for_STM32\TwisterDriver\Middlewares\Third_Party\FreeRTOS\Source\stream_buffer.c -o CMakeFiles\TwisterDriver.elf.dir\Middlewares\Third_Party\FreeRTOS\Source\stream_buffer.c.s
+	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S E:\Clion_for_STM32\TwisterDriver\Software\Middlewares\Third_Party\FreeRTOS\Source\stream_buffer.c -o CMakeFiles\TwisterDriver.elf.dir\Middlewares\Third_Party\FreeRTOS\Source\stream_buffer.c.s
 
 CMakeFiles/TwisterDriver.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj: CMakeFiles/TwisterDriver.elf.dir/flags.make
-CMakeFiles/TwisterDriver.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj: E:/Clion_for_STM32/TwisterDriver/Middlewares/Third_Party/FreeRTOS/Source/tasks.c
+CMakeFiles/TwisterDriver.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj: E:/Clion_for_STM32/TwisterDriver/Software/Middlewares/Third_Party/FreeRTOS/Source/tasks.c
 CMakeFiles/TwisterDriver.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj: CMakeFiles/TwisterDriver.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\Clion_for_STM32\TwisterDriver\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_42) "Building C object CMakeFiles/TwisterDriver.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj"
-	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/TwisterDriver.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj -MF CMakeFiles\TwisterDriver.elf.dir\Middlewares\Third_Party\FreeRTOS\Source\tasks.c.obj.d -o CMakeFiles\TwisterDriver.elf.dir\Middlewares\Third_Party\FreeRTOS\Source\tasks.c.obj -c E:\Clion_for_STM32\TwisterDriver\Middlewares\Third_Party\FreeRTOS\Source\tasks.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\Clion_for_STM32\TwisterDriver\Software\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_42) "Building C object CMakeFiles/TwisterDriver.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj"
+	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/TwisterDriver.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj -MF CMakeFiles\TwisterDriver.elf.dir\Middlewares\Third_Party\FreeRTOS\Source\tasks.c.obj.d -o CMakeFiles\TwisterDriver.elf.dir\Middlewares\Third_Party\FreeRTOS\Source\tasks.c.obj -c E:\Clion_for_STM32\TwisterDriver\Software\Middlewares\Third_Party\FreeRTOS\Source\tasks.c
 
 CMakeFiles/TwisterDriver.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/TwisterDriver.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.i"
-	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E E:\Clion_for_STM32\TwisterDriver\Middlewares\Third_Party\FreeRTOS\Source\tasks.c > CMakeFiles\TwisterDriver.elf.dir\Middlewares\Third_Party\FreeRTOS\Source\tasks.c.i
+	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E E:\Clion_for_STM32\TwisterDriver\Software\Middlewares\Third_Party\FreeRTOS\Source\tasks.c > CMakeFiles\TwisterDriver.elf.dir\Middlewares\Third_Party\FreeRTOS\Source\tasks.c.i
 
 CMakeFiles/TwisterDriver.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/TwisterDriver.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.s"
-	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S E:\Clion_for_STM32\TwisterDriver\Middlewares\Third_Party\FreeRTOS\Source\tasks.c -o CMakeFiles\TwisterDriver.elf.dir\Middlewares\Third_Party\FreeRTOS\Source\tasks.c.s
+	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S E:\Clion_for_STM32\TwisterDriver\Software\Middlewares\Third_Party\FreeRTOS\Source\tasks.c -o CMakeFiles\TwisterDriver.elf.dir\Middlewares\Third_Party\FreeRTOS\Source\tasks.c.s
 
 CMakeFiles/TwisterDriver.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/timers.c.obj: CMakeFiles/TwisterDriver.elf.dir/flags.make
-CMakeFiles/TwisterDriver.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/timers.c.obj: E:/Clion_for_STM32/TwisterDriver/Middlewares/Third_Party/FreeRTOS/Source/timers.c
+CMakeFiles/TwisterDriver.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/timers.c.obj: E:/Clion_for_STM32/TwisterDriver/Software/Middlewares/Third_Party/FreeRTOS/Source/timers.c
 CMakeFiles/TwisterDriver.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/timers.c.obj: CMakeFiles/TwisterDriver.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\Clion_for_STM32\TwisterDriver\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_43) "Building C object CMakeFiles/TwisterDriver.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/timers.c.obj"
-	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/TwisterDriver.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/timers.c.obj -MF CMakeFiles\TwisterDriver.elf.dir\Middlewares\Third_Party\FreeRTOS\Source\timers.c.obj.d -o CMakeFiles\TwisterDriver.elf.dir\Middlewares\Third_Party\FreeRTOS\Source\timers.c.obj -c E:\Clion_for_STM32\TwisterDriver\Middlewares\Third_Party\FreeRTOS\Source\timers.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\Clion_for_STM32\TwisterDriver\Software\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_43) "Building C object CMakeFiles/TwisterDriver.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/timers.c.obj"
+	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/TwisterDriver.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/timers.c.obj -MF CMakeFiles\TwisterDriver.elf.dir\Middlewares\Third_Party\FreeRTOS\Source\timers.c.obj.d -o CMakeFiles\TwisterDriver.elf.dir\Middlewares\Third_Party\FreeRTOS\Source\timers.c.obj -c E:\Clion_for_STM32\TwisterDriver\Software\Middlewares\Third_Party\FreeRTOS\Source\timers.c
 
 CMakeFiles/TwisterDriver.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/timers.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/TwisterDriver.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/timers.c.i"
-	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E E:\Clion_for_STM32\TwisterDriver\Middlewares\Third_Party\FreeRTOS\Source\timers.c > CMakeFiles\TwisterDriver.elf.dir\Middlewares\Third_Party\FreeRTOS\Source\timers.c.i
+	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E E:\Clion_for_STM32\TwisterDriver\Software\Middlewares\Third_Party\FreeRTOS\Source\timers.c > CMakeFiles\TwisterDriver.elf.dir\Middlewares\Third_Party\FreeRTOS\Source\timers.c.i
 
 CMakeFiles/TwisterDriver.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/timers.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/TwisterDriver.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/timers.c.s"
-	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S E:\Clion_for_STM32\TwisterDriver\Middlewares\Third_Party\FreeRTOS\Source\timers.c -o CMakeFiles\TwisterDriver.elf.dir\Middlewares\Third_Party\FreeRTOS\Source\timers.c.s
+	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S E:\Clion_for_STM32\TwisterDriver\Software\Middlewares\Third_Party\FreeRTOS\Source\timers.c -o CMakeFiles\TwisterDriver.elf.dir\Middlewares\Third_Party\FreeRTOS\Source\timers.c.s
 
 CMakeFiles/TwisterDriver.elf.dir/UserApp/FOC/FOC.c.obj: CMakeFiles/TwisterDriver.elf.dir/flags.make
-CMakeFiles/TwisterDriver.elf.dir/UserApp/FOC/FOC.c.obj: E:/Clion_for_STM32/TwisterDriver/UserApp/FOC/FOC.c
+CMakeFiles/TwisterDriver.elf.dir/UserApp/FOC/FOC.c.obj: E:/Clion_for_STM32/TwisterDriver/Software/UserApp/FOC/FOC.c
 CMakeFiles/TwisterDriver.elf.dir/UserApp/FOC/FOC.c.obj: CMakeFiles/TwisterDriver.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\Clion_for_STM32\TwisterDriver\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_44) "Building C object CMakeFiles/TwisterDriver.elf.dir/UserApp/FOC/FOC.c.obj"
-	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/TwisterDriver.elf.dir/UserApp/FOC/FOC.c.obj -MF CMakeFiles\TwisterDriver.elf.dir\UserApp\FOC\FOC.c.obj.d -o CMakeFiles\TwisterDriver.elf.dir\UserApp\FOC\FOC.c.obj -c E:\Clion_for_STM32\TwisterDriver\UserApp\FOC\FOC.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\Clion_for_STM32\TwisterDriver\Software\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_44) "Building C object CMakeFiles/TwisterDriver.elf.dir/UserApp/FOC/FOC.c.obj"
+	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/TwisterDriver.elf.dir/UserApp/FOC/FOC.c.obj -MF CMakeFiles\TwisterDriver.elf.dir\UserApp\FOC\FOC.c.obj.d -o CMakeFiles\TwisterDriver.elf.dir\UserApp\FOC\FOC.c.obj -c E:\Clion_for_STM32\TwisterDriver\Software\UserApp\FOC\FOC.c
 
 CMakeFiles/TwisterDriver.elf.dir/UserApp/FOC/FOC.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/TwisterDriver.elf.dir/UserApp/FOC/FOC.c.i"
-	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E E:\Clion_for_STM32\TwisterDriver\UserApp\FOC\FOC.c > CMakeFiles\TwisterDriver.elf.dir\UserApp\FOC\FOC.c.i
+	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E E:\Clion_for_STM32\TwisterDriver\Software\UserApp\FOC\FOC.c > CMakeFiles\TwisterDriver.elf.dir\UserApp\FOC\FOC.c.i
 
 CMakeFiles/TwisterDriver.elf.dir/UserApp/FOC/FOC.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/TwisterDriver.elf.dir/UserApp/FOC/FOC.c.s"
-	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S E:\Clion_for_STM32\TwisterDriver\UserApp\FOC\FOC.c -o CMakeFiles\TwisterDriver.elf.dir\UserApp\FOC\FOC.c.s
+	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S E:\Clion_for_STM32\TwisterDriver\Software\UserApp\FOC\FOC.c -o CMakeFiles\TwisterDriver.elf.dir\UserApp\FOC\FOC.c.s
 
 CMakeFiles/TwisterDriver.elf.dir/UserApp/FOC/FOC_math.c.obj: CMakeFiles/TwisterDriver.elf.dir/flags.make
-CMakeFiles/TwisterDriver.elf.dir/UserApp/FOC/FOC_math.c.obj: E:/Clion_for_STM32/TwisterDriver/UserApp/FOC/FOC_math.c
+CMakeFiles/TwisterDriver.elf.dir/UserApp/FOC/FOC_math.c.obj: E:/Clion_for_STM32/TwisterDriver/Software/UserApp/FOC/FOC_math.c
 CMakeFiles/TwisterDriver.elf.dir/UserApp/FOC/FOC_math.c.obj: CMakeFiles/TwisterDriver.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\Clion_for_STM32\TwisterDriver\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_45) "Building C object CMakeFiles/TwisterDriver.elf.dir/UserApp/FOC/FOC_math.c.obj"
-	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/TwisterDriver.elf.dir/UserApp/FOC/FOC_math.c.obj -MF CMakeFiles\TwisterDriver.elf.dir\UserApp\FOC\FOC_math.c.obj.d -o CMakeFiles\TwisterDriver.elf.dir\UserApp\FOC\FOC_math.c.obj -c E:\Clion_for_STM32\TwisterDriver\UserApp\FOC\FOC_math.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\Clion_for_STM32\TwisterDriver\Software\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_45) "Building C object CMakeFiles/TwisterDriver.elf.dir/UserApp/FOC/FOC_math.c.obj"
+	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/TwisterDriver.elf.dir/UserApp/FOC/FOC_math.c.obj -MF CMakeFiles\TwisterDriver.elf.dir\UserApp\FOC\FOC_math.c.obj.d -o CMakeFiles\TwisterDriver.elf.dir\UserApp\FOC\FOC_math.c.obj -c E:\Clion_for_STM32\TwisterDriver\Software\UserApp\FOC\FOC_math.c
 
 CMakeFiles/TwisterDriver.elf.dir/UserApp/FOC/FOC_math.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/TwisterDriver.elf.dir/UserApp/FOC/FOC_math.c.i"
-	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E E:\Clion_for_STM32\TwisterDriver\UserApp\FOC\FOC_math.c > CMakeFiles\TwisterDriver.elf.dir\UserApp\FOC\FOC_math.c.i
+	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E E:\Clion_for_STM32\TwisterDriver\Software\UserApp\FOC\FOC_math.c > CMakeFiles\TwisterDriver.elf.dir\UserApp\FOC\FOC_math.c.i
 
 CMakeFiles/TwisterDriver.elf.dir/UserApp/FOC/FOC_math.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/TwisterDriver.elf.dir/UserApp/FOC/FOC_math.c.s"
-	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S E:\Clion_for_STM32\TwisterDriver\UserApp\FOC\FOC_math.c -o CMakeFiles\TwisterDriver.elf.dir\UserApp\FOC\FOC_math.c.s
+	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S E:\Clion_for_STM32\TwisterDriver\Software\UserApp\FOC\FOC_math.c -o CMakeFiles\TwisterDriver.elf.dir\UserApp\FOC\FOC_math.c.s
 
 CMakeFiles/TwisterDriver.elf.dir/UserApp/FOC/Filter.c.obj: CMakeFiles/TwisterDriver.elf.dir/flags.make
-CMakeFiles/TwisterDriver.elf.dir/UserApp/FOC/Filter.c.obj: E:/Clion_for_STM32/TwisterDriver/UserApp/FOC/Filter.c
+CMakeFiles/TwisterDriver.elf.dir/UserApp/FOC/Filter.c.obj: E:/Clion_for_STM32/TwisterDriver/Software/UserApp/FOC/Filter.c
 CMakeFiles/TwisterDriver.elf.dir/UserApp/FOC/Filter.c.obj: CMakeFiles/TwisterDriver.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\Clion_for_STM32\TwisterDriver\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_46) "Building C object CMakeFiles/TwisterDriver.elf.dir/UserApp/FOC/Filter.c.obj"
-	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/TwisterDriver.elf.dir/UserApp/FOC/Filter.c.obj -MF CMakeFiles\TwisterDriver.elf.dir\UserApp\FOC\Filter.c.obj.d -o CMakeFiles\TwisterDriver.elf.dir\UserApp\FOC\Filter.c.obj -c E:\Clion_for_STM32\TwisterDriver\UserApp\FOC\Filter.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\Clion_for_STM32\TwisterDriver\Software\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_46) "Building C object CMakeFiles/TwisterDriver.elf.dir/UserApp/FOC/Filter.c.obj"
+	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/TwisterDriver.elf.dir/UserApp/FOC/Filter.c.obj -MF CMakeFiles\TwisterDriver.elf.dir\UserApp\FOC\Filter.c.obj.d -o CMakeFiles\TwisterDriver.elf.dir\UserApp\FOC\Filter.c.obj -c E:\Clion_for_STM32\TwisterDriver\Software\UserApp\FOC\Filter.c
 
 CMakeFiles/TwisterDriver.elf.dir/UserApp/FOC/Filter.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/TwisterDriver.elf.dir/UserApp/FOC/Filter.c.i"
-	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E E:\Clion_for_STM32\TwisterDriver\UserApp\FOC\Filter.c > CMakeFiles\TwisterDriver.elf.dir\UserApp\FOC\Filter.c.i
+	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E E:\Clion_for_STM32\TwisterDriver\Software\UserApp\FOC\Filter.c > CMakeFiles\TwisterDriver.elf.dir\UserApp\FOC\Filter.c.i
 
 CMakeFiles/TwisterDriver.elf.dir/UserApp/FOC/Filter.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/TwisterDriver.elf.dir/UserApp/FOC/Filter.c.s"
-	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S E:\Clion_for_STM32\TwisterDriver\UserApp\FOC\Filter.c -o CMakeFiles\TwisterDriver.elf.dir\UserApp\FOC\Filter.c.s
+	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S E:\Clion_for_STM32\TwisterDriver\Software\UserApp\FOC\Filter.c -o CMakeFiles\TwisterDriver.elf.dir\UserApp\FOC\Filter.c.s
 
 CMakeFiles/TwisterDriver.elf.dir/UserApp/FOC/hardware_api.c.obj: CMakeFiles/TwisterDriver.elf.dir/flags.make
-CMakeFiles/TwisterDriver.elf.dir/UserApp/FOC/hardware_api.c.obj: E:/Clion_for_STM32/TwisterDriver/UserApp/FOC/hardware_api.c
+CMakeFiles/TwisterDriver.elf.dir/UserApp/FOC/hardware_api.c.obj: E:/Clion_for_STM32/TwisterDriver/Software/UserApp/FOC/hardware_api.c
 CMakeFiles/TwisterDriver.elf.dir/UserApp/FOC/hardware_api.c.obj: CMakeFiles/TwisterDriver.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\Clion_for_STM32\TwisterDriver\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_47) "Building C object CMakeFiles/TwisterDriver.elf.dir/UserApp/FOC/hardware_api.c.obj"
-	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/TwisterDriver.elf.dir/UserApp/FOC/hardware_api.c.obj -MF CMakeFiles\TwisterDriver.elf.dir\UserApp\FOC\hardware_api.c.obj.d -o CMakeFiles\TwisterDriver.elf.dir\UserApp\FOC\hardware_api.c.obj -c E:\Clion_for_STM32\TwisterDriver\UserApp\FOC\hardware_api.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\Clion_for_STM32\TwisterDriver\Software\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_47) "Building C object CMakeFiles/TwisterDriver.elf.dir/UserApp/FOC/hardware_api.c.obj"
+	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/TwisterDriver.elf.dir/UserApp/FOC/hardware_api.c.obj -MF CMakeFiles\TwisterDriver.elf.dir\UserApp\FOC\hardware_api.c.obj.d -o CMakeFiles\TwisterDriver.elf.dir\UserApp\FOC\hardware_api.c.obj -c E:\Clion_for_STM32\TwisterDriver\Software\UserApp\FOC\hardware_api.c
 
 CMakeFiles/TwisterDriver.elf.dir/UserApp/FOC/hardware_api.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/TwisterDriver.elf.dir/UserApp/FOC/hardware_api.c.i"
-	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E E:\Clion_for_STM32\TwisterDriver\UserApp\FOC\hardware_api.c > CMakeFiles\TwisterDriver.elf.dir\UserApp\FOC\hardware_api.c.i
+	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E E:\Clion_for_STM32\TwisterDriver\Software\UserApp\FOC\hardware_api.c > CMakeFiles\TwisterDriver.elf.dir\UserApp\FOC\hardware_api.c.i
 
 CMakeFiles/TwisterDriver.elf.dir/UserApp/FOC/hardware_api.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/TwisterDriver.elf.dir/UserApp/FOC/hardware_api.c.s"
-	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S E:\Clion_for_STM32\TwisterDriver\UserApp\FOC\hardware_api.c -o CMakeFiles\TwisterDriver.elf.dir\UserApp\FOC\hardware_api.c.s
+	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S E:\Clion_for_STM32\TwisterDriver\Software\UserApp\FOC\hardware_api.c -o CMakeFiles\TwisterDriver.elf.dir\UserApp\FOC\hardware_api.c.s
 
 CMakeFiles/TwisterDriver.elf.dir/UserApp/FOC/my_PID.c.obj: CMakeFiles/TwisterDriver.elf.dir/flags.make
-CMakeFiles/TwisterDriver.elf.dir/UserApp/FOC/my_PID.c.obj: E:/Clion_for_STM32/TwisterDriver/UserApp/FOC/my_PID.c
+CMakeFiles/TwisterDriver.elf.dir/UserApp/FOC/my_PID.c.obj: E:/Clion_for_STM32/TwisterDriver/Software/UserApp/FOC/my_PID.c
 CMakeFiles/TwisterDriver.elf.dir/UserApp/FOC/my_PID.c.obj: CMakeFiles/TwisterDriver.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\Clion_for_STM32\TwisterDriver\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_48) "Building C object CMakeFiles/TwisterDriver.elf.dir/UserApp/FOC/my_PID.c.obj"
-	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/TwisterDriver.elf.dir/UserApp/FOC/my_PID.c.obj -MF CMakeFiles\TwisterDriver.elf.dir\UserApp\FOC\my_PID.c.obj.d -o CMakeFiles\TwisterDriver.elf.dir\UserApp\FOC\my_PID.c.obj -c E:\Clion_for_STM32\TwisterDriver\UserApp\FOC\my_PID.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\Clion_for_STM32\TwisterDriver\Software\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_48) "Building C object CMakeFiles/TwisterDriver.elf.dir/UserApp/FOC/my_PID.c.obj"
+	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/TwisterDriver.elf.dir/UserApp/FOC/my_PID.c.obj -MF CMakeFiles\TwisterDriver.elf.dir\UserApp\FOC\my_PID.c.obj.d -o CMakeFiles\TwisterDriver.elf.dir\UserApp\FOC\my_PID.c.obj -c E:\Clion_for_STM32\TwisterDriver\Software\UserApp\FOC\my_PID.c
 
 CMakeFiles/TwisterDriver.elf.dir/UserApp/FOC/my_PID.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/TwisterDriver.elf.dir/UserApp/FOC/my_PID.c.i"
-	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E E:\Clion_for_STM32\TwisterDriver\UserApp\FOC\my_PID.c > CMakeFiles\TwisterDriver.elf.dir\UserApp\FOC\my_PID.c.i
+	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E E:\Clion_for_STM32\TwisterDriver\Software\UserApp\FOC\my_PID.c > CMakeFiles\TwisterDriver.elf.dir\UserApp\FOC\my_PID.c.i
 
 CMakeFiles/TwisterDriver.elf.dir/UserApp/FOC/my_PID.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/TwisterDriver.elf.dir/UserApp/FOC/my_PID.c.s"
-	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S E:\Clion_for_STM32\TwisterDriver\UserApp\FOC\my_PID.c -o CMakeFiles\TwisterDriver.elf.dir\UserApp\FOC\my_PID.c.s
+	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S E:\Clion_for_STM32\TwisterDriver\Software\UserApp\FOC\my_PID.c -o CMakeFiles\TwisterDriver.elf.dir\UserApp\FOC\my_PID.c.s
 
-CMakeFiles/TwisterDriver.elf.dir/UserApp/LCD/lcd_dma.c.obj: CMakeFiles/TwisterDriver.elf.dir/flags.make
-CMakeFiles/TwisterDriver.elf.dir/UserApp/LCD/lcd_dma.c.obj: E:/Clion_for_STM32/TwisterDriver/UserApp/LCD/lcd_dma.c
-CMakeFiles/TwisterDriver.elf.dir/UserApp/LCD/lcd_dma.c.obj: CMakeFiles/TwisterDriver.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\Clion_for_STM32\TwisterDriver\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_49) "Building C object CMakeFiles/TwisterDriver.elf.dir/UserApp/LCD/lcd_dma.c.obj"
-	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/TwisterDriver.elf.dir/UserApp/LCD/lcd_dma.c.obj -MF CMakeFiles\TwisterDriver.elf.dir\UserApp\LCD\lcd_dma.c.obj.d -o CMakeFiles\TwisterDriver.elf.dir\UserApp\LCD\lcd_dma.c.obj -c E:\Clion_for_STM32\TwisterDriver\UserApp\LCD\lcd_dma.c
+CMakeFiles/TwisterDriver.elf.dir/UserApp/LCD/fonts.c.obj: CMakeFiles/TwisterDriver.elf.dir/flags.make
+CMakeFiles/TwisterDriver.elf.dir/UserApp/LCD/fonts.c.obj: E:/Clion_for_STM32/TwisterDriver/Software/UserApp/LCD/fonts.c
+CMakeFiles/TwisterDriver.elf.dir/UserApp/LCD/fonts.c.obj: CMakeFiles/TwisterDriver.elf.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\Clion_for_STM32\TwisterDriver\Software\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_49) "Building C object CMakeFiles/TwisterDriver.elf.dir/UserApp/LCD/fonts.c.obj"
+	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/TwisterDriver.elf.dir/UserApp/LCD/fonts.c.obj -MF CMakeFiles\TwisterDriver.elf.dir\UserApp\LCD\fonts.c.obj.d -o CMakeFiles\TwisterDriver.elf.dir\UserApp\LCD\fonts.c.obj -c E:\Clion_for_STM32\TwisterDriver\Software\UserApp\LCD\fonts.c
 
-CMakeFiles/TwisterDriver.elf.dir/UserApp/LCD/lcd_dma.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/TwisterDriver.elf.dir/UserApp/LCD/lcd_dma.c.i"
-	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E E:\Clion_for_STM32\TwisterDriver\UserApp\LCD\lcd_dma.c > CMakeFiles\TwisterDriver.elf.dir\UserApp\LCD\lcd_dma.c.i
+CMakeFiles/TwisterDriver.elf.dir/UserApp/LCD/fonts.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/TwisterDriver.elf.dir/UserApp/LCD/fonts.c.i"
+	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E E:\Clion_for_STM32\TwisterDriver\Software\UserApp\LCD\fonts.c > CMakeFiles\TwisterDriver.elf.dir\UserApp\LCD\fonts.c.i
 
-CMakeFiles/TwisterDriver.elf.dir/UserApp/LCD/lcd_dma.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/TwisterDriver.elf.dir/UserApp/LCD/lcd_dma.c.s"
-	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S E:\Clion_for_STM32\TwisterDriver\UserApp\LCD\lcd_dma.c -o CMakeFiles\TwisterDriver.elf.dir\UserApp\LCD\lcd_dma.c.s
+CMakeFiles/TwisterDriver.elf.dir/UserApp/LCD/fonts.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/TwisterDriver.elf.dir/UserApp/LCD/fonts.c.s"
+	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S E:\Clion_for_STM32\TwisterDriver\Software\UserApp\LCD\fonts.c -o CMakeFiles\TwisterDriver.elf.dir\UserApp\LCD\fonts.c.s
 
-CMakeFiles/TwisterDriver.elf.dir/UserApp/LCD/lcd_init.c.obj: CMakeFiles/TwisterDriver.elf.dir/flags.make
-CMakeFiles/TwisterDriver.elf.dir/UserApp/LCD/lcd_init.c.obj: E:/Clion_for_STM32/TwisterDriver/UserApp/LCD/lcd_init.c
-CMakeFiles/TwisterDriver.elf.dir/UserApp/LCD/lcd_init.c.obj: CMakeFiles/TwisterDriver.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\Clion_for_STM32\TwisterDriver\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_50) "Building C object CMakeFiles/TwisterDriver.elf.dir/UserApp/LCD/lcd_init.c.obj"
-	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/TwisterDriver.elf.dir/UserApp/LCD/lcd_init.c.obj -MF CMakeFiles\TwisterDriver.elf.dir\UserApp\LCD\lcd_init.c.obj.d -o CMakeFiles\TwisterDriver.elf.dir\UserApp\LCD\lcd_init.c.obj -c E:\Clion_for_STM32\TwisterDriver\UserApp\LCD\lcd_init.c
+CMakeFiles/TwisterDriver.elf.dir/UserApp/LCD/gui.c.obj: CMakeFiles/TwisterDriver.elf.dir/flags.make
+CMakeFiles/TwisterDriver.elf.dir/UserApp/LCD/gui.c.obj: E:/Clion_for_STM32/TwisterDriver/Software/UserApp/LCD/gui.c
+CMakeFiles/TwisterDriver.elf.dir/UserApp/LCD/gui.c.obj: CMakeFiles/TwisterDriver.elf.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\Clion_for_STM32\TwisterDriver\Software\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_50) "Building C object CMakeFiles/TwisterDriver.elf.dir/UserApp/LCD/gui.c.obj"
+	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/TwisterDriver.elf.dir/UserApp/LCD/gui.c.obj -MF CMakeFiles\TwisterDriver.elf.dir\UserApp\LCD\gui.c.obj.d -o CMakeFiles\TwisterDriver.elf.dir\UserApp\LCD\gui.c.obj -c E:\Clion_for_STM32\TwisterDriver\Software\UserApp\LCD\gui.c
 
-CMakeFiles/TwisterDriver.elf.dir/UserApp/LCD/lcd_init.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/TwisterDriver.elf.dir/UserApp/LCD/lcd_init.c.i"
-	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E E:\Clion_for_STM32\TwisterDriver\UserApp\LCD\lcd_init.c > CMakeFiles\TwisterDriver.elf.dir\UserApp\LCD\lcd_init.c.i
+CMakeFiles/TwisterDriver.elf.dir/UserApp/LCD/gui.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/TwisterDriver.elf.dir/UserApp/LCD/gui.c.i"
+	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E E:\Clion_for_STM32\TwisterDriver\Software\UserApp\LCD\gui.c > CMakeFiles\TwisterDriver.elf.dir\UserApp\LCD\gui.c.i
 
-CMakeFiles/TwisterDriver.elf.dir/UserApp/LCD/lcd_init.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/TwisterDriver.elf.dir/UserApp/LCD/lcd_init.c.s"
-	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S E:\Clion_for_STM32\TwisterDriver\UserApp\LCD\lcd_init.c -o CMakeFiles\TwisterDriver.elf.dir\UserApp\LCD\lcd_init.c.s
+CMakeFiles/TwisterDriver.elf.dir/UserApp/LCD/gui.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/TwisterDriver.elf.dir/UserApp/LCD/gui.c.s"
+	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S E:\Clion_for_STM32\TwisterDriver\Software\UserApp\LCD\gui.c -o CMakeFiles\TwisterDriver.elf.dir\UserApp\LCD\gui.c.s
+
+CMakeFiles/TwisterDriver.elf.dir/UserApp/LCD/image.c.obj: CMakeFiles/TwisterDriver.elf.dir/flags.make
+CMakeFiles/TwisterDriver.elf.dir/UserApp/LCD/image.c.obj: E:/Clion_for_STM32/TwisterDriver/Software/UserApp/LCD/image.c
+CMakeFiles/TwisterDriver.elf.dir/UserApp/LCD/image.c.obj: CMakeFiles/TwisterDriver.elf.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\Clion_for_STM32\TwisterDriver\Software\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_51) "Building C object CMakeFiles/TwisterDriver.elf.dir/UserApp/LCD/image.c.obj"
+	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/TwisterDriver.elf.dir/UserApp/LCD/image.c.obj -MF CMakeFiles\TwisterDriver.elf.dir\UserApp\LCD\image.c.obj.d -o CMakeFiles\TwisterDriver.elf.dir\UserApp\LCD\image.c.obj -c E:\Clion_for_STM32\TwisterDriver\Software\UserApp\LCD\image.c
+
+CMakeFiles/TwisterDriver.elf.dir/UserApp/LCD/image.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/TwisterDriver.elf.dir/UserApp/LCD/image.c.i"
+	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E E:\Clion_for_STM32\TwisterDriver\Software\UserApp\LCD\image.c > CMakeFiles\TwisterDriver.elf.dir\UserApp\LCD\image.c.i
+
+CMakeFiles/TwisterDriver.elf.dir/UserApp/LCD/image.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/TwisterDriver.elf.dir/UserApp/LCD/image.c.s"
+	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S E:\Clion_for_STM32\TwisterDriver\Software\UserApp\LCD\image.c -o CMakeFiles\TwisterDriver.elf.dir\UserApp\LCD\image.c.s
+
+CMakeFiles/TwisterDriver.elf.dir/UserApp/LCD/st7735.c.obj: CMakeFiles/TwisterDriver.elf.dir/flags.make
+CMakeFiles/TwisterDriver.elf.dir/UserApp/LCD/st7735.c.obj: E:/Clion_for_STM32/TwisterDriver/Software/UserApp/LCD/st7735.c
+CMakeFiles/TwisterDriver.elf.dir/UserApp/LCD/st7735.c.obj: CMakeFiles/TwisterDriver.elf.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\Clion_for_STM32\TwisterDriver\Software\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_52) "Building C object CMakeFiles/TwisterDriver.elf.dir/UserApp/LCD/st7735.c.obj"
+	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/TwisterDriver.elf.dir/UserApp/LCD/st7735.c.obj -MF CMakeFiles\TwisterDriver.elf.dir\UserApp\LCD\st7735.c.obj.d -o CMakeFiles\TwisterDriver.elf.dir\UserApp\LCD\st7735.c.obj -c E:\Clion_for_STM32\TwisterDriver\Software\UserApp\LCD\st7735.c
+
+CMakeFiles/TwisterDriver.elf.dir/UserApp/LCD/st7735.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/TwisterDriver.elf.dir/UserApp/LCD/st7735.c.i"
+	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E E:\Clion_for_STM32\TwisterDriver\Software\UserApp\LCD\st7735.c > CMakeFiles\TwisterDriver.elf.dir\UserApp\LCD\st7735.c.i
+
+CMakeFiles/TwisterDriver.elf.dir/UserApp/LCD/st7735.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/TwisterDriver.elf.dir/UserApp/LCD/st7735.c.s"
+	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S E:\Clion_for_STM32\TwisterDriver\Software\UserApp\LCD\st7735.c -o CMakeFiles\TwisterDriver.elf.dir\UserApp\LCD\st7735.c.s
 
 CMakeFiles/TwisterDriver.elf.dir/UserApp/MT6701/MT6701.c.obj: CMakeFiles/TwisterDriver.elf.dir/flags.make
-CMakeFiles/TwisterDriver.elf.dir/UserApp/MT6701/MT6701.c.obj: E:/Clion_for_STM32/TwisterDriver/UserApp/MT6701/MT6701.c
+CMakeFiles/TwisterDriver.elf.dir/UserApp/MT6701/MT6701.c.obj: E:/Clion_for_STM32/TwisterDriver/Software/UserApp/MT6701/MT6701.c
 CMakeFiles/TwisterDriver.elf.dir/UserApp/MT6701/MT6701.c.obj: CMakeFiles/TwisterDriver.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\Clion_for_STM32\TwisterDriver\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_51) "Building C object CMakeFiles/TwisterDriver.elf.dir/UserApp/MT6701/MT6701.c.obj"
-	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/TwisterDriver.elf.dir/UserApp/MT6701/MT6701.c.obj -MF CMakeFiles\TwisterDriver.elf.dir\UserApp\MT6701\MT6701.c.obj.d -o CMakeFiles\TwisterDriver.elf.dir\UserApp\MT6701\MT6701.c.obj -c E:\Clion_for_STM32\TwisterDriver\UserApp\MT6701\MT6701.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\Clion_for_STM32\TwisterDriver\Software\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_53) "Building C object CMakeFiles/TwisterDriver.elf.dir/UserApp/MT6701/MT6701.c.obj"
+	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/TwisterDriver.elf.dir/UserApp/MT6701/MT6701.c.obj -MF CMakeFiles\TwisterDriver.elf.dir\UserApp\MT6701\MT6701.c.obj.d -o CMakeFiles\TwisterDriver.elf.dir\UserApp\MT6701\MT6701.c.obj -c E:\Clion_for_STM32\TwisterDriver\Software\UserApp\MT6701\MT6701.c
 
 CMakeFiles/TwisterDriver.elf.dir/UserApp/MT6701/MT6701.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/TwisterDriver.elf.dir/UserApp/MT6701/MT6701.c.i"
-	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E E:\Clion_for_STM32\TwisterDriver\UserApp\MT6701\MT6701.c > CMakeFiles\TwisterDriver.elf.dir\UserApp\MT6701\MT6701.c.i
+	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E E:\Clion_for_STM32\TwisterDriver\Software\UserApp\MT6701\MT6701.c > CMakeFiles\TwisterDriver.elf.dir\UserApp\MT6701\MT6701.c.i
 
 CMakeFiles/TwisterDriver.elf.dir/UserApp/MT6701/MT6701.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/TwisterDriver.elf.dir/UserApp/MT6701/MT6701.c.s"
-	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S E:\Clion_for_STM32\TwisterDriver\UserApp\MT6701\MT6701.c -o CMakeFiles\TwisterDriver.elf.dir\UserApp\MT6701\MT6701.c.s
+	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S E:\Clion_for_STM32\TwisterDriver\Software\UserApp\MT6701\MT6701.c -o CMakeFiles\TwisterDriver.elf.dir\UserApp\MT6701\MT6701.c.s
 
 CMakeFiles/TwisterDriver.elf.dir/UserApp/Servo/Servo.c.obj: CMakeFiles/TwisterDriver.elf.dir/flags.make
-CMakeFiles/TwisterDriver.elf.dir/UserApp/Servo/Servo.c.obj: E:/Clion_for_STM32/TwisterDriver/UserApp/Servo/Servo.c
+CMakeFiles/TwisterDriver.elf.dir/UserApp/Servo/Servo.c.obj: E:/Clion_for_STM32/TwisterDriver/Software/UserApp/Servo/Servo.c
 CMakeFiles/TwisterDriver.elf.dir/UserApp/Servo/Servo.c.obj: CMakeFiles/TwisterDriver.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\Clion_for_STM32\TwisterDriver\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_52) "Building C object CMakeFiles/TwisterDriver.elf.dir/UserApp/Servo/Servo.c.obj"
-	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/TwisterDriver.elf.dir/UserApp/Servo/Servo.c.obj -MF CMakeFiles\TwisterDriver.elf.dir\UserApp\Servo\Servo.c.obj.d -o CMakeFiles\TwisterDriver.elf.dir\UserApp\Servo\Servo.c.obj -c E:\Clion_for_STM32\TwisterDriver\UserApp\Servo\Servo.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\Clion_for_STM32\TwisterDriver\Software\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_54) "Building C object CMakeFiles/TwisterDriver.elf.dir/UserApp/Servo/Servo.c.obj"
+	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/TwisterDriver.elf.dir/UserApp/Servo/Servo.c.obj -MF CMakeFiles\TwisterDriver.elf.dir\UserApp\Servo\Servo.c.obj.d -o CMakeFiles\TwisterDriver.elf.dir\UserApp\Servo\Servo.c.obj -c E:\Clion_for_STM32\TwisterDriver\Software\UserApp\Servo\Servo.c
 
 CMakeFiles/TwisterDriver.elf.dir/UserApp/Servo/Servo.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/TwisterDriver.elf.dir/UserApp/Servo/Servo.c.i"
-	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E E:\Clion_for_STM32\TwisterDriver\UserApp\Servo\Servo.c > CMakeFiles\TwisterDriver.elf.dir\UserApp\Servo\Servo.c.i
+	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E E:\Clion_for_STM32\TwisterDriver\Software\UserApp\Servo\Servo.c > CMakeFiles\TwisterDriver.elf.dir\UserApp\Servo\Servo.c.i
 
 CMakeFiles/TwisterDriver.elf.dir/UserApp/Servo/Servo.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/TwisterDriver.elf.dir/UserApp/Servo/Servo.c.s"
-	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S E:\Clion_for_STM32\TwisterDriver\UserApp\Servo\Servo.c -o CMakeFiles\TwisterDriver.elf.dir\UserApp\Servo\Servo.c.s
+	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S E:\Clion_for_STM32\TwisterDriver\Software\UserApp\Servo\Servo.c -o CMakeFiles\TwisterDriver.elf.dir\UserApp\Servo\Servo.c.s
 
 CMakeFiles/TwisterDriver.elf.dir/UserApp/cJSON/cJSON.c.obj: CMakeFiles/TwisterDriver.elf.dir/flags.make
-CMakeFiles/TwisterDriver.elf.dir/UserApp/cJSON/cJSON.c.obj: E:/Clion_for_STM32/TwisterDriver/UserApp/cJSON/cJSON.c
+CMakeFiles/TwisterDriver.elf.dir/UserApp/cJSON/cJSON.c.obj: E:/Clion_for_STM32/TwisterDriver/Software/UserApp/cJSON/cJSON.c
 CMakeFiles/TwisterDriver.elf.dir/UserApp/cJSON/cJSON.c.obj: CMakeFiles/TwisterDriver.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\Clion_for_STM32\TwisterDriver\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_53) "Building C object CMakeFiles/TwisterDriver.elf.dir/UserApp/cJSON/cJSON.c.obj"
-	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/TwisterDriver.elf.dir/UserApp/cJSON/cJSON.c.obj -MF CMakeFiles\TwisterDriver.elf.dir\UserApp\cJSON\cJSON.c.obj.d -o CMakeFiles\TwisterDriver.elf.dir\UserApp\cJSON\cJSON.c.obj -c E:\Clion_for_STM32\TwisterDriver\UserApp\cJSON\cJSON.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\Clion_for_STM32\TwisterDriver\Software\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_55) "Building C object CMakeFiles/TwisterDriver.elf.dir/UserApp/cJSON/cJSON.c.obj"
+	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/TwisterDriver.elf.dir/UserApp/cJSON/cJSON.c.obj -MF CMakeFiles\TwisterDriver.elf.dir\UserApp\cJSON\cJSON.c.obj.d -o CMakeFiles\TwisterDriver.elf.dir\UserApp\cJSON\cJSON.c.obj -c E:\Clion_for_STM32\TwisterDriver\Software\UserApp\cJSON\cJSON.c
 
 CMakeFiles/TwisterDriver.elf.dir/UserApp/cJSON/cJSON.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/TwisterDriver.elf.dir/UserApp/cJSON/cJSON.c.i"
-	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E E:\Clion_for_STM32\TwisterDriver\UserApp\cJSON\cJSON.c > CMakeFiles\TwisterDriver.elf.dir\UserApp\cJSON\cJSON.c.i
+	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E E:\Clion_for_STM32\TwisterDriver\Software\UserApp\cJSON\cJSON.c > CMakeFiles\TwisterDriver.elf.dir\UserApp\cJSON\cJSON.c.i
 
 CMakeFiles/TwisterDriver.elf.dir/UserApp/cJSON/cJSON.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/TwisterDriver.elf.dir/UserApp/cJSON/cJSON.c.s"
-	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S E:\Clion_for_STM32\TwisterDriver\UserApp\cJSON\cJSON.c -o CMakeFiles\TwisterDriver.elf.dir\UserApp\cJSON\cJSON.c.s
+	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S E:\Clion_for_STM32\TwisterDriver\Software\UserApp\cJSON\cJSON.c -o CMakeFiles\TwisterDriver.elf.dir\UserApp\cJSON\cJSON.c.s
 
 CMakeFiles/TwisterDriver.elf.dir/UserApp/cJSON/cJSON_Utils.c.obj: CMakeFiles/TwisterDriver.elf.dir/flags.make
-CMakeFiles/TwisterDriver.elf.dir/UserApp/cJSON/cJSON_Utils.c.obj: E:/Clion_for_STM32/TwisterDriver/UserApp/cJSON/cJSON_Utils.c
+CMakeFiles/TwisterDriver.elf.dir/UserApp/cJSON/cJSON_Utils.c.obj: E:/Clion_for_STM32/TwisterDriver/Software/UserApp/cJSON/cJSON_Utils.c
 CMakeFiles/TwisterDriver.elf.dir/UserApp/cJSON/cJSON_Utils.c.obj: CMakeFiles/TwisterDriver.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\Clion_for_STM32\TwisterDriver\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_54) "Building C object CMakeFiles/TwisterDriver.elf.dir/UserApp/cJSON/cJSON_Utils.c.obj"
-	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/TwisterDriver.elf.dir/UserApp/cJSON/cJSON_Utils.c.obj -MF CMakeFiles\TwisterDriver.elf.dir\UserApp\cJSON\cJSON_Utils.c.obj.d -o CMakeFiles\TwisterDriver.elf.dir\UserApp\cJSON\cJSON_Utils.c.obj -c E:\Clion_for_STM32\TwisterDriver\UserApp\cJSON\cJSON_Utils.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\Clion_for_STM32\TwisterDriver\Software\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_56) "Building C object CMakeFiles/TwisterDriver.elf.dir/UserApp/cJSON/cJSON_Utils.c.obj"
+	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/TwisterDriver.elf.dir/UserApp/cJSON/cJSON_Utils.c.obj -MF CMakeFiles\TwisterDriver.elf.dir\UserApp\cJSON\cJSON_Utils.c.obj.d -o CMakeFiles\TwisterDriver.elf.dir\UserApp\cJSON\cJSON_Utils.c.obj -c E:\Clion_for_STM32\TwisterDriver\Software\UserApp\cJSON\cJSON_Utils.c
 
 CMakeFiles/TwisterDriver.elf.dir/UserApp/cJSON/cJSON_Utils.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/TwisterDriver.elf.dir/UserApp/cJSON/cJSON_Utils.c.i"
-	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E E:\Clion_for_STM32\TwisterDriver\UserApp\cJSON\cJSON_Utils.c > CMakeFiles\TwisterDriver.elf.dir\UserApp\cJSON\cJSON_Utils.c.i
+	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E E:\Clion_for_STM32\TwisterDriver\Software\UserApp\cJSON\cJSON_Utils.c > CMakeFiles\TwisterDriver.elf.dir\UserApp\cJSON\cJSON_Utils.c.i
 
 CMakeFiles/TwisterDriver.elf.dir/UserApp/cJSON/cJSON_Utils.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/TwisterDriver.elf.dir/UserApp/cJSON/cJSON_Utils.c.s"
-	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S E:\Clion_for_STM32\TwisterDriver\UserApp\cJSON\cJSON_Utils.c -o CMakeFiles\TwisterDriver.elf.dir\UserApp\cJSON\cJSON_Utils.c.s
+	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S E:\Clion_for_STM32\TwisterDriver\Software\UserApp\cJSON\cJSON_Utils.c -o CMakeFiles\TwisterDriver.elf.dir\UserApp\cJSON\cJSON_Utils.c.s
 
 CMakeFiles/TwisterDriver.elf.dir/UserApp/multiBotton/multi_button.c.obj: CMakeFiles/TwisterDriver.elf.dir/flags.make
-CMakeFiles/TwisterDriver.elf.dir/UserApp/multiBotton/multi_button.c.obj: E:/Clion_for_STM32/TwisterDriver/UserApp/multiBotton/multi_button.c
+CMakeFiles/TwisterDriver.elf.dir/UserApp/multiBotton/multi_button.c.obj: E:/Clion_for_STM32/TwisterDriver/Software/UserApp/multiBotton/multi_button.c
 CMakeFiles/TwisterDriver.elf.dir/UserApp/multiBotton/multi_button.c.obj: CMakeFiles/TwisterDriver.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\Clion_for_STM32\TwisterDriver\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_55) "Building C object CMakeFiles/TwisterDriver.elf.dir/UserApp/multiBotton/multi_button.c.obj"
-	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/TwisterDriver.elf.dir/UserApp/multiBotton/multi_button.c.obj -MF CMakeFiles\TwisterDriver.elf.dir\UserApp\multiBotton\multi_button.c.obj.d -o CMakeFiles\TwisterDriver.elf.dir\UserApp\multiBotton\multi_button.c.obj -c E:\Clion_for_STM32\TwisterDriver\UserApp\multiBotton\multi_button.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\Clion_for_STM32\TwisterDriver\Software\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_57) "Building C object CMakeFiles/TwisterDriver.elf.dir/UserApp/multiBotton/multi_button.c.obj"
+	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/TwisterDriver.elf.dir/UserApp/multiBotton/multi_button.c.obj -MF CMakeFiles\TwisterDriver.elf.dir\UserApp\multiBotton\multi_button.c.obj.d -o CMakeFiles\TwisterDriver.elf.dir\UserApp\multiBotton\multi_button.c.obj -c E:\Clion_for_STM32\TwisterDriver\Software\UserApp\multiBotton\multi_button.c
 
 CMakeFiles/TwisterDriver.elf.dir/UserApp/multiBotton/multi_button.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/TwisterDriver.elf.dir/UserApp/multiBotton/multi_button.c.i"
-	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E E:\Clion_for_STM32\TwisterDriver\UserApp\multiBotton\multi_button.c > CMakeFiles\TwisterDriver.elf.dir\UserApp\multiBotton\multi_button.c.i
+	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E E:\Clion_for_STM32\TwisterDriver\Software\UserApp\multiBotton\multi_button.c > CMakeFiles\TwisterDriver.elf.dir\UserApp\multiBotton\multi_button.c.i
 
 CMakeFiles/TwisterDriver.elf.dir/UserApp/multiBotton/multi_button.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/TwisterDriver.elf.dir/UserApp/multiBotton/multi_button.c.s"
-	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S E:\Clion_for_STM32\TwisterDriver\UserApp\multiBotton\multi_button.c -o CMakeFiles\TwisterDriver.elf.dir\UserApp\multiBotton\multi_button.c.s
+	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S E:\Clion_for_STM32\TwisterDriver\Software\UserApp\multiBotton\multi_button.c -o CMakeFiles\TwisterDriver.elf.dir\UserApp\multiBotton\multi_button.c.s
 
 CMakeFiles/TwisterDriver.elf.dir/UserApp/retarget/retarget.c.obj: CMakeFiles/TwisterDriver.elf.dir/flags.make
-CMakeFiles/TwisterDriver.elf.dir/UserApp/retarget/retarget.c.obj: E:/Clion_for_STM32/TwisterDriver/UserApp/retarget/retarget.c
+CMakeFiles/TwisterDriver.elf.dir/UserApp/retarget/retarget.c.obj: E:/Clion_for_STM32/TwisterDriver/Software/UserApp/retarget/retarget.c
 CMakeFiles/TwisterDriver.elf.dir/UserApp/retarget/retarget.c.obj: CMakeFiles/TwisterDriver.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\Clion_for_STM32\TwisterDriver\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_56) "Building C object CMakeFiles/TwisterDriver.elf.dir/UserApp/retarget/retarget.c.obj"
-	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/TwisterDriver.elf.dir/UserApp/retarget/retarget.c.obj -MF CMakeFiles\TwisterDriver.elf.dir\UserApp\retarget\retarget.c.obj.d -o CMakeFiles\TwisterDriver.elf.dir\UserApp\retarget\retarget.c.obj -c E:\Clion_for_STM32\TwisterDriver\UserApp\retarget\retarget.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\Clion_for_STM32\TwisterDriver\Software\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_58) "Building C object CMakeFiles/TwisterDriver.elf.dir/UserApp/retarget/retarget.c.obj"
+	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/TwisterDriver.elf.dir/UserApp/retarget/retarget.c.obj -MF CMakeFiles\TwisterDriver.elf.dir\UserApp\retarget\retarget.c.obj.d -o CMakeFiles\TwisterDriver.elf.dir\UserApp\retarget\retarget.c.obj -c E:\Clion_for_STM32\TwisterDriver\Software\UserApp\retarget\retarget.c
 
 CMakeFiles/TwisterDriver.elf.dir/UserApp/retarget/retarget.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/TwisterDriver.elf.dir/UserApp/retarget/retarget.c.i"
-	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E E:\Clion_for_STM32\TwisterDriver\UserApp\retarget\retarget.c > CMakeFiles\TwisterDriver.elf.dir\UserApp\retarget\retarget.c.i
+	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E E:\Clion_for_STM32\TwisterDriver\Software\UserApp\retarget\retarget.c > CMakeFiles\TwisterDriver.elf.dir\UserApp\retarget\retarget.c.i
 
 CMakeFiles/TwisterDriver.elf.dir/UserApp/retarget/retarget.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/TwisterDriver.elf.dir/UserApp/retarget/retarget.c.s"
-	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S E:\Clion_for_STM32\TwisterDriver\UserApp\retarget\retarget.c -o CMakeFiles\TwisterDriver.elf.dir\UserApp\retarget\retarget.c.s
+	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S E:\Clion_for_STM32\TwisterDriver\Software\UserApp\retarget\retarget.c -o CMakeFiles\TwisterDriver.elf.dir\UserApp\retarget\retarget.c.s
 
 # Object files for target TwisterDriver.elf
 TwisterDriver_elf_OBJECTS = \
@@ -901,8 +929,10 @@ TwisterDriver_elf_OBJECTS = \
 "CMakeFiles/TwisterDriver.elf.dir/UserApp/FOC/Filter.c.obj" \
 "CMakeFiles/TwisterDriver.elf.dir/UserApp/FOC/hardware_api.c.obj" \
 "CMakeFiles/TwisterDriver.elf.dir/UserApp/FOC/my_PID.c.obj" \
-"CMakeFiles/TwisterDriver.elf.dir/UserApp/LCD/lcd_dma.c.obj" \
-"CMakeFiles/TwisterDriver.elf.dir/UserApp/LCD/lcd_init.c.obj" \
+"CMakeFiles/TwisterDriver.elf.dir/UserApp/LCD/fonts.c.obj" \
+"CMakeFiles/TwisterDriver.elf.dir/UserApp/LCD/gui.c.obj" \
+"CMakeFiles/TwisterDriver.elf.dir/UserApp/LCD/image.c.obj" \
+"CMakeFiles/TwisterDriver.elf.dir/UserApp/LCD/st7735.c.obj" \
 "CMakeFiles/TwisterDriver.elf.dir/UserApp/MT6701/MT6701.c.obj" \
 "CMakeFiles/TwisterDriver.elf.dir/UserApp/Servo/Servo.c.obj" \
 "CMakeFiles/TwisterDriver.elf.dir/UserApp/cJSON/cJSON.c.obj" \
@@ -961,8 +991,10 @@ TwisterDriver.elf: CMakeFiles/TwisterDriver.elf.dir/UserApp/FOC/FOC_math.c.obj
 TwisterDriver.elf: CMakeFiles/TwisterDriver.elf.dir/UserApp/FOC/Filter.c.obj
 TwisterDriver.elf: CMakeFiles/TwisterDriver.elf.dir/UserApp/FOC/hardware_api.c.obj
 TwisterDriver.elf: CMakeFiles/TwisterDriver.elf.dir/UserApp/FOC/my_PID.c.obj
-TwisterDriver.elf: CMakeFiles/TwisterDriver.elf.dir/UserApp/LCD/lcd_dma.c.obj
-TwisterDriver.elf: CMakeFiles/TwisterDriver.elf.dir/UserApp/LCD/lcd_init.c.obj
+TwisterDriver.elf: CMakeFiles/TwisterDriver.elf.dir/UserApp/LCD/fonts.c.obj
+TwisterDriver.elf: CMakeFiles/TwisterDriver.elf.dir/UserApp/LCD/gui.c.obj
+TwisterDriver.elf: CMakeFiles/TwisterDriver.elf.dir/UserApp/LCD/image.c.obj
+TwisterDriver.elf: CMakeFiles/TwisterDriver.elf.dir/UserApp/LCD/st7735.c.obj
 TwisterDriver.elf: CMakeFiles/TwisterDriver.elf.dir/UserApp/MT6701/MT6701.c.obj
 TwisterDriver.elf: CMakeFiles/TwisterDriver.elf.dir/UserApp/Servo/Servo.c.obj
 TwisterDriver.elf: CMakeFiles/TwisterDriver.elf.dir/UserApp/cJSON/cJSON.c.obj
@@ -972,12 +1004,12 @@ TwisterDriver.elf: CMakeFiles/TwisterDriver.elf.dir/UserApp/retarget/retarget.c.
 TwisterDriver.elf: CMakeFiles/TwisterDriver.elf.dir/build.make
 TwisterDriver.elf: CMakeFiles/TwisterDriver.elf.dir/objects1
 TwisterDriver.elf: CMakeFiles/TwisterDriver.elf.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=E:\Clion_for_STM32\TwisterDriver\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_57) "Linking C executable TwisterDriver.elf"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=E:\Clion_for_STM32\TwisterDriver\Software\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_59) "Linking C executable TwisterDriver.elf"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\TwisterDriver.elf.dir\link.txt --verbose=$(VERBOSE)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Building E:/Clion_for_STM32/TwisterDriver/cmake-build-debug/TwisterDriver.hex"
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Building E:/Clion_for_STM32/TwisterDriver/cmake-build-debug/TwisterDriver.bin"
-	arm-none-eabi-objcopy -Oihex E:/Clion_for_STM32/TwisterDriver/cmake-build-debug/TwisterDriver.elf E:/Clion_for_STM32/TwisterDriver/cmake-build-debug/TwisterDriver.hex
-	arm-none-eabi-objcopy -Obinary E:/Clion_for_STM32/TwisterDriver/cmake-build-debug/TwisterDriver.elf E:/Clion_for_STM32/TwisterDriver/cmake-build-debug/TwisterDriver.bin
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Building E:/Clion_for_STM32/TwisterDriver/Software/cmake-build-debug/TwisterDriver.hex"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Building E:/Clion_for_STM32/TwisterDriver/Software/cmake-build-debug/TwisterDriver.bin"
+	arm-none-eabi-objcopy -Oihex E:/Clion_for_STM32/TwisterDriver/Software/cmake-build-debug/TwisterDriver.elf E:/Clion_for_STM32/TwisterDriver/Software/cmake-build-debug/TwisterDriver.hex
+	arm-none-eabi-objcopy -Obinary E:/Clion_for_STM32/TwisterDriver/Software/cmake-build-debug/TwisterDriver.elf E:/Clion_for_STM32/TwisterDriver/Software/cmake-build-debug/TwisterDriver.bin
 
 # Rule to build all files generated by this target.
 CMakeFiles/TwisterDriver.elf.dir/build: TwisterDriver.elf
@@ -988,6 +1020,6 @@ CMakeFiles/TwisterDriver.elf.dir/clean:
 .PHONY : CMakeFiles/TwisterDriver.elf.dir/clean
 
 CMakeFiles/TwisterDriver.elf.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" E:\Clion_for_STM32\TwisterDriver E:\Clion_for_STM32\TwisterDriver E:\Clion_for_STM32\TwisterDriver\cmake-build-debug E:\Clion_for_STM32\TwisterDriver\cmake-build-debug E:\Clion_for_STM32\TwisterDriver\cmake-build-debug\CMakeFiles\TwisterDriver.elf.dir\DependInfo.cmake --color=$(COLOR)
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" E:\Clion_for_STM32\TwisterDriver\Software E:\Clion_for_STM32\TwisterDriver\Software E:\Clion_for_STM32\TwisterDriver\Software\cmake-build-debug E:\Clion_for_STM32\TwisterDriver\Software\cmake-build-debug E:\Clion_for_STM32\TwisterDriver\Software\cmake-build-debug\CMakeFiles\TwisterDriver.elf.dir\DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/TwisterDriver.elf.dir/depend
 

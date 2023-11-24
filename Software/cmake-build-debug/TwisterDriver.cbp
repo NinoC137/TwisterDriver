@@ -8,18 +8,18 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="E:/Clion_for_STM32/TwisterDriver/cmake-build-debug"/>
+				<Option working_dir="E:/Clion_for_STM32/TwisterDriver/Software/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/MinGW/bin/make.exe -f &quot;E:/Clion_for_STM32/TwisterDriver/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="C:/MinGW/bin/make.exe -f &quot;E:/Clion_for_STM32/TwisterDriver/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/MinGW/bin/make.exe -f &quot;E:/Clion_for_STM32/TwisterDriver/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/MinGW/bin/make.exe -f &quot;E:/Clion_for_STM32/TwisterDriver/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/MinGW/bin/make.exe -f &quot;E:/Clion_for_STM32/TwisterDriver/Software/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="C:/MinGW/bin/make.exe -f &quot;E:/Clion_for_STM32/TwisterDriver/Software/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/make.exe -f &quot;E:/Clion_for_STM32/TwisterDriver/Software/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/make.exe -f &quot;E:/Clion_for_STM32/TwisterDriver/Software/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="TwisterDriver.elf">
-				<Option output="E:/Clion_for_STM32/TwisterDriver/cmake-build-debug/TwisterDriver.elf" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="E:/Clion_for_STM32/TwisterDriver/cmake-build-debug"/>
+				<Option output="E:/Clion_for_STM32/TwisterDriver/Software/cmake-build-debug/TwisterDriver.elf" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="E:/Clion_for_STM32/TwisterDriver/Software/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -27,21 +27,21 @@
 					<Add option="-DDEBUG"/>
 					<Add option="-DUSE_HAL_DRIVER"/>
 					<Add option="-DSTM32G431xx"/>
-					<Add directory="E:/Clion_for_STM32/TwisterDriver/Core/Inc"/>
-					<Add directory="E:/Clion_for_STM32/TwisterDriver/Drivers/STM32G4xx_HAL_Driver/Inc"/>
-					<Add directory="E:/Clion_for_STM32/TwisterDriver/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy"/>
-					<Add directory="E:/Clion_for_STM32/TwisterDriver/Drivers/CMSIS/Device/ST/STM32G4xx/Include"/>
-					<Add directory="E:/Clion_for_STM32/TwisterDriver/Drivers/CMSIS/Include"/>
-					<Add directory="E:/Clion_for_STM32/TwisterDriver/Middlewares/Third_Party/FreeRTOS/Source/include"/>
-					<Add directory="E:/Clion_for_STM32/TwisterDriver/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS"/>
-					<Add directory="E:/Clion_for_STM32/TwisterDriver/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F"/>
-					<Add directory="E:/Clion_for_STM32/TwisterDriver/UserApp/FOC"/>
-					<Add directory="E:/Clion_for_STM32/TwisterDriver/UserApp/MT6701"/>
-					<Add directory="E:/Clion_for_STM32/TwisterDriver/UserApp/retarget"/>
-					<Add directory="E:/Clion_for_STM32/TwisterDriver/UserApp/cJSON"/>
-					<Add directory="E:/Clion_for_STM32/TwisterDriver/UserApp/Servo"/>
-					<Add directory="E:/Clion_for_STM32/TwisterDriver/UserApp/LCD"/>
-					<Add directory="E:/Clion_for_STM32/TwisterDriver/UserApp/multiBotton"/>
+					<Add directory="E:/Clion_for_STM32/TwisterDriver/Software/Core/Inc"/>
+					<Add directory="E:/Clion_for_STM32/TwisterDriver/Software/Drivers/STM32G4xx_HAL_Driver/Inc"/>
+					<Add directory="E:/Clion_for_STM32/TwisterDriver/Software/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy"/>
+					<Add directory="E:/Clion_for_STM32/TwisterDriver/Software/Drivers/CMSIS/Device/ST/STM32G4xx/Include"/>
+					<Add directory="E:/Clion_for_STM32/TwisterDriver/Software/Drivers/CMSIS/Include"/>
+					<Add directory="E:/Clion_for_STM32/TwisterDriver/Software/Middlewares/Third_Party/FreeRTOS/Source/include"/>
+					<Add directory="E:/Clion_for_STM32/TwisterDriver/Software/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS"/>
+					<Add directory="E:/Clion_for_STM32/TwisterDriver/Software/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F"/>
+					<Add directory="E:/Clion_for_STM32/TwisterDriver/Software/UserApp/FOC"/>
+					<Add directory="E:/Clion_for_STM32/TwisterDriver/Software/UserApp/MT6701"/>
+					<Add directory="E:/Clion_for_STM32/TwisterDriver/Software/UserApp/retarget"/>
+					<Add directory="E:/Clion_for_STM32/TwisterDriver/Software/UserApp/cJSON"/>
+					<Add directory="E:/Clion_for_STM32/TwisterDriver/Software/UserApp/Servo"/>
+					<Add directory="E:/Clion_for_STM32/TwisterDriver/Software/UserApp/LCD"/>
+					<Add directory="E:/Clion_for_STM32/TwisterDriver/Software/UserApp/multiBotton"/>
 					<Add directory="e:\compiler\bin\../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/include/c++/10.2.1"/>
 					<Add directory="e:\compiler\bin\../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/include/c++/10.2.1/arm-none-eabi"/>
 					<Add directory="e:\compiler\bin\../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/include/c++/10.2.1/backward"/>
@@ -50,15 +50,15 @@
 					<Add directory="e:\compiler\bin\../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/MinGW/bin/make.exe -f &quot;E:/Clion_for_STM32/TwisterDriver/cmake-build-debug/Makefile&quot;  VERBOSE=1 TwisterDriver.elf"/>
-					<CompileFile command="C:/MinGW/bin/make.exe -f &quot;E:/Clion_for_STM32/TwisterDriver/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/MinGW/bin/make.exe -f &quot;E:/Clion_for_STM32/TwisterDriver/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/MinGW/bin/make.exe -f &quot;E:/Clion_for_STM32/TwisterDriver/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/MinGW/bin/make.exe -f &quot;E:/Clion_for_STM32/TwisterDriver/Software/cmake-build-debug/Makefile&quot;  VERBOSE=1 TwisterDriver.elf"/>
+					<CompileFile command="C:/MinGW/bin/make.exe -f &quot;E:/Clion_for_STM32/TwisterDriver/Software/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/make.exe -f &quot;E:/Clion_for_STM32/TwisterDriver/Software/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/make.exe -f &quot;E:/Clion_for_STM32/TwisterDriver/Software/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="TwisterDriver.elf/fast">
-				<Option output="E:/Clion_for_STM32/TwisterDriver/cmake-build-debug/TwisterDriver.elf" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="E:/Clion_for_STM32/TwisterDriver/cmake-build-debug"/>
+				<Option output="E:/Clion_for_STM32/TwisterDriver/Software/cmake-build-debug/TwisterDriver.elf" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="E:/Clion_for_STM32/TwisterDriver/Software/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -66,21 +66,21 @@
 					<Add option="-DDEBUG"/>
 					<Add option="-DUSE_HAL_DRIVER"/>
 					<Add option="-DSTM32G431xx"/>
-					<Add directory="E:/Clion_for_STM32/TwisterDriver/Core/Inc"/>
-					<Add directory="E:/Clion_for_STM32/TwisterDriver/Drivers/STM32G4xx_HAL_Driver/Inc"/>
-					<Add directory="E:/Clion_for_STM32/TwisterDriver/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy"/>
-					<Add directory="E:/Clion_for_STM32/TwisterDriver/Drivers/CMSIS/Device/ST/STM32G4xx/Include"/>
-					<Add directory="E:/Clion_for_STM32/TwisterDriver/Drivers/CMSIS/Include"/>
-					<Add directory="E:/Clion_for_STM32/TwisterDriver/Middlewares/Third_Party/FreeRTOS/Source/include"/>
-					<Add directory="E:/Clion_for_STM32/TwisterDriver/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS"/>
-					<Add directory="E:/Clion_for_STM32/TwisterDriver/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F"/>
-					<Add directory="E:/Clion_for_STM32/TwisterDriver/UserApp/FOC"/>
-					<Add directory="E:/Clion_for_STM32/TwisterDriver/UserApp/MT6701"/>
-					<Add directory="E:/Clion_for_STM32/TwisterDriver/UserApp/retarget"/>
-					<Add directory="E:/Clion_for_STM32/TwisterDriver/UserApp/cJSON"/>
-					<Add directory="E:/Clion_for_STM32/TwisterDriver/UserApp/Servo"/>
-					<Add directory="E:/Clion_for_STM32/TwisterDriver/UserApp/LCD"/>
-					<Add directory="E:/Clion_for_STM32/TwisterDriver/UserApp/multiBotton"/>
+					<Add directory="E:/Clion_for_STM32/TwisterDriver/Software/Core/Inc"/>
+					<Add directory="E:/Clion_for_STM32/TwisterDriver/Software/Drivers/STM32G4xx_HAL_Driver/Inc"/>
+					<Add directory="E:/Clion_for_STM32/TwisterDriver/Software/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy"/>
+					<Add directory="E:/Clion_for_STM32/TwisterDriver/Software/Drivers/CMSIS/Device/ST/STM32G4xx/Include"/>
+					<Add directory="E:/Clion_for_STM32/TwisterDriver/Software/Drivers/CMSIS/Include"/>
+					<Add directory="E:/Clion_for_STM32/TwisterDriver/Software/Middlewares/Third_Party/FreeRTOS/Source/include"/>
+					<Add directory="E:/Clion_for_STM32/TwisterDriver/Software/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS"/>
+					<Add directory="E:/Clion_for_STM32/TwisterDriver/Software/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F"/>
+					<Add directory="E:/Clion_for_STM32/TwisterDriver/Software/UserApp/FOC"/>
+					<Add directory="E:/Clion_for_STM32/TwisterDriver/Software/UserApp/MT6701"/>
+					<Add directory="E:/Clion_for_STM32/TwisterDriver/Software/UserApp/retarget"/>
+					<Add directory="E:/Clion_for_STM32/TwisterDriver/Software/UserApp/cJSON"/>
+					<Add directory="E:/Clion_for_STM32/TwisterDriver/Software/UserApp/Servo"/>
+					<Add directory="E:/Clion_for_STM32/TwisterDriver/Software/UserApp/LCD"/>
+					<Add directory="E:/Clion_for_STM32/TwisterDriver/Software/UserApp/multiBotton"/>
 					<Add directory="e:\compiler\bin\../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/include/c++/10.2.1"/>
 					<Add directory="e:\compiler\bin\../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/include/c++/10.2.1/arm-none-eabi"/>
 					<Add directory="e:\compiler\bin\../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/include/c++/10.2.1/backward"/>
@@ -89,544 +89,550 @@
 					<Add directory="e:\compiler\bin\../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/MinGW/bin/make.exe -f &quot;E:/Clion_for_STM32/TwisterDriver/cmake-build-debug/Makefile&quot;  VERBOSE=1 TwisterDriver.elf/fast"/>
-					<CompileFile command="C:/MinGW/bin/make.exe -f &quot;E:/Clion_for_STM32/TwisterDriver/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/MinGW/bin/make.exe -f &quot;E:/Clion_for_STM32/TwisterDriver/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/MinGW/bin/make.exe -f &quot;E:/Clion_for_STM32/TwisterDriver/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/MinGW/bin/make.exe -f &quot;E:/Clion_for_STM32/TwisterDriver/Software/cmake-build-debug/Makefile&quot;  VERBOSE=1 TwisterDriver.elf/fast"/>
+					<CompileFile command="C:/MinGW/bin/make.exe -f &quot;E:/Clion_for_STM32/TwisterDriver/Software/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/make.exe -f &quot;E:/Clion_for_STM32/TwisterDriver/Software/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/make.exe -f &quot;E:/Clion_for_STM32/TwisterDriver/Software/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="E:/Clion_for_STM32/TwisterDriver/cmake-build-debug"/>
+				<Option working_dir="E:/Clion_for_STM32/TwisterDriver/Software/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/MinGW/bin/make.exe -f &quot;E:/Clion_for_STM32/TwisterDriver/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="C:/MinGW/bin/make.exe -f &quot;E:/Clion_for_STM32/TwisterDriver/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/MinGW/bin/make.exe -f &quot;E:/Clion_for_STM32/TwisterDriver/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/MinGW/bin/make.exe -f &quot;E:/Clion_for_STM32/TwisterDriver/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/MinGW/bin/make.exe -f &quot;E:/Clion_for_STM32/TwisterDriver/Software/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="C:/MinGW/bin/make.exe -f &quot;E:/Clion_for_STM32/TwisterDriver/Software/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/make.exe -f &quot;E:/Clion_for_STM32/TwisterDriver/Software/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/make.exe -f &quot;E:/Clion_for_STM32/TwisterDriver/Software/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="E:/Clion_for_STM32/TwisterDriver/cmake-build-debug"/>
+				<Option working_dir="E:/Clion_for_STM32/TwisterDriver/Software/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/MinGW/bin/make.exe -f &quot;E:/Clion_for_STM32/TwisterDriver/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="C:/MinGW/bin/make.exe -f &quot;E:/Clion_for_STM32/TwisterDriver/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/MinGW/bin/make.exe -f &quot;E:/Clion_for_STM32/TwisterDriver/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/MinGW/bin/make.exe -f &quot;E:/Clion_for_STM32/TwisterDriver/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/MinGW/bin/make.exe -f &quot;E:/Clion_for_STM32/TwisterDriver/Software/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="C:/MinGW/bin/make.exe -f &quot;E:/Clion_for_STM32/TwisterDriver/Software/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/make.exe -f &quot;E:/Clion_for_STM32/TwisterDriver/Software/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/make.exe -f &quot;E:/Clion_for_STM32/TwisterDriver/Software/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Core/Inc/FreeRTOSConfig.h">
+		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Software/Core/Inc/FreeRTOSConfig.h">
 			<Option target="TwisterDriver.elf"/>
 		</Unit>
-		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Core/Inc/main.h">
+		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Software/Core/Inc/main.h">
 			<Option target="TwisterDriver.elf"/>
 		</Unit>
-		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Core/Inc/stm32g4xx_hal_conf.h">
+		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Software/Core/Inc/stm32g4xx_hal_conf.h">
 			<Option target="TwisterDriver.elf"/>
 		</Unit>
-		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Core/Inc/stm32g4xx_it.h">
+		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Software/Core/Inc/stm32g4xx_it.h">
 			<Option target="TwisterDriver.elf"/>
 		</Unit>
-		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Core/Src/app_freertos.c">
+		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Software/Core/Src/app_freertos.c">
 			<Option target="TwisterDriver.elf"/>
 		</Unit>
-		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Core/Src/main.c">
+		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Software/Core/Src/main.c">
 			<Option target="TwisterDriver.elf"/>
 		</Unit>
-		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Core/Src/stm32g4xx_hal_msp.c">
+		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Software/Core/Src/stm32g4xx_hal_msp.c">
 			<Option target="TwisterDriver.elf"/>
 		</Unit>
-		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Core/Src/stm32g4xx_it.c">
+		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Software/Core/Src/stm32g4xx_it.c">
 			<Option target="TwisterDriver.elf"/>
 		</Unit>
-		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Core/Src/syscalls.c">
+		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Software/Core/Src/syscalls.c">
 			<Option target="TwisterDriver.elf"/>
 		</Unit>
-		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Core/Src/sysmem.c">
+		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Software/Core/Src/sysmem.c">
 			<Option target="TwisterDriver.elf"/>
 		</Unit>
-		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Core/Src/system_stm32g4xx.c">
+		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Software/Core/Src/system_stm32g4xx.c">
 			<Option target="TwisterDriver.elf"/>
 		</Unit>
-		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Core/Startup/startup_stm32g431rbtx.s">
+		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Software/Core/Startup/startup_stm32g431rbtx.s">
 			<Option target="TwisterDriver.elf"/>
 		</Unit>
-		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g431xx.h">
+		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Software/Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g431xx.h">
 			<Option target="TwisterDriver.elf"/>
 		</Unit>
-		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h">
+		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Software/Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h">
 			<Option target="TwisterDriver.elf"/>
 		</Unit>
-		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Drivers/CMSIS/Device/ST/STM32G4xx/Include/system_stm32g4xx.h">
+		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Software/Drivers/CMSIS/Device/ST/STM32G4xx/Include/system_stm32g4xx.h">
 			<Option target="TwisterDriver.elf"/>
 		</Unit>
-		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Drivers/CMSIS/Device/ST/STM32G4xx/LICENSE.txt">
+		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Software/Drivers/CMSIS/Device/ST/STM32G4xx/LICENSE.txt">
 			<Option target="TwisterDriver.elf"/>
 		</Unit>
-		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Drivers/CMSIS/Include/cmsis_armcc.h">
+		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Software/Drivers/CMSIS/Include/cmsis_armcc.h">
 			<Option target="TwisterDriver.elf"/>
 		</Unit>
-		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Drivers/CMSIS/Include/cmsis_armclang.h">
+		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Software/Drivers/CMSIS/Include/cmsis_armclang.h">
 			<Option target="TwisterDriver.elf"/>
 		</Unit>
-		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Drivers/CMSIS/Include/cmsis_armclang_ltm.h">
+		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Software/Drivers/CMSIS/Include/cmsis_armclang_ltm.h">
 			<Option target="TwisterDriver.elf"/>
 		</Unit>
-		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Drivers/CMSIS/Include/cmsis_compiler.h">
+		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Software/Drivers/CMSIS/Include/cmsis_compiler.h">
 			<Option target="TwisterDriver.elf"/>
 		</Unit>
-		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Drivers/CMSIS/Include/cmsis_gcc.h">
+		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Software/Drivers/CMSIS/Include/cmsis_gcc.h">
 			<Option target="TwisterDriver.elf"/>
 		</Unit>
-		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Drivers/CMSIS/Include/cmsis_iccarm.h">
+		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Software/Drivers/CMSIS/Include/cmsis_iccarm.h">
 			<Option target="TwisterDriver.elf"/>
 		</Unit>
-		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Drivers/CMSIS/Include/cmsis_version.h">
+		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Software/Drivers/CMSIS/Include/cmsis_version.h">
 			<Option target="TwisterDriver.elf"/>
 		</Unit>
-		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Drivers/CMSIS/Include/core_armv81mml.h">
+		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Software/Drivers/CMSIS/Include/core_armv81mml.h">
 			<Option target="TwisterDriver.elf"/>
 		</Unit>
-		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Drivers/CMSIS/Include/core_armv8mbl.h">
+		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Software/Drivers/CMSIS/Include/core_armv8mbl.h">
 			<Option target="TwisterDriver.elf"/>
 		</Unit>
-		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Drivers/CMSIS/Include/core_armv8mml.h">
+		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Software/Drivers/CMSIS/Include/core_armv8mml.h">
 			<Option target="TwisterDriver.elf"/>
 		</Unit>
-		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Drivers/CMSIS/Include/core_cm0.h">
+		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Software/Drivers/CMSIS/Include/core_cm0.h">
 			<Option target="TwisterDriver.elf"/>
 		</Unit>
-		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Drivers/CMSIS/Include/core_cm0plus.h">
+		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Software/Drivers/CMSIS/Include/core_cm0plus.h">
 			<Option target="TwisterDriver.elf"/>
 		</Unit>
-		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Drivers/CMSIS/Include/core_cm1.h">
+		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Software/Drivers/CMSIS/Include/core_cm1.h">
 			<Option target="TwisterDriver.elf"/>
 		</Unit>
-		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Drivers/CMSIS/Include/core_cm23.h">
+		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Software/Drivers/CMSIS/Include/core_cm23.h">
 			<Option target="TwisterDriver.elf"/>
 		</Unit>
-		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Drivers/CMSIS/Include/core_cm3.h">
+		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Software/Drivers/CMSIS/Include/core_cm3.h">
 			<Option target="TwisterDriver.elf"/>
 		</Unit>
-		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Drivers/CMSIS/Include/core_cm33.h">
+		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Software/Drivers/CMSIS/Include/core_cm33.h">
 			<Option target="TwisterDriver.elf"/>
 		</Unit>
-		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Drivers/CMSIS/Include/core_cm35p.h">
+		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Software/Drivers/CMSIS/Include/core_cm35p.h">
 			<Option target="TwisterDriver.elf"/>
 		</Unit>
-		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Drivers/CMSIS/Include/core_cm4.h">
+		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Software/Drivers/CMSIS/Include/core_cm4.h">
 			<Option target="TwisterDriver.elf"/>
 		</Unit>
-		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Drivers/CMSIS/Include/core_cm7.h">
+		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Software/Drivers/CMSIS/Include/core_cm7.h">
 			<Option target="TwisterDriver.elf"/>
 		</Unit>
-		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Drivers/CMSIS/Include/core_sc000.h">
+		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Software/Drivers/CMSIS/Include/core_sc000.h">
 			<Option target="TwisterDriver.elf"/>
 		</Unit>
-		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Drivers/CMSIS/Include/core_sc300.h">
+		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Software/Drivers/CMSIS/Include/core_sc300.h">
 			<Option target="TwisterDriver.elf"/>
 		</Unit>
-		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Drivers/CMSIS/Include/mpu_armv7.h">
+		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Software/Drivers/CMSIS/Include/mpu_armv7.h">
 			<Option target="TwisterDriver.elf"/>
 		</Unit>
-		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Drivers/CMSIS/Include/mpu_armv8.h">
+		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Software/Drivers/CMSIS/Include/mpu_armv8.h">
 			<Option target="TwisterDriver.elf"/>
 		</Unit>
-		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Drivers/CMSIS/Include/tz_context.h">
+		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Software/Drivers/CMSIS/Include/tz_context.h">
 			<Option target="TwisterDriver.elf"/>
 		</Unit>
-		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Drivers/CMSIS/LICENSE.txt">
+		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Software/Drivers/CMSIS/LICENSE.txt">
 			<Option target="TwisterDriver.elf"/>
 		</Unit>
-		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h">
+		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Software/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h">
 			<Option target="TwisterDriver.elf"/>
 		</Unit>
-		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h">
+		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Software/Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h">
 			<Option target="TwisterDriver.elf"/>
 		</Unit>
-		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_adc.h">
+		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Software/Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_adc.h">
 			<Option target="TwisterDriver.elf"/>
 		</Unit>
-		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_adc_ex.h">
+		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Software/Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_adc_ex.h">
 			<Option target="TwisterDriver.elf"/>
 		</Unit>
-		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_cortex.h">
+		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Software/Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_cortex.h">
 			<Option target="TwisterDriver.elf"/>
 		</Unit>
-		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_def.h">
+		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Software/Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_def.h">
 			<Option target="TwisterDriver.elf"/>
 		</Unit>
-		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_dma.h">
+		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Software/Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_dma.h">
 			<Option target="TwisterDriver.elf"/>
 		</Unit>
-		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_dma_ex.h">
+		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Software/Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_dma_ex.h">
 			<Option target="TwisterDriver.elf"/>
 		</Unit>
-		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_exti.h">
+		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Software/Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_exti.h">
 			<Option target="TwisterDriver.elf"/>
 		</Unit>
-		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_fdcan.h">
+		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Software/Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_fdcan.h">
 			<Option target="TwisterDriver.elf"/>
 		</Unit>
-		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash.h">
+		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Software/Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash.h">
 			<Option target="TwisterDriver.elf"/>
 		</Unit>
-		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ex.h">
+		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Software/Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ex.h">
 			<Option target="TwisterDriver.elf"/>
 		</Unit>
-		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ramfunc.h">
+		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Software/Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ramfunc.h">
 			<Option target="TwisterDriver.elf"/>
 		</Unit>
-		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_gpio.h">
+		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Software/Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_gpio.h">
 			<Option target="TwisterDriver.elf"/>
 		</Unit>
-		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_gpio_ex.h">
+		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Software/Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_gpio_ex.h">
 			<Option target="TwisterDriver.elf"/>
 		</Unit>
-		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_i2c.h">
+		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Software/Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_i2c.h">
 			<Option target="TwisterDriver.elf"/>
 		</Unit>
-		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_i2c_ex.h">
+		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Software/Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_i2c_ex.h">
 			<Option target="TwisterDriver.elf"/>
 		</Unit>
-		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr.h">
+		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Software/Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr.h">
 			<Option target="TwisterDriver.elf"/>
 		</Unit>
-		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr_ex.h">
+		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Software/Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr_ex.h">
 			<Option target="TwisterDriver.elf"/>
 		</Unit>
-		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc.h">
+		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Software/Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc.h">
 			<Option target="TwisterDriver.elf"/>
 		</Unit>
-		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc_ex.h">
+		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Software/Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc_ex.h">
 			<Option target="TwisterDriver.elf"/>
 		</Unit>
-		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_spi.h">
+		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Software/Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_spi.h">
 			<Option target="TwisterDriver.elf"/>
 		</Unit>
-		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_spi_ex.h">
+		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Software/Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_spi_ex.h">
 			<Option target="TwisterDriver.elf"/>
 		</Unit>
-		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim.h">
+		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Software/Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim.h">
 			<Option target="TwisterDriver.elf"/>
 		</Unit>
-		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim_ex.h">
+		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Software/Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim_ex.h">
 			<Option target="TwisterDriver.elf"/>
 		</Unit>
-		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart.h">
+		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Software/Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart.h">
 			<Option target="TwisterDriver.elf"/>
 		</Unit>
-		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart_ex.h">
+		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Software/Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart_ex.h">
 			<Option target="TwisterDriver.elf"/>
 		</Unit>
-		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_adc.h">
+		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Software/Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_adc.h">
 			<Option target="TwisterDriver.elf"/>
 		</Unit>
-		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h">
+		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Software/Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h">
 			<Option target="TwisterDriver.elf"/>
 		</Unit>
-		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_cortex.h">
+		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Software/Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_cortex.h">
 			<Option target="TwisterDriver.elf"/>
 		</Unit>
-		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_crs.h">
+		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Software/Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_crs.h">
 			<Option target="TwisterDriver.elf"/>
 		</Unit>
-		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dma.h">
+		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Software/Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dma.h">
 			<Option target="TwisterDriver.elf"/>
 		</Unit>
-		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dmamux.h">
+		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Software/Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dmamux.h">
 			<Option target="TwisterDriver.elf"/>
 		</Unit>
-		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_exti.h">
+		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Software/Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_exti.h">
 			<Option target="TwisterDriver.elf"/>
 		</Unit>
-		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h">
+		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Software/Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h">
 			<Option target="TwisterDriver.elf"/>
 		</Unit>
-		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_i2c.h">
+		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Software/Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_i2c.h">
 			<Option target="TwisterDriver.elf"/>
 		</Unit>
-		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_lpuart.h">
+		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Software/Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_lpuart.h">
 			<Option target="TwisterDriver.elf"/>
 		</Unit>
-		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h">
+		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Software/Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h">
 			<Option target="TwisterDriver.elf"/>
 		</Unit>
-		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h">
+		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Software/Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h">
 			<Option target="TwisterDriver.elf"/>
 		</Unit>
-		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_system.h">
+		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Software/Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_system.h">
 			<Option target="TwisterDriver.elf"/>
 		</Unit>
-		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h">
+		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Software/Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h">
 			<Option target="TwisterDriver.elf"/>
 		</Unit>
-		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_usart.h">
+		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Software/Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_usart.h">
 			<Option target="TwisterDriver.elf"/>
 		</Unit>
-		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_utils.h">
+		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Software/Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_utils.h">
 			<Option target="TwisterDriver.elf"/>
 		</Unit>
-		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Drivers/STM32G4xx_HAL_Driver/LICENSE.txt">
+		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Software/Drivers/STM32G4xx_HAL_Driver/LICENSE.txt">
 			<Option target="TwisterDriver.elf"/>
 		</Unit>
-		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal.c">
+		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Software/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal.c">
 			<Option target="TwisterDriver.elf"/>
 		</Unit>
-		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_adc.c">
+		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Software/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_adc.c">
 			<Option target="TwisterDriver.elf"/>
 		</Unit>
-		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_adc_ex.c">
+		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Software/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_adc_ex.c">
 			<Option target="TwisterDriver.elf"/>
 		</Unit>
-		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_cortex.c">
+		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Software/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_cortex.c">
 			<Option target="TwisterDriver.elf"/>
 		</Unit>
-		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma.c">
+		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Software/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma.c">
 			<Option target="TwisterDriver.elf"/>
 		</Unit>
-		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma_ex.c">
+		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Software/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma_ex.c">
 			<Option target="TwisterDriver.elf"/>
 		</Unit>
-		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c">
+		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Software/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c">
 			<Option target="TwisterDriver.elf"/>
 		</Unit>
-		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_fdcan.c">
+		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Software/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_fdcan.c">
 			<Option target="TwisterDriver.elf"/>
 		</Unit>
-		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash.c">
+		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Software/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash.c">
 			<Option target="TwisterDriver.elf"/>
 		</Unit>
-		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash_ex.c">
+		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Software/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash_ex.c">
 			<Option target="TwisterDriver.elf"/>
 		</Unit>
-		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash_ramfunc.c">
+		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Software/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash_ramfunc.c">
 			<Option target="TwisterDriver.elf"/>
 		</Unit>
-		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_gpio.c">
+		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Software/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_gpio.c">
 			<Option target="TwisterDriver.elf"/>
 		</Unit>
-		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_i2c.c">
+		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Software/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_i2c.c">
 			<Option target="TwisterDriver.elf"/>
 		</Unit>
-		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_i2c_ex.c">
+		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Software/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_i2c_ex.c">
 			<Option target="TwisterDriver.elf"/>
 		</Unit>
-		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr.c">
+		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Software/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr.c">
 			<Option target="TwisterDriver.elf"/>
 		</Unit>
-		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr_ex.c">
+		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Software/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr_ex.c">
 			<Option target="TwisterDriver.elf"/>
 		</Unit>
-		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c">
+		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Software/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c">
 			<Option target="TwisterDriver.elf"/>
 		</Unit>
-		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc_ex.c">
+		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Software/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc_ex.c">
 			<Option target="TwisterDriver.elf"/>
 		</Unit>
-		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_spi.c">
+		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Software/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_spi.c">
 			<Option target="TwisterDriver.elf"/>
 		</Unit>
-		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_spi_ex.c">
+		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Software/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_spi_ex.c">
 			<Option target="TwisterDriver.elf"/>
 		</Unit>
-		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_tim.c">
+		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Software/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_tim.c">
 			<Option target="TwisterDriver.elf"/>
 		</Unit>
-		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_tim_ex.c">
+		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Software/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_tim_ex.c">
 			<Option target="TwisterDriver.elf"/>
 		</Unit>
-		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c">
+		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Software/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c">
 			<Option target="TwisterDriver.elf"/>
 		</Unit>
-		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart_ex.c">
+		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Software/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart_ex.c">
 			<Option target="TwisterDriver.elf"/>
 		</Unit>
-		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_adc.c">
+		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Software/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_adc.c">
 			<Option target="TwisterDriver.elf"/>
 		</Unit>
-		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.c">
+		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Software/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.c">
 			<Option target="TwisterDriver.elf"/>
 		</Unit>
-		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h">
+		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Software/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h">
 			<Option target="TwisterDriver.elf"/>
 		</Unit>
-		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Middlewares/Third_Party/FreeRTOS/Source/croutine.c">
+		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Software/Middlewares/Third_Party/FreeRTOS/Source/croutine.c">
 			<Option target="TwisterDriver.elf"/>
 		</Unit>
-		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Middlewares/Third_Party/FreeRTOS/Source/event_groups.c">
+		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Software/Middlewares/Third_Party/FreeRTOS/Source/event_groups.c">
 			<Option target="TwisterDriver.elf"/>
 		</Unit>
-		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h">
+		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Software/Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h">
 			<Option target="TwisterDriver.elf"/>
 		</Unit>
-		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Middlewares/Third_Party/FreeRTOS/Source/include/StackMacros.h">
+		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Software/Middlewares/Third_Party/FreeRTOS/Source/include/StackMacros.h">
 			<Option target="TwisterDriver.elf"/>
 		</Unit>
-		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Middlewares/Third_Party/FreeRTOS/Source/include/atomic.h">
+		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Software/Middlewares/Third_Party/FreeRTOS/Source/include/atomic.h">
 			<Option target="TwisterDriver.elf"/>
 		</Unit>
-		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Middlewares/Third_Party/FreeRTOS/Source/include/croutine.h">
+		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Software/Middlewares/Third_Party/FreeRTOS/Source/include/croutine.h">
 			<Option target="TwisterDriver.elf"/>
 		</Unit>
-		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h">
+		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Software/Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h">
 			<Option target="TwisterDriver.elf"/>
 		</Unit>
-		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h">
+		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Software/Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h">
 			<Option target="TwisterDriver.elf"/>
 		</Unit>
-		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Middlewares/Third_Party/FreeRTOS/Source/include/list.h">
+		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Software/Middlewares/Third_Party/FreeRTOS/Source/include/list.h">
 			<Option target="TwisterDriver.elf"/>
 		</Unit>
-		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Middlewares/Third_Party/FreeRTOS/Source/include/message_buffer.h">
+		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Software/Middlewares/Third_Party/FreeRTOS/Source/include/message_buffer.h">
 			<Option target="TwisterDriver.elf"/>
 		</Unit>
-		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Middlewares/Third_Party/FreeRTOS/Source/include/mpu_prototypes.h">
+		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Software/Middlewares/Third_Party/FreeRTOS/Source/include/mpu_prototypes.h">
 			<Option target="TwisterDriver.elf"/>
 		</Unit>
-		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h">
+		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Software/Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h">
 			<Option target="TwisterDriver.elf"/>
 		</Unit>
-		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Middlewares/Third_Party/FreeRTOS/Source/include/portable.h">
+		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Software/Middlewares/Third_Party/FreeRTOS/Source/include/portable.h">
 			<Option target="TwisterDriver.elf"/>
 		</Unit>
-		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h">
+		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Software/Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h">
 			<Option target="TwisterDriver.elf"/>
 		</Unit>
-		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Middlewares/Third_Party/FreeRTOS/Source/include/queue.h">
+		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Software/Middlewares/Third_Party/FreeRTOS/Source/include/queue.h">
 			<Option target="TwisterDriver.elf"/>
 		</Unit>
-		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h">
+		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Software/Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h">
 			<Option target="TwisterDriver.elf"/>
 		</Unit>
-		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Middlewares/Third_Party/FreeRTOS/Source/include/stack_macros.h">
+		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Software/Middlewares/Third_Party/FreeRTOS/Source/include/stack_macros.h">
 			<Option target="TwisterDriver.elf"/>
 		</Unit>
-		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Middlewares/Third_Party/FreeRTOS/Source/include/stream_buffer.h">
+		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Software/Middlewares/Third_Party/FreeRTOS/Source/include/stream_buffer.h">
 			<Option target="TwisterDriver.elf"/>
 		</Unit>
-		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Middlewares/Third_Party/FreeRTOS/Source/include/task.h">
+		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Software/Middlewares/Third_Party/FreeRTOS/Source/include/task.h">
 			<Option target="TwisterDriver.elf"/>
 		</Unit>
-		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Middlewares/Third_Party/FreeRTOS/Source/include/timers.h">
+		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Software/Middlewares/Third_Party/FreeRTOS/Source/include/timers.h">
 			<Option target="TwisterDriver.elf"/>
 		</Unit>
-		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Middlewares/Third_Party/FreeRTOS/Source/list.c">
+		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Software/Middlewares/Third_Party/FreeRTOS/Source/list.c">
 			<Option target="TwisterDriver.elf"/>
 		</Unit>
-		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c">
+		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Software/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c">
 			<Option target="TwisterDriver.elf"/>
 		</Unit>
-		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/portmacro.h">
+		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Software/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/portmacro.h">
 			<Option target="TwisterDriver.elf"/>
 		</Unit>
-		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c">
+		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Software/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c">
 			<Option target="TwisterDriver.elf"/>
 		</Unit>
-		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Middlewares/Third_Party/FreeRTOS/Source/queue.c">
+		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Software/Middlewares/Third_Party/FreeRTOS/Source/queue.c">
 			<Option target="TwisterDriver.elf"/>
 		</Unit>
-		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c">
+		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Software/Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c">
 			<Option target="TwisterDriver.elf"/>
 		</Unit>
-		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Middlewares/Third_Party/FreeRTOS/Source/tasks.c">
+		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Software/Middlewares/Third_Party/FreeRTOS/Source/tasks.c">
 			<Option target="TwisterDriver.elf"/>
 		</Unit>
-		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Middlewares/Third_Party/FreeRTOS/Source/timers.c">
+		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Software/Middlewares/Third_Party/FreeRTOS/Source/timers.c">
 			<Option target="TwisterDriver.elf"/>
 		</Unit>
-		<Unit filename="E:/Clion_for_STM32/TwisterDriver/STM32G431RBTX_FLASH.ld">
+		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Software/STM32G431RBTX_FLASH.ld">
 			<Option target="TwisterDriver.elf"/>
 		</Unit>
-		<Unit filename="E:/Clion_for_STM32/TwisterDriver/UserApp/FOC/FOC.c">
+		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Software/UserApp/FOC/FOC.c">
 			<Option target="TwisterDriver.elf"/>
 		</Unit>
-		<Unit filename="E:/Clion_for_STM32/TwisterDriver/UserApp/FOC/FOC.h">
+		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Software/UserApp/FOC/FOC.h">
 			<Option target="TwisterDriver.elf"/>
 		</Unit>
-		<Unit filename="E:/Clion_for_STM32/TwisterDriver/UserApp/FOC/FOC_math.c">
+		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Software/UserApp/FOC/FOC_math.c">
 			<Option target="TwisterDriver.elf"/>
 		</Unit>
-		<Unit filename="E:/Clion_for_STM32/TwisterDriver/UserApp/FOC/FOC_math.h">
+		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Software/UserApp/FOC/FOC_math.h">
 			<Option target="TwisterDriver.elf"/>
 		</Unit>
-		<Unit filename="E:/Clion_for_STM32/TwisterDriver/UserApp/FOC/Filter.c">
+		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Software/UserApp/FOC/Filter.c">
 			<Option target="TwisterDriver.elf"/>
 		</Unit>
-		<Unit filename="E:/Clion_for_STM32/TwisterDriver/UserApp/FOC/Filter.h">
+		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Software/UserApp/FOC/Filter.h">
 			<Option target="TwisterDriver.elf"/>
 		</Unit>
-		<Unit filename="E:/Clion_for_STM32/TwisterDriver/UserApp/FOC/hardware_api.c">
+		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Software/UserApp/FOC/hardware_api.c">
 			<Option target="TwisterDriver.elf"/>
 		</Unit>
-		<Unit filename="E:/Clion_for_STM32/TwisterDriver/UserApp/FOC/hardware_api.h">
+		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Software/UserApp/FOC/hardware_api.h">
 			<Option target="TwisterDriver.elf"/>
 		</Unit>
-		<Unit filename="E:/Clion_for_STM32/TwisterDriver/UserApp/FOC/my_PID.c">
+		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Software/UserApp/FOC/my_PID.c">
 			<Option target="TwisterDriver.elf"/>
 		</Unit>
-		<Unit filename="E:/Clion_for_STM32/TwisterDriver/UserApp/FOC/my_PID.h">
+		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Software/UserApp/FOC/my_PID.h">
 			<Option target="TwisterDriver.elf"/>
 		</Unit>
-		<Unit filename="E:/Clion_for_STM32/TwisterDriver/UserApp/LCD/lcd.h">
+		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Software/UserApp/LCD/fonts.c">
 			<Option target="TwisterDriver.elf"/>
 		</Unit>
-		<Unit filename="E:/Clion_for_STM32/TwisterDriver/UserApp/LCD/lcd_dma.c">
+		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Software/UserApp/LCD/fonts.h">
 			<Option target="TwisterDriver.elf"/>
 		</Unit>
-		<Unit filename="E:/Clion_for_STM32/TwisterDriver/UserApp/LCD/lcd_init.c">
+		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Software/UserApp/LCD/gui.c">
 			<Option target="TwisterDriver.elf"/>
 		</Unit>
-		<Unit filename="E:/Clion_for_STM32/TwisterDriver/UserApp/LCD/lcd_init.h">
+		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Software/UserApp/LCD/gui.h">
 			<Option target="TwisterDriver.elf"/>
 		</Unit>
-		<Unit filename="E:/Clion_for_STM32/TwisterDriver/UserApp/LCD/lcdfont.h">
+		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Software/UserApp/LCD/image.c">
 			<Option target="TwisterDriver.elf"/>
 		</Unit>
-		<Unit filename="E:/Clion_for_STM32/TwisterDriver/UserApp/LCD/pic.h">
+		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Software/UserApp/LCD/image.h">
 			<Option target="TwisterDriver.elf"/>
 		</Unit>
-		<Unit filename="E:/Clion_for_STM32/TwisterDriver/UserApp/MT6701/MT6701.c">
+		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Software/UserApp/LCD/st7735.c">
 			<Option target="TwisterDriver.elf"/>
 		</Unit>
-		<Unit filename="E:/Clion_for_STM32/TwisterDriver/UserApp/MT6701/MT6701.h">
+		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Software/UserApp/LCD/st7735.h">
 			<Option target="TwisterDriver.elf"/>
 		</Unit>
-		<Unit filename="E:/Clion_for_STM32/TwisterDriver/UserApp/Servo/Servo.c">
+		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Software/UserApp/MT6701/MT6701.c">
 			<Option target="TwisterDriver.elf"/>
 		</Unit>
-		<Unit filename="E:/Clion_for_STM32/TwisterDriver/UserApp/Servo/Servo.h">
+		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Software/UserApp/MT6701/MT6701.h">
 			<Option target="TwisterDriver.elf"/>
 		</Unit>
-		<Unit filename="E:/Clion_for_STM32/TwisterDriver/UserApp/cJSON/cJSON.c">
+		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Software/UserApp/Servo/Servo.c">
 			<Option target="TwisterDriver.elf"/>
 		</Unit>
-		<Unit filename="E:/Clion_for_STM32/TwisterDriver/UserApp/cJSON/cJSON.h">
+		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Software/UserApp/Servo/Servo.h">
 			<Option target="TwisterDriver.elf"/>
 		</Unit>
-		<Unit filename="E:/Clion_for_STM32/TwisterDriver/UserApp/cJSON/cJSON_Utils.c">
+		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Software/UserApp/cJSON/cJSON.c">
 			<Option target="TwisterDriver.elf"/>
 		</Unit>
-		<Unit filename="E:/Clion_for_STM32/TwisterDriver/UserApp/cJSON/cJSON_Utils.h">
+		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Software/UserApp/cJSON/cJSON.h">
 			<Option target="TwisterDriver.elf"/>
 		</Unit>
-		<Unit filename="E:/Clion_for_STM32/TwisterDriver/UserApp/multiBotton/README.md">
+		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Software/UserApp/cJSON/cJSON_Utils.c">
 			<Option target="TwisterDriver.elf"/>
 		</Unit>
-		<Unit filename="E:/Clion_for_STM32/TwisterDriver/UserApp/multiBotton/multi_button.c">
+		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Software/UserApp/cJSON/cJSON_Utils.h">
 			<Option target="TwisterDriver.elf"/>
 		</Unit>
-		<Unit filename="E:/Clion_for_STM32/TwisterDriver/UserApp/multiBotton/multi_button.h">
+		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Software/UserApp/multiBotton/README.md">
 			<Option target="TwisterDriver.elf"/>
 		</Unit>
-		<Unit filename="E:/Clion_for_STM32/TwisterDriver/UserApp/retarget/retarget.c">
+		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Software/UserApp/multiBotton/multi_button.c">
 			<Option target="TwisterDriver.elf"/>
 		</Unit>
-		<Unit filename="E:/Clion_for_STM32/TwisterDriver/UserApp/retarget/retarget.h">
+		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Software/UserApp/multiBotton/multi_button.h">
 			<Option target="TwisterDriver.elf"/>
 		</Unit>
-		<Unit filename="E:/Clion_for_STM32/TwisterDriver/CMakeLists.txt">
+		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Software/UserApp/retarget/retarget.c">
+			<Option target="TwisterDriver.elf"/>
+		</Unit>
+		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Software/UserApp/retarget/retarget.h">
+			<Option target="TwisterDriver.elf"/>
+		</Unit>
+		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Software/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

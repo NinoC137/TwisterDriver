@@ -6,5 +6,5 @@
 
 #IncludeRegexTransform: 
 
-E:/Clion_for_STM32/TwisterDriver/Core/Startup/startup_stm32g431rbtx.s
+E:/Clion_for_STM32/TwisterDriver/Software/Core/Startup/startup_stm32g431rbtx.s
 

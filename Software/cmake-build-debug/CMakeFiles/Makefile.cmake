@@ -101,7 +101,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "E:/CLion/CLion 2022.3.2/bin/cmake/win/x64/share/cmake-3.25/Modules/Internal/FeatureTesting.cmake"
   "E:/CLion/CLion 2022.3.2/bin/cmake/win/x64/share/cmake-3.25/Modules/Platform/Generic.cmake"
   "E:/CLion/CLion 2022.3.2/bin/cmake/win/x64/share/cmake-3.25/Modules/ProcessorCount.cmake"
-  "E:/Clion_for_STM32/TwisterDriver/CMakeLists.txt"
+  "E:/Clion_for_STM32/TwisterDriver/Software/CMakeLists.txt"
   "CMakeFiles/3.25.2/CMakeASMCompiler.cmake"
   "CMakeFiles/3.25.2/CMakeCCompiler.cmake"
   "CMakeFiles/3.25.2/CMakeCXXCompiler.cmake"
