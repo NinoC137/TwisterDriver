@@ -275,7 +275,7 @@ Discarded input sections
                 0x00000000        0xc CMakeFiles/TwisterDriver.elf.dir/Core/Src/app_freertos.c.obj
  .text.CANTask  0x00000000        0xc CMakeFiles/TwisterDriver.elf.dir/Core/Src/app_freertos.c.obj
  .text.ServoTask
-                0x00000000        0xc CMakeFiles/TwisterDriver.elf.dir/Core/Src/app_freertos.c.obj
+                0x00000000       0x34 CMakeFiles/TwisterDriver.elf.dir/Core/Src/app_freertos.c.obj
  .text          0x00000000        0x0 CMakeFiles/TwisterDriver.elf.dir/Core/Src/main.c.obj
  .data          0x00000000        0x0 CMakeFiles/TwisterDriver.elf.dir/Core/Src/main.c.obj
  .bss           0x00000000        0x0 CMakeFiles/TwisterDriver.elf.dir/Core/Src/main.c.obj
@@ -2554,42 +2554,36 @@ Discarded input sections
                 0x00000000        0x6 CMakeFiles/TwisterDriver.elf.dir/UserApp/Servo/Servo.c.obj
  .text.move2TargetAngle
                 0x00000000       0x80 CMakeFiles/TwisterDriver.elf.dir/UserApp/Servo/Servo.c.obj
+ .rodata.setAngle_180.str1.4
+                0x00000000       0x1b CMakeFiles/TwisterDriver.elf.dir/UserApp/Servo/Servo.c.obj
  .text.setAngle_180
-                0x00000000       0x68 CMakeFiles/TwisterDriver.elf.dir/UserApp/Servo/Servo.c.obj
+                0x00000000       0x70 CMakeFiles/TwisterDriver.elf.dir/UserApp/Servo/Servo.c.obj
  .text.setAngle_270
-                0x00000000       0x80 CMakeFiles/TwisterDriver.elf.dir/UserApp/Servo/Servo.c.obj
- .text.setAngle_180_slowly
-                0x00000000       0x44 CMakeFiles/TwisterDriver.elf.dir/UserApp/Servo/Servo.c.obj
- .text.setAngle_270_slowly
-                0x00000000       0x44 CMakeFiles/TwisterDriver.elf.dir/UserApp/Servo/Servo.c.obj
- .text.SG90_scan
-                0x00000000       0xb4 CMakeFiles/TwisterDriver.elf.dir/UserApp/Servo/Servo.c.obj
- .text.SG90_move_pitch
+                0x00000000       0x70 CMakeFiles/TwisterDriver.elf.dir/UserApp/Servo/Servo.c.obj
+ .text.Servo_move_pitch
                 0x00000000       0xc8 CMakeFiles/TwisterDriver.elf.dir/UserApp/Servo/Servo.c.obj
- .text.SG90_move_yaw
+ .text.Servo_move_yaw
                 0x00000000       0xc8 CMakeFiles/TwisterDriver.elf.dir/UserApp/Servo/Servo.c.obj
- .text.SG90_Create
-                0x00000000       0x34 CMakeFiles/TwisterDriver.elf.dir/UserApp/Servo/Servo.c.obj
- .text.SG90_init
-                0x00000000       0x20 CMakeFiles/TwisterDriver.elf.dir/UserApp/Servo/Servo.c.obj
- .text.Click_Once
+ .text.Servo_Create
                 0x00000000       0x40 CMakeFiles/TwisterDriver.elf.dir/UserApp/Servo/Servo.c.obj
- .text.Click_Num
-                0x00000000       0x50 CMakeFiles/TwisterDriver.elf.dir/UserApp/Servo/Servo.c.obj
- .bss.Servo_pitch
+ .rodata.Servo_init.str1.4
+                0x00000000       0x11 CMakeFiles/TwisterDriver.elf.dir/UserApp/Servo/Servo.c.obj
+ .text.Servo_init
+                0x00000000       0x9c CMakeFiles/TwisterDriver.elf.dir/UserApp/Servo/Servo.c.obj
+ .bss.Servo_LeftLeg
                 0x00000000       0x28 CMakeFiles/TwisterDriver.elf.dir/UserApp/Servo/Servo.c.obj
- .bss.Servo_yaw
+ .bss.Servo_RightLeg
                 0x00000000       0x28 CMakeFiles/TwisterDriver.elf.dir/UserApp/Servo/Servo.c.obj
- .debug_info    0x00000000     0x12f9 CMakeFiles/TwisterDriver.elf.dir/UserApp/Servo/Servo.c.obj
- .debug_abbrev  0x00000000      0x28c CMakeFiles/TwisterDriver.elf.dir/UserApp/Servo/Servo.c.obj
- .debug_loc     0x00000000      0x703 CMakeFiles/TwisterDriver.elf.dir/UserApp/Servo/Servo.c.obj
+ .debug_info    0x00000000      0xeef CMakeFiles/TwisterDriver.elf.dir/UserApp/Servo/Servo.c.obj
+ .debug_abbrev  0x00000000      0x266 CMakeFiles/TwisterDriver.elf.dir/UserApp/Servo/Servo.c.obj
+ .debug_loc     0x00000000      0x58f CMakeFiles/TwisterDriver.elf.dir/UserApp/Servo/Servo.c.obj
  .debug_aranges
-                0x00000000       0x80 CMakeFiles/TwisterDriver.elf.dir/UserApp/Servo/Servo.c.obj
- .debug_ranges  0x00000000       0x70 CMakeFiles/TwisterDriver.elf.dir/UserApp/Servo/Servo.c.obj
- .debug_line    0x00000000      0x7ad CMakeFiles/TwisterDriver.elf.dir/UserApp/Servo/Servo.c.obj
- .debug_str     0x00000000      0xa9b CMakeFiles/TwisterDriver.elf.dir/UserApp/Servo/Servo.c.obj
+                0x00000000       0x58 CMakeFiles/TwisterDriver.elf.dir/UserApp/Servo/Servo.c.obj
+ .debug_ranges  0x00000000       0x48 CMakeFiles/TwisterDriver.elf.dir/UserApp/Servo/Servo.c.obj
+ .debug_line    0x00000000      0x668 CMakeFiles/TwisterDriver.elf.dir/UserApp/Servo/Servo.c.obj
+ .debug_str     0x00000000      0xa7b CMakeFiles/TwisterDriver.elf.dir/UserApp/Servo/Servo.c.obj
  .comment       0x00000000       0x4e CMakeFiles/TwisterDriver.elf.dir/UserApp/Servo/Servo.c.obj
- .debug_frame   0x00000000      0x1c0 CMakeFiles/TwisterDriver.elf.dir/UserApp/Servo/Servo.c.obj
+ .debug_frame   0x00000000      0x120 CMakeFiles/TwisterDriver.elf.dir/UserApp/Servo/Servo.c.obj
  .ARM.attributes
                 0x00000000       0x34 CMakeFiles/TwisterDriver.elf.dir/UserApp/Servo/Servo.c.obj
  .text          0x00000000        0x0 CMakeFiles/TwisterDriver.elf.dir/UserApp/cJSON/cJSON.c.obj
@@ -5413,79 +5407,79 @@ LOAD e:/compiler/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/l
 LOAD e:/compiler/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a
 LOAD e:/compiler/bin/../lib/gcc/arm-none-eabi/10.2.1/thumb/v7e-m+fp/hard\libgcc.a
 
-.debug_info     0x00000000    0x33c8c
- .debug_info    0x00000000      0xe54 CMakeFiles/TwisterDriver.elf.dir/Core/Src/app_freertos.c.obj
- .debug_info    0x00000e54     0x353f CMakeFiles/TwisterDriver.elf.dir/Core/Src/main.c.obj
- .debug_info    0x00004393     0x2c44 CMakeFiles/TwisterDriver.elf.dir/Core/Src/stm32g4xx_hal_msp.c.obj
- .debug_info    0x00006fd7      0x504 CMakeFiles/TwisterDriver.elf.dir/Core/Src/stm32g4xx_it.c.obj
- .debug_info    0x000074db      0x7af CMakeFiles/TwisterDriver.elf.dir/Core/Src/syscalls.c.obj
- .debug_info    0x00007c8a      0x174 CMakeFiles/TwisterDriver.elf.dir/Core/Src/sysmem.c.obj
- .debug_info    0x00007dfe      0x5b4 CMakeFiles/TwisterDriver.elf.dir/Core/Src/system_stm32g4xx.c.obj
- .debug_info    0x000083b2       0x22 CMakeFiles/TwisterDriver.elf.dir/Core/Startup/startup_stm32g431rbtx.s.obj
- .debug_info    0x000083d4      0xb73 CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal.c.obj
- .debug_info    0x00008f47     0x3722 CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_adc.c.obj
- .debug_info    0x0000c669     0x2fa8 CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_adc_ex.c.obj
- .debug_info    0x0000f611     0x1041 CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_cortex.c.obj
- .debug_info    0x00010652      0xa56 CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma.c.obj
- .debug_info    0x000110a8     0x1cee CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_fdcan.c.obj
- .debug_info    0x00012d96      0x865 CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_gpio.c.obj
- .debug_info    0x000135fb     0x416e CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_i2c.c.obj
- .debug_info    0x00017769      0xb7e CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_i2c_ex.c.obj
- .debug_info    0x000182e7      0xa07 CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr_ex.c.obj
- .debug_info    0x00018cee      0xe96 CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c.obj
- .debug_info    0x00019b84      0xecf CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc_ex.c.obj
- .debug_info    0x0001aa53     0x22cb CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_spi.c.obj
- .debug_info    0x0001cd1e     0x40a4 CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_tim.c.obj
- .debug_info    0x00020dc2     0x250e CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_tim_ex.c.obj
- .debug_info    0x000232d0     0x61e5 CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c.obj
- .debug_info    0x000294b5     0x1234 CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart_ex.c.obj
- .debug_info    0x0002a6e9     0x1dce CMakeFiles/TwisterDriver.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.c.obj
- .debug_info    0x0002c4b7      0x2e0 CMakeFiles/TwisterDriver.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/list.c.obj
- .debug_info    0x0002c797      0x587 CMakeFiles/TwisterDriver.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c.obj
- .debug_info    0x0002cd1e      0x5d9 CMakeFiles/TwisterDriver.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.obj
- .debug_info    0x0002d2f7     0x2660 CMakeFiles/TwisterDriver.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
- .debug_info    0x0002f957     0x12c6 CMakeFiles/TwisterDriver.elf.dir/UserApp/FOC/FOC.c.obj
- .debug_info    0x00030c1d      0x979 CMakeFiles/TwisterDriver.elf.dir/UserApp/FOC/hardware_api.c.obj
- .debug_info    0x00031596      0x9be CMakeFiles/TwisterDriver.elf.dir/UserApp/MT6701/MT6701.c.obj
- .debug_info    0x00031f54     0x1022 CMakeFiles/TwisterDriver.elf.dir/UserApp/multiBotton/multi_button.c.obj
- .debug_info    0x00032f76      0xd16 CMakeFiles/TwisterDriver.elf.dir/UserApp/retarget/retarget.c.obj
+.debug_info     0x00000000    0x341d3
+ .debug_info    0x00000000     0x139b CMakeFiles/TwisterDriver.elf.dir/Core/Src/app_freertos.c.obj
+ .debug_info    0x0000139b     0x353f CMakeFiles/TwisterDriver.elf.dir/Core/Src/main.c.obj
+ .debug_info    0x000048da     0x2c44 CMakeFiles/TwisterDriver.elf.dir/Core/Src/stm32g4xx_hal_msp.c.obj
+ .debug_info    0x0000751e      0x504 CMakeFiles/TwisterDriver.elf.dir/Core/Src/stm32g4xx_it.c.obj
+ .debug_info    0x00007a22      0x7af CMakeFiles/TwisterDriver.elf.dir/Core/Src/syscalls.c.obj
+ .debug_info    0x000081d1      0x174 CMakeFiles/TwisterDriver.elf.dir/Core/Src/sysmem.c.obj
+ .debug_info    0x00008345      0x5b4 CMakeFiles/TwisterDriver.elf.dir/Core/Src/system_stm32g4xx.c.obj
+ .debug_info    0x000088f9       0x22 CMakeFiles/TwisterDriver.elf.dir/Core/Startup/startup_stm32g431rbtx.s.obj
+ .debug_info    0x0000891b      0xb73 CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal.c.obj
+ .debug_info    0x0000948e     0x3722 CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_adc.c.obj
+ .debug_info    0x0000cbb0     0x2fa8 CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_adc_ex.c.obj
+ .debug_info    0x0000fb58     0x1041 CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_cortex.c.obj
+ .debug_info    0x00010b99      0xa56 CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma.c.obj
+ .debug_info    0x000115ef     0x1cee CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_fdcan.c.obj
+ .debug_info    0x000132dd      0x865 CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_gpio.c.obj
+ .debug_info    0x00013b42     0x416e CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_i2c.c.obj
+ .debug_info    0x00017cb0      0xb7e CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_i2c_ex.c.obj
+ .debug_info    0x0001882e      0xa07 CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr_ex.c.obj
+ .debug_info    0x00019235      0xe96 CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c.obj
+ .debug_info    0x0001a0cb      0xecf CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc_ex.c.obj
+ .debug_info    0x0001af9a     0x22cb CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_spi.c.obj
+ .debug_info    0x0001d265     0x40a4 CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_tim.c.obj
+ .debug_info    0x00021309     0x250e CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_tim_ex.c.obj
+ .debug_info    0x00023817     0x61e5 CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c.obj
+ .debug_info    0x000299fc     0x1234 CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart_ex.c.obj
+ .debug_info    0x0002ac30     0x1dce CMakeFiles/TwisterDriver.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.c.obj
+ .debug_info    0x0002c9fe      0x2e0 CMakeFiles/TwisterDriver.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/list.c.obj
+ .debug_info    0x0002ccde      0x587 CMakeFiles/TwisterDriver.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c.obj
+ .debug_info    0x0002d265      0x5d9 CMakeFiles/TwisterDriver.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.obj
+ .debug_info    0x0002d83e     0x2660 CMakeFiles/TwisterDriver.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
+ .debug_info    0x0002fe9e     0x12c6 CMakeFiles/TwisterDriver.elf.dir/UserApp/FOC/FOC.c.obj
+ .debug_info    0x00031164      0x979 CMakeFiles/TwisterDriver.elf.dir/UserApp/FOC/hardware_api.c.obj
+ .debug_info    0x00031add      0x9be CMakeFiles/TwisterDriver.elf.dir/UserApp/MT6701/MT6701.c.obj
+ .debug_info    0x0003249b     0x1022 CMakeFiles/TwisterDriver.elf.dir/UserApp/multiBotton/multi_button.c.obj
+ .debug_info    0x000334bd      0xd16 CMakeFiles/TwisterDriver.elf.dir/UserApp/retarget/retarget.c.obj
 
-.debug_abbrev   0x00000000     0x4dcb
- .debug_abbrev  0x00000000      0x1d4 CMakeFiles/TwisterDriver.elf.dir/Core/Src/app_freertos.c.obj
- .debug_abbrev  0x000001d4      0x32a CMakeFiles/TwisterDriver.elf.dir/Core/Src/main.c.obj
- .debug_abbrev  0x000004fe      0x28f CMakeFiles/TwisterDriver.elf.dir/Core/Src/stm32g4xx_hal_msp.c.obj
- .debug_abbrev  0x0000078d      0x167 CMakeFiles/TwisterDriver.elf.dir/Core/Src/stm32g4xx_it.c.obj
- .debug_abbrev  0x000008f4      0x1a3 CMakeFiles/TwisterDriver.elf.dir/Core/Src/syscalls.c.obj
- .debug_abbrev  0x00000a97       0xe7 CMakeFiles/TwisterDriver.elf.dir/Core/Src/sysmem.c.obj
- .debug_abbrev  0x00000b7e      0x119 CMakeFiles/TwisterDriver.elf.dir/Core/Src/system_stm32g4xx.c.obj
- .debug_abbrev  0x00000c97       0x12 CMakeFiles/TwisterDriver.elf.dir/Core/Startup/startup_stm32g431rbtx.s.obj
- .debug_abbrev  0x00000ca9      0x23e CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal.c.obj
- .debug_abbrev  0x00000ee7      0x2cb CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_adc.c.obj
- .debug_abbrev  0x000011b2      0x33c CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_adc_ex.c.obj
- .debug_abbrev  0x000014ee      0x361 CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_cortex.c.obj
- .debug_abbrev  0x0000184f      0x216 CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma.c.obj
- .debug_abbrev  0x00001a65      0x1cf CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_fdcan.c.obj
- .debug_abbrev  0x00001c34      0x1e6 CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_gpio.c.obj
- .debug_abbrev  0x00001e1a      0x252 CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_i2c.c.obj
- .debug_abbrev  0x0000206c      0x1b3 CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_i2c_ex.c.obj
- .debug_abbrev  0x0000221f      0x245 CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr_ex.c.obj
- .debug_abbrev  0x00002464      0x26f CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c.obj
- .debug_abbrev  0x000026d3      0x243 CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc_ex.c.obj
- .debug_abbrev  0x00002916      0x23b CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_spi.c.obj
- .debug_abbrev  0x00002b51      0x25c CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_tim.c.obj
- .debug_abbrev  0x00002dad      0x272 CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_tim_ex.c.obj
- .debug_abbrev  0x0000301f      0x306 CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c.obj
- .debug_abbrev  0x00003325      0x2e7 CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart_ex.c.obj
- .debug_abbrev  0x0000360c      0x36d CMakeFiles/TwisterDriver.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.c.obj
- .debug_abbrev  0x00003979      0x106 CMakeFiles/TwisterDriver.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/list.c.obj
- .debug_abbrev  0x00003a7f      0x26b CMakeFiles/TwisterDriver.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c.obj
- .debug_abbrev  0x00003cea      0x24b CMakeFiles/TwisterDriver.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.obj
- .debug_abbrev  0x00003f35      0x302 CMakeFiles/TwisterDriver.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
- .debug_abbrev  0x00004237      0x26a CMakeFiles/TwisterDriver.elf.dir/UserApp/FOC/FOC.c.obj
- .debug_abbrev  0x000044a1      0x20f CMakeFiles/TwisterDriver.elf.dir/UserApp/FOC/hardware_api.c.obj
- .debug_abbrev  0x000046b0      0x1ce CMakeFiles/TwisterDriver.elf.dir/UserApp/MT6701/MT6701.c.obj
- .debug_abbrev  0x0000487e      0x2b7 CMakeFiles/TwisterDriver.elf.dir/UserApp/multiBotton/multi_button.c.obj
- .debug_abbrev  0x00004b35      0x296 CMakeFiles/TwisterDriver.elf.dir/UserApp/retarget/retarget.c.obj
+.debug_abbrev   0x00000000     0x4e1a
+ .debug_abbrev  0x00000000      0x223 CMakeFiles/TwisterDriver.elf.dir/Core/Src/app_freertos.c.obj
+ .debug_abbrev  0x00000223      0x32a CMakeFiles/TwisterDriver.elf.dir/Core/Src/main.c.obj
+ .debug_abbrev  0x0000054d      0x28f CMakeFiles/TwisterDriver.elf.dir/Core/Src/stm32g4xx_hal_msp.c.obj
+ .debug_abbrev  0x000007dc      0x167 CMakeFiles/TwisterDriver.elf.dir/Core/Src/stm32g4xx_it.c.obj
+ .debug_abbrev  0x00000943      0x1a3 CMakeFiles/TwisterDriver.elf.dir/Core/Src/syscalls.c.obj
+ .debug_abbrev  0x00000ae6       0xe7 CMakeFiles/TwisterDriver.elf.dir/Core/Src/sysmem.c.obj
+ .debug_abbrev  0x00000bcd      0x119 CMakeFiles/TwisterDriver.elf.dir/Core/Src/system_stm32g4xx.c.obj
+ .debug_abbrev  0x00000ce6       0x12 CMakeFiles/TwisterDriver.elf.dir/Core/Startup/startup_stm32g431rbtx.s.obj
+ .debug_abbrev  0x00000cf8      0x23e CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal.c.obj
+ .debug_abbrev  0x00000f36      0x2cb CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_adc.c.obj
+ .debug_abbrev  0x00001201      0x33c CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_adc_ex.c.obj
+ .debug_abbrev  0x0000153d      0x361 CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_cortex.c.obj
+ .debug_abbrev  0x0000189e      0x216 CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma.c.obj
+ .debug_abbrev  0x00001ab4      0x1cf CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_fdcan.c.obj
+ .debug_abbrev  0x00001c83      0x1e6 CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_gpio.c.obj
+ .debug_abbrev  0x00001e69      0x252 CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_i2c.c.obj
+ .debug_abbrev  0x000020bb      0x1b3 CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_i2c_ex.c.obj
+ .debug_abbrev  0x0000226e      0x245 CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr_ex.c.obj
+ .debug_abbrev  0x000024b3      0x26f CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c.obj
+ .debug_abbrev  0x00002722      0x243 CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc_ex.c.obj
+ .debug_abbrev  0x00002965      0x23b CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_spi.c.obj
+ .debug_abbrev  0x00002ba0      0x25c CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_tim.c.obj
+ .debug_abbrev  0x00002dfc      0x272 CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_tim_ex.c.obj
+ .debug_abbrev  0x0000306e      0x306 CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c.obj
+ .debug_abbrev  0x00003374      0x2e7 CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart_ex.c.obj
+ .debug_abbrev  0x0000365b      0x36d CMakeFiles/TwisterDriver.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.c.obj
+ .debug_abbrev  0x000039c8      0x106 CMakeFiles/TwisterDriver.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/list.c.obj
+ .debug_abbrev  0x00003ace      0x26b CMakeFiles/TwisterDriver.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c.obj
+ .debug_abbrev  0x00003d39      0x24b CMakeFiles/TwisterDriver.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.obj
+ .debug_abbrev  0x00003f84      0x302 CMakeFiles/TwisterDriver.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
+ .debug_abbrev  0x00004286      0x26a CMakeFiles/TwisterDriver.elf.dir/UserApp/FOC/FOC.c.obj
+ .debug_abbrev  0x000044f0      0x20f CMakeFiles/TwisterDriver.elf.dir/UserApp/FOC/hardware_api.c.obj
+ .debug_abbrev  0x000046ff      0x1ce CMakeFiles/TwisterDriver.elf.dir/UserApp/MT6701/MT6701.c.obj
+ .debug_abbrev  0x000048cd      0x2b7 CMakeFiles/TwisterDriver.elf.dir/UserApp/multiBotton/multi_button.c.obj
+ .debug_abbrev  0x00004b84      0x296 CMakeFiles/TwisterDriver.elf.dir/UserApp/retarget/retarget.c.obj
 
 .debug_loc      0x00000000    0x2474a
  .debug_loc     0x00000000       0xde CMakeFiles/TwisterDriver.elf.dir/Core/Src/app_freertos.c.obj
@@ -5631,113 +5625,113 @@ LOAD e:/compiler/bin/../lib/gcc/arm-none-eabi/10.2.1/thumb/v7e-m+fp/hard\libgcc.
  .debug_ranges  0x000021a8       0xb8 CMakeFiles/TwisterDriver.elf.dir/UserApp/multiBotton/multi_button.c.obj
  .debug_ranges  0x00002260       0x38 CMakeFiles/TwisterDriver.elf.dir/UserApp/retarget/retarget.c.obj
 
-.debug_line     0x00000000    0x29d19
- .debug_line    0x00000000      0x4d5 CMakeFiles/TwisterDriver.elf.dir/Core/Src/app_freertos.c.obj
- .debug_line    0x000004d5     0x11e4 CMakeFiles/TwisterDriver.elf.dir/Core/Src/main.c.obj
- .debug_line    0x000016b9      0xbd6 CMakeFiles/TwisterDriver.elf.dir/Core/Src/stm32g4xx_hal_msp.c.obj
- .debug_line    0x0000228f      0x401 CMakeFiles/TwisterDriver.elf.dir/Core/Src/stm32g4xx_it.c.obj
- .debug_line    0x00002690      0x3de CMakeFiles/TwisterDriver.elf.dir/Core/Src/syscalls.c.obj
- .debug_line    0x00002a6e      0x177 CMakeFiles/TwisterDriver.elf.dir/Core/Src/sysmem.c.obj
- .debug_line    0x00002be5      0x26d CMakeFiles/TwisterDriver.elf.dir/Core/Src/system_stm32g4xx.c.obj
- .debug_line    0x00002e52       0xb0 CMakeFiles/TwisterDriver.elf.dir/Core/Startup/startup_stm32g431rbtx.s.obj
- .debug_line    0x00002f02      0x6d8 CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal.c.obj
- .debug_line    0x000035da     0x2473 CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_adc.c.obj
- .debug_line    0x00005a4d     0x1f34 CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_adc_ex.c.obj
- .debug_line    0x00007981      0x7b8 CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_cortex.c.obj
- .debug_line    0x00008139      0xc70 CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma.c.obj
- .debug_line    0x00008da9     0x19ef CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_fdcan.c.obj
- .debug_line    0x0000a798      0x6ae CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_gpio.c.obj
- .debug_line    0x0000ae46     0x49e0 CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_i2c.c.obj
- .debug_line    0x0000f826      0x4e5 CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_i2c_ex.c.obj
- .debug_line    0x0000fd0b      0xaca CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr_ex.c.obj
- .debug_line    0x000107d5      0xe0f CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c.obj
- .debug_line    0x000115e4     0x1084 CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc_ex.c.obj
- .debug_line    0x00012668     0x293a CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_spi.c.obj
- .debug_line    0x00014fa2     0x537a CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_tim.c.obj
- .debug_line    0x0001a31c     0x25cf CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_tim_ex.c.obj
- .debug_line    0x0001c8eb     0x6393 CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c.obj
- .debug_line    0x00022c7e      0xd4d CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart_ex.c.obj
- .debug_line    0x000239cb     0x1152 CMakeFiles/TwisterDriver.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.c.obj
- .debug_line    0x00024b1d      0x389 CMakeFiles/TwisterDriver.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/list.c.obj
- .debug_line    0x00024ea6      0x73a CMakeFiles/TwisterDriver.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c.obj
- .debug_line    0x000255e0      0x73b CMakeFiles/TwisterDriver.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.obj
- .debug_line    0x00025d1b     0x237d CMakeFiles/TwisterDriver.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
- .debug_line    0x00028098      0x981 CMakeFiles/TwisterDriver.elf.dir/UserApp/FOC/FOC.c.obj
- .debug_line    0x00028a19      0x27a CMakeFiles/TwisterDriver.elf.dir/UserApp/FOC/hardware_api.c.obj
- .debug_line    0x00028c93      0x2e5 CMakeFiles/TwisterDriver.elf.dir/UserApp/MT6701/MT6701.c.obj
- .debug_line    0x00028f78      0x723 CMakeFiles/TwisterDriver.elf.dir/UserApp/multiBotton/multi_button.c.obj
- .debug_line    0x0002969b      0x67e CMakeFiles/TwisterDriver.elf.dir/UserApp/retarget/retarget.c.obj
+.debug_line     0x00000000    0x29d76
+ .debug_line    0x00000000      0x532 CMakeFiles/TwisterDriver.elf.dir/Core/Src/app_freertos.c.obj
+ .debug_line    0x00000532     0x11e4 CMakeFiles/TwisterDriver.elf.dir/Core/Src/main.c.obj
+ .debug_line    0x00001716      0xbd6 CMakeFiles/TwisterDriver.elf.dir/Core/Src/stm32g4xx_hal_msp.c.obj
+ .debug_line    0x000022ec      0x401 CMakeFiles/TwisterDriver.elf.dir/Core/Src/stm32g4xx_it.c.obj
+ .debug_line    0x000026ed      0x3de CMakeFiles/TwisterDriver.elf.dir/Core/Src/syscalls.c.obj
+ .debug_line    0x00002acb      0x177 CMakeFiles/TwisterDriver.elf.dir/Core/Src/sysmem.c.obj
+ .debug_line    0x00002c42      0x26d CMakeFiles/TwisterDriver.elf.dir/Core/Src/system_stm32g4xx.c.obj
+ .debug_line    0x00002eaf       0xb0 CMakeFiles/TwisterDriver.elf.dir/Core/Startup/startup_stm32g431rbtx.s.obj
+ .debug_line    0x00002f5f      0x6d8 CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal.c.obj
+ .debug_line    0x00003637     0x2473 CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_adc.c.obj
+ .debug_line    0x00005aaa     0x1f34 CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_adc_ex.c.obj
+ .debug_line    0x000079de      0x7b8 CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_cortex.c.obj
+ .debug_line    0x00008196      0xc70 CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma.c.obj
+ .debug_line    0x00008e06     0x19ef CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_fdcan.c.obj
+ .debug_line    0x0000a7f5      0x6ae CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_gpio.c.obj
+ .debug_line    0x0000aea3     0x49e0 CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_i2c.c.obj
+ .debug_line    0x0000f883      0x4e5 CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_i2c_ex.c.obj
+ .debug_line    0x0000fd68      0xaca CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr_ex.c.obj
+ .debug_line    0x00010832      0xe0f CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c.obj
+ .debug_line    0x00011641     0x1084 CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc_ex.c.obj
+ .debug_line    0x000126c5     0x293a CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_spi.c.obj
+ .debug_line    0x00014fff     0x537a CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_tim.c.obj
+ .debug_line    0x0001a379     0x25cf CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_tim_ex.c.obj
+ .debug_line    0x0001c948     0x6393 CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c.obj
+ .debug_line    0x00022cdb      0xd4d CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart_ex.c.obj
+ .debug_line    0x00023a28     0x1152 CMakeFiles/TwisterDriver.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.c.obj
+ .debug_line    0x00024b7a      0x389 CMakeFiles/TwisterDriver.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/list.c.obj
+ .debug_line    0x00024f03      0x73a CMakeFiles/TwisterDriver.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c.obj
+ .debug_line    0x0002563d      0x73b CMakeFiles/TwisterDriver.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.obj
+ .debug_line    0x00025d78     0x237d CMakeFiles/TwisterDriver.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
+ .debug_line    0x000280f5      0x981 CMakeFiles/TwisterDriver.elf.dir/UserApp/FOC/FOC.c.obj
+ .debug_line    0x00028a76      0x27a CMakeFiles/TwisterDriver.elf.dir/UserApp/FOC/hardware_api.c.obj
+ .debug_line    0x00028cf0      0x2e5 CMakeFiles/TwisterDriver.elf.dir/UserApp/MT6701/MT6701.c.obj
+ .debug_line    0x00028fd5      0x723 CMakeFiles/TwisterDriver.elf.dir/UserApp/multiBotton/multi_button.c.obj
+ .debug_line    0x000296f8      0x67e CMakeFiles/TwisterDriver.elf.dir/UserApp/retarget/retarget.c.obj
 
-.debug_str      0x00000000     0xb379
- .debug_str     0x00000000      0x85e CMakeFiles/TwisterDriver.elf.dir/Core/Src/app_freertos.c.obj
-                                0x978 (size before relaxing)
- .debug_str     0x0000085e     0x1bc9 CMakeFiles/TwisterDriver.elf.dir/Core/Src/main.c.obj
+.debug_str      0x00000000     0xb447
+ .debug_str     0x00000000      0xc29 CMakeFiles/TwisterDriver.elf.dir/Core/Src/app_freertos.c.obj
+                                0xd85 (size before relaxing)
+ .debug_str     0x00000c29     0x18cc CMakeFiles/TwisterDriver.elf.dir/Core/Src/main.c.obj
                                0x250d (size before relaxing)
- .debug_str     0x00002427      0x38d CMakeFiles/TwisterDriver.elf.dir/Core/Src/stm32g4xx_hal_msp.c.obj
+ .debug_str     0x000024f5      0x38d CMakeFiles/TwisterDriver.elf.dir/Core/Src/stm32g4xx_hal_msp.c.obj
                                0x1e5e (size before relaxing)
- .debug_str     0x000027b4      0x11a CMakeFiles/TwisterDriver.elf.dir/Core/Src/stm32g4xx_it.c.obj
+ .debug_str     0x00002882      0x11a CMakeFiles/TwisterDriver.elf.dir/Core/Src/stm32g4xx_it.c.obj
                                 0x5d8 (size before relaxing)
- .debug_str     0x000028ce      0x23a CMakeFiles/TwisterDriver.elf.dir/Core/Src/syscalls.c.obj
+ .debug_str     0x0000299c      0x23a CMakeFiles/TwisterDriver.elf.dir/Core/Src/syscalls.c.obj
                                 0x44e (size before relaxing)
- .debug_str     0x00002b08       0x9c CMakeFiles/TwisterDriver.elf.dir/Core/Src/sysmem.c.obj
+ .debug_str     0x00002bd6       0x9c CMakeFiles/TwisterDriver.elf.dir/Core/Src/sysmem.c.obj
                                 0x27a (size before relaxing)
- .debug_str     0x00002ba4      0x102 CMakeFiles/TwisterDriver.elf.dir/Core/Src/system_stm32g4xx.c.obj
+ .debug_str     0x00002c72      0x102 CMakeFiles/TwisterDriver.elf.dir/Core/Src/system_stm32g4xx.c.obj
                                 0x420 (size before relaxing)
- .debug_str     0x00002ca6       0x5d CMakeFiles/TwisterDriver.elf.dir/Core/Startup/startup_stm32g431rbtx.s.obj
+ .debug_str     0x00002d74       0x5d CMakeFiles/TwisterDriver.elf.dir/Core/Startup/startup_stm32g431rbtx.s.obj
                                  0x99 (size before relaxing)
- .debug_str     0x00002d03      0x47a CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal.c.obj
+ .debug_str     0x00002dd1      0x47a CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal.c.obj
                                 0xc94 (size before relaxing)
- .debug_str     0x0000317d      0xa3c CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_adc.c.obj
+ .debug_str     0x0000324b      0xa3c CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_adc.c.obj
                                0x1364 (size before relaxing)
- .debug_str     0x00003bb9      0x5db CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_adc_ex.c.obj
+ .debug_str     0x00003c87      0x5db CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_adc_ex.c.obj
                                0x130d (size before relaxing)
- .debug_str     0x00004194      0x453 CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_cortex.c.obj
+ .debug_str     0x00004262      0x453 CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_cortex.c.obj
                                 0xbe3 (size before relaxing)
- .debug_str     0x000045e7      0x29f CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma.c.obj
+ .debug_str     0x000046b5      0x29f CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma.c.obj
                                 0x7fa (size before relaxing)
- .debug_str     0x00004886      0xbf2 CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_fdcan.c.obj
+ .debug_str     0x00004954      0xbf2 CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_fdcan.c.obj
                                0x1270 (size before relaxing)
- .debug_str     0x00005478      0x133 CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_gpio.c.obj
+ .debug_str     0x00005546      0x133 CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_gpio.c.obj
                                 0x599 (size before relaxing)
- .debug_str     0x000055ab      0x8a1 CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_i2c.c.obj
+ .debug_str     0x00005679      0x8a1 CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_i2c.c.obj
                                0x10ed (size before relaxing)
- .debug_str     0x00005e4c       0xdf CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_i2c_ex.c.obj
+ .debug_str     0x00005f1a       0xdf CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_i2c_ex.c.obj
                                 0xa53 (size before relaxing)
- .debug_str     0x00005f2b      0x4fd CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr_ex.c.obj
+ .debug_str     0x00005ff9      0x4fd CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr_ex.c.obj
                                 0x83b (size before relaxing)
- .debug_str     0x00006428      0x27f CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c.obj
+ .debug_str     0x000064f6      0x27f CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c.obj
                                 0x888 (size before relaxing)
- .debug_str     0x000066a7      0x38a CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc_ex.c.obj
+ .debug_str     0x00006775      0x38a CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc_ex.c.obj
                                 0xa6f (size before relaxing)
- .debug_str     0x00006a31      0x564 CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_spi.c.obj
+ .debug_str     0x00006aff      0x564 CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_spi.c.obj
                                 0xd3f (size before relaxing)
- .debug_str     0x00006f95      0xe23 CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_tim.c.obj
+ .debug_str     0x00007063      0xe23 CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_tim.c.obj
                                0x18b8 (size before relaxing)
- .debug_str     0x00007db8      0x840 CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_tim_ex.c.obj
+ .debug_str     0x00007e86      0x840 CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_tim_ex.c.obj
                                0x1520 (size before relaxing)
- .debug_str     0x000085f8      0x86e CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c.obj
+ .debug_str     0x000086c6      0x86e CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c.obj
                                0x125b (size before relaxing)
- .debug_str     0x00008e66      0x24f CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart_ex.c.obj
+ .debug_str     0x00008f34      0x24f CMakeFiles/TwisterDriver.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart_ex.c.obj
                                 0xb6a (size before relaxing)
- .debug_str     0x000090b5      0xa2c CMakeFiles/TwisterDriver.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.c.obj
+ .debug_str     0x00009183      0xa2c CMakeFiles/TwisterDriver.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.c.obj
                                 0xe60 (size before relaxing)
- .debug_str     0x00009ae1      0x176 CMakeFiles/TwisterDriver.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/list.c.obj
+ .debug_str     0x00009baf      0x176 CMakeFiles/TwisterDriver.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/list.c.obj
                                 0x357 (size before relaxing)
- .debug_str     0x00009c57      0x260 CMakeFiles/TwisterDriver.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c.obj
+ .debug_str     0x00009d25      0x260 CMakeFiles/TwisterDriver.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c.obj
                                 0x4d7 (size before relaxing)
- .debug_str     0x00009eb7      0x2f2 CMakeFiles/TwisterDriver.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.obj
+ .debug_str     0x00009f85      0x2f2 CMakeFiles/TwisterDriver.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.obj
                                 0x565 (size before relaxing)
- .debug_str     0x0000a1a9      0x8fb CMakeFiles/TwisterDriver.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
+ .debug_str     0x0000a277      0x8fb CMakeFiles/TwisterDriver.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
                                 0xf29 (size before relaxing)
- .debug_str     0x0000aaa4      0x4fd CMakeFiles/TwisterDriver.elf.dir/UserApp/FOC/FOC.c.obj
+ .debug_str     0x0000ab72      0x4fd CMakeFiles/TwisterDriver.elf.dir/UserApp/FOC/FOC.c.obj
                                 0x7b1 (size before relaxing)
- .debug_str     0x0000afa1       0x4e CMakeFiles/TwisterDriver.elf.dir/UserApp/FOC/hardware_api.c.obj
+ .debug_str     0x0000b06f       0x4e CMakeFiles/TwisterDriver.elf.dir/UserApp/FOC/hardware_api.c.obj
                                 0x8f1 (size before relaxing)
- .debug_str     0x0000afef       0x8c CMakeFiles/TwisterDriver.elf.dir/UserApp/MT6701/MT6701.c.obj
+ .debug_str     0x0000b0bd       0x8c CMakeFiles/TwisterDriver.elf.dir/UserApp/MT6701/MT6701.c.obj
                                 0x89d (size before relaxing)
- .debug_str     0x0000b07b      0x1a6 CMakeFiles/TwisterDriver.elf.dir/UserApp/multiBotton/multi_button.c.obj
+ .debug_str     0x0000b149      0x1a6 CMakeFiles/TwisterDriver.elf.dir/UserApp/multiBotton/multi_button.c.obj
                                 0xa62 (size before relaxing)
- .debug_str     0x0000b221      0x158 CMakeFiles/TwisterDriver.elf.dir/UserApp/retarget/retarget.c.obj
+ .debug_str     0x0000b2ef      0x158 CMakeFiles/TwisterDriver.elf.dir/UserApp/retarget/retarget.c.obj
                                 0x8d5 (size before relaxing)
 
 .comment        0x00000000       0x4d

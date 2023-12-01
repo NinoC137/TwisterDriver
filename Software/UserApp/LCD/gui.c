@@ -16,7 +16,6 @@ const char foc_mode_name[FOC_CONTROL_MODE_NUM][20] = {
         "0 RESIST"
 };
 
-
 void gui_draw_line(uint16_t x1, uint16_t y1, uint16_t x2, uint16_t y2, uint16_t color) {
     if (x1 == x2) { // slope == infinite
         if (y2 < y1) { // Make sure that y1 <= y2

@@ -96,6 +96,11 @@ void CANTask(void const *argument) {
 }
 
 void ServoTask(void const *argument) {
+    Servo_init();
+
+    setAngle_180(&Servo_LeftLeg, 0);
+    setAngle_180(&Servo_RightLeg, 0);
+    
     for (;;) {
         osDelay(300);
     }

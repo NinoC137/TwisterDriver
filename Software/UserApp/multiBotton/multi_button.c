@@ -9,14 +9,10 @@
 
 struct Button KEY1;
 struct Button KEY2;
-struct Button KEY3; //步进电机切换
-struct Button KEY4; //下药模式切换
-struct Button KEY5; //开启下药
-struct Button KEY6; //待定
-
-extern int gMode;
-extern int StepID;
-extern int SubBox_Buffer[4];
+struct Button KEY3;
+struct Button KEY4;
+struct Button KEY5;
+struct Button KEY6;
 
 //button handle list head.
 static struct Button *head_handle = NULL;
