@@ -22,21 +22,7 @@
   <component name="ChangeListManager">
     <list default="true" id="0e2c7c2d-a2ac-461a-be57-7a8b8cadda32" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Src/app_freertos.c" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Src/app_freertos.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserApp/LCD/gui.c" beforeDir="false" afterPath="$PROJECT_DIR$/UserApp/LCD/gui.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserApp/Servo/Servo.c" beforeDir="false" afterPath="$PROJECT_DIR$/UserApp/Servo/Servo.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserApp/Servo/Servo.h" beforeDir="false" afterPath="$PROJECT_DIR$/UserApp/Servo/Servo.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserApp/multiBotton/multi_button.c" beforeDir="false" afterPath="$PROJECT_DIR$/UserApp/multiBotton/multi_button.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/index-2023-11-17T13-04-13-0923.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.25.2/CMakeDetermineCompilerABI_C.bin" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.25.2/CMakeDetermineCompilerABI_C.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.25.2/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.25.2/CMakeDetermineCompilerABI_CXX.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TwisterDriver.elf.dir/Core/Src/app_freertos.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TwisterDriver.elf.dir/Core/Src/app_freertos.c.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TwisterDriver.elf.dir/UserApp/LCD/gui.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TwisterDriver.elf.dir/UserApp/LCD/gui.c.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TwisterDriver.elf.dir/UserApp/Servo/Servo.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TwisterDriver.elf.dir/UserApp/Servo/Servo.c.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TwisterDriver.elf.dir/UserApp/multiBotton/multi_button.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TwisterDriver.elf.dir/UserApp/multiBotton/multi_button.c.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/TwisterDriver.elf" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/TwisterDriver.elf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/TwisterDriver.map" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/TwisterDriver.map" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,12 +79,12 @@
     </key>
   </component>
   <component name="RunManager" selected="OpenOCD Download &amp; Run.TwisterDriver.elf">
-    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
+    <configuration name="TwisterDriver.elf" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="TwisterDriver" TARGET_NAME="TwisterDriver.elf" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="TwisterDriver" RUN_TARGET_NAME="TwisterDriver.elf">
       <method v="2">
-        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TwisterDriver.elf" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="TwisterDriver" TARGET_NAME="TwisterDriver.elf" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="TwisterDriver" RUN_TARGET_NAME="TwisterDriver.elf">
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -129,6 +115,7 @@
       <workItem from="1700189383671" duration="3424000" />
       <workItem from="1700211319917" duration="11853000" />
       <workItem from="1701420455416" duration="5523000" />
+      <workItem from="1701426751733" duration="220000" />
     </task>
     <servers />
   </component>

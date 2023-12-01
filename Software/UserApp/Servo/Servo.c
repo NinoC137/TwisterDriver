@@ -24,8 +24,8 @@ void setAngle_180(struct Servo_OOC *Servo, ServoAngle target_Angle) {
 
     Servo->prTarget_Angle = target_Angle;
     //换算角度至脉冲时长对应的占空比比较值
-    Servo->prHighLevelTimes_Ms = (5e-4f / (float) Servo->TIMFreq +
-                                  (Servo->prTarget_Angle / 180.00f) * (2e-3f / (float) Servo->TIMFreq));
+    Servo->prHighLevelTimes_Ms = (5e-4f * (float) Servo->TIMFreq +
+                                  (Servo->prTarget_Angle / 180.00f) * (2e-3f * (float) Servo->TIMFreq));
 
     if (Servo->prHighLevelTimes_Ms > Servo->TIMER->Init.Period) {
         Servo_log("Counter Period overflow!\r\n");
@@ -47,8 +47,8 @@ void setAngle_270(struct Servo_OOC *Servo, ServoAngle target_Angle) {
 
     Servo->prTarget_Angle = target_Angle;
     //换算角度至脉冲时长对应的占空比比较值
-    Servo->prHighLevelTimes_Ms = (5e-4f / (float) Servo->TIMFreq +
-                                  (Servo->prTarget_Angle / 270.00f) * (2e-3f / (float) Servo->TIMFreq));
+    Servo->prHighLevelTimes_Ms = (5e-4f * (float) Servo->TIMFreq +
+                                  (Servo->prTarget_Angle / 270.00f) * (2e-3f * (float) Servo->TIMFreq));
 
     if (Servo->prHighLevelTimes_Ms > Servo->TIMER->Init.Period) {
         Servo_log("Counter Period overflow!\r\n");
