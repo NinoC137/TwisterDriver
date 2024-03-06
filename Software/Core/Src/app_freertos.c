@@ -75,8 +75,8 @@ void FOCTask(void const *argument) {
 
     for (;;) {
 //        velocityOpenLoop(30);
-        FOC_M0_set_Velocity_Angle(targetAngle_left);
-//        FOC_M0_setVelocity(2);
+//        FOC_M0_set_Velocity_Angle(targetAngle_left);
+        FOC_M0_setVelocity(20);
         osDelay(1);
     }
 }
@@ -89,13 +89,12 @@ void LCDTask(void const *argument) {
         osDelay(10);
     }
 }
-
+extern float angle_pi;
 void UARTTask(void const *argument) {
-    float angle_p_1, angle_f_1, angle_p_2, angle_f_2;
     for (;;) {
-//        i2c_mt6701_get_angle(&angle_p_1, &angle_f_1);
-//        i2c2_mt6701_get_angle(&angle_p_2, &angle_f_2);
-        uart_printf("Motor1 angle: %d\t Motor2 angle: %d\r\n",(int)angle_f_1, (int)angle_f_2);
+//        float currentSpeed = FOC_M0_Velocity() * 180.0f / _PI;
+//        uart_printf("Motor1 speed: %d\t",(int)currentSpeed);
+        uart_printf("Motor1 angle: %d\r\n",(int)angle_pi);
         osDelay(300);
     }
 }
@@ -111,13 +110,13 @@ void ServoTask(void const *argument) {
 
     osDelay(500);
 
-    setAngle_180(&Servo_LeftLeg, 5);
+    setAngle_270(&Servo_LeftLeg, 5);
     setAngle_270(&Servo_RightLeg, 5);
 
     uart_printf("Servo init.\r\n");
     
     for (;;) {
-        setAngle_180(&Servo_LeftLeg, targetAngle_left);
+        setAngle_270(&Servo_LeftLeg, targetAngle_left);
         setAngle_270(&Servo_RightLeg, targetAngle_right);
         osDelay(300);
     }

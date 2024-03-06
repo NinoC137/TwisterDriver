@@ -241,27 +241,27 @@ static void angleIncrease(){
 }
 
 void KEY1_PRESS_DOWN_Handler(void *btn){
-    HAL_UART_Transmit(&huart1, "KEY1 Press.\n", sizeof("KEY2 Press.\n") - 1, 100);
+//    HAL_UART_Transmit(&huart1, "KEY1 Press.\n", sizeof("KEY2 Press.\n") - 1, 100);
     angleReduce();
 }
 
 void KEY2_PRESS_DOWN_Handler(void *btn){
-    HAL_UART_Transmit(&huart1, "KEY2 Press.\n", sizeof("KEY2 Press.\n") - 1, 100);
+//    HAL_UART_Transmit(&huart1, "KEY2 Press.\n", sizeof("KEY2 Press.\n") - 1, 100);
 }
 
 void KEY3_PRESS_DOWN_Handler(void *btn) {
-    HAL_UART_Transmit(&huart1, "KEY3 Press.\n", sizeof("KEY2 Press.\n") - 1, 100);
+//    HAL_UART_Transmit(&huart1, "KEY3 Press.\n", sizeof("KEY2 Press.\n") - 1, 100);
 }
 
 void KEY4_PRESS_DOWN_Handler(void *btn) {
-    HAL_UART_Transmit(&huart1, "KEY4 Press.\n", sizeof("KEY2 Press.\n") - 1, 100);
+//    HAL_UART_Transmit(&huart1, "KEY4 Press.\n", sizeof("KEY2 Press.\n") - 1, 100);
     angleIncrease();
 }
 
 void KEY5_PRESS_DOWN_Handler(void *btn) {
-    HAL_UART_Transmit(&huart1, "KEY5 Press.\n", sizeof("KEY2 Press.\n") - 1, 100);
+//    HAL_UART_Transmit(&huart1, "KEY5 Press.\n", sizeof("KEY2 Press.\n") - 1, 100);
 }
 
 void KEY6_PRESS_DOWN_Handler(void *btn) {
-    HAL_UART_Transmit(&huart1, "Encounter Press.\n", sizeof("Encounter Press.\n") - 1, 100);
+//    HAL_UART_Transmit(&huart1, "Encounter Press.\n", sizeof("Encounter Press.\n") - 1, 100);
 }

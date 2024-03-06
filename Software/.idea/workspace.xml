@@ -20,31 +20,19 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0e2c7c2d-a2ac-461a-be57-7a8b8cadda32" name="Changes" comment="">
+    <list default="true" id="0e2c7c2d-a2ac-461a-be57-7a8b8cadda32" name="Changes" comment="实现了SVPWM下的FOC闭环位置环控制, 效果稳定不抖动">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Inc/main.h" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Inc/main.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Core/Src/app_freertos.c" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Src/app_freertos.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Src/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Src/main.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TwisterDriver.ioc" beforeDir="false" afterPath="$PROJECT_DIR$/TwisterDriver.ioc" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserApp/FOC/FOC.c" beforeDir="false" afterPath="$PROJECT_DIR$/UserApp/FOC/FOC.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserApp/FOC/FOC.h" beforeDir="false" afterPath="$PROJECT_DIR$/UserApp/FOC/FOC.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserApp/FOC/Filter.c" beforeDir="false" afterPath="$PROJECT_DIR$/UserApp/FOC/Filter.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserApp/FOC/Filter.h" beforeDir="false" afterPath="$PROJECT_DIR$/UserApp/FOC/Filter.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserApp/FOC/my_PID.c" beforeDir="false" afterPath="$PROJECT_DIR$/UserApp/FOC/my_PID.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserApp/MT6701/MT6701.c" beforeDir="false" afterPath="$PROJECT_DIR$/UserApp/MT6701/MT6701.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserApp/MT6701/MT6701.h" beforeDir="false" afterPath="$PROJECT_DIR$/UserApp/MT6701/MT6701.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserApp/Servo/Servo.c" beforeDir="false" afterPath="$PROJECT_DIR$/UserApp/Servo/Servo.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserApp/FOC/my_PID.h" beforeDir="false" afterPath="$PROJECT_DIR$/UserApp/FOC/my_PID.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserApp/multiBotton/multi_button.c" beforeDir="false" afterPath="$PROJECT_DIR$/UserApp/multiBotton/multi_button.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserApp/retarget/retarget.c" beforeDir="false" afterPath="$PROJECT_DIR$/UserApp/retarget/retarget.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.25.2/CMakeDetermineCompilerABI_C.bin" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.25.2/CMakeDetermineCompilerABI_C.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.25.2/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.25.2/CMakeDetermineCompilerABI_CXX.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.25.2/CMakeSystem.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.25.2/CMakeSystem.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TwisterDriver.elf.dir/Core/Src/app_freertos.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TwisterDriver.elf.dir/Core/Src/app_freertos.c.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TwisterDriver.elf.dir/Core/Src/main.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TwisterDriver.elf.dir/Core/Src/main.c.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TwisterDriver.elf.dir/Core/Src/stm32g4xx_hal_msp.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TwisterDriver.elf.dir/Core/Src/stm32g4xx_hal_msp.c.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TwisterDriver.elf.dir/UserApp/FOC/FOC.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TwisterDriver.elf.dir/UserApp/FOC/FOC.c.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TwisterDriver.elf.dir/UserApp/FOC/Filter.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TwisterDriver.elf.dir/UserApp/FOC/Filter.c.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TwisterDriver.elf.dir/UserApp/FOC/my_PID.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TwisterDriver.elf.dir/UserApp/FOC/my_PID.c.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TwisterDriver.elf.dir/UserApp/MT6701/MT6701.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TwisterDriver.elf.dir/UserApp/MT6701/MT6701.c.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TwisterDriver.elf.dir/UserApp/Servo/Servo.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TwisterDriver.elf.dir/UserApp/Servo/Servo.c.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TwisterDriver.elf.dir/UserApp/multiBotton/multi_button.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TwisterDriver.elf.dir/UserApp/multiBotton/multi_button.c.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/TwisterDriver.bin" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/TwisterDriver.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/TwisterDriver.elf" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/TwisterDriver.elf" afterDir="false" />
@@ -162,8 +150,17 @@
       <workItem from="1705051582550" duration="878000" />
       <workItem from="1709116771890" duration="2490000" />
       <workItem from="1709285749759" duration="8712000" />
-      <workItem from="1709629422677" duration="15071000" />
+      <workItem from="1709629422677" duration="26474000" />
     </task>
+    <task id="LOCAL-00001" summary="实现了SVPWM下的FOC闭环位置环控制, 效果稳定不抖动">
+      <option name="closed" value="true" />
+      <created>1709706416536</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1709706416537</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -175,22 +172,29 @@
     <isAutomaticFoundErrors value="true" />
     <isAutomaticFoundErrors value="true" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="实现了SVPWM下的FOC闭环位置环控制, 效果稳定不抖动" />
+    <option name="LAST_COMMIT_MESSAGE" value="实现了SVPWM下的FOC闭环位置环控制, 效果稳定不抖动" />
+  </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/UserApp/FOC/FOC.c</url>
-          <line>316</line>
-          <option name="timeStamp" value="49" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
     <watches-manager>
       <configuration name="com.jetbrains.cidr.embedded.openocd.conf.type">
         <watch expression="shaft_angle" />
         <watch expression="angle_pi" />
         <watch expression="targetAngle_left" />
         <watch expression="Motor_1" />
+        <watch expression="error" />
       </configuration>
     </watches-manager>
   </component>

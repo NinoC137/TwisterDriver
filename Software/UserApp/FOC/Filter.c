@@ -5,67 +5,68 @@ Sliding_Mean_Filter moving_filter;
 
 LowPass_Filter lpf_Motor1_error;
 LowPass_Filter lpf_Motor1_speed;
+LowPass_Filter lpf_Motor1_sensor;
 
 LowPass_Filter lpf_Motor1_current;
 LowPass_Filter lpf_current_d;
 LowPass_Filter lpf_current_q;
 
 /**
- ** º¯Êı¹¦ÄÜ:  Ò»½×ÖÍºóÂË²¨Ëã·¨£¬BiasÂË²¨Æ÷
- ** ²Î    Êı: value£ºĞèÒª½øĞĞÂË²¨µÄÖµ
- ** ·µ »Ø Öµ: ÂË²¨ºóµÄÖµ
+ ** ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½:  Ò»ï¿½ï¿½ï¿½Íºï¿½ï¿½Ë²ï¿½ï¿½ã·¨ï¿½ï¿½Biasï¿½Ë²ï¿½ï¿½ï¿½
+ ** ï¿½ï¿½    ï¿½ï¿½: valueï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½ï¿½Ë²ï¿½ï¿½ï¿½Öµ
+ ** ï¿½ï¿½ ï¿½ï¿½ Öµ: ï¿½Ë²ï¿½ï¿½ï¿½ï¿½Öµ
  */
 float FirstOrderLagFilter(float value) {
     static float last_value;
-    value = FIRST_LAG_P * value + (1.0f - FIRST_LAG_P) * last_value; //Ò»½×ÖÍºóÂË²¨
+    value = FIRST_LAG_P * value + (1.0f - FIRST_LAG_P) * last_value; //Ò»ï¿½ï¿½ï¿½Íºï¿½ï¿½Ë²ï¿½
     last_value = value;
     return value;
 }
 
 /**
- ** º¯Êı¹¦ÄÜ:  Ò»½×ÖÍºóÂË²¨Ëã·¨£¬SlopeÂË²¨Æ÷
- ** ²Î    Êı: value£ºĞèÒª½øĞĞÂË²¨µÄÖµ
- ** ·µ »Ø Öµ: ÂË²¨ºóµÄÖµ
+ ** ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½:  Ò»ï¿½ï¿½ï¿½Íºï¿½ï¿½Ë²ï¿½ï¿½ã·¨ï¿½ï¿½Slopeï¿½Ë²ï¿½ï¿½ï¿½
+ ** ï¿½ï¿½    ï¿½ï¿½: valueï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½ï¿½Ë²ï¿½ï¿½ï¿½Öµ
+ ** ï¿½ï¿½ ï¿½ï¿½ Öµ: ï¿½Ë²ï¿½ï¿½ï¿½ï¿½Öµ
 */
 float FirstOrderLagFilter_Slope(float value) {
     static float last_value;
-    value = FIRST_LAG_P * value + (1.0f - FIRST_LAG_P) * last_value; //Ò»½×ÖÍºóÂË²¨
+    value = FIRST_LAG_P * value + (1.0f - FIRST_LAG_P) * last_value; //Ò»ï¿½ï¿½ï¿½Íºï¿½ï¿½Ë²ï¿½
     last_value = value;
     return value;
 }
 
 /**
- *  º¯Êı¹¦ÄÜ:  ¶ş½×ÖÍºóÂË²¨Ëã·¨
- ** ²Î    Êı: value£ºĞèÒª½øĞĞÂË²¨µÄÖµ
- ** ·µ »Ø Öµ: ÂË²¨ºóµÄÖµ
+ *  ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½:  ï¿½ï¿½ï¿½ï¿½ï¿½Íºï¿½ï¿½Ë²ï¿½ï¿½ã·¨
+ ** ï¿½ï¿½    ï¿½ï¿½: valueï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½ï¿½Ë²ï¿½ï¿½ï¿½Öµ
+ ** ï¿½ï¿½ ï¿½ï¿½ Öµ: ï¿½Ë²ï¿½ï¿½ï¿½ï¿½Öµ
  */
 float SecondOrderLagFilter(float value) {
     static float last_value, last_2_value;
-    value = 0.2f * value + 0.4f * last_value + 0.4f * last_2_value;     //¶ş½×ÖÍºóÂË²¨
+    value = 0.2f * value + 0.4f * last_value + 0.4f * last_2_value;     //ï¿½ï¿½ï¿½ï¿½ï¿½Íºï¿½ï¿½Ë²ï¿½
     last_2_value = last_value;
     last_value = value;
     return value;
 }
 
 /**
- *  º¯Êı¹¦ÄÜ:  »¬¶¯Æ½¾ùÂË²¨Ëã·¨
- ** ²Î    Êı: value£ºĞèÒª½øĞĞÂË²¨µÄÖµ
- ** ·µ »Ø Öµ: ÂË²¨ºóµÄÖµ
+ *  ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½:  ï¿½ï¿½ï¿½ï¿½Æ½ï¿½ï¿½ï¿½Ë²ï¿½ï¿½ã·¨
+ ** ï¿½ï¿½    ï¿½ï¿½: valueï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½ï¿½Ë²ï¿½ï¿½ï¿½Öµ
+ ** ï¿½ï¿½ ï¿½ï¿½ Öµ: ï¿½Ë²ï¿½ï¿½ï¿½ï¿½Öµ
  */
 float movingAverageFilter(Sliding_Mean_Filter *filter, float value) {
-    filter->sum -= filter->Filter_Buffer[filter->index];        //¼õÈ¥×î¾ÉµÄÊı
-    filter->sum += value;                                       //¼Ó½ø×îĞÂµÄÊı
-    filter->Filter_Buffer[filter->index] = value;               //½«×îĞÂµÄÊı¸²¸Ç×î¾ÉµÄÊı
-    filter->average = filter->sum / MVF_BUFFER;                 //Çó¾ùÖµ
+    filter->sum -= filter->Filter_Buffer[filter->index];        //ï¿½ï¿½È¥ï¿½ï¿½Éµï¿½ï¿½ï¿½
+    filter->sum += value;                                       //ï¿½Ó½ï¿½ï¿½ï¿½ï¿½Âµï¿½ï¿½ï¿½
+    filter->Filter_Buffer[filter->index] = value;               //ï¿½ï¿½ï¿½ï¿½ï¿½Âµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Éµï¿½ï¿½ï¿½
+    filter->average = filter->sum / MVF_BUFFER;                 //ï¿½ï¿½ï¿½Öµ
     if (++filter->index == MVF_BUFFER)
         filter->index = 0;
     return filter->average;
 }
 
 /**
- * º¯Êı¹¦ÄÜ:    Ò»½×¿¨¶ûÂüÂË²¨³õÊ¼»¯
- * ²Î    Êı:   q,r: Ô¤²âÔëÉù·½²î, ²âÁ¿ÔëÉù·½²î
- * ·µ »Ø Öµ:   state : ÂË²¨½á¹¹Êı¾İÖ¸Õë
+ * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½:    Ò»ï¿½×¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ë²ï¿½ï¿½ï¿½Ê¼ï¿½ï¿½
+ * ï¿½ï¿½    ï¿½ï¿½:   q,r: Ô¤ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½, ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+ * ï¿½ï¿½ ï¿½ï¿½ Öµ:   state : ï¿½Ë²ï¿½ï¿½á¹¹ï¿½ï¿½ï¿½ï¿½Ö¸ï¿½ï¿½
  */
 void kalman1_init(kalman1_filter_t *state, float q, float r) {
     state->x = 0;
@@ -77,29 +78,29 @@ void kalman1_init(kalman1_filter_t *state, float q, float r) {
 }
 
 /**
- * º¯Êı¹¦ÄÜ:    Ò»½×¿¨¶ûÂüÂË²¨
- * ²Î    Êı:   z_measure : Ô­Ê¼Êı¾İ
- * ·µ »Ø Öµ:   state : ÂË²¨½á¹¹Êı¾İÖ¸Õë
+ * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½:    Ò»ï¿½×¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ë²ï¿½
+ * ï¿½ï¿½    ï¿½ï¿½:   z_measure : Ô­Ê¼ï¿½ï¿½ï¿½ï¿½
+ * ï¿½ï¿½ ï¿½ï¿½ Öµ:   state : ï¿½Ë²ï¿½ï¿½á¹¹ï¿½ï¿½ï¿½ï¿½Ö¸ï¿½ï¿½
  */
 float kalman1_filter(kalman1_filter_t *state, float z_measure) {
     /* Predict */
-    // Ê±¼ä¸üĞÂ(Ô¤²â): X(k|k-1) = A(k,k-1)*X(k-1|k-1) + B(k)*u(k)
+    // Ê±ï¿½ï¿½ï¿½ï¿½ï¿½(Ô¤ï¿½ï¿½): X(k|k-1) = A(k,k-1)*X(k-1|k-1) + B(k)*u(k)
     state->x = state->A * state->x;
-    // ¸üĞÂÏÈÑéĞ­·½²î: P(k|k-1) = A(k,k-1)*A(k,k-1)^T*P(k-1|k-1)+Q(k)
+    // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ğ­ï¿½ï¿½ï¿½ï¿½: P(k|k-1) = A(k,k-1)*A(k,k-1)^T*P(k-1|k-1)+Q(k)
     state->p = state->A * state->A * state->p + state->q;
 
     /* Measurement */
-    // ¼ÆËã¿¨¶ûÂüÔöÒæ: K(k) = P(k|k-1)*H(k)^T/(P(k|k-1)*H(k)*H(k)^T + R(k))
+    // ï¿½ï¿½ï¿½ã¿¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½: K(k) = P(k|k-1)*H(k)^T/(P(k|k-1)*H(k)*H(k)^T + R(k))
     state->gain = state->p * state->H / (state->p * state->H * state->H + state->r);
-    // ²âÁ¿¸üĞÂ(Ğ£Õı): X(k|k) = X(k|k-1)+K(k)*(Z(k)-H(k)*X(k|k-1))
+    // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½(Ğ£ï¿½ï¿½): X(k|k) = X(k|k-1)+K(k)*(Z(k)-H(k)*X(k|k-1))
     state->x = state->x + state->gain * (z_measure - state->H * state->x);
-    // ¸üĞÂºóÑéĞ­·½²î: P(k|k) =£¨I-K(k)*H(k))*P(k|k-1)
+    // ï¿½ï¿½ï¿½Âºï¿½ï¿½ï¿½Ğ­ï¿½ï¿½ï¿½ï¿½: P(k|k) =ï¿½ï¿½I-K(k)*H(k))*P(k|k-1)
     state->p = (1 - state->gain * state->H) * state->p;
 
     return state->x;
 }
 
-/*********************************Ò»½×µÍÍ¨ÂË²¨***********************************************************/
+/*********************************Ò»ï¿½×µï¿½Í¨ï¿½Ë²ï¿½***********************************************************/
 float Low_Pass_Filter(LowPass_Filter *filter,float data,float param)
 {
     filter->parameter=param;
@@ -109,7 +110,7 @@ float Low_Pass_Filter(LowPass_Filter *filter,float data,float param)
     return filter->output;
 }
 
-/*********************************´°¿Ú»¬¶¯ÂË²¨***********************************************************/
+/*********************************ï¿½ï¿½ï¿½Ú»ï¿½ï¿½ï¿½ï¿½Ë²ï¿½***********************************************************/
 float Window_Slide_Filter(Slide_Filter *filter,float data)
 {
     filter->slide_count++;

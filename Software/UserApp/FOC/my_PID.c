@@ -2,6 +2,8 @@
 
 PID Motor_1;
 
+PID Motor_speed;
+
 PID Motor_Uq;
 PID Motor_Ud;
 
@@ -15,10 +17,14 @@ PID Motor_Ud;
 *************************************************************************/
 void Pid_Value_Init(void)
 {
-    Pid_Init(&Motor_1, 0.100f, 0.00f, 0.0f);
+    Pid_Init(&Motor_1, 0.08f, 0.00f, 0.0f);
     Motor_1.OutputMax = 6.0f;
     Motor_1.OutputMin = -6.0f;
     Motor_1.IntegralMax = 200.0f;
+    Pid_Init(&Motor_speed, 0.08f, 0.1f, 0.00f);
+    Motor_speed.OutputMax = 6.0f;
+    Motor_speed.OutputMin = -6.0f;
+    Motor_speed.IntegralMax = 5.0f;
     Pid_Init(&Motor_Uq, 0.004f, 0.00f, 0.00f);
     Motor_Uq.OutputMax = 3.0f;
     Motor_Uq.OutputMin = -3.0f;

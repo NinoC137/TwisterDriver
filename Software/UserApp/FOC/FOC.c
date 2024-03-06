@@ -16,9 +16,8 @@ float angle_f;
 //M0速度PID接口
 float FOC_M0_VEL_PID(float error)   //M0速度环
 {
-//    Motor_1.Error = error;
-    Motor_1.Error = Low_Pass_Filter(&lpf_Motor1_error, error, 0.7f);
-    return Position_Pid_Calculate(&Motor_1);
+    Motor_speed.Error = Low_Pass_Filter(&lpf_Motor1_sensor, error, 0.7f);
+    return Position_Pid_Calculate(&Motor_speed);
 }
 
 //M0角度PID接口
@@ -249,9 +248,15 @@ void FOC_M0_set_Velocity_Angle(float Target) {
 }
 
 void FOC_M0_setVelocity(float Target) {
-    Motor_1.Target = Target;
-    FOC_SVPWM(_constrain( FOC_M0_VEL_PID((Target - FOC_M0_Velocity()) * 180 / _PI), Motor_1.OutputMin, Motor_1.OutputMax), 0,
+    i2c_mt6701_get_angle(&angle_pi, &angle_f); //更新传感器数值
+    Motor_speed.Target = Target;
+    float currentSpeed = FOC_M0_Velocity() * 180.0f / _PI;
+    float error = (Target - currentSpeed);
+    float Uq = FOC_M0_VEL_PID(error);
+    FOC_SVPWM(_constrain( Uq, Motor_speed.OutputMin, Motor_speed.OutputMax), 0,
               _electricalAngle(angle_pi, PP));   //速度闭环
+//    FOC_SVPWM(_constrain( FOC_M0_VEL_PID((Target - FOC_M0_Velocity() * 180.0f / _PI)), Motor_speed.OutputMin, Motor_speed.OutputMax), 0,
+//              _electricalAngle(angle_pi, PP));   //速度闭环
 }
 
 void FOC_M0_set_Force_Angle(float Target)   //力位
@@ -290,29 +295,26 @@ void FOC_current_control_loop(float target_Iq){
     // debug
 //    printf("%.1f,%.1f,%.1f,%.1f,%.1f\n", cs_value[0], cs_value[1], cs_value[2], Id, Iq);
 }
-
+float angle_old, full_rotations, full_rotations_old;
 float FOC_M0_Velocity() {
-    static float angle_now, angle_old;
-
-    i2c_mt6701_get_angle(&angle_pi, &angle_f); //更新传感器数值
-
+    float angle_now;
+    static int Ts = 1;
+    i2c_mt6701_get_angle(&angle_pi, &angle_f);
     angle_now = angle_pi;
 
-    float delta_angle = angle_now - angle_old;
+    float delta_angle = angle_pi - angle_old;
 
-    if (delta_angle >= 1.6 * M_PI) {
-        delta_angle -= 2.0f * M_PI;
-    }
-    if (delta_angle <= -1.6 * M_PI) {
-        delta_angle += 2.0f * M_PI;
+    if(abs((int)delta_angle) > (1.6f * _PI)){
+        full_rotations += (delta_angle > 0 )? -1 : 1;
     }
 
-    float vel_speed_ori = delta_angle;  //采样时间以ms为单位
+    float vel_speed_ori = ((full_rotations - full_rotations_old) * (_PI * 2) + (angle_now - angle_old)) / (float)Ts ;
 
     angle_old = angle_now;
+    full_rotations_old = full_rotations;
 
     float vel_M0_flit = Low_Pass_Filter(&lpf_Motor1_speed, DIR * vel_speed_ori, 0.7f);
-//    Motor_1.Actual = vel_M0_flit;
+    Motor_speed.Actual = vel_M0_flit;
 
     return vel_M0_flit;
 }
