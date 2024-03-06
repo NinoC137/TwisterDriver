@@ -39,7 +39,8 @@
 
 /* Private macro -------------------------------------------------------------*/
 /* USER CODE BEGIN PM */
-
+float targetAngle_left = 0;
+float targetAngle_right = 0;
 /* USER CODE END PM */
 
 /* Private variables ---------------------------------------------------------*/
@@ -55,21 +56,27 @@
 /* Private application code --------------------------------------------------*/
 /* USER CODE BEGIN Application */
 void FOCTask(void const *argument) {
+    float angle_p, angle_f;
+
+    Pid_Value_Init();
+
     HAL_GPIO_WritePin(Driver1_EN_GPIO_Port, Driver1_EN_Pin, 1);
 
-//    HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_1);
-//    HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_2);
-//    HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_3);
-//
-//            __HAL_TIM_SetCompare(&htim1, TIM_CHANNEL_1, 500);
-//            __HAL_TIM_SetCompare(&htim1, TIM_CHANNEL_2, 500);
-//            __HAL_TIM_SetCompare(&htim1, TIM_CHANNEL_3, 500);
+    HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_1);
+    HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_2);
+    HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_3);
+
+            __HAL_TIM_SetCompare(&htim1, TIM_CHANNEL_1, 5000);
+            __HAL_TIM_SetCompare(&htim1, TIM_CHANNEL_2, 5000);
+            __HAL_TIM_SetCompare(&htim1, TIM_CHANNEL_3, 5000);
 
     FOC_Vbus(12.0f);
     FOC_alignSensor(7, 1);
 
     for (;;) {
-        velocityOpenLoop(30);
+//        velocityOpenLoop(30);
+        FOC_M0_set_Velocity_Angle(targetAngle_left);
+//        FOC_M0_setVelocity(2);
         osDelay(1);
     }
 }
@@ -84,7 +91,11 @@ void LCDTask(void const *argument) {
 }
 
 void UARTTask(void const *argument) {
+    float angle_p_1, angle_f_1, angle_p_2, angle_f_2;
     for (;;) {
+//        i2c_mt6701_get_angle(&angle_p_1, &angle_f_1);
+//        i2c2_mt6701_get_angle(&angle_p_2, &angle_f_2);
+        uart_printf("Motor1 angle: %d\t Motor2 angle: %d\r\n",(int)angle_f_1, (int)angle_f_2);
         osDelay(300);
     }
 }
@@ -98,10 +109,16 @@ void CANTask(void const *argument) {
 void ServoTask(void const *argument) {
     Servo_init();
 
-    setAngle_180(&Servo_LeftLeg, 0);
-    setAngle_180(&Servo_RightLeg, 0);
+    osDelay(500);
+
+    setAngle_180(&Servo_LeftLeg, 5);
+    setAngle_270(&Servo_RightLeg, 5);
+
+    uart_printf("Servo init.\r\n");
     
     for (;;) {
+        setAngle_180(&Servo_LeftLeg, targetAngle_left);
+        setAngle_270(&Servo_RightLeg, targetAngle_right);
         osDelay(300);
     }
 }

@@ -16,10 +16,10 @@ void setAngle_180(struct Servo_OOC *Servo, ServoAngle target_Angle) {
     target_Angle += Servo->prAngle_Offset;
 
     /********角度限幅, 使用反馈控制时可按需定义*************/
-//    if(target_Angle <= 20)
-//        target_Angle = 20;
-//    if(target_Angle >= 75)
-//        target_Angle = 75;
+    if(target_Angle <= 2)
+        target_Angle = 2;
+    if(target_Angle >= 45)
+        target_Angle = 45;
     /************************************************/
 
     Servo->prTarget_Angle = target_Angle;
@@ -39,10 +39,10 @@ void setAngle_270(struct Servo_OOC *Servo, ServoAngle target_Angle) {
     target_Angle += Servo->prAngle_Offset;
 
     /********角度限幅, 使用反馈控制时可按需定义*************/
-//    if(target_Angle <= 20)
-//        target_Angle = 20;
-//    if(target_Angle >= 75)
-//        target_Angle = 75;
+    if(target_Angle <= 2)
+        target_Angle = 2;
+    if(target_Angle >= 45)
+        target_Angle = 45;
     /************************************************/
 
     Servo->prTarget_Angle = target_Angle;

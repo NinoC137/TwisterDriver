@@ -105,6 +105,9 @@ osThreadId UARTTaskHandle;
 osThreadId CANTaskHandle;
 osThreadId FOCTaskHandle;
 osThreadId ServoTaskHandle;
+
+osMutexDef(printfMutex);
+osMutexId printfMutex_id;
 /* USER CODE END 0 */
 
 /**
@@ -154,6 +157,7 @@ int main(void)
 
   /* USER CODE BEGIN RTOS_MUTEX */
     /* add mutexes, ... */
+    printfMutex_id = osMutexCreate(osMutex(printfMutex));
   /* USER CODE END RTOS_MUTEX */
 
   /* USER CODE BEGIN RTOS_SEMAPHORES */
@@ -563,7 +567,7 @@ static void MX_TIM1_Init(void)
   /* USER CODE END TIM1_Init 1 */
   htim1.Instance = TIM1;
   htim1.Init.Prescaler = 6;
-  htim1.Init.CounterMode = TIM_COUNTERMODE_UP;
+  htim1.Init.CounterMode = TIM_COUNTERMODE_CENTERALIGNED1;
   htim1.Init.Period = 1000;
   htim1.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
   htim1.Init.RepetitionCounter = 0;
@@ -753,9 +757,9 @@ static void MX_TIM8_Init(void)
 
   /* USER CODE END TIM8_Init 1 */
   htim8.Instance = TIM8;
-  htim8.Init.Prescaler = 0;
+  htim8.Init.Prescaler = 160;
   htim8.Init.CounterMode = TIM_COUNTERMODE_UP;
-  htim8.Init.Period = 65535;
+  htim8.Init.Period = 10000;
   htim8.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
   htim8.Init.RepetitionCounter = 0;
   htim8.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
@@ -992,20 +996,20 @@ void StartDefaultTask(void const * argument)
 {
   /* USER CODE BEGIN 5 */
 
-    osThreadDef(ButtonTask, ButtonTask, osPriorityNormal, 0, 128);
+    osThreadDef(ButtonTask, ButtonTask, osPriorityNormal, 0, 512);
 //    osThreadDef(LCDTask, LCDTask, osPriorityNormal, 0, 512);
-    osThreadDef(UARTTask, UARTTask, osPriorityNormal, 0, 512);
-    osThreadDef(CANTask, CANTask, osPriorityNormal, 0, 512);
+    osThreadDef(UARTTask, UARTTask, osPriorityNormal, 0, 1024);
+//    osThreadDef(CANTask, CANTask, osPriorityNormal, 0, 512);
     osThreadDef(FOCTask, FOCTask, osPriorityAboveNormal, 0, 512);
     osThreadDef(ServoTask, ServoTask, osPriorityAboveNormal, 0, 512);
 
     portENTER_CRITICAL();
     ButtonTaskHandle = osThreadCreate(osThread(ButtonTask), NULL);
 //    LCDTaskHandle = osThreadCreate(osThread(LCDTask), NULL);
-//    UARTTaskHandle = osThreadCreate(osThread(UARTTask), NULL);
+    UARTTaskHandle = osThreadCreate(osThread(UARTTask), NULL);
 //    CANTaskHandle = osThreadCreate(osThread(CANTask), NULL);
     FOCTaskHandle = osThreadCreate(osThread(FOCTask), NULL);
-//    ServoTaskHandle = osThreadCreate(osThread(ServoTask), NULL);
+    ServoTaskHandle = osThreadCreate(osThread(ServoTask), NULL);
     portEXIT_CRITICAL();
 
     uart3_printf("Hello World!\n");

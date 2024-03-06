@@ -81,7 +81,7 @@ void setPWM(float Ua, float Ub, float Uc) {
 }
 
 void setTorque(float Uq, float angle_el) {
-    Uq = _constrain(Uq, -(voltage_power_supply) / 3, (voltage_power_supply) / 3);   //力矩限制, 限定为上限电压的五分之一, 保证安全性
+    Uq = _constrain(Uq, -(voltage_power_supply) / 3, (voltage_power_supply) / 3);   //力矩限制, 限定为上限电压的n分之一, 保证安全性
 
     angle_el = _normalizeAngle(angle_el);
 
@@ -114,7 +114,7 @@ void FOC_SVPWM(float Uq, float Ud, float angle) {
     // equivalent to 3) is
     // angle_el = angle_el + atan2(Uq,Ud)
 
-    float Uout = _sqrt(Ud * Ud + Uq * Uq) / VOLTAGE_LIMIT; // Actually, Uout is a ratio
+    float Uout = sqrt(Ud * Ud + Uq * Uq) / VOLTAGE_LIMIT; // Actually, Uout is a ratio
     angle = _normalizeAngle(angle + atan2(Uq, Ud));
 
     // find the sector we are in currently
@@ -217,7 +217,7 @@ float velocityOpenLoop(float target_velocity) {
 
     // 使用早前设置的voltage_power_supply的1/3作为Uq值，这个值会直接影响输出力矩
     // 最大只能设置为Uq = voltage_power_supply/2，否则ua,ub,uc会超出供电电压限幅
-    float Uq = voltage_power_supply / 10.0f;
+    float Uq = voltage_power_supply / 6.0f;
 
 #if FOC_MODE == SPWM
     setPhaseVoltage(Uq, 0, _electricalAngle(shaft_angle, 7));
@@ -232,24 +232,26 @@ float velocityOpenLoop(float target_velocity) {
 //================简易接口函数================
 void FOC_M0_set_Velocity_Angle(float Target) {
     i2c_mt6701_get_angle(&angle_pi, &angle_f);
-    float angle_error = Target - angle_pi * DIR;
+    _normalizeAngle(Target);
+    float angle_error = _normalizeAngle(Target - angle_pi * DIR);
 
-    angle_error = _normalizeAngle(angle_error);
     if(angle_error > M_PI){
-        angle_error -= M_PI_2;
+        angle_error -= 2 * _PI;
     }
+
 #if FOC_MODE == SPWM
     setTorque(_constrain( FOC_M0_ANGLE_PID(angle_error) * 180.0f / _PI , Motor_1.OutputMin, Motor_1.OutputMax),
     _electricalAngle(angle_pi, PP));   //角度闭环
 #else
-    FOC_SVPWM(_constrain( FOC_M0_ANGLE_PID(angle_error) * 180.0f / PI , Motor_1.OutputMin, Motor_1.OutputMax), 0,
+    FOC_SVPWM(_constrain( FOC_M0_ANGLE_PID(angle_error) * 180.0f / _PI , Motor_1.OutputMin, Motor_1.OutputMax), 0,
               _electricalAngle(angle_pi, PP));
 #endif
 }
 
 void FOC_M0_setVelocity(float Target) {
     Motor_1.Target = Target;
-    setTorque(FOC_M0_VEL_PID((Target - FOC_M0_Velocity()) * 180 / _PI), _electricalAngle(angle_pi, PP));   //速度闭环
+    FOC_SVPWM(_constrain( FOC_M0_VEL_PID((Target - FOC_M0_Velocity()) * 180 / _PI), Motor_1.OutputMin, Motor_1.OutputMax), 0,
+              _electricalAngle(angle_pi, PP));   //速度闭环
 }
 
 void FOC_M0_set_Force_Angle(float Target)   //力位
@@ -291,12 +293,13 @@ void FOC_current_control_loop(float target_Iq){
 
 float FOC_M0_Velocity() {
     static float angle_now, angle_old;
-    static long sampleTimeStamp;
+
     i2c_mt6701_get_angle(&angle_pi, &angle_f); //更新传感器数值
-    sampleTimeStamp = osKernelSysTick();
+
     angle_now = angle_pi;
 
     float delta_angle = angle_now - angle_old;
+
     if (delta_angle >= 1.6 * M_PI) {
         delta_angle -= 2.0f * M_PI;
     }
@@ -304,7 +307,7 @@ float FOC_M0_Velocity() {
         delta_angle += 2.0f * M_PI;
     }
 
-    float vel_speed_ori = delta_angle / 3e-3;  //采样时间以3ms为单位, 乘1e3后为每秒的角速度
+    float vel_speed_ori = delta_angle;  //采样时间以ms为单位
 
     angle_old = angle_now;
 

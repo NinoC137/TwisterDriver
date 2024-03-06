@@ -14,6 +14,9 @@ struct Button KEY4;
 struct Button KEY5;
 struct Button KEY6;
 
+extern float targetAngle_left;
+extern float targetAngle_right;
+
 //button handle list head.
 static struct Button *head_handle = NULL;
 
@@ -222,26 +225,43 @@ uint8_t read_KEY6_GPIO() {
     return HAL_GPIO_ReadPin(ENCD_KEY_GPIO_Port, ENCD_KEY_Pin);
 }
 
+static void angleReduce(){
+//    if(targetAngle_left > 0 && targetAngle_right > 0)
+    {
+        targetAngle_left -= 0.3f;
+        targetAngle_right -= 0.3f;
+    }
+    uart_printf("leg angle : %d\r\n", (int)targetAngle_left);
+}
+
+static void angleIncrease(){
+    targetAngle_left += 0.3f;
+    targetAngle_right += 0.3f;
+    uart_printf("leg angle : %d\r\n", (int)targetAngle_left);
+}
+
 void KEY1_PRESS_DOWN_Handler(void *btn){
-    HAL_UART_Transmit(&huart3, "key1 press\n", sizeof("key1 press\n") - 1, 0xffff);
+    HAL_UART_Transmit(&huart1, "KEY1 Press.\n", sizeof("KEY2 Press.\n") - 1, 100);
+    angleReduce();
 }
 
 void KEY2_PRESS_DOWN_Handler(void *btn){
-    HAL_UART_Transmit(&huart3, "key2 press\n", sizeof("key1 press\n") - 1, 0xffff);
+    HAL_UART_Transmit(&huart1, "KEY2 Press.\n", sizeof("KEY2 Press.\n") - 1, 100);
 }
 
 void KEY3_PRESS_DOWN_Handler(void *btn) {
-    HAL_UART_Transmit(&huart3, "key3 press\n", sizeof("key1 press\n") - 1, 0xffff);
+    HAL_UART_Transmit(&huart1, "KEY3 Press.\n", sizeof("KEY2 Press.\n") - 1, 100);
 }
 
 void KEY4_PRESS_DOWN_Handler(void *btn) {
-    HAL_UART_Transmit(&huart3, "key4 press\n", sizeof("key1 press\n") - 1, 0xffff);
+    HAL_UART_Transmit(&huart1, "KEY4 Press.\n", sizeof("KEY2 Press.\n") - 1, 100);
+    angleIncrease();
 }
 
 void KEY5_PRESS_DOWN_Handler(void *btn) {
-    HAL_UART_Transmit(&huart3, "key5 press\n", sizeof("key1 press\n") - 1, 0xffff);
+    HAL_UART_Transmit(&huart1, "KEY5 Press.\n", sizeof("KEY2 Press.\n") - 1, 100);
 }
 
 void KEY6_PRESS_DOWN_Handler(void *btn) {
-    HAL_UART_Transmit(&huart3, "Encoder press\n", sizeof("Encoder press\n") - 1, 0xffff);
+    HAL_UART_Transmit(&huart1, "Encounter Press.\n", sizeof("Encounter Press.\n") - 1, 100);
 }

@@ -12,5 +12,7 @@
 
 void i2c_mt6701_get_angle(float *angle_pi, float *angle_f);
 
+void i2c2_mt6701_get_angle(float *angle_pi, float *angle_f);
+
 #endif
 

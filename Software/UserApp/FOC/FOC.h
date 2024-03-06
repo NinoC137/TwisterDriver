@@ -6,7 +6,7 @@ enum Mode{
     SVPWM = 1
 };
 //FOC模式设定   ---     SVPWM未测试
-#define FOC_MODE 0
+#define FOC_MODE 1
 
 #include "MT6701.h"
 #include "hardware_api.h"
@@ -30,7 +30,7 @@ typedef enum{
 
 #define FOC_CONTROL_MODE_NUM 10
 
-#define VOLTAGE_LIMIT (voltage_power_supply / 3)
+#define VOLTAGE_LIMIT 6
 
 //传感器读取
 float FOC_M0_Velocity();
