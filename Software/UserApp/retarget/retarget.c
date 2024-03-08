@@ -8,9 +8,11 @@
 #define Usart_Number 20
 
 extern UART_HandleTypeDef huart1;
-extern UART_HandleTypeDef huart2;
+extern UART_HandleTypeDef huart3;
 
 extern osMutexId printfMutex_id;
+
+char uart3Buffer[128];
 
 void uart_printf(const char* format, ...) {
 //    osMutexWait(printfMutex_id, portMAX_DELAY);

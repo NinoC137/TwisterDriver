@@ -39,7 +39,7 @@
 
 /* Private macro -------------------------------------------------------------*/
 /* USER CODE BEGIN PM */
-float targetAngle_left = 0;
+float targetAngle_left = 60;
 float targetAngle_right = 0;
 /* USER CODE END PM */
 
@@ -90,12 +90,18 @@ void LCDTask(void const *argument) {
     }
 }
 extern float angle_pi;
+extern int dataPackageUpdate;
 void UARTTask(void const *argument) {
+    HAL_UART_Receive_IT(&huart3, (uint8_t*)&uart3Buffer, 1);
     for (;;) {
 //        float currentSpeed = FOC_M0_Velocity() * 180.0f / _PI;
 //        uart_printf("Motor1 speed: %d\t",(int)currentSpeed);
-        uart_printf("Motor1 angle: %d\r\n",(int)angle_pi);
-        osDelay(300);
+//        uart_printf("Motor1 angle: %d\r\n",(int)angle_pi);
+        if(dataPackageUpdate == 1){
+            dataPackageUpdate = 0;
+            uart3_printf("buffer: %s\r\n", uart3Buffer);
+        }
+        osDelay(100);
     }
 }
 
@@ -110,7 +116,7 @@ void ServoTask(void const *argument) {
 
     osDelay(500);
 
-    setAngle_270(&Servo_LeftLeg, 5);
+    setAngle_270(&Servo_LeftLeg, 60);
     setAngle_270(&Servo_RightLeg, 5);
 
     uart_printf("Servo init.\r\n");
@@ -123,7 +129,7 @@ void ServoTask(void const *argument) {
 }
 
 void ButtonTask(void const *argument) {
-    HAL_UART_Transmit(&huart3, "Button Task Start\n", sizeof("Button Task Start\n") - 1, 0xff);
+    uart3_printf("Button Task Start\n");
 
     button_init(&KEY1, read_KEY1_GPIO, 0);
     button_init(&KEY2, read_KEY2_GPIO, 0);

@@ -12,6 +12,8 @@
 #include "stdarg.h"
 #include "string.h"
 
+extern char uart3Buffer[128];
+
 void uart_printf(const char *format, ...);
 
 void uart3_printf(const char* format, ...);

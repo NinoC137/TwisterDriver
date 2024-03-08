@@ -59,6 +59,7 @@ TIM_HandleTypeDef htim8;
 
 UART_HandleTypeDef huart1;
 UART_HandleTypeDef huart3;
+DMA_HandleTypeDef hdma_usart3_rx;
 
 osThreadId defaultTaskHandle;
 /* USER CODE BEGIN PV */
@@ -77,10 +78,10 @@ static void MX_SPI1_Init(void);
 static void MX_TIM1_Init(void);
 static void MX_TIM2_Init(void);
 static void MX_USART1_UART_Init(void);
-static void MX_USART3_UART_Init(void);
 static void MX_TIM3_Init(void);
 static void MX_I2C3_Init(void);
 static void MX_TIM8_Init(void);
+static void MX_USART3_UART_Init(void);
 void StartDefaultTask(void const * argument);
 
 /* USER CODE BEGIN PFP */
@@ -107,7 +108,41 @@ osThreadId FOCTaskHandle;
 osThreadId ServoTaskHandle;
 
 osMutexDef(printfMutex);
-osMutexId printfMutex_id;
+osMutexId printfMutex;
+
+#define UART_STARTFLAG '{'
+#define UART_ENDFLAG '}'
+
+int dataPackageUpdate;
+
+void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart){
+    if(huart == &huart3){
+        static int uart3_RxFlag, uart3_RxStatus;
+        switch(uart3_RxStatus){
+            case 0:
+                if(uart3Buffer[uart3_RxFlag] == UART_STARTFLAG){
+                    uart3_RxFlag++;
+                    uart3_RxStatus = 1;
+                }else{
+                    memset(uart3Buffer, 0, sizeof(uart3Buffer));
+                }
+                break;
+            case 1:
+                if(uart3Buffer[uart3_RxFlag] != UART_ENDFLAG){
+                    uart3_RxFlag++;
+                }else{
+                    memset(&uart3Buffer[uart3_RxFlag + 1], 0, sizeof(uart3Buffer) - uart3_RxFlag);
+                    uart3_RxFlag = 0;
+                    uart3_RxStatus = 0;
+                    dataPackageUpdate = 1;
+                }
+                break;
+            default:
+                break;
+        }
+        HAL_UART_Receive_IT(&huart3, (uint8_t*)&uart3Buffer[uart3_RxFlag], 1);
+    }
+}
 /* USER CODE END 0 */
 
 /**
@@ -147,17 +182,17 @@ int main(void)
   MX_TIM1_Init();
   MX_TIM2_Init();
   MX_USART1_UART_Init();
-  MX_USART3_UART_Init();
   MX_TIM3_Init();
   MX_I2C3_Init();
   MX_TIM8_Init();
+  MX_USART3_UART_Init();
   /* USER CODE BEGIN 2 */
 
   /* USER CODE END 2 */
 
   /* USER CODE BEGIN RTOS_MUTEX */
     /* add mutexes, ... */
-    printfMutex_id = osMutexCreate(osMutex(printfMutex));
+    printfMutex = osMutexCreate(osMutex(printfMutex));
   /* USER CODE END RTOS_MUTEX */
 
   /* USER CODE BEGIN RTOS_SEMAPHORES */
@@ -568,7 +603,7 @@ static void MX_TIM1_Init(void)
   htim1.Instance = TIM1;
   htim1.Init.Prescaler = 6;
   htim1.Init.CounterMode = TIM_COUNTERMODE_CENTERALIGNED1;
-  htim1.Init.Period = 1000;
+  htim1.Init.Period = 10000;
   htim1.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
   htim1.Init.RepetitionCounter = 0;
   htim1.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
@@ -923,6 +958,9 @@ static void MX_DMA_Init(void)
   /* DMA1_Channel1_IRQn interrupt configuration */
   HAL_NVIC_SetPriority(DMA1_Channel1_IRQn, 5, 0);
   HAL_NVIC_EnableIRQ(DMA1_Channel1_IRQn);
+  /* DMA1_Channel2_IRQn interrupt configuration */
+  HAL_NVIC_SetPriority(DMA1_Channel2_IRQn, 5, 0);
+  HAL_NVIC_EnableIRQ(DMA1_Channel2_IRQn);
 
 }
 
@@ -995,6 +1033,7 @@ static void MX_GPIO_Init(void)
 void StartDefaultTask(void const * argument)
 {
   /* USER CODE BEGIN 5 */
+    uart3_printf("Hello World!\n");
 
     osThreadDef(ButtonTask, ButtonTask, osPriorityNormal, 0, 512);
 //    osThreadDef(LCDTask, LCDTask, osPriorityNormal, 0, 512);
@@ -1011,8 +1050,6 @@ void StartDefaultTask(void const * argument)
     FOCTaskHandle = osThreadCreate(osThread(FOCTask), NULL);
     ServoTaskHandle = osThreadCreate(osThread(ServoTask), NULL);
     portEXIT_CRITICAL();
-
-    uart3_printf("Hello World!\n");
 
     /* Infinite loop */
     for (;;) {
