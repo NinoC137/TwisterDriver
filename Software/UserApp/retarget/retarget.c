@@ -31,7 +31,7 @@ void uart_printf(const char* format, ...) {
 
 void uart3_printf(const char* format, ...) {
     osMutexWait(printfMutex, portMAX_DELAY);
-    char buffer[64];  // 缓冲区用于存储格式化后的字符串
+    char buffer[128];  // 缓冲区用于存储格式化后的字符串
     va_list args;
     va_start(args, format);
 

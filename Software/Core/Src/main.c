@@ -63,7 +63,12 @@ DMA_HandleTypeDef hdma_usart3_rx;
 
 osThreadId defaultTaskHandle;
 /* USER CODE BEGIN PV */
-
+t_sysLog sysLog = {
+        .name = "TwisterRobot v1.0",
+        .lastUpgradeTime = __DATE__,
+        .sysRunTime = 0,
+        .beatTime_ms = 500
+};
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -1062,7 +1067,8 @@ void StartDefaultTask(void const * argument)
     /* Infinite loop */
     for (;;) {
         HAL_GPIO_TogglePin(LED_GPIO_Port, LED_Pin);
-        osDelay(500);
+        osDelay(1000);
+        sysLog.sysRunTime++;
     }
   /* USER CODE END 5 */
 }

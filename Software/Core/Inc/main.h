@@ -49,6 +49,12 @@ typedef struct JsonPackage{
     char JsonString[128];
 } t_JsonPackage;
 
+typedef struct {
+    const char* name;
+    const char* lastUpgradeTime;
+    long sysRunTime;
+    long beatTime_ms;
+} t_sysLog;
 /* USER CODE END ET */
 
 /* Exported constants --------------------------------------------------------*/
@@ -74,6 +80,8 @@ extern UART_HandleTypeDef huart3;
 
 extern osMessageQId JsonQueueHandle;
 extern osPoolId JsonQ_Mem;
+
+extern t_sysLog sysLog;
 /* USER CODE END EM */
 
 void HAL_TIM_MspPostInit(TIM_HandleTypeDef *htim);

@@ -107,7 +107,7 @@ void UARTTask(void const *argument) {
 
         if(JsonQueueEvt.status == osEventMessage){
             JsonBuffer = JsonQueueEvt.value.p;
-            uart3_printf("buffer: %s\r\n", JsonBuffer->JsonString);
+            uart3_printf("buffer:\r\n %s\r\n", JsonBuffer->JsonString);
             cmd_startParse(JsonBuffer->JsonString);
             osPoolFree(JsonQ_Mem, JsonBuffer);
         }

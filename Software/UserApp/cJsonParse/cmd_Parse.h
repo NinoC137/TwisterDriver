@@ -7,6 +7,8 @@
 
 #include "main.h"
 
+#define JSON_response uart3_printf
+
 void cmd_startParse(char* JsonString);
 
 void res_sendHeartBeat();

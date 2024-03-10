@@ -20,24 +20,21 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0e2c7c2d-a2ac-461a-be57-7a8b8cadda32" name="Changes" comment="Json数据包在解析完成之后, 通过消息队列的方式传入数据包解析线程, 提高代码解耦度">
-      <change afterPath="$PROJECT_DIR$/UserApp/cJsonParse/cmd_Book.md" afterDir="false" />
+    <list default="true" id="0e2c7c2d-a2ac-461a-be57-7a8b8cadda32" name="Changes" comment="规范了JSON数据包的格式, 待填充代码实现部分">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists_template.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists_template.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Core/Inc/main.h" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Inc/main.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserApp/retarget/cmd_Parse.c" beforeDir="false" afterPath="$PROJECT_DIR$/UserApp/cJsonParse/cmd_Parse.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserApp/retarget/cmd_Parse.h" beforeDir="false" afterPath="$PROJECT_DIR$/UserApp/cJsonParse/cmd_Parse.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.25.2/CMakeDetermineCompilerABI_C.bin" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.25.2/CMakeDetermineCompilerABI_C.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.25.2/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.25.2/CMakeDetermineCompilerABI_CXX.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TwisterDriver.elf.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TwisterDriver.elf.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TwisterDriver.elf.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TwisterDriver.elf.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TwisterDriver.elf.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TwisterDriver.elf.dir/cmake_clean.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TwisterDriver.elf.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TwisterDriver.elf.dir/flags.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TwisterDriver.elf.dir/objects1" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TwisterDriver.elf.dir/objects1" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/TwisterDriver.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/TwisterDriver.cbp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Src/app_freertos.c" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Src/app_freertos.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Src/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Src/main.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserApp/cJsonParse/cmd_Book.md" beforeDir="false" afterPath="$PROJECT_DIR$/UserApp/cJsonParse/cmd_Book.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserApp/cJsonParse/cmd_Parse.c" beforeDir="false" afterPath="$PROJECT_DIR$/UserApp/cJsonParse/cmd_Parse.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserApp/cJsonParse/cmd_Parse.h" beforeDir="false" afterPath="$PROJECT_DIR$/UserApp/cJsonParse/cmd_Parse.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserApp/retarget/retarget.c" beforeDir="false" afterPath="$PROJECT_DIR$/UserApp/retarget/retarget.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TwisterDriver.elf.dir/compiler_depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TwisterDriver.elf.dir/compiler_depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TwisterDriver.elf.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TwisterDriver.elf.dir/depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/TwisterDriver.bin" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/TwisterDriver.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/TwisterDriver.elf" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/TwisterDriver.elf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/TwisterDriver.hex" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/TwisterDriver.hex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/TwisterDriver.map" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/TwisterDriver.map" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -157,7 +154,7 @@
       <workItem from="1709955105071" duration="2293000" />
       <workItem from="1709974947820" duration="9062000" />
       <workItem from="1709990120288" duration="5138000" />
-      <workItem from="1710044833924" duration="2840000" />
+      <workItem from="1710044833924" duration="7135000" />
     </task>
     <task id="LOCAL-00001" summary="实现了SVPWM下的FOC闭环位置环控制, 效果稳定不抖动">
       <option name="closed" value="true" />
@@ -191,7 +188,15 @@
       <option name="project" value="LOCAL" />
       <updated>1710045633047</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="规范了JSON数据包的格式, 待填充代码实现部分">
+      <option name="closed" value="true" />
+      <created>1710051392553</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1710051392553</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -219,7 +224,8 @@
     <MESSAGE value="实现了SVPWM下的FOC闭环速度环控制, 效果稳定不抖动" />
     <MESSAGE value="实现了UART的中断接收, 现在可以有效地完整接收JSON数据包" />
     <MESSAGE value="Json数据包在解析完成之后, 通过消息队列的方式传入数据包解析线程, 提高代码解耦度" />
-    <option name="LAST_COMMIT_MESSAGE" value="Json数据包在解析完成之后, 通过消息队列的方式传入数据包解析线程, 提高代码解耦度" />
+    <MESSAGE value="规范了JSON数据包的格式, 待填充代码实现部分" />
+    <option name="LAST_COMMIT_MESSAGE" value="规范了JSON数据包的格式, 待填充代码实现部分" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
