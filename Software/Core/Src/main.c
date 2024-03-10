@@ -110,10 +110,13 @@ osThreadId ServoTaskHandle;
 osMutexDef(printfMutex);
 osMutexId printfMutex;
 
+osPoolDef(JsonQ_Mem, 16, t_JsonPackage);
+osMessageQDef(JsonQueue, 16, uint32_t);
+osPoolId JsonQ_Mem;
+osMessageQId JsonQueueHandle;
+
 #define UART_STARTFLAG '{'
 #define UART_ENDFLAG '}'
-
-int dataPackageUpdate;
 
 void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart){
     if(huart == &huart3){
@@ -134,7 +137,10 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart){
                     memset(&uart3Buffer[uart3_RxFlag + 1], 0, sizeof(uart3Buffer) - uart3_RxFlag);
                     uart3_RxFlag = 0;
                     uart3_RxStatus = 0;
-                    dataPackageUpdate = 1;
+
+                    t_JsonPackage *JsonPtr = osPoolAlloc(JsonQ_Mem);
+                    memcpy(JsonPtr->JsonString, uart3Buffer, sizeof(uart3Buffer));
+                    osMessagePut(JsonQueueHandle, (uint32_t)JsonPtr, 0);
                 }
                 break;
             default:
@@ -187,7 +193,7 @@ int main(void)
   MX_TIM8_Init();
   MX_USART3_UART_Init();
   /* USER CODE BEGIN 2 */
-
+//    NVIC_SetPriorityGrouping(0);
   /* USER CODE END 2 */
 
   /* USER CODE BEGIN RTOS_MUTEX */
@@ -205,15 +211,17 @@ int main(void)
 
   /* USER CODE BEGIN RTOS_QUEUES */
     /* add queues, ... */
+    JsonQ_Mem = osPoolCreate(osPool(JsonQ_Mem));
+    JsonQueueHandle = osMessageCreate(osMessageQ(JsonQueue), NULL);
   /* USER CODE END RTOS_QUEUES */
 
   /* Create the thread(s) */
   /* definition and creation of defaultTask */
   osThreadDef(defaultTask, StartDefaultTask, osPriorityNormal, 0, 128);
   defaultTaskHandle = osThreadCreate(osThread(defaultTask), NULL);
-
   /* USER CODE BEGIN RTOS_THREADS */
     /* add threads, ... */
+
   /* USER CODE END RTOS_THREADS */
 
   /* Start scheduler */

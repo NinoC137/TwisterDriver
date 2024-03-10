@@ -626,6 +626,12 @@
 		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Software/UserApp/multiBotton/multi_button.h">
 			<Option target="TwisterDriver.elf"/>
 		</Unit>
+		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Software/UserApp/retarget/cmd_Parse.c">
+			<Option target="TwisterDriver.elf"/>
+		</Unit>
+		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Software/UserApp/retarget/cmd_Parse.h">
+			<Option target="TwisterDriver.elf"/>
+		</Unit>
 		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Software/UserApp/retarget/retarget.c">
 			<Option target="TwisterDriver.elf"/>
 		</Unit>

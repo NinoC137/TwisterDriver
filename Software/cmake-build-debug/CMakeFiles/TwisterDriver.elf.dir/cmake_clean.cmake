@@ -112,6 +112,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/TwisterDriver.elf.dir/UserApp/cJSON/cJSON_Utils.c.obj.d"
   "CMakeFiles/TwisterDriver.elf.dir/UserApp/multiBotton/multi_button.c.obj"
   "CMakeFiles/TwisterDriver.elf.dir/UserApp/multiBotton/multi_button.c.obj.d"
+  "CMakeFiles/TwisterDriver.elf.dir/UserApp/retarget/cmd_Parse.c.obj"
+  "CMakeFiles/TwisterDriver.elf.dir/UserApp/retarget/cmd_Parse.c.obj.d"
   "CMakeFiles/TwisterDriver.elf.dir/UserApp/retarget/retarget.c.obj"
   "CMakeFiles/TwisterDriver.elf.dir/UserApp/retarget/retarget.c.obj.d"
   "TwisterDriver.elf"

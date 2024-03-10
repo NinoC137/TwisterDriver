@@ -89,19 +89,28 @@ void LCDTask(void const *argument) {
         osDelay(10);
     }
 }
+
 extern float angle_pi;
-extern int dataPackageUpdate;
+
 void UARTTask(void const *argument) {
     HAL_UART_Receive_IT(&huart3, (uint8_t*)&uart3Buffer, 1);
+
+    osEvent JsonQueueEvt;
+    t_JsonPackage *JsonBuffer = NULL;
+
     for (;;) {
 //        float currentSpeed = FOC_M0_Velocity() * 180.0f / _PI;
 //        uart_printf("Motor1 speed: %d\t",(int)currentSpeed);
 //        uart_printf("Motor1 angle: %d\r\n",(int)angle_pi);
-        if(dataPackageUpdate == 1){
-            dataPackageUpdate = 0;
-            uart3_printf("buffer: %s\r\n", uart3Buffer);
+
+        JsonQueueEvt = osMessageGet(JsonQueueHandle, osWaitForever);
+
+        if(JsonQueueEvt.status == osEventMessage){
+            JsonBuffer = JsonQueueEvt.value.p;
+            uart3_printf("buffer: %s\r\n", JsonBuffer->JsonString);
+            cmd_startParse(JsonBuffer->JsonString);
+            osPoolFree(JsonQ_Mem, JsonBuffer);
         }
-        osDelay(100);
     }
 }
 
@@ -120,7 +129,7 @@ void ServoTask(void const *argument) {
     setAngle_270(&Servo_RightLeg, 5);
 
     uart_printf("Servo init.\r\n");
-    
+
     for (;;) {
         setAngle_270(&Servo_LeftLeg, targetAngle_left);
         setAngle_270(&Servo_RightLeg, targetAngle_right);
@@ -129,8 +138,6 @@ void ServoTask(void const *argument) {
 }
 
 void ButtonTask(void const *argument) {
-    uart3_printf("Button Task Start\n");
-
     button_init(&KEY1, read_KEY1_GPIO, 0);
     button_init(&KEY2, read_KEY2_GPIO, 0);
     button_init(&KEY3, read_KEY3_GPIO, 0);

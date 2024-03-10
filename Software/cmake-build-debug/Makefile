@@ -1480,6 +1480,30 @@ UserApp/multiBotton/multi_button.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\TwisterDriver.elf.dir\build.make CMakeFiles/TwisterDriver.elf.dir/UserApp/multiBotton/multi_button.c.s
 .PHONY : UserApp/multiBotton/multi_button.c.s
 
+UserApp/retarget/cmd_Parse.obj: UserApp/retarget/cmd_Parse.c.obj
+.PHONY : UserApp/retarget/cmd_Parse.obj
+
+# target to build an object file
+UserApp/retarget/cmd_Parse.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\TwisterDriver.elf.dir\build.make CMakeFiles/TwisterDriver.elf.dir/UserApp/retarget/cmd_Parse.c.obj
+.PHONY : UserApp/retarget/cmd_Parse.c.obj
+
+UserApp/retarget/cmd_Parse.i: UserApp/retarget/cmd_Parse.c.i
+.PHONY : UserApp/retarget/cmd_Parse.i
+
+# target to preprocess a source file
+UserApp/retarget/cmd_Parse.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\TwisterDriver.elf.dir\build.make CMakeFiles/TwisterDriver.elf.dir/UserApp/retarget/cmd_Parse.c.i
+.PHONY : UserApp/retarget/cmd_Parse.c.i
+
+UserApp/retarget/cmd_Parse.s: UserApp/retarget/cmd_Parse.c.s
+.PHONY : UserApp/retarget/cmd_Parse.s
+
+# target to generate assembly for a file
+UserApp/retarget/cmd_Parse.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\TwisterDriver.elf.dir\build.make CMakeFiles/TwisterDriver.elf.dir/UserApp/retarget/cmd_Parse.c.s
+.PHONY : UserApp/retarget/cmd_Parse.c.s
+
 UserApp/retarget/retarget.obj: UserApp/retarget/retarget.c.obj
 .PHONY : UserApp/retarget/retarget.obj
 
@@ -1682,6 +1706,9 @@ help:
 	@echo ... UserApp/multiBotton/multi_button.obj
 	@echo ... UserApp/multiBotton/multi_button.i
 	@echo ... UserApp/multiBotton/multi_button.s
+	@echo ... UserApp/retarget/cmd_Parse.obj
+	@echo ... UserApp/retarget/cmd_Parse.i
+	@echo ... UserApp/retarget/cmd_Parse.s
 	@echo ... UserApp/retarget/retarget.obj
 	@echo ... UserApp/retarget/retarget.i
 	@echo ... UserApp/retarget/retarget.s

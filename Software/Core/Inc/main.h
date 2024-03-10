@@ -39,10 +39,15 @@ extern "C" {
 #include "gui.h"
 #include "retarget.h"
 #include "cJSON.h"
+#include "cmd_Parse.h"
 /* USER CODE END Includes */
 
 /* Exported types ------------------------------------------------------------*/
 /* USER CODE BEGIN ET */
+typedef struct JsonPackage{
+    int counter;
+    char JsonString[128];
+} t_JsonPackage;
 
 /* USER CODE END ET */
 
@@ -67,6 +72,8 @@ extern DMA_HandleTypeDef hdma_spi1_tx;
 extern UART_HandleTypeDef huart1;
 extern UART_HandleTypeDef huart3;
 
+extern osMessageQId JsonQueueHandle;
+extern osPoolId JsonQ_Mem;
 /* USER CODE END EM */
 
 void HAL_TIM_MspPostInit(TIM_HandleTypeDef *htim);
