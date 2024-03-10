@@ -851,10 +851,24 @@ CMakeFiles/TwisterDriver.elf.dir/UserApp/cJSON/cJSON_Utils.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/TwisterDriver.elf.dir/UserApp/cJSON/cJSON_Utils.c.s"
 	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S E:\Clion_for_STM32\TwisterDriver\Software\UserApp\cJSON\cJSON_Utils.c -o CMakeFiles\TwisterDriver.elf.dir\UserApp\cJSON\cJSON_Utils.c.s
 
+CMakeFiles/TwisterDriver.elf.dir/UserApp/cJsonParse/cmd_Parse.c.obj: CMakeFiles/TwisterDriver.elf.dir/flags.make
+CMakeFiles/TwisterDriver.elf.dir/UserApp/cJsonParse/cmd_Parse.c.obj: E:/Clion_for_STM32/TwisterDriver/Software/UserApp/cJsonParse/cmd_Parse.c
+CMakeFiles/TwisterDriver.elf.dir/UserApp/cJsonParse/cmd_Parse.c.obj: CMakeFiles/TwisterDriver.elf.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\Clion_for_STM32\TwisterDriver\Software\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_57) "Building C object CMakeFiles/TwisterDriver.elf.dir/UserApp/cJsonParse/cmd_Parse.c.obj"
+	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/TwisterDriver.elf.dir/UserApp/cJsonParse/cmd_Parse.c.obj -MF CMakeFiles\TwisterDriver.elf.dir\UserApp\cJsonParse\cmd_Parse.c.obj.d -o CMakeFiles\TwisterDriver.elf.dir\UserApp\cJsonParse\cmd_Parse.c.obj -c E:\Clion_for_STM32\TwisterDriver\Software\UserApp\cJsonParse\cmd_Parse.c
+
+CMakeFiles/TwisterDriver.elf.dir/UserApp/cJsonParse/cmd_Parse.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/TwisterDriver.elf.dir/UserApp/cJsonParse/cmd_Parse.c.i"
+	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E E:\Clion_for_STM32\TwisterDriver\Software\UserApp\cJsonParse\cmd_Parse.c > CMakeFiles\TwisterDriver.elf.dir\UserApp\cJsonParse\cmd_Parse.c.i
+
+CMakeFiles/TwisterDriver.elf.dir/UserApp/cJsonParse/cmd_Parse.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/TwisterDriver.elf.dir/UserApp/cJsonParse/cmd_Parse.c.s"
+	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S E:\Clion_for_STM32\TwisterDriver\Software\UserApp\cJsonParse\cmd_Parse.c -o CMakeFiles\TwisterDriver.elf.dir\UserApp\cJsonParse\cmd_Parse.c.s
+
 CMakeFiles/TwisterDriver.elf.dir/UserApp/multiBotton/multi_button.c.obj: CMakeFiles/TwisterDriver.elf.dir/flags.make
 CMakeFiles/TwisterDriver.elf.dir/UserApp/multiBotton/multi_button.c.obj: E:/Clion_for_STM32/TwisterDriver/Software/UserApp/multiBotton/multi_button.c
 CMakeFiles/TwisterDriver.elf.dir/UserApp/multiBotton/multi_button.c.obj: CMakeFiles/TwisterDriver.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\Clion_for_STM32\TwisterDriver\Software\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_57) "Building C object CMakeFiles/TwisterDriver.elf.dir/UserApp/multiBotton/multi_button.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\Clion_for_STM32\TwisterDriver\Software\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_58) "Building C object CMakeFiles/TwisterDriver.elf.dir/UserApp/multiBotton/multi_button.c.obj"
 	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/TwisterDriver.elf.dir/UserApp/multiBotton/multi_button.c.obj -MF CMakeFiles\TwisterDriver.elf.dir\UserApp\multiBotton\multi_button.c.obj.d -o CMakeFiles\TwisterDriver.elf.dir\UserApp\multiBotton\multi_button.c.obj -c E:\Clion_for_STM32\TwisterDriver\Software\UserApp\multiBotton\multi_button.c
 
 CMakeFiles/TwisterDriver.elf.dir/UserApp/multiBotton/multi_button.c.i: cmake_force
@@ -864,20 +878,6 @@ CMakeFiles/TwisterDriver.elf.dir/UserApp/multiBotton/multi_button.c.i: cmake_for
 CMakeFiles/TwisterDriver.elf.dir/UserApp/multiBotton/multi_button.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/TwisterDriver.elf.dir/UserApp/multiBotton/multi_button.c.s"
 	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S E:\Clion_for_STM32\TwisterDriver\Software\UserApp\multiBotton\multi_button.c -o CMakeFiles\TwisterDriver.elf.dir\UserApp\multiBotton\multi_button.c.s
-
-CMakeFiles/TwisterDriver.elf.dir/UserApp/retarget/cmd_Parse.c.obj: CMakeFiles/TwisterDriver.elf.dir/flags.make
-CMakeFiles/TwisterDriver.elf.dir/UserApp/retarget/cmd_Parse.c.obj: E:/Clion_for_STM32/TwisterDriver/Software/UserApp/retarget/cmd_Parse.c
-CMakeFiles/TwisterDriver.elf.dir/UserApp/retarget/cmd_Parse.c.obj: CMakeFiles/TwisterDriver.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\Clion_for_STM32\TwisterDriver\Software\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_58) "Building C object CMakeFiles/TwisterDriver.elf.dir/UserApp/retarget/cmd_Parse.c.obj"
-	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/TwisterDriver.elf.dir/UserApp/retarget/cmd_Parse.c.obj -MF CMakeFiles\TwisterDriver.elf.dir\UserApp\retarget\cmd_Parse.c.obj.d -o CMakeFiles\TwisterDriver.elf.dir\UserApp\retarget\cmd_Parse.c.obj -c E:\Clion_for_STM32\TwisterDriver\Software\UserApp\retarget\cmd_Parse.c
-
-CMakeFiles/TwisterDriver.elf.dir/UserApp/retarget/cmd_Parse.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/TwisterDriver.elf.dir/UserApp/retarget/cmd_Parse.c.i"
-	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E E:\Clion_for_STM32\TwisterDriver\Software\UserApp\retarget\cmd_Parse.c > CMakeFiles\TwisterDriver.elf.dir\UserApp\retarget\cmd_Parse.c.i
-
-CMakeFiles/TwisterDriver.elf.dir/UserApp/retarget/cmd_Parse.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/TwisterDriver.elf.dir/UserApp/retarget/cmd_Parse.c.s"
-	E:\Compiler\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S E:\Clion_for_STM32\TwisterDriver\Software\UserApp\retarget\cmd_Parse.c -o CMakeFiles\TwisterDriver.elf.dir\UserApp\retarget\cmd_Parse.c.s
 
 CMakeFiles/TwisterDriver.elf.dir/UserApp/retarget/retarget.c.obj: CMakeFiles/TwisterDriver.elf.dir/flags.make
 CMakeFiles/TwisterDriver.elf.dir/UserApp/retarget/retarget.c.obj: E:/Clion_for_STM32/TwisterDriver/Software/UserApp/retarget/retarget.c
@@ -951,8 +951,8 @@ TwisterDriver_elf_OBJECTS = \
 "CMakeFiles/TwisterDriver.elf.dir/UserApp/Servo/Servo.c.obj" \
 "CMakeFiles/TwisterDriver.elf.dir/UserApp/cJSON/cJSON.c.obj" \
 "CMakeFiles/TwisterDriver.elf.dir/UserApp/cJSON/cJSON_Utils.c.obj" \
+"CMakeFiles/TwisterDriver.elf.dir/UserApp/cJsonParse/cmd_Parse.c.obj" \
 "CMakeFiles/TwisterDriver.elf.dir/UserApp/multiBotton/multi_button.c.obj" \
-"CMakeFiles/TwisterDriver.elf.dir/UserApp/retarget/cmd_Parse.c.obj" \
 "CMakeFiles/TwisterDriver.elf.dir/UserApp/retarget/retarget.c.obj"
 
 # External object files for target TwisterDriver.elf
@@ -1014,8 +1014,8 @@ TwisterDriver.elf: CMakeFiles/TwisterDriver.elf.dir/UserApp/MT6701/MT6701.c.obj
 TwisterDriver.elf: CMakeFiles/TwisterDriver.elf.dir/UserApp/Servo/Servo.c.obj
 TwisterDriver.elf: CMakeFiles/TwisterDriver.elf.dir/UserApp/cJSON/cJSON.c.obj
 TwisterDriver.elf: CMakeFiles/TwisterDriver.elf.dir/UserApp/cJSON/cJSON_Utils.c.obj
+TwisterDriver.elf: CMakeFiles/TwisterDriver.elf.dir/UserApp/cJsonParse/cmd_Parse.c.obj
 TwisterDriver.elf: CMakeFiles/TwisterDriver.elf.dir/UserApp/multiBotton/multi_button.c.obj
-TwisterDriver.elf: CMakeFiles/TwisterDriver.elf.dir/UserApp/retarget/cmd_Parse.c.obj
 TwisterDriver.elf: CMakeFiles/TwisterDriver.elf.dir/UserApp/retarget/retarget.c.obj
 TwisterDriver.elf: CMakeFiles/TwisterDriver.elf.dir/build.make
 TwisterDriver.elf: CMakeFiles/TwisterDriver.elf.dir/objects1

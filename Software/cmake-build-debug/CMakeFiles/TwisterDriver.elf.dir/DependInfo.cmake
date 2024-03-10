@@ -36,6 +36,7 @@ set(CMAKE_ASM_TARGET_INCLUDE_PATH
   "E:/Clion_for_STM32/TwisterDriver/Software/UserApp/Servo"
   "E:/Clion_for_STM32/TwisterDriver/Software/UserApp/LCD"
   "E:/Clion_for_STM32/TwisterDriver/Software/UserApp/multiBotton"
+  "E:/Clion_for_STM32/TwisterDriver/Software/UserApp/cJsonParse"
   )
 
 # The set of dependency files which are needed:
@@ -95,8 +96,8 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "E:/Clion_for_STM32/TwisterDriver/Software/UserApp/Servo/Servo.c" "CMakeFiles/TwisterDriver.elf.dir/UserApp/Servo/Servo.c.obj" "gcc" "CMakeFiles/TwisterDriver.elf.dir/UserApp/Servo/Servo.c.obj.d"
   "E:/Clion_for_STM32/TwisterDriver/Software/UserApp/cJSON/cJSON.c" "CMakeFiles/TwisterDriver.elf.dir/UserApp/cJSON/cJSON.c.obj" "gcc" "CMakeFiles/TwisterDriver.elf.dir/UserApp/cJSON/cJSON.c.obj.d"
   "E:/Clion_for_STM32/TwisterDriver/Software/UserApp/cJSON/cJSON_Utils.c" "CMakeFiles/TwisterDriver.elf.dir/UserApp/cJSON/cJSON_Utils.c.obj" "gcc" "CMakeFiles/TwisterDriver.elf.dir/UserApp/cJSON/cJSON_Utils.c.obj.d"
+  "E:/Clion_for_STM32/TwisterDriver/Software/UserApp/cJsonParse/cmd_Parse.c" "CMakeFiles/TwisterDriver.elf.dir/UserApp/cJsonParse/cmd_Parse.c.obj" "gcc" "CMakeFiles/TwisterDriver.elf.dir/UserApp/cJsonParse/cmd_Parse.c.obj.d"
   "E:/Clion_for_STM32/TwisterDriver/Software/UserApp/multiBotton/multi_button.c" "CMakeFiles/TwisterDriver.elf.dir/UserApp/multiBotton/multi_button.c.obj" "gcc" "CMakeFiles/TwisterDriver.elf.dir/UserApp/multiBotton/multi_button.c.obj.d"
-  "E:/Clion_for_STM32/TwisterDriver/Software/UserApp/retarget/cmd_Parse.c" "CMakeFiles/TwisterDriver.elf.dir/UserApp/retarget/cmd_Parse.c.obj" "gcc" "CMakeFiles/TwisterDriver.elf.dir/UserApp/retarget/cmd_Parse.c.obj.d"
   "E:/Clion_for_STM32/TwisterDriver/Software/UserApp/retarget/retarget.c" "CMakeFiles/TwisterDriver.elf.dir/UserApp/retarget/retarget.c.obj" "gcc" "CMakeFiles/TwisterDriver.elf.dir/UserApp/retarget/retarget.c.obj.d"
   )
 

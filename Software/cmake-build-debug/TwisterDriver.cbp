@@ -42,6 +42,7 @@
 					<Add directory="E:/Clion_for_STM32/TwisterDriver/Software/UserApp/Servo"/>
 					<Add directory="E:/Clion_for_STM32/TwisterDriver/Software/UserApp/LCD"/>
 					<Add directory="E:/Clion_for_STM32/TwisterDriver/Software/UserApp/multiBotton"/>
+					<Add directory="E:/Clion_for_STM32/TwisterDriver/Software/UserApp/cJsonParse"/>
 					<Add directory="e:\compiler\bin\../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/include/c++/10.2.1"/>
 					<Add directory="e:\compiler\bin\../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/include/c++/10.2.1/arm-none-eabi"/>
 					<Add directory="e:\compiler\bin\../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/include/c++/10.2.1/backward"/>
@@ -81,6 +82,7 @@
 					<Add directory="E:/Clion_for_STM32/TwisterDriver/Software/UserApp/Servo"/>
 					<Add directory="E:/Clion_for_STM32/TwisterDriver/Software/UserApp/LCD"/>
 					<Add directory="E:/Clion_for_STM32/TwisterDriver/Software/UserApp/multiBotton"/>
+					<Add directory="E:/Clion_for_STM32/TwisterDriver/Software/UserApp/cJsonParse"/>
 					<Add directory="e:\compiler\bin\../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/include/c++/10.2.1"/>
 					<Add directory="e:\compiler\bin\../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/include/c++/10.2.1/arm-none-eabi"/>
 					<Add directory="e:\compiler\bin\../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/include/c++/10.2.1/backward"/>
@@ -617,6 +619,12 @@
 		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Software/UserApp/cJSON/cJSON_Utils.h">
 			<Option target="TwisterDriver.elf"/>
 		</Unit>
+		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Software/UserApp/cJsonParse/cmd_Parse.c">
+			<Option target="TwisterDriver.elf"/>
+		</Unit>
+		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Software/UserApp/cJsonParse/cmd_Parse.h">
+			<Option target="TwisterDriver.elf"/>
+		</Unit>
 		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Software/UserApp/multiBotton/README.md">
 			<Option target="TwisterDriver.elf"/>
 		</Unit>
@@ -624,12 +632,6 @@
 			<Option target="TwisterDriver.elf"/>
 		</Unit>
 		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Software/UserApp/multiBotton/multi_button.h">
-			<Option target="TwisterDriver.elf"/>
-		</Unit>
-		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Software/UserApp/retarget/cmd_Parse.c">
-			<Option target="TwisterDriver.elf"/>
-		</Unit>
-		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Software/UserApp/retarget/cmd_Parse.h">
 			<Option target="TwisterDriver.elf"/>
 		</Unit>
 		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Software/UserApp/retarget/retarget.c">

@@ -57,6 +57,7 @@ UserApp/cJSON
 UserApp/Servo
 UserApp/LCD
 UserApp/multiBotton
+UserApp/cJsonParse
 )
 
 add_definitions(-DDEBUG -DUSE_HAL_DRIVER -DSTM32G431xx)
@@ -69,6 +70,7 @@ file(GLOB_RECURSE SOURCES "Core/*.*" "Middlewares/*.*" "Drivers/*.*"
 "UserApp/Servo/*.*"
 "UserApp/LCD/*.*"
 "UserApp/multiBotton/*.*"
+"UserApp/cJsonParse/*.*"
 )
 
 set(LINKER_SCRIPT ${CMAKE_SOURCE_DIR}/STM32G431RBTX_FLASH.ld)

@@ -39,7 +39,7 @@ extern "C" {
 #include "gui.h"
 #include "retarget.h"
 #include "cJSON.h"
-#include "cmd_Parse.h"
+#include "../../UserApp/cJsonParse/cmd_Parse.h"
 /* USER CODE END Includes */
 
 /* Exported types ------------------------------------------------------------*/
