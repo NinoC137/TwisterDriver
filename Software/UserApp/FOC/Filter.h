@@ -43,13 +43,11 @@ typedef struct
     unsigned char first_filter_flag;
 }LowPass_Filter;
 
-extern LowPass_Filter lpf_Motor1_error;
-extern LowPass_Filter lpf_Motor1_speed;
-extern LowPass_Filter lpf_Motor1_sensor;
+extern LowPass_Filter lpf_Motor_Left_position;
+extern LowPass_Filter lpf_Motor_Left_speed;
 
-extern LowPass_Filter lpf_Motor1_current;
-extern LowPass_Filter lpf_current_d;
-extern LowPass_Filter lpf_current_q;
+extern LowPass_Filter lpf_Motor_Right_position;
+extern LowPass_Filter lpf_Motor_Right_speed;
 
 float Low_Pass_Filter(LowPass_Filter *filter,float data,float param);
 

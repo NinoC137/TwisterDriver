@@ -61,22 +61,25 @@ void FOCTask(void const *argument) {
     Pid_Value_Init();
 
     HAL_GPIO_WritePin(Driver1_EN_GPIO_Port, Driver1_EN_Pin, 1);
-
     HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_1);
     HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_2);
     HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_3);
 
-            __HAL_TIM_SetCompare(&htim1, TIM_CHANNEL_1, 5000);
-            __HAL_TIM_SetCompare(&htim1, TIM_CHANNEL_2, 5000);
-            __HAL_TIM_SetCompare(&htim1, TIM_CHANNEL_3, 5000);
+    HAL_GPIO_WritePin(Driver2_EN_GPIO_Port, Driver2_EN_Pin, 1);
+    HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_1);
+    HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_2);
+    HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_3);
 
     FOC_Vbus(12.0f);
-    FOC_alignSensor(7, 1);
+    FOC_alignSensor(&FOCMotor_Left, 7, -1);
+    FOC_alignSensor(&FOCMotor_Right, 7, 1);
 
     for (;;) {
-//        velocityOpenLoop(30);
-//        FOC_M0_set_Velocity_Angle(targetAngle_left);
-        FOC_M0_setVelocity(20);
+//        velocityOpenLoop(&FOCMotor_Left,20);
+//        FOC_M0_set_Velocity_Angle(&FOCMotor_Left, targetAngle_right);
+//        FOC_M0_set_Velocity_Angle(&FOCMotor_Right, targetAngle_right);
+        FOC_M0_setVelocity(&FOCMotor_Left, targetAngle_right);
+        FOC_M0_setVelocity(&FOCMotor_Right, targetAngle_right);
         osDelay(1);
     }
 }
@@ -89,8 +92,6 @@ void LCDTask(void const *argument) {
         osDelay(10);
     }
 }
-
-extern float angle_pi;
 
 void UARTTask(void const *argument) {
     HAL_UART_Receive_IT(&huart3, (uint8_t*)&uart3Buffer, 1);

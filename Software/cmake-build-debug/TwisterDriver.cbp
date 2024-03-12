@@ -619,6 +619,9 @@
 		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Software/UserApp/cJSON/cJSON_Utils.h">
 			<Option target="TwisterDriver.elf"/>
 		</Unit>
+		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Software/UserApp/cJsonParse/cmd_Book.md">
+			<Option target="TwisterDriver.elf"/>
+		</Unit>
 		<Unit filename="E:/Clion_for_STM32/TwisterDriver/Software/UserApp/cJsonParse/cmd_Parse.c">
 			<Option target="TwisterDriver.elf"/>
 		</Unit>

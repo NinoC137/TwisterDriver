@@ -12,10 +12,16 @@ void _init3PWM(){
     HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_3);
 }
 
-void _writeDutyCycle3PWM(float dc_a, float dc_b, float dc_c){
+void _writeDutyCycle3PWM_1(float dc_a, float dc_b, float dc_c){
             __HAL_TIM_SetCompare(&htim1, TIM_CHANNEL_1, dc_a * htim1.Init.Period);
             __HAL_TIM_SetCompare(&htim1, TIM_CHANNEL_2, dc_b * htim1.Init.Period);
             __HAL_TIM_SetCompare(&htim1, TIM_CHANNEL_3, dc_c * htim1.Init.Period);
+}
+
+void _writeDutyCycle3PWM_2(float dc_a, float dc_b, float dc_c){
+            __HAL_TIM_SetCompare(&htim2, TIM_CHANNEL_1, dc_a * htim2.Init.Period);
+            __HAL_TIM_SetCompare(&htim2, TIM_CHANNEL_2, dc_b * htim2.Init.Period);
+            __HAL_TIM_SetCompare(&htim2, TIM_CHANNEL_3, dc_c * htim2.Init.Period);
 }
 
 void _initCurrentSample(){

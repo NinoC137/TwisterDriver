@@ -15,6 +15,8 @@ void res_sendHeartBeat();
 
 void cmd_setAngularDeviation(cJSON* root);
 
+void cmd_setMotorAngle(cJSON *root);
+
 void cmd_setServoAngle(cJSON* root);
 
 void cmd_getMotorSpeed(cJSON* root);
@@ -26,5 +28,7 @@ void cmd_getMotorCurrent(cJSON* root);
 void cmd_getSystemMode(cJSON* root);
 
 void cmd_setHeartBeat(cJSON* root);
+
+void cmd_setFOCMode(cJSON *root);
 
 #endif //TWISTERDRIVER_CMD_PARSE_H

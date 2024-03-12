@@ -18,7 +18,9 @@ void _init3PWM();
  * @param dc_b  duty cycle phase B [0, 1]
  * @param dc_c  duty cycle phase C [0, 1]
  */
-void _writeDutyCycle3PWM(float dc_a, float dc_b, float dc_c);
+void _writeDutyCycle3PWM_1(float dc_a, float dc_b, float dc_c);
+
+void _writeDutyCycle3PWM_2(float dc_a, float dc_b, float dc_c);
 
 void _initCurrentSample();
 

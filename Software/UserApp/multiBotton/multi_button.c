@@ -228,15 +228,15 @@ uint8_t read_KEY6_GPIO() {
 static void angleReduce(){
     if(targetAngle_left > 0 && targetAngle_right > 0)
     {
-        targetAngle_left += 5;
-        targetAngle_right -= 5;
+        targetAngle_left += 1;
+        targetAngle_right -= 1;
     }
     uart_printf("leg angle : %d\r\n", (int)targetAngle_left);
 }
 
 static void angleIncrease(){
-    targetAngle_left -= 5;
-    targetAngle_right += 5;
+    targetAngle_left -= 1;
+    targetAngle_right += 1;
     uart_printf("leg angle : %d\r\n", (int)targetAngle_left);
 }
 

@@ -86,7 +86,7 @@ float _normalizeAngle(float angle);
  * @param shaft_angle - shaft angle of the motor
  * @param pole_pairs - number of pole pairs
  */
-float _electricalAngle(float shaft_angle, int pole_pairs);
+//float _electricalAngle(float shaft_angle, int pole_pairs);
 
 /**
  * Function approximating square root function

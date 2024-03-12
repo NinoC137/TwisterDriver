@@ -3,13 +3,11 @@
 kalman1_filter_t kalman_filter;
 Sliding_Mean_Filter moving_filter;
 
-LowPass_Filter lpf_Motor1_error;
-LowPass_Filter lpf_Motor1_speed;
-LowPass_Filter lpf_Motor1_sensor;
+LowPass_Filter lpf_Motor_Left_position;
+LowPass_Filter lpf_Motor_Left_speed;
 
-LowPass_Filter lpf_Motor1_current;
-LowPass_Filter lpf_current_d;
-LowPass_Filter lpf_current_q;
+LowPass_Filter lpf_Motor_Right_position;
+LowPass_Filter lpf_Motor_Right_speed;
 
 /**
  ** ��������:  һ���ͺ��˲��㷨��Bias�˲���

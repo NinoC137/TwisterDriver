@@ -1,12 +1,14 @@
 #ifndef _FOC_H__
 #define _FOC_H__
 
-enum Mode{
-    SPWM = 0,
-    SVPWM = 1
-};
-//FOC模式设定   ---     SVPWM未测试
-#define FOC_MODE 1
+//FOC模式设定
+#define mode_SPWM 0
+#define mode_SVPWM 1
+#define FOC_MODE mode_SVPWM
+
+#define FOC_CONTROL_MODE_NUM 10
+
+#define VOLTAGE_LIMIT 6
 
 #include "MT6701.h"
 #include "hardware_api.h"
@@ -14,6 +16,60 @@ enum Mode{
 #include "FOC_math.h"
 #include "my_PID.h"
 #include "Filter.h"
+
+typedef struct{
+    float angle_now;
+    float angle_old;
+    float full_rotations;
+    float full_rotations_old;
+    long timeStamp;
+    long timeStamp_old;
+}FOC_calculateUint;
+
+typedef struct{
+    PID *position;
+    PID *speed;
+    PID *Uq;
+    PID *Ud;
+    PID *Iq;
+    PID *Id;
+}FOC_PIDUint;
+
+typedef struct{
+    LowPass_Filter *position;
+    LowPass_Filter *speed;
+    LowPass_Filter *current_d;
+    LowPass_Filter *current_q;
+}FOC_Filter;
+
+typedef struct{
+    char* name;
+
+    float Uq;
+    float Ud;
+    float current[3];
+    float Iq;
+    float Id;
+
+    FOC_calculateUint speedUint;
+    FOC_PIDUint PIDUint;
+    FOC_Filter FilterUint;
+
+    int PolePair;
+    int direct;
+
+    float speed;
+
+    float angle_pi;
+    float angle_f;
+    float electrical_angle;
+    float zero_electrical_angle;
+    float shaft_angle;
+
+    void (*api_writeDutyCyclePWM)(float dutyCycle_a, float dutyCycle_b, float dutyCycle_c);
+    void (*api_getMotorAngle)(float *angle_Pi, float *angle_f);
+    void (*api_getMotorCurrent)(float *currentArray);
+}FOC_Motor;
 
 typedef enum{
     OPEN_LOOP_POSITION_CONTROL = 0,
@@ -28,27 +84,26 @@ typedef enum{
     ZERO_RESISTANCE
 } FOC_CONTROL_MODE;
 
-#define FOC_CONTROL_MODE_NUM 10
-
-#define VOLTAGE_LIMIT 6
+extern FOC_Motor FOCMotor_Left;
+extern FOC_Motor FOCMotor_Right;
 
 //传感器读取
-float FOC_M0_Velocity();
-float FOC_M0_Angle();
+float FOC_M0_Velocity(FOC_Motor *Motor);
+float FOC_M0_Angle(FOC_Motor *Motor);
 //PID
-void FOC_M0_SET_ANGLE_PID(float P, float I, float D, float ramp);
-void FOC_M0_SET_VEL_PID(float P, float I, float D, float ramp);
-float FOC_M0_VEL_PID(float error);
-float FOC_M0_ANGLE_PID(float error);
+void FOC_M0_SET_ANGLE_PID(FOC_Motor *Motor, float P, float I, float D, float ramp);
+void FOC_M0_SET_VEL_PID(FOC_Motor *Motor, float P, float I, float D, float ramp);
+float FOC_M0_VEL_PID(FOC_Motor *Motor, float error);
+float FOC_M0_ANGLE_PID(FOC_Motor *Motor, float error);
 
 //电角度求解
-float _electricalAngle(float shaft_angle, int pole_pairs);
+float _electricalAngle(FOC_Motor *Motor, float shaft_angle, int pole_pairs);
 //角度归一化
 float _normalizeAngle(float angle);
 //输出PWM
-void setPWM(float Ua, float Ub, float Uc);
+void setPWM(FOC_Motor *Motor, float Ua, float Ub, float Uc);
 //设置相电压
-void setPhaseVoltage(float Uq, float Ud, float angle_elec);
+void setPhaseVoltage(FOC_Motor *Motor, float Uq, float Ud, float angle_elec);
 /**
  * SVPWM计算式
  * 求解得出PWM输出, 内部通过api设定PWM输出
@@ -56,7 +111,7 @@ void setPhaseVoltage(float Uq, float Ud, float angle_elec);
  * @param Ud    励磁电压    在不使用电流环控制时可设定为0
  * @param angle 当前电角度
  */
-void FOC_SVPWM(float Uq, float Ud, float angle);
+void FOC_SVPWM(FOC_Motor *Motor, float Uq, float Ud, float angle);
 /**
  * 电流环克拉克-帕克变换
  * 用于求解Id, Iq
@@ -70,17 +125,15 @@ void FOC_SVPWM(float Uq, float Ud, float angle);
 void FOC_Clarke_Park(float Ia, float Ib, float Ic, float angle, float *Id, float *Iq);
 
 //开环速度接口函数
-float velocityOpenLoop(float target_velocity);
+float velocityOpenLoop(FOC_Motor *Motor, float target_velocity);
 
 //闭环部分
-void setTorque(float Uq, float angle_el);
+void setTorque(FOC_Motor *Motor, float Uq, float angle_el);
 void FOC_Vbus(float _Vbus);
-void FOC_alignSensor(int _PP, int _DIR);
+void FOC_alignSensor(FOC_Motor *Motor, int _PP, int _DIR);
 
 //闭环控制接口函数
-void FOC_M0_set_Velocity_Angle(float Target);
-void FOC_M0_setVelocity(float Target);
-void FOC_M0_set_Force_Angle(float Target);
-void FOC_M0_setTorque(float Target);
+void FOC_M0_set_Velocity_Angle(FOC_Motor *Motor, float Target);
+void FOC_M0_setVelocity(FOC_Motor *Motor, float Target);
 
 #endif
