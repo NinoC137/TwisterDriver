@@ -45,9 +45,13 @@ typedef struct
 
 extern LowPass_Filter lpf_Motor_Left_position;
 extern LowPass_Filter lpf_Motor_Left_speed;
+extern LowPass_Filter lpf_Motor_Left_Iq;
+extern LowPass_Filter lpf_Motor_Left_Id;
 
 extern LowPass_Filter lpf_Motor_Right_position;
 extern LowPass_Filter lpf_Motor_Right_speed;
+extern LowPass_Filter lpf_Motor_Right_Iq;
+extern LowPass_Filter lpf_Motor_Right_Id;
 
 float Low_Pass_Filter(LowPass_Filter *filter,float data,float param);
 
@@ -61,6 +65,12 @@ typedef struct
     float slide_temp5;
     float slide_sum;
 }Slide_Filter;
+
+extern Slide_Filter wsf_Motor_Left_speed;
+extern Slide_Filter wsf_Motor_Right_speed;
+
+extern Sliding_Mean_Filter moving_filter_LeftSpeed;
+extern Sliding_Mean_Filter moving_filter_RightSpeed;
 
 float Window_Slide_Filter(Slide_Filter *filter,float data);
 float Low_Pass_Filter(LowPass_Filter *filter,float data,float param);

@@ -28,19 +28,19 @@ void Pid_Value_Init(void)
     Motor_Left_position.OutputMax = 6.0f;
     Motor_Left_position.OutputMin = -6.0f;
     Motor_Left_position.IntegralMax = 3.0f;
-    Pid_Init(&Motor_Left_speed, 0.18f, 0.15f, 0.0f);
+    Pid_Init(&Motor_Left_speed, 0.7f, 0.25f, 0.0f);
     Motor_Left_speed.OutputMax = 6.0f;
     Motor_Left_speed.OutputMin = -6.0f;
-    Motor_Left_speed.IntegralMax = 5.0f;
+    Motor_Left_speed.IntegralMax = 16.0f;
 
     Pid_Init(&Motor_Right_position, 0.1f, 0.00f, 0.06f);
     Motor_Right_position.OutputMax = 6.0f;
     Motor_Right_position.OutputMin = -6.0f;
     Motor_Right_position.IntegralMax = 3.0f;
-    Pid_Init(&Motor_Right_speed, 0.20f, 0.15f, 0.0f);
+    Pid_Init(&Motor_Right_speed, 0.7f, 0.25f, 0.0f);
     Motor_Right_speed.OutputMax = 6.0f;
     Motor_Right_speed.OutputMin = -6.0f;
-    Motor_Right_speed.IntegralMax = 5.0f;
+    Motor_Right_speed.IntegralMax = 16.0f;
 
 //    Pid_Init(&Motor_Uq, 0.004f, 0.00f, 0.00f);
 //    Motor_Uq.OutputMax = 3.0f;

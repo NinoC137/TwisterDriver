@@ -3,6 +3,14 @@
 Servo Servo_LeftLeg;
 Servo Servo_RightLeg;
 
+void Servo_init() {
+    Servo_LeftLeg = Servo_Create("LeftLeg", &htim8, TIM_CHANNEL_1, 60);
+    Servo_RightLeg = Servo_Create("RightLeg", &htim8, TIM_CHANNEL_2, 0);
+
+    HAL_TIM_PWM_Start(Servo_LeftLeg.TIMER, Servo_LeftLeg.TIM_Channel);
+    HAL_TIM_PWM_Start(Servo_RightLeg.TIMER, Servo_RightLeg.TIM_Channel);
+}
+
 TimerPeriod getAngle2Pulse(struct Servo_OOC *Servo) {
     return Servo->prHighLevelTimes_Ms;
 }
@@ -119,12 +127,4 @@ Servo Servo_Create(char *name, TIM_HandleTypeDef *TIMER, uint32_t Channel, Servo
     servo_temple.Move2TargetAngle = move2TargetAngle;
 
     return servo_temple;
-}
-
-void Servo_init() {
-    Servo_LeftLeg = Servo_Create("LeftLeg", &htim8, TIM_CHANNEL_1, 0);
-    Servo_RightLeg = Servo_Create("RightLeg", &htim8, TIM_CHANNEL_2, 0);
-
-    HAL_TIM_PWM_Start(Servo_LeftLeg.TIMER, Servo_LeftLeg.TIM_Channel);
-    HAL_TIM_PWM_Start(Servo_RightLeg.TIMER, Servo_RightLeg.TIM_Channel);
 }

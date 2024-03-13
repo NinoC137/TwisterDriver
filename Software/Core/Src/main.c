@@ -43,6 +43,7 @@
 /* Private variables ---------------------------------------------------------*/
 ADC_HandleTypeDef hadc1;
 ADC_HandleTypeDef hadc2;
+DMA_HandleTypeDef hdma_adc2;
 
 FDCAN_HandleTypeDef hfdcan1;
 
@@ -98,7 +99,9 @@ void UARTTask(void const *argument);
 
 void CANTask(void const *argument);
 
-void FOCTask(void const *argument);
+void FOC_LeftTask(void const *argument);
+
+void FOC_RightTask(void const *argument);
 
 void ServoTask(void const *argument);
 /* USER CODE END PFP */
@@ -109,7 +112,8 @@ osThreadId ButtonTaskHandle;
 osThreadId LCDTaskHandle;
 osThreadId UARTTaskHandle;
 osThreadId CANTaskHandle;
-osThreadId FOCTaskHandle;
+osThreadId FOC_LeftTaskHandle;
+osThreadId FOC_RightTaskHandle;
 osThreadId ServoTaskHandle;
 
 osMutexDef(printfMutex);
@@ -311,15 +315,15 @@ static void MX_ADC1_Init(void)
   /** Common config
   */
   hadc1.Instance = ADC1;
-  hadc1.Init.ClockPrescaler = ADC_CLOCK_SYNC_PCLK_DIV4;
+  hadc1.Init.ClockPrescaler = ADC_CLOCK_ASYNC_DIV10;
   hadc1.Init.Resolution = ADC_RESOLUTION_12B;
   hadc1.Init.DataAlign = ADC_DATAALIGN_RIGHT;
   hadc1.Init.GainCompensation = 0;
-  hadc1.Init.ScanConvMode = ADC_SCAN_DISABLE;
+  hadc1.Init.ScanConvMode = ADC_SCAN_ENABLE;
   hadc1.Init.EOCSelection = ADC_EOC_SINGLE_CONV;
   hadc1.Init.LowPowerAutoWait = DISABLE;
   hadc1.Init.ContinuousConvMode = DISABLE;
-  hadc1.Init.NbrOfConversion = 1;
+  hadc1.Init.NbrOfConversion = 3;
   hadc1.Init.DiscontinuousConvMode = DISABLE;
   hadc1.Init.ExternalTrigConv = ADC_SOFTWARE_START;
   hadc1.Init.ExternalTrigConvEdge = ADC_EXTERNALTRIGCONVEDGE_NONE;
@@ -343,10 +347,28 @@ static void MX_ADC1_Init(void)
   */
   sConfig.Channel = ADC_CHANNEL_1;
   sConfig.Rank = ADC_REGULAR_RANK_1;
-  sConfig.SamplingTime = ADC_SAMPLETIME_2CYCLES_5;
+  sConfig.SamplingTime = ADC_SAMPLETIME_12CYCLES_5;
   sConfig.SingleDiff = ADC_SINGLE_ENDED;
   sConfig.OffsetNumber = ADC_OFFSET_NONE;
   sConfig.Offset = 0;
+  if (HAL_ADC_ConfigChannel(&hadc1, &sConfig) != HAL_OK)
+  {
+    Error_Handler();
+  }
+
+  /** Configure Regular Channel
+  */
+  sConfig.Channel = ADC_CHANNEL_2;
+  sConfig.Rank = ADC_REGULAR_RANK_2;
+  if (HAL_ADC_ConfigChannel(&hadc1, &sConfig) != HAL_OK)
+  {
+    Error_Handler();
+  }
+
+  /** Configure Regular Channel
+  */
+  sConfig.Channel = ADC_CHANNEL_3;
+  sConfig.Rank = ADC_REGULAR_RANK_3;
   if (HAL_ADC_ConfigChannel(&hadc1, &sConfig) != HAL_OK)
   {
     Error_Handler();
@@ -378,15 +400,15 @@ static void MX_ADC2_Init(void)
   /** Common config
   */
   hadc2.Instance = ADC2;
-  hadc2.Init.ClockPrescaler = ADC_CLOCK_SYNC_PCLK_DIV4;
+  hadc2.Init.ClockPrescaler = ADC_CLOCK_ASYNC_DIV10;
   hadc2.Init.Resolution = ADC_RESOLUTION_12B;
   hadc2.Init.DataAlign = ADC_DATAALIGN_RIGHT;
   hadc2.Init.GainCompensation = 0;
-  hadc2.Init.ScanConvMode = ADC_SCAN_DISABLE;
+  hadc2.Init.ScanConvMode = ADC_SCAN_ENABLE;
   hadc2.Init.EOCSelection = ADC_EOC_SINGLE_CONV;
   hadc2.Init.LowPowerAutoWait = DISABLE;
   hadc2.Init.ContinuousConvMode = DISABLE;
-  hadc2.Init.NbrOfConversion = 1;
+  hadc2.Init.NbrOfConversion = 3;
   hadc2.Init.DiscontinuousConvMode = DISABLE;
   hadc2.Init.ExternalTrigConv = ADC_SOFTWARE_START;
   hadc2.Init.ExternalTrigConvEdge = ADC_EXTERNALTRIGCONVEDGE_NONE;
@@ -402,10 +424,28 @@ static void MX_ADC2_Init(void)
   */
   sConfig.Channel = ADC_CHANNEL_7;
   sConfig.Rank = ADC_REGULAR_RANK_1;
-  sConfig.SamplingTime = ADC_SAMPLETIME_2CYCLES_5;
+  sConfig.SamplingTime = ADC_SAMPLETIME_6CYCLES_5;
   sConfig.SingleDiff = ADC_SINGLE_ENDED;
   sConfig.OffsetNumber = ADC_OFFSET_NONE;
   sConfig.Offset = 0;
+  if (HAL_ADC_ConfigChannel(&hadc2, &sConfig) != HAL_OK)
+  {
+    Error_Handler();
+  }
+
+  /** Configure Regular Channel
+  */
+  sConfig.Channel = ADC_CHANNEL_8;
+  sConfig.Rank = ADC_REGULAR_RANK_2;
+  if (HAL_ADC_ConfigChannel(&hadc2, &sConfig) != HAL_OK)
+  {
+    Error_Handler();
+  }
+
+  /** Configure Regular Channel
+  */
+  sConfig.Channel = ADC_CHANNEL_9;
+  sConfig.Rank = ADC_REGULAR_RANK_3;
   if (HAL_ADC_ConfigChannel(&hadc2, &sConfig) != HAL_OK)
   {
     Error_Handler();
@@ -475,7 +515,7 @@ static void MX_I2C2_Init(void)
 
   /* USER CODE END I2C2_Init 1 */
   hi2c2.Instance = I2C2;
-  hi2c2.Init.Timing = 0x30909DEC;
+  hi2c2.Init.Timing = 0x00F07BFF;
   hi2c2.Init.OwnAddress1 = 0;
   hi2c2.Init.AddressingMode = I2C_ADDRESSINGMODE_7BIT;
   hi2c2.Init.DualAddressMode = I2C_DUALADDRESS_DISABLE;
@@ -523,7 +563,7 @@ static void MX_I2C3_Init(void)
 
   /* USER CODE END I2C3_Init 1 */
   hi2c3.Instance = I2C3;
-  hi2c3.Init.Timing = 0x30909DEC;
+  hi2c3.Init.Timing = 0x00F07BFF;
   hi2c3.Init.OwnAddress1 = 0;
   hi2c3.Init.AddressingMode = I2C_ADDRESSINGMODE_7BIT;
   hi2c3.Init.DualAddressMode = I2C_DUALADDRESS_DISABLE;
@@ -970,6 +1010,9 @@ static void MX_DMA_Init(void)
   /* DMA1_Channel2_IRQn interrupt configuration */
   HAL_NVIC_SetPriority(DMA1_Channel2_IRQn, 5, 0);
   HAL_NVIC_EnableIRQ(DMA1_Channel2_IRQn);
+  /* DMA1_Channel4_IRQn interrupt configuration */
+  HAL_NVIC_SetPriority(DMA1_Channel4_IRQn, 5, 0);
+  HAL_NVIC_EnableIRQ(DMA1_Channel4_IRQn);
 
 }
 
@@ -1044,11 +1087,12 @@ void StartDefaultTask(void const * argument)
   /* USER CODE BEGIN 5 */
     uart3_printf("Hello World!\n");
 
-    osThreadDef(ButtonTask, ButtonTask, osPriorityNormal, 0, 512);
+    osThreadDef(ButtonTask, ButtonTask, osPriorityNormal, 0, 128);
 //    osThreadDef(LCDTask, LCDTask, osPriorityNormal, 0, 512);
-    osThreadDef(UARTTask, UARTTask, osPriorityNormal, 0, 1024);
+    osThreadDef(UARTTask, UARTTask, osPriorityNormal, 0, 600);
 //    osThreadDef(CANTask, CANTask, osPriorityNormal, 0, 512);
-    osThreadDef(FOCTask, FOCTask, osPriorityAboveNormal, 0, 512);
+    osThreadDef(FOC_LeftTask, FOC_LeftTask, osPriorityAboveNormal, 0, 512);
+    osThreadDef(FOC_RightTask, FOC_RightTask, osPriorityAboveNormal, 0, 512);
     osThreadDef(ServoTask, ServoTask, osPriorityAboveNormal, 0, 512);
 
     portENTER_CRITICAL();
@@ -1056,7 +1100,8 @@ void StartDefaultTask(void const * argument)
 //    LCDTaskHandle = osThreadCreate(osThread(LCDTask), NULL);
     UARTTaskHandle = osThreadCreate(osThread(UARTTask), NULL);
 //    CANTaskHandle = osThreadCreate(osThread(CANTask), NULL);
-    FOCTaskHandle = osThreadCreate(osThread(FOCTask), NULL);
+    FOC_LeftTaskHandle = osThreadCreate(osThread(FOC_LeftTask), NULL);
+    FOC_RightTaskHandle = osThreadCreate(osThread(FOC_RightTask), NULL);
     ServoTaskHandle = osThreadCreate(osThread(ServoTask), NULL);
     portEXIT_CRITICAL();
 

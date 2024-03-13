@@ -5,11 +5,14 @@
 
 float open_loop_timestamp = 0.0f;
 float voltage_power_supply = 12.0f;
+uint32_t cs1_zero_value[3];
+uint32_t cs2_zero_value[3];
 
 FOC_Motor FOCMotor_Left = {
         .name = "left leg",
         .api_writeDutyCyclePWM = _writeDutyCycle3PWM_1,
         .api_getMotorAngle = i2c_mt6701_get_angle,
+        .api_getMotorCurrent = _currentGetValue,
         .PIDUint.speed = &Motor_Left_speed,
         .PIDUint.position = &Motor_Left_position,
         .PIDUint.Uq = NULL,
@@ -18,13 +21,14 @@ FOC_Motor FOCMotor_Left = {
         .PIDUint.Id = NULL,
         .FilterUint.speed = &lpf_Motor_Left_speed,
         .FilterUint.position = &lpf_Motor_Left_position,
-        .FilterUint.current_d = NULL,
-        .FilterUint.current_q = NULL
+        .FilterUint.current_d = &lpf_Motor_Left_Id,
+        .FilterUint.current_q = &lpf_Motor_Left_Iq
 };
 FOC_Motor FOCMotor_Right = {
         .name = "right leg",
         .api_writeDutyCyclePWM = _writeDutyCycle3PWM_2,
         .api_getMotorAngle = i2c2_mt6701_get_angle,
+        .api_getMotorCurrent = _currentGetValue2,
         .PIDUint.speed = &Motor_Right_speed,
         .PIDUint.position = &Motor_Right_position,
         .PIDUint.Uq = NULL,
@@ -33,24 +37,9 @@ FOC_Motor FOCMotor_Right = {
         .PIDUint.Id = NULL,
         .FilterUint.speed = &lpf_Motor_Right_speed,
         .FilterUint.position = &lpf_Motor_Right_position,
-        .FilterUint.current_d = NULL,
-        .FilterUint.current_q = NULL
+        .FilterUint.current_d = &lpf_Motor_Right_Id,
+        .FilterUint.current_q = &lpf_Motor_Right_Iq
 };
-
-//速度PID接口
-float FOC_M0_VEL_PID(FOC_Motor *Motor, float error)   //M0速度环
-{
-    Motor->PIDUint.speed->Error = error;
-    return Position_Pid_Calculate(Motor->PIDUint.speed);
-}
-
-//角度PID接口
-float FOC_M0_ANGLE_PID(FOC_Motor *Motor, float error) {
-//    Motor->PIDUint.position->Error = Low_Pass_Filter(Motor->FilterUint.position, error, 0.7f);
-    Motor->PIDUint.position->Error = error;
-    return Position_Pid_Calculate(Motor->PIDUint.position);
-}
-//=====================================================================================
 
 void FOC_Vbus(float _Vbus) {
     voltage_power_supply = _Vbus;
@@ -80,10 +69,13 @@ void FOC_alignSensor(FOC_Motor *Motor, int _PP, int _DIR) {
     Motor->zero_electrical_angle = _electricalAngle(Motor, Motor->angle_pi, Motor->PolePair);
     setTorque(Motor, 0, _3PI_2);  //松劲（解除校准）
 
-//    uart_printf("zero electric angle: %f\r\n", zero_electric_angle);
+    _initCurrentSample();
+
+    Motor->angle_pi = 0.0f;
+    Motor->angle_f = 0.0f;
+    Motor->PIDUint.speed->Error = 0;
 }
 
-//输出PWM
 void setPWM(FOC_Motor *Motor, float Ua, float Ub, float Uc) {
     // 限制上限
     Ua = _constrain(Ua, 0.0f, voltage_power_supply);
@@ -114,6 +106,169 @@ void setTorque(FOC_Motor *Motor, float Uq, float angle_el) {
     float Uc = (float) (-Ualpha - _SQRT3 * Ubeta) / 2 + voltage_power_supply / 2;
 
     setPWM(Motor, Ua, Ub, Uc);
+}
+
+//设置相电压
+void setPhaseVoltage(FOC_Motor *Motor, float Uq, float Ud, float angle_elec) {
+    angle_elec = _normalizeAngle(angle_elec);
+    // 帕克逆变换
+    float Ualpha = -Uq * sin(angle_elec);
+    float Ubeta = Uq * cos(angle_elec);
+
+    // 克拉克逆变换
+    float Ua = Ualpha + voltage_power_supply / 2;
+    float Ub = (_SQRT3 * Ubeta - Ualpha) / 2 + voltage_power_supply / 2;
+    float Uc = (-Ualpha - _SQRT3 * Ubeta) / 2 + voltage_power_supply / 2;
+
+    setPWM(Motor, Ua, Ub, Uc);
+}
+
+//开环速度函数
+float velocityOpenLoop(FOC_Motor *Motor, float target_velocity) {
+    unsigned long now_us = HAL_GetTick();  //获取从开启芯片以来的微秒数，它的精度是 1ms
+
+    //计算当前每个Loop的运行时间间隔
+    float Ts = (now_us - open_loop_timestamp) * 1e-3f;
+
+    // 通过乘以时间间隔和目标速度来计算需要转动的机械角度，存储在 Motor->shaft_angle 变量中。在此之前，还需要对轴角度进行归一化，以确保其值在 0 到 2π 之间。
+    Motor->shaft_angle = _normalizeAngle(Motor->shaft_angle + target_velocity * Ts);
+    //以目标速度为 10 rad/s 为例，如果时间间隔是 1 秒，则在每个循环中需要增加 10 * 1 = 10 弧度的角度变化量，才能使电机转动到目标速度。
+    //如果时间间隔是 0.1 秒，那么在每个循环中需要增加的角度变化量就是 10 * 0.1 = 1 弧度，才能实现相同的目标速度。因此，电机轴的转动角度取决于目标速度和时间间隔的乘积。
+
+    // 使用早前设置的voltage_power_supply的1/3作为Uq值，这个值会直接影响输出力矩
+    // 最大只能设置为Uq = voltage_power_supply/2，否则ua,ub,uc会超出供电电压限幅
+    float Uq = voltage_power_supply / 9.0f;
+
+#if FOC_MODE == mode_SPWM
+    setPhaseVoltage(Motor, Uq, 0, _electricalAngle(Motor, Motor->shaft_angle, Motor->PolePair));
+#else
+    FOC_SVPWM(Motor, Uq, 0, _electricalAngle(Motor, Motor->shaft_angle, Motor->PolePair));
+#endif
+    open_loop_timestamp = now_us;  //用于计算下一个时间间隔
+
+    return Uq;
+}
+
+//================简易接口函数================
+void FOC_setVelocityAngle(FOC_Motor *Motor, float Target) {
+    Motor->api_getMotorAngle(&Motor->angle_pi, &Motor->angle_f);
+    _normalizeAngle(Target);
+    Motor->PIDUint.position->Target = Target;
+    float angle_error = _normalizeAngle(Target - Motor->angle_pi * (float)Motor->direct);
+
+    if(angle_error > M_PI){
+        angle_error -= 2 * _PI;
+    }
+
+    Motor->Uq = _constrain( FOC_ANGLE_PID(Motor, angle_error * 180.0f / _PI),
+                            Motor->PIDUint.position->OutputMin, Motor->PIDUint.position->OutputMax);
+    Motor->electrical_angle = _electricalAngle(Motor, Motor->angle_pi, Motor->PolePair);
+
+#if FOC_MODE == mode_SPWM
+    setTorque(Motor, Motor->Uq, Motor->electrical_angle);   //角度闭环
+#else
+    FOC_SVPWM(Motor,  Motor->Uq,0, Motor->electrical_angle);
+#endif
+}
+
+void FOC_setVelocity(FOC_Motor *Motor, float Target) {
+    Motor->PIDUint.speed->Target = Target;
+    FOC_getVelocity(Motor);
+    Motor->api_getMotorAngle(&Motor->angle_pi, &Motor->angle_f);
+
+    Motor->Uq = _constrain( FOC_VEL_PID(Motor, (Motor->PIDUint.speed->Target - Motor->PIDUint.speed->Actual)),
+                            Motor->PIDUint.speed->OutputMin, Motor->PIDUint.speed->OutputMax);
+    Motor->electrical_angle = _electricalAngle(Motor, Motor->angle_pi, Motor->PolePair);
+
+#if FOC_MODE == mode_SPWM
+
+#else
+    FOC_SVPWM(Motor, Motor->Uq,0, Motor->electrical_angle);   //速度闭环
+#endif
+}
+
+void FOC_current_control_loop(FOC_Motor *Motor, float target_Iq){
+    Motor->api_getMotorAngle(&Motor->angle_pi, &Motor->angle_f);
+    Motor->electrical_angle = _electricalAngle(Motor, Motor->angle_pi, Motor->PolePair);
+    // Current sense
+    Motor->api_getMotorCurrent(Motor->current);
+    FOC_Clarke_Park(Motor->current[0], Motor->current[1], Motor->current[2], Motor->electrical_angle, &Motor->Id, &Motor->Iq);
+
+    Motor->Id = Low_Pass_Filter(Motor->FilterUint.current_d, Motor->Id, 0.6f);
+    Motor->Iq = Low_Pass_Filter(Motor->FilterUint.current_q, Motor->Iq, 0.6f);
+
+    // back feed
+    Motor->PIDUint.Uq->Error = target_Iq - Motor->Iq;
+    Motor->Uq = Position_Pid_Calculate(Motor->PIDUint.Uq);
+    Motor->PIDUint.Ud->Error = -Motor->Id;
+    Motor->Ud = Position_Pid_Calculate(Motor->PIDUint.Ud);
+
+    // front feed
+    Motor->Uq += 0.008f * Motor->Iq;
+
+    FOC_SVPWM(Motor, Motor->Uq, Motor->Ud, Motor->electrical_angle);
+
+//    uart_printf("%.1f,%.1f,%.1f,%.1f,%.1f\n", cs_value[0], cs_value[1], cs_value[2], Id, Iq);
+}
+
+//速度PID接口
+float FOC_VEL_PID(FOC_Motor *Motor, float error)   //M0速度环
+{
+    Motor->PIDUint.speed->Error = error;
+    return Position_Pid_Calculate(Motor->PIDUint.speed);
+}
+
+//角度PID接口
+float FOC_ANGLE_PID(FOC_Motor *Motor, float error) {
+    Motor->PIDUint.position->Error = Low_Pass_Filter(Motor->FilterUint.position, error, 0.6f);
+//    Motor->PIDUint.position->Error = error;
+    return Position_Pid_Calculate(Motor->PIDUint.position);
+}
+static float Ts = 1;
+float FOC_getVelocity(FOC_Motor *Motor) {
+    Motor->api_getMotorAngle(&Motor->angle_pi, &Motor->angle_f);
+    Motor->speedUint.angle_now = Motor->angle_pi;
+
+    if(Motor->speedUint.angle_old == 0){
+        Motor->speedUint.angle_old = Motor->speedUint.angle_now;
+        return 0;
+    }
+
+    float delta_angle = (Motor->speedUint.angle_now - Motor->speedUint.angle_old);
+
+    if (delta_angle >= 1.6f * M_PI){
+        delta_angle -= 2.0f * (float)M_PI;
+    }
+    if (delta_angle <= -1.6f * M_PI){
+        delta_angle += 2.0f * (float)M_PI;
+    }
+
+    float vel_speed_ori = Motor->direct *  (delta_angle) / (float)Ts ;
+
+    Motor->speedUint.angle_old = Motor->speedUint.angle_now;
+    Motor->speedUint.full_rotations_old = Motor->speedUint.full_rotations;
+
+    float vel_flit = Low_Pass_Filter(Motor->FilterUint.speed, vel_speed_ori, 0.6f);
+    Motor->PIDUint.speed->Actual = vel_flit;
+    Motor->speed = vel_flit;
+
+    return vel_flit;
+}
+
+//current sample version
+void FOC_Clarke_Park(float Ia, float Ib, float Ic, float angle, float *Id, float *Iq) {
+    // Clarke transform
+    float mid = (1.0f / 3) * (Ia + Ib + Ic);
+    float a = Ia - mid;
+    float b = Ib - mid;
+    float i_alpha = a;
+    float i_beta = _1_SQRT3 * a + _2_SQRT3 * b;
+
+    // Park transform
+    float ct = cos(angle);
+    float st = sin(angle);
+    *Id = i_alpha * ct + i_beta * st;
+    *Iq = i_beta * ct - i_alpha * st;
 }
 
 void FOC_SVPWM(FOC_Motor *Motor, float Uq, float Ud, float angle) {
@@ -186,147 +341,4 @@ void FOC_SVPWM(FOC_Motor *Motor, float Uq, float Ud, float angle) {
 
     // Ta, Tb, Tc range [0,1]
     Motor->api_writeDutyCyclePWM(Ta, Tb, Tc);
-}
-
-//current sample version
-void FOC_Clarke_Park(float Ia, float Ib, float Ic, float angle, float *Id, float *Iq) {
-    // Clarke transform
-    float mid = (1.f / 3) * (Ia + Ib + Ic);
-    float a = Ia - mid;
-    float b = Ib - mid;
-    float i_alpha = a;
-    float i_beta = _1_SQRT3 * a + _2_SQRT3 * b;
-
-    // Park transform
-    float ct = cos(angle);
-    float st = sin(angle);
-    *Id = i_alpha * ct + i_beta * st;
-    *Iq = i_beta * ct - i_alpha * st;
-}
-
-//设置相电压
-void setPhaseVoltage(FOC_Motor *Motor, float Uq, float Ud, float angle_elec) {
-    angle_elec = _normalizeAngle(angle_elec);
-    // 帕克逆变换
-    float Ualpha = -Uq * sin(angle_elec);
-    float Ubeta = Uq * cos(angle_elec);
-
-    // 克拉克逆变换
-    float Ua = Ualpha + voltage_power_supply / 2;
-    float Ub = (_SQRT3 * Ubeta - Ualpha) / 2 + voltage_power_supply / 2;
-    float Uc = (-Ualpha - _SQRT3 * Ubeta) / 2 + voltage_power_supply / 2;
-
-    setPWM(Motor, Ua, Ub, Uc);
-}
-
-//开环速度函数
-float velocityOpenLoop(FOC_Motor *Motor, float target_velocity) {
-    unsigned long now_us = HAL_GetTick();  //获取从开启芯片以来的微秒数，它的精度是 1ms
-
-    //计算当前每个Loop的运行时间间隔
-    float Ts = (now_us - open_loop_timestamp) * 1e-3f;
-
-    // 通过乘以时间间隔和目标速度来计算需要转动的机械角度，存储在 Motor->shaft_angle 变量中。在此之前，还需要对轴角度进行归一化，以确保其值在 0 到 2π 之间。
-    Motor->shaft_angle = _normalizeAngle(Motor->shaft_angle + target_velocity * Ts);
-    //以目标速度为 10 rad/s 为例，如果时间间隔是 1 秒，则在每个循环中需要增加 10 * 1 = 10 弧度的角度变化量，才能使电机转动到目标速度。
-    //如果时间间隔是 0.1 秒，那么在每个循环中需要增加的角度变化量就是 10 * 0.1 = 1 弧度，才能实现相同的目标速度。因此，电机轴的转动角度取决于目标速度和时间间隔的乘积。
-
-    // 使用早前设置的voltage_power_supply的1/3作为Uq值，这个值会直接影响输出力矩
-    // 最大只能设置为Uq = voltage_power_supply/2，否则ua,ub,uc会超出供电电压限幅
-    float Uq = voltage_power_supply / 9.0f;
-
-#if FOC_MODE == mode_SPWM
-    setPhaseVoltage(Motor, Uq, 0, _electricalAngle(Motor, Motor->shaft_angle, Motor->PolePair));
-#else
-    FOC_SVPWM(Motor, Uq, 0, _electricalAngle(Motor, Motor->shaft_angle, Motor->PolePair));
-#endif
-    open_loop_timestamp = now_us;  //用于计算下一个时间间隔
-
-    return Uq;
-}
-
-//================简易接口函数================
-void FOC_M0_set_Velocity_Angle(FOC_Motor *Motor, float Target) {
-    Motor->api_getMotorAngle(&Motor->angle_pi, &Motor->angle_f);
-    _normalizeAngle(Target);
-    Motor->PIDUint.position->Target = Target;
-    float angle_error = _normalizeAngle(Target - Motor->angle_pi * (float)Motor->direct);
-
-    if(angle_error > M_PI){
-        angle_error -= 2 * _PI;
-    }
-
-    Motor->Uq = _constrain( FOC_M0_ANGLE_PID(Motor, angle_error * 180.0f / _PI),
-                            Motor->PIDUint.position->OutputMin, Motor->PIDUint.position->OutputMax);
-    Motor->electrical_angle = _electricalAngle(Motor, Motor->angle_pi, Motor->PolePair);
-
-#if FOC_MODE == mode_SPWM
-    setTorque(Motor, Motor->Uq, Motor->electrical_angle);   //角度闭环
-#else
-    FOC_SVPWM(Motor,  Motor->Uq,0, Motor->electrical_angle);
-#endif
-}
-
-void FOC_M0_setVelocity(FOC_Motor *Motor, float Target) {
-    Motor->PIDUint.speed->Target = Target;
-    FOC_M0_Velocity(Motor);
-    Motor->api_getMotorAngle(&Motor->angle_pi, &Motor->angle_f);
-
-    Motor->Uq = _constrain( FOC_M0_VEL_PID(Motor, (Motor->PIDUint.speed->Target - Motor->PIDUint.speed->Actual)),
-                            Motor->PIDUint.speed->OutputMin, Motor->PIDUint.speed->OutputMax);
-    Motor->electrical_angle = _electricalAngle(Motor, Motor->angle_pi, Motor->PolePair);
-
-#if FOC_MODE == mode_SPWM
-
-#else
-    FOC_SVPWM(Motor, Motor->Uq,0, Motor->electrical_angle);   //速度闭环
-#endif
-}
-
-void FOC_current_control_loop(FOC_Motor *Motor, float target_Iq){
-    Motor->api_getMotorAngle(&Motor->angle_pi, &Motor->angle_f);
-    Motor->electrical_angle = _electricalAngle(Motor, Motor->angle_pi, Motor->PolePair);
-    // Current sense
-    _currentGetValue(Motor->current);
-    FOC_Clarke_Park(Motor->current[0], Motor->current[1], Motor->current[2], Motor->electrical_angle, &Motor->Id, &Motor->Iq);
-
-    Motor->Id = Low_Pass_Filter(Motor->FilterUint.current_d, Motor->Id, 0.6f);
-    Motor->Iq = Low_Pass_Filter(Motor->FilterUint.current_q, Motor->Iq, 0.6f);
-
-    // back feed
-    Motor->PIDUint.Uq->Error = target_Iq - Motor->Iq;
-    Motor->Uq = Position_Pid_Calculate(Motor->PIDUint.Uq);
-    Motor->PIDUint.Ud->Error = -Motor->Id;
-    Motor->Ud = Position_Pid_Calculate(Motor->PIDUint.Ud);
-
-    // front feed
-    Motor->Uq += 0.008f * Motor->Iq;
-
-    FOC_SVPWM(Motor, Motor->Uq, Motor->Ud, Motor->electrical_angle);
-
-//    uart_printf("%.1f,%.1f,%.1f,%.1f,%.1f\n", cs_value[0], cs_value[1], cs_value[2], Id, Iq);
-}
-
-float FOC_M0_Velocity(FOC_Motor *Motor) {
-    static int Ts = 1;
-    Motor->api_getMotorAngle(&Motor->angle_pi, &Motor->angle_f);
-    Motor->speedUint.angle_now = Motor->angle_pi;
-
-    float delta_angle = Motor->speedUint.angle_now - Motor->speedUint.angle_old;
-
-    if(abs((int)delta_angle) > (1.6f * _PI)){
-        Motor->speedUint.full_rotations += (delta_angle > 0 )? -1 : 1;
-    }
-
-    float vel_speed_ori = ((Motor->speedUint.full_rotations - Motor->speedUint.full_rotations_old) * (_PI * 2)
-            + (Motor->speedUint.angle_now - Motor->speedUint.angle_old)) / (float)Ts ;
-
-    Motor->speedUint.angle_old = Motor->speedUint.angle_now;
-    Motor->speedUint.full_rotations_old = Motor->speedUint.full_rotations;
-
-    float vel_M0_flit = Low_Pass_Filter(Motor->FilterUint.speed, Motor->direct * vel_speed_ori, 0.7f);
-    Motor->PIDUint.speed->Actual = vel_M0_flit;
-    Motor->speed = vel_M0_flit;
-
-    return vel_M0_flit;
 }

@@ -32,4 +32,6 @@ void _initCurrentSample();
  */
 void _currentGetValue(float *cs_value);
 
+void _currentGetValue2(float *cs_value);
+
 #endif //FOC_CONTROL_HARDWARE_API_H

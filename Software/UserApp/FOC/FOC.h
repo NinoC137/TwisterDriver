@@ -20,8 +20,8 @@
 typedef struct{
     float angle_now;
     float angle_old;
-    float full_rotations;
-    float full_rotations_old;
+    int full_rotations;
+    int full_rotations_old;
     long timeStamp;
     long timeStamp_old;
 }FOC_calculateUint;
@@ -88,13 +88,10 @@ extern FOC_Motor FOCMotor_Left;
 extern FOC_Motor FOCMotor_Right;
 
 //传感器读取
-float FOC_M0_Velocity(FOC_Motor *Motor);
-float FOC_M0_Angle(FOC_Motor *Motor);
+float FOC_getVelocity(FOC_Motor *Motor);
 //PID
-void FOC_M0_SET_ANGLE_PID(FOC_Motor *Motor, float P, float I, float D, float ramp);
-void FOC_M0_SET_VEL_PID(FOC_Motor *Motor, float P, float I, float D, float ramp);
-float FOC_M0_VEL_PID(FOC_Motor *Motor, float error);
-float FOC_M0_ANGLE_PID(FOC_Motor *Motor, float error);
+float FOC_VEL_PID(FOC_Motor *Motor, float error);
+float FOC_ANGLE_PID(FOC_Motor *Motor, float error);
 
 //电角度求解
 float _electricalAngle(FOC_Motor *Motor, float shaft_angle, int pole_pairs);
@@ -133,7 +130,7 @@ void FOC_Vbus(float _Vbus);
 void FOC_alignSensor(FOC_Motor *Motor, int _PP, int _DIR);
 
 //闭环控制接口函数
-void FOC_M0_set_Velocity_Angle(FOC_Motor *Motor, float Target);
-void FOC_M0_setVelocity(FOC_Motor *Motor, float Target);
+void FOC_setVelocityAngle(FOC_Motor *Motor, float Target);
+void FOC_setVelocity(FOC_Motor *Motor, float Target);
 
 #endif

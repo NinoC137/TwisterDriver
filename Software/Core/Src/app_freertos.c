@@ -41,6 +41,8 @@
 /* USER CODE BEGIN PM */
 float targetAngle_left = 60;
 float targetAngle_right = 0;
+float targetMotorSpeed_Left;
+float targetMotorSpeed_Right;
 /* USER CODE END PM */
 
 /* Private variables ---------------------------------------------------------*/
@@ -55,32 +57,49 @@ float targetAngle_right = 0;
 
 /* Private application code --------------------------------------------------*/
 /* USER CODE BEGIN Application */
-void FOCTask(void const *argument) {
-    float angle_p, angle_f;
-
+void FOC_LeftTask(void const *argument) {
     Pid_Value_Init();
-
     HAL_GPIO_WritePin(Driver1_EN_GPIO_Port, Driver1_EN_Pin, 1);
-    HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_1);
-    HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_2);
-    HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_3);
 
-    HAL_GPIO_WritePin(Driver2_EN_GPIO_Port, Driver2_EN_Pin, 1);
-    HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_1);
-    HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_2);
-    HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_3);
-
-    FOC_Vbus(12.0f);
+    FOC_Vbus(12.3f);    //3s 电池
     FOC_alignSensor(&FOCMotor_Left, 7, -1);
-    FOC_alignSensor(&FOCMotor_Right, 7, 1);
 
     for (;;) {
 //        velocityOpenLoop(&FOCMotor_Left,20);
-//        FOC_M0_set_Velocity_Angle(&FOCMotor_Left, targetAngle_right);
-//        FOC_M0_set_Velocity_Angle(&FOCMotor_Right, targetAngle_right);
-        FOC_M0_setVelocity(&FOCMotor_Left, targetAngle_right);
-        FOC_M0_setVelocity(&FOCMotor_Right, targetAngle_right);
-        osDelay(1);
+//        FOC_setVelocityAngle(&FOCMotor_Left, targetAngle_right);
+        FOC_setVelocity(&FOCMotor_Left, targetMotorSpeed_Left);
+        FOCMotor_Left.api_getMotorCurrent(FOCMotor_Left.current);
+        osDelay(3);
+    }
+}
+
+void FOC_RightTask(void const *argument) {
+    Pid_Value_Init();
+    FOC_Vbus(12.3f);    //3s 电池
+    HAL_GPIO_WritePin(Driver2_EN_GPIO_Port, Driver2_EN_Pin, 1);
+    FOC_alignSensor(&FOCMotor_Right, 7, 1);
+    for (;;) {
+//        velocityOpenLoop(&FOCMotor_Right,20);
+//        FOC_setVelocityAngle(&FOCMotor_Right, targetAngle_right);
+        FOC_setVelocity(&FOCMotor_Right, targetMotorSpeed_Right);
+        FOCMotor_Right.api_getMotorCurrent(FOCMotor_Right.current);
+        osDelay(3);
+    }
+}
+
+void ServoTask(void const *argument) {
+    Servo_init();
+
+    setAngle_270(&Servo_LeftLeg, 60);
+    setAngle_270(&Servo_RightLeg, 5);
+    osDelay(500);
+
+    for (;;) {
+        uart3_printf("%f,%f,%f,%f,%f,%f\n",FOCMotor_Left.current[0], FOCMotor_Left.current[1], FOCMotor_Left.current[2],
+                     FOCMotor_Right.current[0], FOCMotor_Right.current[1], FOCMotor_Right.current[2]);
+//        setAngle_270(&Servo_LeftLeg, targetAngle_left);
+//        setAngle_270(&Servo_RightLeg, targetAngle_right);
+        osDelay(50);
     }
 }
 
@@ -100,10 +119,6 @@ void UARTTask(void const *argument) {
     t_JsonPackage *JsonBuffer = NULL;
 
     for (;;) {
-//        float currentSpeed = FOC_M0_Velocity() * 180.0f / _PI;
-//        uart_printf("Motor1 speed: %d\t",(int)currentSpeed);
-//        uart_printf("Motor1 angle: %d\r\n",(int)angle_pi);
-
         JsonQueueEvt = osMessageGet(JsonQueueHandle, osWaitForever);
 
         if(JsonQueueEvt.status == osEventMessage){
@@ -118,23 +133,6 @@ void UARTTask(void const *argument) {
 void CANTask(void const *argument) {
     for (;;) {
         osDelay(1000);
-    }
-}
-
-void ServoTask(void const *argument) {
-    Servo_init();
-
-    osDelay(500);
-
-    setAngle_270(&Servo_LeftLeg, 60);
-    setAngle_270(&Servo_RightLeg, 5);
-
-    uart_printf("Servo init.\r\n");
-
-    for (;;) {
-        setAngle_270(&Servo_LeftLeg, targetAngle_left);
-        setAngle_270(&Servo_RightLeg, targetAngle_right);
-        osDelay(300);
     }
 }
 

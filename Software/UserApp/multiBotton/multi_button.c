@@ -14,9 +14,6 @@ struct Button KEY4;
 struct Button KEY5;
 struct Button KEY6;
 
-extern float targetAngle_left;
-extern float targetAngle_right;
-
 //button handle list head.
 static struct Button *head_handle = NULL;
 
@@ -225,6 +222,7 @@ uint8_t read_KEY6_GPIO() {
     return HAL_GPIO_ReadPin(ENCD_KEY_GPIO_Port, ENCD_KEY_Pin);
 }
 
+extern float targetAngle_left, targetAngle_right;
 static void angleReduce(){
     if(targetAngle_left > 0 && targetAngle_right > 0)
     {
@@ -240,6 +238,27 @@ static void angleIncrease(){
     uart_printf("leg angle : %d\r\n", (int)targetAngle_left);
 }
 
+extern float targetMotorSpeed_Left, targetMotorSpeed_Right;
+static void speedReduce(){
+    targetMotorSpeed_Left -= 0.02f;
+    targetMotorSpeed_Right -= 0.02f;
+}
+
+static void speedIncrease(){
+    targetMotorSpeed_Left += 0.02f;
+    targetMotorSpeed_Right += 0.02f;
+}
+
+static void speedClean(){
+    targetMotorSpeed_Left = 0;
+    targetMotorSpeed_Right = 0;
+}
+
+static void speedReverse(){
+    targetMotorSpeed_Left = (-targetMotorSpeed_Left);
+    targetMotorSpeed_Right = (-targetMotorSpeed_Right);
+}
+
 void KEY1_PRESS_DOWN_Handler(void *btn){
 //    HAL_UART_Transmit(&huart1, "KEY1 Press.\n", sizeof("KEY2 Press.\n") - 1, 100);
     angleReduce();
@@ -247,11 +266,12 @@ void KEY1_PRESS_DOWN_Handler(void *btn){
 
 void KEY2_PRESS_DOWN_Handler(void *btn){
 //    HAL_UART_Transmit(&huart1, "KEY2 Press.\n", sizeof("KEY2 Press.\n") - 1, 100);
-    angleReduce();
+    speedReduce();
 }
 
 void KEY3_PRESS_DOWN_Handler(void *btn) {
 //    HAL_UART_Transmit(&huart1, "KEY3 Press.\n", sizeof("KEY2 Press.\n") - 1, 100);
+    speedIncrease();
 }
 
 void KEY4_PRESS_DOWN_Handler(void *btn) {
@@ -261,9 +281,10 @@ void KEY4_PRESS_DOWN_Handler(void *btn) {
 
 void KEY5_PRESS_DOWN_Handler(void *btn) {
 //    HAL_UART_Transmit(&huart1, "KEY5 Press.\n", sizeof("KEY2 Press.\n") - 1, 100);
-    angleIncrease();
+    speedClean();
 }
 
 void KEY6_PRESS_DOWN_Handler(void *btn) {
 //    HAL_UART_Transmit(&huart1, "Encounter Press.\n", sizeof("Encounter Press.\n") - 1, 100);
+    speedReverse();
 }
