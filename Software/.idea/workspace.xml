@@ -20,15 +20,11 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0e2c7c2d-a2ac-461a-be57-7a8b8cadda32" name="Changes" comment="实现了FOC的面向对象结构及双路FOC的驱动, 包括位置环与速度环闭环控制">
+    <list default="true" id="0e2c7c2d-a2ac-461a-be57-7a8b8cadda32" name="Changes" comment="实现了双路闭环控制, 完成了双路电流的采样, 未做电压偏置的处理">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Inc/main.h" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Inc/main.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Inc/stm32g4xx_it.h" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Inc/stm32g4xx_it.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Inc/FreeRTOSConfig.h" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Inc/FreeRTOSConfig.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Core/Src/app_freertos.c" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Src/app_freertos.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Core/Src/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Src/main.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Src/stm32g4xx_hal_msp.c" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Src/stm32g4xx_hal_msp.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Src/stm32g4xx_it.c" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Src/stm32g4xx_it.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TwisterDriver.ioc" beforeDir="false" afterPath="$PROJECT_DIR$/TwisterDriver.ioc" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserApp/FOC/FOC.c" beforeDir="false" afterPath="$PROJECT_DIR$/UserApp/FOC/FOC.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserApp/FOC/FOC.h" beforeDir="false" afterPath="$PROJECT_DIR$/UserApp/FOC/FOC.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserApp/FOC/Filter.c" beforeDir="false" afterPath="$PROJECT_DIR$/UserApp/FOC/Filter.c" afterDir="false" />
@@ -36,11 +32,9 @@
       <change beforePath="$PROJECT_DIR$/UserApp/FOC/hardware_api.c" beforeDir="false" afterPath="$PROJECT_DIR$/UserApp/FOC/hardware_api.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserApp/FOC/hardware_api.h" beforeDir="false" afterPath="$PROJECT_DIR$/UserApp/FOC/hardware_api.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserApp/FOC/my_PID.c" beforeDir="false" afterPath="$PROJECT_DIR$/UserApp/FOC/my_PID.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserApp/Servo/Servo.c" beforeDir="false" afterPath="$PROJECT_DIR$/UserApp/Servo/Servo.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserApp/FOC/my_PID.h" beforeDir="false" afterPath="$PROJECT_DIR$/UserApp/FOC/my_PID.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserApp/cJsonParse/cmd_Parse.c" beforeDir="false" afterPath="$PROJECT_DIR$/UserApp/cJsonParse/cmd_Parse.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserApp/multiBotton/multi_button.c" beforeDir="false" afterPath="$PROJECT_DIR$/UserApp/multiBotton/multi_button.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.25.2/CMakeDetermineCompilerABI_C.bin" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.25.2/CMakeDetermineCompilerABI_C.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.25.2/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.25.2/CMakeDetermineCompilerABI_CXX.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/TwisterDriver.bin" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/TwisterDriver.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/TwisterDriver.elf" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/TwisterDriver.elf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/TwisterDriver.hex" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/TwisterDriver.hex" afterDir="false" />
@@ -123,11 +117,6 @@
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="TwisterDriver.elf" type="com.jetbrains.cidr.embedded.openocd.conf.type" factoryName="com.jetbrains.cidr.embedded.openocd.conf.factory" nameIsGenerated="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="TwisterDriver" TARGET_NAME="TwisterDriver.elf" CONFIG_NAME="Debug" version="1" RUN_TARGET_PROJECT_NAME="TwisterDriver" RUN_TARGET_NAME="TwisterDriver.elf">
       <openocd version="1" gdb-port="3333" telnet-port="4444" board-config="E:\Clion_for_STM32\TwisterDriver\Software\stm32g4x.cfg" reset-type="INIT" download-type="UPDATED_ONLY">
         <debugger kind="GDB" isBundled="true" />
@@ -168,7 +157,8 @@
       <workItem from="1710146185180" duration="7123000" />
       <workItem from="1710164837254" duration="3127000" />
       <workItem from="1710209932490" duration="14606000" />
-      <workItem from="1710298108971" duration="29525000" />
+      <workItem from="1710298108971" duration="30788000" />
+      <workItem from="1710383376616" duration="9379000" />
     </task>
     <task id="LOCAL-00001" summary="实现了SVPWM下的FOC闭环位置环控制, 效果稳定不抖动">
       <option name="closed" value="true" />
@@ -226,7 +216,15 @@
       <option name="project" value="LOCAL" />
       <updated>1710225354751</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="实现了双路闭环控制, 完成了双路电流的采样, 未做电压偏置的处理">
+      <option name="closed" value="true" />
+      <created>1710340048578</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1710340048578</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -257,7 +255,8 @@
     <MESSAGE value="规范了JSON数据包的格式, 待填充代码实现部分" />
     <MESSAGE value="完成了部分JSON解析的内部实现及测试,下一步进行FOC的面向对象编程" />
     <MESSAGE value="实现了FOC的面向对象结构及双路FOC的驱动, 包括位置环与速度环闭环控制" />
-    <option name="LAST_COMMIT_MESSAGE" value="实现了FOC的面向对象结构及双路FOC的驱动, 包括位置环与速度环闭环控制" />
+    <MESSAGE value="实现了双路闭环控制, 完成了双路电流的采样, 未做电压偏置的处理" />
+    <option name="LAST_COMMIT_MESSAGE" value="实现了双路闭环控制, 完成了双路电流的采样, 未做电压偏置的处理" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -273,9 +272,9 @@
       <configuration name="com.jetbrains.cidr.embedded.openocd.conf.type">
         <watch expression="FOCMotor_Left" />
         <watch expression="FOCMotor_Right" />
-        <watch expression="HAL_ADC_GetValue(&amp;hadc1)" />
         <watch expression="cs1_zero_value" />
         <watch expression="cs2_zero_value" />
+        <watch expression="targetMotorSpeed_Right" />
       </configuration>
     </watches-manager>
   </component>

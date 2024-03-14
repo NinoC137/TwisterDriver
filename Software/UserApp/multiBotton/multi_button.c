@@ -229,13 +229,13 @@ static void angleReduce(){
         targetAngle_left += 1;
         targetAngle_right -= 1;
     }
-    uart_printf("leg angle : %d\r\n", (int)targetAngle_left);
+//    uart_printf("leg angle : %d\r\n", (int)targetAngle_left);
 }
 
 static void angleIncrease(){
     targetAngle_left -= 1;
     targetAngle_right += 1;
-    uart_printf("leg angle : %d\r\n", (int)targetAngle_left);
+//    uart_printf("leg angle : %d\r\n", (int)targetAngle_left);
 }
 
 extern float targetMotorSpeed_Left, targetMotorSpeed_Right;

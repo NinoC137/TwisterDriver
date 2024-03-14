@@ -66,23 +66,25 @@ void FOC_LeftTask(void const *argument) {
 
     for (;;) {
 //        velocityOpenLoop(&FOCMotor_Left,20);
-//        FOC_setVelocityAngle(&FOCMotor_Left, targetAngle_right);
+//        FOC_setAngle(&FOCMotor_Left, targetAngle_right);
         FOC_setVelocity(&FOCMotor_Left, targetMotorSpeed_Left);
-        FOCMotor_Left.api_getMotorCurrent(FOCMotor_Left.current);
+//        FOC_setVelocityAngle(&FOCMotor_Left, targetAngle_left, 0.06f);
+//        FOC_current_control_loop(&FOCMotor_Left, targetMotorSpeed_Left);
         osDelay(3);
     }
 }
 
 void FOC_RightTask(void const *argument) {
-    Pid_Value_Init();
-    FOC_Vbus(12.3f);    //3s 电池
+//    Pid_Value_Init();
+//    FOC_Vbus(12.3f);    //3s 电池
     HAL_GPIO_WritePin(Driver2_EN_GPIO_Port, Driver2_EN_Pin, 1);
     FOC_alignSensor(&FOCMotor_Right, 7, 1);
     for (;;) {
 //        velocityOpenLoop(&FOCMotor_Right,20);
-//        FOC_setVelocityAngle(&FOCMotor_Right, targetAngle_right);
+//        FOC_setAngle(&FOCMotor_Right, targetAngle_right);
         FOC_setVelocity(&FOCMotor_Right, targetMotorSpeed_Right);
-        FOCMotor_Right.api_getMotorCurrent(FOCMotor_Right.current);
+//        FOC_setVelocityAngle(&FOCMotor_Right, targetAngle_right, 0.06f);
+//        FOC_current_control_loop(&FOCMotor_Right, targetMotorSpeed_Right);
         osDelay(3);
     }
 }
@@ -95,8 +97,7 @@ void ServoTask(void const *argument) {
     osDelay(500);
 
     for (;;) {
-        uart3_printf("%f,%f,%f,%f,%f,%f\n",FOCMotor_Left.current[0], FOCMotor_Left.current[1], FOCMotor_Left.current[2],
-                     FOCMotor_Right.current[0], FOCMotor_Right.current[1], FOCMotor_Right.current[2]);
+        uart3_printf("%f,%f\n",FOCMotor_Left.Iq, FOCMotor_Right.Iq);
 //        setAngle_270(&Servo_LeftLeg, targetAngle_left);
 //        setAngle_270(&Servo_RightLeg, targetAngle_right);
         osDelay(50);

@@ -36,15 +36,11 @@ extern PID Motor_Left_speed;
 extern PID Motor_Left_position;
 extern PID Motor_Left_Uq;
 extern PID Motor_Left_Ud;
-extern PID Motor_Left_Iq;
-extern PID Motor_Left_Id;
 
 extern PID Motor_Right_speed;
 extern PID Motor_Right_position;
 extern PID Motor_Right_Uq;
 extern PID Motor_Right_Ud;
-extern PID Motor_Right_Iq;
-extern PID Motor_Right_Id;
 
 void Pid_Value_Init(void);
 void Pid_Init(PID *param,float Kp_Init,float Ki_Init,float Kd_Init);

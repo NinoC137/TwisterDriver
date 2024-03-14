@@ -7,6 +7,9 @@
 
 #include "FOC_math.h"
 
+#define CURRENT_GAIN 50.0f
+#define CURRENT_SAMPLE_REGISTER 0.01f
+
 void _init3PWM();
 
 /**
@@ -23,6 +26,8 @@ void _writeDutyCycle3PWM_1(float dc_a, float dc_b, float dc_c);
 void _writeDutyCycle3PWM_2(float dc_a, float dc_b, float dc_c);
 
 void _initCurrentSample();
+
+void _getCurrentZeroValue(uint32_t *cs1_zero_value, uint32_t *cs2_zero_value);
 
 /**
  * Function getting the value of current. (ex. getAnalogValue())

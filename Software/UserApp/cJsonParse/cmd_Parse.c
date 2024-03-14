@@ -8,6 +8,7 @@ void cmd_startParse(char* JsonString){
     cJSON *root = cJSON_Parse(JsonString);
     if(root == NULL){
         JSON_response("Error before: [%s]\n", cJSON_GetErrorPtr());
+        return;
     }
     cJSON *cmd = cJSON_GetObjectItem(root, "cmd");
     switch (cmd->valueint) {
@@ -61,7 +62,10 @@ void res_sendHeartBeat(){
 
 void cmd_setAngularDeviation(cJSON* root){
     cJSON *cmd_Deviation = cJSON_GetObjectItem(root, "Deviation");
-    //TODO:对角度误差进行处理
+    if(cmd_Deviation == NULL){
+        JSON_response("Error before: [%s]\n", cJSON_GetErrorPtr());
+        return;
+    }
     JSON_response("get Deviation: %d\r\n", cmd_Deviation->valueint);
 
     cJSON *response_root = cJSON_CreateObject();
@@ -79,6 +83,10 @@ void cmd_setAngularDeviation(cJSON* root){
 void cmd_setMotorAngle(cJSON *root){
     cJSON *cmd_AngleLeft = cJSON_GetObjectItem(root, "MotorAngle_Left");
     cJSON *cmd_AngleRight = cJSON_GetObjectItem(root, "MotorAngle_Right");
+    if(cmd_AngleLeft == NULL || cmd_AngleRight == NULL){
+        JSON_response("Error before: [%s]\n", cJSON_GetErrorPtr());
+        return;
+    }
 
     //TODO:在这里添加消息队列, 使得FOC线程及时获取最新的目标角度
 
@@ -99,6 +107,10 @@ void cmd_setMotorAngle(cJSON *root){
 void cmd_setServoAngle(cJSON* root){
     cJSON *cmd_AngleLeft = cJSON_GetObjectItem(root, "ServoAngle_Left");
     cJSON *cmd_AngleRight = cJSON_GetObjectItem(root, "ServoAngle_Right");
+    if(cmd_AngleLeft == NULL || cmd_AngleRight == NULL){
+        JSON_response("Error before: [%s]\n", cJSON_GetErrorPtr());
+        return;
+    }
 
     setAngle_270(&Servo_LeftLeg, (float)cmd_AngleLeft->valueint);
     setAngle_180(&Servo_RightLeg,(float)cmd_AngleRight->valueint);
@@ -171,6 +183,10 @@ void cmd_getSystemMode(cJSON* root){
 
 void cmd_setHeartBeat(cJSON* root){
     cJSON *cmd_beatTime_ms = cJSON_GetObjectItem(root, "beatTime_ms");
+    if(cmd_beatTime_ms == NULL){
+        JSON_response("Error before: [%s]\n", cJSON_GetErrorPtr());
+        return;
+    }
     sysLog.beatTime_ms = cmd_beatTime_ms->valueint;
 
     cJSON *response_root = cJSON_CreateObject();

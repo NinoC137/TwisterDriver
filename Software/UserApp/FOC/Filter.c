@@ -15,8 +15,8 @@ LowPass_Filter lpf_Motor_Right_Id;
 Slide_Filter wsf_Motor_Left_speed;
 Slide_Filter wsf_Motor_Right_speed;
 
-Sliding_Mean_Filter moving_filter_LeftSpeed;
-Sliding_Mean_Filter moving_filter_RightSpeed;
+Sliding_Mean_Filter moving_filter_cs1ZeroValue;
+Sliding_Mean_Filter moving_filter_cs2ZeroValue;
 
 float FirstOrderLagFilter(float value) {
     static float last_value;

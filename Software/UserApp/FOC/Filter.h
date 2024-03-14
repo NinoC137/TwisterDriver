@@ -2,7 +2,7 @@
 #define CODE_FILTER_H_
 
 #define FIRST_LAG_P 0.8f        //һ���ͺ��˲�ϵ����ԽС�ͺ�Ч��Խǿ
-#define MVF_BUFFER 8
+#define MVF_BUFFER 10
 
 typedef struct
 {
@@ -69,8 +69,8 @@ typedef struct
 extern Slide_Filter wsf_Motor_Left_speed;
 extern Slide_Filter wsf_Motor_Right_speed;
 
-extern Sliding_Mean_Filter moving_filter_LeftSpeed;
-extern Sliding_Mean_Filter moving_filter_RightSpeed;
+extern Sliding_Mean_Filter moving_filter_cs1ZeroValue;
+extern Sliding_Mean_Filter moving_filter_cs2ZeroValue;
 
 float Window_Slide_Filter(Slide_Filter *filter,float data);
 float Low_Pass_Filter(LowPass_Filter *filter,float data,float param);

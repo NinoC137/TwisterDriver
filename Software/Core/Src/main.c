@@ -119,8 +119,8 @@ osThreadId ServoTaskHandle;
 osMutexDef(printfMutex);
 osMutexId printfMutex;
 
-osPoolDef(JsonQ_Mem, 16, t_JsonPackage);
-osMessageQDef(JsonQueue, 16, uint32_t);
+osPoolDef(JsonQ_Mem, 5, t_JsonPackage);
+osMessageQDef(JsonQueue, 5, uint32_t);
 osPoolId JsonQ_Mem;
 osMessageQId JsonQueueHandle;
 
@@ -1089,11 +1089,11 @@ void StartDefaultTask(void const * argument)
 
     osThreadDef(ButtonTask, ButtonTask, osPriorityNormal, 0, 128);
 //    osThreadDef(LCDTask, LCDTask, osPriorityNormal, 0, 512);
-    osThreadDef(UARTTask, UARTTask, osPriorityNormal, 0, 600);
+    osThreadDef(UARTTask, UARTTask, osPriorityNormal, 0, 1024);
 //    osThreadDef(CANTask, CANTask, osPriorityNormal, 0, 512);
-    osThreadDef(FOC_LeftTask, FOC_LeftTask, osPriorityAboveNormal, 0, 512);
-    osThreadDef(FOC_RightTask, FOC_RightTask, osPriorityAboveNormal, 0, 512);
-    osThreadDef(ServoTask, ServoTask, osPriorityAboveNormal, 0, 512);
+    osThreadDef(FOC_LeftTask, FOC_LeftTask, osPriorityAboveNormal, 0, 2048);
+    osThreadDef(FOC_RightTask, FOC_RightTask, osPriorityAboveNormal, 0, 2048);
+    osThreadDef(ServoTask, ServoTask, osPriorityAboveNormal, 0, 256);
 
     portENTER_CRITICAL();
     ButtonTaskHandle = osThreadCreate(osThread(ButtonTask), NULL);
