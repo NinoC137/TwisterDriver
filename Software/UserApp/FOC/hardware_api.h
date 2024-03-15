@@ -8,7 +8,7 @@
 #include "FOC_math.h"
 
 #define CURRENT_GAIN 50.0f
-#define CURRENT_SAMPLE_REGISTER 0.01f
+#define CURRENT_SAMPLE_RESISTER 0.01f
 
 void _init3PWM();
 

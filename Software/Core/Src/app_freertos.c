@@ -65,11 +65,11 @@ void FOC_LeftTask(void const *argument) {
     FOC_alignSensor(&FOCMotor_Left, 7, -1);
 
     for (;;) {
-//        velocityOpenLoop(&FOCMotor_Left,20);
+//        velocityOpenLoop(&FOCMotor_Left,10);
+//        FOCMotor_Left.api_getMotorCurrent(FOCMotor_Left.current);
 //        FOC_setAngle(&FOCMotor_Left, targetAngle_right);
-        FOC_setVelocity(&FOCMotor_Left, targetMotorSpeed_Left);
-//        FOC_setVelocityAngle(&FOCMotor_Left, targetAngle_left, 0.06f);
-//        FOC_current_control_loop(&FOCMotor_Left, targetMotorSpeed_Left);
+//        FOC_setVelocity(&FOCMotor_Left, targetMotorSpeed_Left);
+        FOC_current_control_loop(&FOCMotor_Left, targetMotorSpeed_Left*10);
         osDelay(3);
     }
 }
@@ -80,11 +80,10 @@ void FOC_RightTask(void const *argument) {
     HAL_GPIO_WritePin(Driver2_EN_GPIO_Port, Driver2_EN_Pin, 1);
     FOC_alignSensor(&FOCMotor_Right, 7, 1);
     for (;;) {
-//        velocityOpenLoop(&FOCMotor_Right,20);
+//        velocityOpenLoop(&FOCMotor_Right,10);
 //        FOC_setAngle(&FOCMotor_Right, targetAngle_right);
-        FOC_setVelocity(&FOCMotor_Right, targetMotorSpeed_Right);
-//        FOC_setVelocityAngle(&FOCMotor_Right, targetAngle_right, 0.06f);
-//        FOC_current_control_loop(&FOCMotor_Right, targetMotorSpeed_Right);
+//        FOC_setVelocity(&FOCMotor_Right, targetMotorSpeed_Right);
+//        FOC_current_control_loop(&FOCMotor_Right, targetMotorSpeed_Right*10);
         osDelay(3);
     }
 }
@@ -92,12 +91,14 @@ void FOC_RightTask(void const *argument) {
 void ServoTask(void const *argument) {
     Servo_init();
 
+
     setAngle_270(&Servo_LeftLeg, 60);
     setAngle_270(&Servo_RightLeg, 5);
     osDelay(500);
 
     for (;;) {
-        uart3_printf("%f,%f\n",FOCMotor_Left.Iq, FOCMotor_Right.Iq);
+        uart3_printf("%f,%f,%f,%f,%f\n",FOCMotor_Left.current[0] , FOCMotor_Left.current[1], FOCMotor_Left.current[2],
+                     FOCMotor_Left.Iq,FOCMotor_Left.Id);
 //        setAngle_270(&Servo_LeftLeg, targetAngle_left);
 //        setAngle_270(&Servo_RightLeg, targetAngle_right);
         osDelay(50);

@@ -20,40 +20,40 @@ PID Motor_Right_Ud;
 *************************************************************************/
 void Pid_Value_Init(void)
 {
-    Pid_Init(&Motor_Left_position, 0.08f, 0.00f, 0.0f);
+    Pid_Init(&Motor_Left_position, 2.0f, 0.00f, 0.0f);
     Motor_Left_position.OutputMax = 6.0f;
     Motor_Left_position.OutputMin = -6.0f;
-    Motor_Left_position.IntegralMax = 3.0f;
+    Motor_Left_position.IntegralMax = 0.0f;
     Pid_Init(&Motor_Left_speed, 0.7f, 0.25f, 0.0f);
     Motor_Left_speed.OutputMax = 6.0f;
     Motor_Left_speed.OutputMin = -6.0f;
     Motor_Left_speed.IntegralMax = 16.0f;
 
-    Pid_Init(&Motor_Right_position, 0.08f, 0.00f, 0.0f);
+    Pid_Init(&Motor_Right_position, 2.0f, 0.00f, 0.0f);
     Motor_Right_position.OutputMax = 6.0f;
     Motor_Right_position.OutputMin = -6.0f;
-    Motor_Right_position.IntegralMax = 3.0f;
+    Motor_Right_position.IntegralMax = 0.0f;
     Pid_Init(&Motor_Right_speed, 0.7f, 0.25f, 0.0f);
     Motor_Right_speed.OutputMax = 6.0f;
     Motor_Right_speed.OutputMin = -6.0f;
     Motor_Right_speed.IntegralMax = 16.0f;
 
-    Pid_Init(&Motor_Left_Uq, 5.0f, 200.0f, 0.0f);
-    Motor_Left_Uq.OutputMax = 0.7f;
-    Motor_Left_Uq.OutputMin = -0.7f;
-    Motor_Left_Uq.IntegralMax = 0.04f;
-    Pid_Init(&Motor_Left_Ud, 5.0f, 200.0f, 0.0f);
-    Motor_Left_Ud.OutputMax = 0.7f;
-    Motor_Left_Ud.OutputMin = -0.7f;
-    Motor_Left_Ud.IntegralMax = 0.04f;
-    Pid_Init(&Motor_Right_Uq, 5.0f, 200.0f, 0.0f);
-    Motor_Right_Uq.OutputMax = 0.7f;
-    Motor_Right_Uq.OutputMin = -0.7f;
-    Motor_Right_Uq.IntegralMax = 0.04f;
-    Pid_Init(&Motor_Right_Ud, 5.0f, 200.0f, 0.0f);
-    Motor_Right_Ud.OutputMax = 0.7f;
-    Motor_Right_Ud.OutputMin = -0.7f;
-    Motor_Right_Ud.IntegralMax = 0.04f;
+    Pid_Init(&Motor_Left_Uq, 1.2f, 10.0f, 0.0f);
+    Motor_Left_Uq.OutputMax = 6.0f;
+    Motor_Left_Uq.OutputMin = -6.0f;
+//    Motor_Left_Uq.IntegralMax = 0.04f;
+    Pid_Init(&Motor_Left_Ud, 1.2f, 10.0f, 0.0f);
+    Motor_Left_Ud.OutputMax = 6.0f;
+    Motor_Left_Ud.OutputMin = -6.0f;
+//    Motor_Left_Ud.IntegralMax = 0.04f;
+    Pid_Init(&Motor_Right_Uq, 1.2f, 10.0f, 0.0f);
+    Motor_Right_Uq.OutputMax = 6.0f;
+    Motor_Right_Uq.OutputMin = -6.0f;
+//    Motor_Right_Uq.IntegralMax = 0.04f;
+    Pid_Init(&Motor_Right_Ud, 1.2f, 10.0f, 0.0f);
+    Motor_Right_Ud.OutputMax = 6.0f;
+    Motor_Right_Ud.OutputMin = -6.0f;
+//    Motor_Right_Ud.IntegralMax = 0.04f;
 }
 
 /*************************************************************************
@@ -94,7 +94,7 @@ float Position_Pid_Calculate(PID *param)
     /*位置式PID微分项的计算*/
     param->Differential = param->Error - param->Error_Last;
     /*位置式PID的输出*/
-    param->Output = (float)(param->Kp * param->Proportion + param->Ki * param->Integral +param->Kd * param->Differential);
+    param->Output = (float)(param->Kp * param->Proportion + param->Ki * param->Integral + param->Kd * param->Differential);
     if(param->OutputMin==0)param->OutputMin=-param->OutputMax;
     /*对位置式PID的输出进行限幅*/
     if(param->OutputMax!=0&&param->OutputMin!=0)

@@ -79,7 +79,7 @@ void cmd_setAngularDeviation(cJSON* root){
     cJSON_Delete(response_root);
     free(responseText);
 }
-
+extern float targetAngle_right;
 void cmd_setMotorAngle(cJSON *root){
     cJSON *cmd_AngleLeft = cJSON_GetObjectItem(root, "MotorAngle_Left");
     cJSON *cmd_AngleRight = cJSON_GetObjectItem(root, "MotorAngle_Right");
@@ -89,6 +89,7 @@ void cmd_setMotorAngle(cJSON *root){
     }
 
     //TODO:在这里添加消息队列, 使得FOC线程及时获取最新的目标角度
+    targetAngle_right = cmd_AngleRight->valuedouble;
 
     cJSON *response_root = cJSON_CreateObject();
     cJSON_AddItemToObject(response_root, "res", cJSON_CreateNumber(0));
