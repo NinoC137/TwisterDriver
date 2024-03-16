@@ -21,31 +21,23 @@ PID Motor_Right_Ud;
 void Pid_Value_Init(void)
 {
     Pid_Init(&Motor_Left_position, 2.0f, 0.00f, 0.0f);
-    Motor_Left_position.OutputMax = 6.0f;
-    Motor_Left_position.OutputMin = -6.0f;
-    Motor_Left_position.IntegralMax = 0.0f;
-    Pid_Init(&Motor_Left_speed, 0.7f, 0.25f, 0.0f);
-    Motor_Left_speed.OutputMax = 6.0f;
-    Motor_Left_speed.OutputMin = -6.0f;
-    Motor_Left_speed.IntegralMax = 16.0f;
+    Motor_Left_position.IntegralMax = 10.0f;
+    Pid_Init(&Motor_Left_speed, 0.08f, 0.008f, 0.0f);
+    Motor_Left_speed.IntegralMax = 6.0f;
 
     Pid_Init(&Motor_Right_position, 2.0f, 0.00f, 0.0f);
-    Motor_Right_position.OutputMax = 6.0f;
-    Motor_Right_position.OutputMin = -6.0f;
-    Motor_Right_position.IntegralMax = 0.0f;
-    Pid_Init(&Motor_Right_speed, 0.7f, 0.25f, 0.0f);
-    Motor_Right_speed.OutputMax = 6.0f;
-    Motor_Right_speed.OutputMin = -6.0f;
-    Motor_Right_speed.IntegralMax = 16.0f;
+    Motor_Right_position.IntegralMax = 3.0f;
+    Pid_Init(&Motor_Right_speed, 0.08f, 0.01f, 0.0f);
+    Motor_Right_speed.IntegralMax = 6.0f;
 
-    Pid_Init(&Motor_Left_Uq, 1.2f, 10.0f, 0.0f);
+    Pid_Init(&Motor_Left_Uq, 0.8f, 1.5f, 1.0f);
     Motor_Left_Uq.OutputMax = 6.0f;
     Motor_Left_Uq.OutputMin = -6.0f;
-//    Motor_Left_Uq.IntegralMax = 0.04f;
-    Pid_Init(&Motor_Left_Ud, 1.2f, 10.0f, 0.0f);
+    Motor_Left_Uq.IntegralMax = 0.04f;
+    Pid_Init(&Motor_Left_Ud, 0.8f, 1.5f, 1.0f);
     Motor_Left_Ud.OutputMax = 6.0f;
     Motor_Left_Ud.OutputMin = -6.0f;
-//    Motor_Left_Ud.IntegralMax = 0.04f;
+    Motor_Left_Ud.IntegralMax = 0.04f;
     Pid_Init(&Motor_Right_Uq, 1.2f, 10.0f, 0.0f);
     Motor_Right_Uq.OutputMax = 6.0f;
     Motor_Right_Uq.OutputMin = -6.0f;

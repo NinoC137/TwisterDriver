@@ -129,8 +129,11 @@ void FOC_alignSensor(FOC_Motor *Motor, int _PP, int _DIR);
 
 //闭环控制接口函数
 void FOC_setAngle(FOC_Motor *Motor, float Target);
-void FOC_setVelocityAngle(FOC_Motor *Motor, float TargetAngle);
 void FOC_setVelocity(FOC_Motor *Motor, float Target);
+void FOC_setVelocity_currentControl(FOC_Motor *Motor, float targetSpeed, float currentLimited);
+void FOC_setVelocityAngle(FOC_Motor *Motor, float targetAngle, float speedLimited);
+void FOC_setAngle_onlyCurrentControl(FOC_Motor *Motor, float targetAngle, float currentLimited);
+void FOC_setAngle_currentControl(FOC_Motor *Motor,float targetAngle, float speedLimited, float currentLimited);
 void FOC_current_control_loop(FOC_Motor *Motor, float target_Iq);
 
 #endif

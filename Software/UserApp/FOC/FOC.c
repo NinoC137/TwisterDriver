@@ -171,17 +171,66 @@ void FOC_setVelocity(FOC_Motor *Motor, float Target) {
 #endif
 }
 
-void FOC_setVelocityAngle(FOC_Motor *Motor, float TargetAngle){
+void FOC_setVelocityAngle(FOC_Motor *Motor, float targetAngle, float speedLimited){
     Motor->api_getMotorAngle(&Motor->angle_pi, &Motor->angle_f);
-    Motor->PIDUint.position->Target = _normalizeAngle(TargetAngle);
-    float angle_error = _normalizeAngle(TargetAngle - Motor->angle_pi * (float)Motor->direct);
+    Motor->PIDUint.position->Target = _normalizeAngle(targetAngle);
+    float angle_error = _normalizeAngle(targetAngle - Motor->angle_pi * (float)Motor->direct);
+
+    if(angle_error > M_PI){
+        angle_error -= 1.8f * _PI;
+    }
+
+    float PID_argument_positionKp = Motor->PIDUint.position->Kp;
+    Motor->PIDUint.position->Kp = 0.6f;
+    FOC_setVelocity(Motor, _constrain(FOC_ANGLE_PID(Motor, angle_error * 180.0f / _PI), -speedLimited, speedLimited));
+    Motor->PIDUint.position->Kp = PID_argument_positionKp;
+}
+
+void FOC_setAngle_onlyCurrentControl(FOC_Motor *Motor, float targetAngle, float currentLimited){
+    Motor->api_getMotorAngle(&Motor->angle_pi, &Motor->angle_f);
+    Motor->PIDUint.position->Target = _normalizeAngle(targetAngle);
+    float angle_error = _normalizeAngle(targetAngle - Motor->angle_pi * (float)Motor->direct);
 
     if(angle_error > M_PI){
         angle_error -= 2.0f * _PI;
     }
 
-    Motor->PIDUint.speed->Ki = 0;
-    FOC_setVelocity(Motor, _constrain(FOC_ANGLE_PID(Motor, angle_error), -voltage_power_supply/2, voltage_power_supply/2));
+    float PID_argument_positionKp = Motor->PIDUint.position->Kp;
+    Motor->PIDUint.position->Kp = 0.01f;
+    FOC_current_control_loop(Motor, _constrain(FOC_ANGLE_PID(Motor, angle_error*60), -currentLimited, currentLimited));
+    Motor->PIDUint.position->Kp = PID_argument_positionKp;
+}
+
+void FOC_setVelocity_currentControl(FOC_Motor *Motor, float targetSpeed, float currentLimited){
+    Motor->PIDUint.speed->Target = targetSpeed;
+    FOC_getVelocity(Motor);
+    Motor->api_getMotorAngle(&Motor->angle_pi, &Motor->angle_f);
+    Motor->electrical_angle = _electricalAngle(Motor, Motor->angle_pi, Motor->PolePair);
+
+    FOC_current_control_loop(Motor, _constrain( FOC_VEL_PID(Motor, (Motor->PIDUint.speed->Target - Motor->PIDUint.speed->Actual)),
+                                                -currentLimited, currentLimited));
+}
+
+void FOC_setAngle_currentControl(FOC_Motor *Motor,float targetAngle, float speedLimited, float currentLimited){
+    Motor->api_getMotorAngle(&Motor->angle_pi, &Motor->angle_f);
+    Motor->PIDUint.position->Target = _normalizeAngle(targetAngle);
+
+    float angle_error = _normalizeAngle(targetAngle - Motor->angle_pi * (float)Motor->direct);
+
+    if(angle_error > M_PI){
+        angle_error -= 2.0f * _PI;
+    }
+
+    float PID_argument_positionKp = Motor->PIDUint.position->Kp;
+    float PID_argument_speedKp = Motor->PIDUint.speed->Kp;
+    float PID_argument_speedKi = Motor->PIDUint.speed->Ki;
+    Motor->PIDUint.position->Kp = 0.6f;
+    Motor->PIDUint.speed->Kp = 0.06f;
+    Motor->PIDUint.speed->Ki = 0.01f;
+    FOC_setVelocity_currentControl(Motor, _constrain(FOC_ANGLE_PID(Motor, angle_error * 180.0f / _PI), -speedLimited, speedLimited), currentLimited);
+    Motor->PIDUint.position->Kp = PID_argument_positionKp;
+    Motor->PIDUint.speed->Kp = PID_argument_speedKp;
+    Motor->PIDUint.speed->Ki = PID_argument_speedKi;
 }
 
 void FOC_current_control_loop(FOC_Motor *Motor, float target_Iq){
@@ -208,9 +257,7 @@ void FOC_current_control_loop(FOC_Motor *Motor, float target_Iq){
 //     front feed
     Motor->Uq += 1.0f * Motor->Iq;
 
-//    setTorque(Motor, Motor->Uq, Motor->electrical_angle);
     FOC_SVPWM(Motor, Motor->Uq, Motor->Ud, Motor->electrical_angle);
-//    FOC_SVPWM(Motor, Motor->Uq, 0, Motor->electrical_angle);
 }
 
 //速度PID接口
@@ -222,11 +269,11 @@ float FOC_VEL_PID(FOC_Motor *Motor, float error)
 
 //角度PID接口
 float FOC_ANGLE_PID(FOC_Motor *Motor, float error) {
-//    Motor->PIDUint.position->Error = Low_Pass_Filter(Motor->FilterUint.position, error, 0.4f);
-    Motor->PIDUint.position->Error = error;
+    Motor->PIDUint.position->Error = Low_Pass_Filter(Motor->FilterUint.position, error, 0.2f);
+//    Motor->PIDUint.position->Error = error;
     return Position_Pid_Calculate(Motor->PIDUint.position);
 }
-static float Ts = 1;
+static float Ts = 3e-3f;
 float FOC_getVelocity(FOC_Motor *Motor) {
     Motor->api_getMotorAngle(&Motor->angle_pi, &Motor->angle_f);
     Motor->speedUint.angle_now = Motor->angle_pi;
@@ -237,13 +284,6 @@ float FOC_getVelocity(FOC_Motor *Motor) {
     }
 
     float delta_angle = (Motor->speedUint.angle_now - Motor->speedUint.angle_old);
-
-//    if (delta_angle >= 1.6f * M_PI){
-//        delta_angle -= 2.0f * (float)M_PI;
-//    }
-//    if (delta_angle <= -1.6f * M_PI){
-//        delta_angle += 2.0f * (float)M_PI;
-//    }
 
     if (fabs(delta_angle) > _PI) {
         if (delta_angle > 0) {
@@ -258,7 +298,7 @@ float FOC_getVelocity(FOC_Motor *Motor) {
     Motor->speedUint.angle_old = Motor->speedUint.angle_now;
     Motor->speedUint.full_rotations_old = Motor->speedUint.full_rotations;
 
-    float vel_flit = Low_Pass_Filter(Motor->FilterUint.speed, vel_speed_ori, 0.3f);
+    float vel_flit = Low_Pass_Filter(Motor->FilterUint.speed, vel_speed_ori, 0.15f);
     Motor->PIDUint.speed->Actual = vel_flit;
     Motor->speed = vel_flit;
 
@@ -279,11 +319,11 @@ float _normalizeAngle(float angle) {
 //current sample version
 void FOC_Clarke_Park(float Ia, float Ib, float Ic, float angle, float *Id, float *Iq) {
     // Clarke transform
-//    float mid = (1.0f / 3) * (Ia + Ib + Ic);
-//    float a = Ia - mid;
-//    float b = Ib - mid;
-    float a = Ia;
-    float b = Ib;
+    float mid = (1.0f / 3) * (Ia + Ib + Ic);
+    float a = Ia - mid;
+    float b = Ib - mid;
+//    float a = Ia;
+//    float b = Ib;
     float i_alpha = a;
     float i_beta = _1_SQRT3 * a + _2_SQRT3 * b;
 
