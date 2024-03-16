@@ -45,23 +45,12 @@ void FOC_Vbus(float _Vbus) {
     _getCurrentZeroValue(cs1_zero_value, cs2_zero_value);
 }
 
-//电角度求解
-float _electricalAngle(FOC_Motor *Motor, float _shaft_angle, int pole_pairs) {
-    return _normalizeAngle(((float)(Motor->direct * pole_pairs) * _shaft_angle) - Motor->zero_electrical_angle);
-}
-
-//角度归一化
-float _normalizeAngle(float angle) {
-    float a = fmod(angle, 2*_PI);
-    return a >= 0 ? a : (a + 2*_PI);
-}
-
 void FOC_alignSensor(FOC_Motor *Motor, int _PP, int _DIR) {
     Motor->PolePair = _PP;
     Motor->direct = _DIR;
 
-    setTorque(Motor, 1, _3PI_2);  //起劲
-    HAL_Delay(400);
+    setTorque(Motor, 2, _3PI_2);  //起劲
+    HAL_Delay(600);
     Motor->api_getMotorAngle(&Motor->angle_pi, &Motor->angle_f); //更新传感器数值
     Motor->zero_electrical_angle = _electricalAngle(Motor, Motor->angle_pi, Motor->PolePair);
     HAL_Delay(100);
@@ -156,7 +145,7 @@ void FOC_setAngle(FOC_Motor *Motor, float Target) {
     }
 
     Motor->Uq = _constrain( FOC_ANGLE_PID(Motor, angle_error),
-                            Motor->PIDUint.position->OutputMin, Motor->PIDUint.position->OutputMax);
+                            -voltage_power_supply/2, voltage_power_supply/2);
     Motor->electrical_angle = _electricalAngle(Motor, Motor->angle_pi, Motor->PolePair);
 
 #if FOC_MODE == mode_SPWM
@@ -166,8 +155,23 @@ void FOC_setAngle(FOC_Motor *Motor, float Target) {
 #endif
 }
 
-//不对劲
-void FOC_setVelocityAngle(FOC_Motor *Motor, float TargetAngle, float TargetSpeed){
+void FOC_setVelocity(FOC_Motor *Motor, float Target) {
+    Motor->PIDUint.speed->Target = Target;
+    FOC_getVelocity(Motor);
+    Motor->api_getMotorAngle(&Motor->angle_pi, &Motor->angle_f);
+
+    Motor->Uq = _constrain( FOC_VEL_PID(Motor, (Motor->PIDUint.speed->Target - Motor->PIDUint.speed->Actual)),
+                            -voltage_power_supply/2, voltage_power_supply/2);
+    Motor->electrical_angle = _electricalAngle(Motor, Motor->angle_pi, Motor->PolePair);
+
+#if FOC_MODE == mode_SPWM
+    setTorque(Motor, Motor->Uq, Motor->electrical_angle);
+#else
+    FOC_SVPWM(Motor, Motor->Uq,0, Motor->electrical_angle);   //速度闭环
+#endif
+}
+
+void FOC_setVelocityAngle(FOC_Motor *Motor, float TargetAngle){
     Motor->api_getMotorAngle(&Motor->angle_pi, &Motor->angle_f);
     Motor->PIDUint.position->Target = _normalizeAngle(TargetAngle);
     float angle_error = _normalizeAngle(TargetAngle - Motor->angle_pi * (float)Motor->direct);
@@ -176,45 +180,8 @@ void FOC_setVelocityAngle(FOC_Motor *Motor, float TargetAngle, float TargetSpeed
         angle_error -= 2.0f * _PI;
     }
 
-    Motor->PIDUint.speed->Target = _constrain(FOC_ANGLE_PID(Motor, angle_error * 180.0f / _PI), -0.2, 0.2);
-
-    FOC_getVelocity(Motor);
-    Motor->Uq = _constrain( FOC_VEL_PID(Motor, Motor->speed),
-                            Motor->PIDUint.speed->OutputMin, Motor->PIDUint.speed->OutputMax);
-    Motor->electrical_angle = _electricalAngle(Motor, Motor->angle_pi, Motor->PolePair);
-
-#if FOC_MODE == mode_SPWM
-    setTorque(Motor, Motor->Uq, Motor->electrical_angle);   //角度闭环
-#else
-    FOC_SVPWM(Motor, Motor->Uq, 0, Motor->electrical_angle);
-#endif
-}
-
-void FOC_setVelocity(FOC_Motor *Motor, float Target) {
-    Motor->PIDUint.speed->Target = Target;
-    FOC_getVelocity(Motor);
-    Motor->api_getMotorAngle(&Motor->angle_pi, &Motor->angle_f);
-
-    Motor->Uq = _constrain( FOC_VEL_PID(Motor, (Motor->PIDUint.speed->Target - Motor->PIDUint.speed->Actual)),
-                            Motor->PIDUint.speed->OutputMin, Motor->PIDUint.speed->OutputMax);
-    Motor->electrical_angle = _electricalAngle(Motor, Motor->angle_pi, Motor->PolePair);
-
-    // Current sense
-    Motor->api_getMotorCurrent(Motor->current);
-    Motor->current[0] = Motor->current[0] * (float)Motor->direct;
-//    Motor->current[0] = Motor->current[0];
-    Motor->current[1] = Motor->current[1] * (float)Motor->direct;
-//    Motor->current[1] = Motor->current[1];
-    Motor->current[2] = Motor->current[2];
-    FOC_Clarke_Park(Motor->current[0], Motor->current[1], Motor->current[2], Motor->electrical_angle, &Motor->Id, &Motor->Iq);
-
-//    Motor->Iq = Low_Pass_Filter(Motor->FilterUint.current_q, Motor->Iq, 0.2f);
-
-#if FOC_MODE == mode_SPWM
-    setTorque(Motor, Motor->Uq, Motor->electrical_angle);
-#else
-    FOC_SVPWM(Motor, Motor->Uq,0, Motor->electrical_angle);   //速度闭环
-#endif
+    Motor->PIDUint.speed->Ki = 0;
+    FOC_setVelocity(Motor, _constrain(FOC_ANGLE_PID(Motor, angle_error), -voltage_power_supply/2, voltage_power_supply/2));
 }
 
 void FOC_current_control_loop(FOC_Motor *Motor, float target_Iq){
@@ -296,6 +263,17 @@ float FOC_getVelocity(FOC_Motor *Motor) {
     Motor->speed = vel_flit;
 
     return vel_flit;
+}
+
+//电角度求解
+float _electricalAngle(FOC_Motor *Motor, float _shaft_angle, int pole_pairs) {
+    return _normalizeAngle(((float)(Motor->direct * pole_pairs) * _shaft_angle) - Motor->zero_electrical_angle);
+}
+
+//角度归一化
+float _normalizeAngle(float angle) {
+    float a = fmod(angle, 2*_PI);
+    return a >= 0 ? a : (a + 2*_PI);
 }
 
 //current sample version

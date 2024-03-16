@@ -69,7 +69,8 @@ void FOC_LeftTask(void const *argument) {
 //        FOCMotor_Left.api_getMotorCurrent(FOCMotor_Left.current);
 //        FOC_setAngle(&FOCMotor_Left, targetAngle_right);
 //        FOC_setVelocity(&FOCMotor_Left, targetMotorSpeed_Left);
-        FOC_current_control_loop(&FOCMotor_Left, targetMotorSpeed_Left*10);
+        FOC_setVelocityAngle(&FOCMotor_Left, targetAngle_left);
+//        FOC_current_control_loop(&FOCMotor_Left, targetMotorSpeed_Left*10);
         osDelay(3);
     }
 }
@@ -91,17 +92,18 @@ void FOC_RightTask(void const *argument) {
 void ServoTask(void const *argument) {
     Servo_init();
 
-
     setAngle_270(&Servo_LeftLeg, 60);
     setAngle_270(&Servo_RightLeg, 5);
     osDelay(500);
 
     for (;;) {
-        uart3_printf("%f,%f,%f,%f,%f\n",FOCMotor_Left.current[0] , FOCMotor_Left.current[1], FOCMotor_Left.current[2],
-                     FOCMotor_Left.Iq,FOCMotor_Left.Id);
+        uart3_printf("%f,%f,%f,%f,%f,%f\n",FOCMotor_Right.current[0] , FOCMotor_Right.current[1], FOCMotor_Right.current[2],
+                     FOCMotor_Right.Iq,FOCMotor_Right.Id, FOCMotor_Right.angle_pi);
+//        uart3_printf("%f,%f,%f,%f,%f,%f\n",FOCMotor_Left.current[0] , FOCMotor_Left.current[1], FOCMotor_Left.current[2],
+//                     FOCMotor_Left.Iq,FOCMotor_Left.Id, FOCMotor_Left.angle_pi);
 //        setAngle_270(&Servo_LeftLeg, targetAngle_left);
 //        setAngle_270(&Servo_RightLeg, targetAngle_right);
-        osDelay(50);
+        osDelay(5);
     }
 }
 
