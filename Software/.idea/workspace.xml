@@ -20,14 +20,9 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0e2c7c2d-a2ac-461a-be57-7a8b8cadda32" name="Changes" comment="完成了速度环为内环,位置环为外环的串级PID控制 电流明显比单独位置环小很多 控制效果很棒">
+    <list default="true" id="0e2c7c2d-a2ac-461a-be57-7a8b8cadda32" name="Changes" comment="完成了速度-电流环控制,位置-电流环控制,位置-速度-电流环控制">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Core/Src/app_freertos.c" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Src/app_freertos.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserApp/FOC/FOC.c" beforeDir="false" afterPath="$PROJECT_DIR$/UserApp/FOC/FOC.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserApp/FOC/FOC.h" beforeDir="false" afterPath="$PROJECT_DIR$/UserApp/FOC/FOC.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserApp/FOC/my_PID.c" beforeDir="false" afterPath="$PROJECT_DIR$/UserApp/FOC/my_PID.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserApp/MT6701/MT6701.c" beforeDir="false" afterPath="$PROJECT_DIR$/UserApp/MT6701/MT6701.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserApp/multiBotton/multi_button.c" beforeDir="false" afterPath="$PROJECT_DIR$/UserApp/multiBotton/multi_button.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/TwisterDriver.bin" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/TwisterDriver.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/TwisterDriver.elf" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/TwisterDriver.elf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/TwisterDriver.hex" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/TwisterDriver.hex" afterDir="false" />
@@ -159,7 +154,11 @@
       <workItem from="1710411966990" duration="2756000" />
       <workItem from="1710424711457" duration="2582000" />
       <workItem from="1710503082050" duration="9718000" />
-      <workItem from="1710555749481" duration="20660000" />
+      <workItem from="1710555749481" duration="20896000" />
+      <workItem from="1710594548608" duration="81000" />
+      <workItem from="1710652873353" duration="13000" />
+      <workItem from="1710755074560" duration="73000" />
+      <workItem from="1710833245603" duration="594000" />
     </task>
     <task id="LOCAL-00001" summary="实现了SVPWM下的FOC闭环位置环控制, 效果稳定不抖动">
       <option name="closed" value="true" />
@@ -249,7 +248,15 @@
       <option name="project" value="LOCAL" />
       <updated>1710564496965</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="完成了速度-电流环控制,位置-电流环控制,位置-速度-电流环控制">
+      <option name="closed" value="true" />
+      <created>1710581855252</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1710581855252</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -285,7 +292,8 @@
     <MESSAGE value="完成了双路FOC的三相电流采集与运算" />
     <MESSAGE value="验证了FOC的电流环闭环控制 第二路的FOC无法正常驱动 定性为硬件故障" />
     <MESSAGE value="完成了速度环为内环,位置环为外环的串级PID控制 电流明显比单独位置环小很多 控制效果很棒" />
-    <option name="LAST_COMMIT_MESSAGE" value="完成了速度环为内环,位置环为外环的串级PID控制 电流明显比单独位置环小很多 控制效果很棒" />
+    <MESSAGE value="完成了速度-电流环控制,位置-电流环控制,位置-速度-电流环控制" />
+    <option name="LAST_COMMIT_MESSAGE" value="完成了速度-电流环控制,位置-电流环控制,位置-速度-电流环控制" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

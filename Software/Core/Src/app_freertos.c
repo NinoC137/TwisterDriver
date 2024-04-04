@@ -70,8 +70,8 @@ void FOC_LeftTask(void const *argument) {
 //        FOC_setAngle(&FOCMotor_Left, targetAngle_left);
 //        FOC_setVelocity(&FOCMotor_Left, targetMotorSpeed_Left);
 //        FOC_setVelocityAngle(&FOCMotor_Left, targetAngle_left, 20);
-//        FOC_setVelocity_currentControl(&FOCMotor_Left, targetMotorSpeed_Left, 0.4f);
-        FOC_setAngle_onlyCurrentControl(&FOCMotor_Left, targetAngle_left, 0.6f);
+        FOC_setVelocity_currentControl(&FOCMotor_Left, targetMotorSpeed_Left, 0.4f);
+//        FOC_setAngle_onlyCurrentControl(&FOCMotor_Left, targetAngle_left, 0.6f);
 //        FOC_setAngle_currentControl(&FOCMotor_Left, targetAngle_left, 20, 1.0f);
 //        FOC_current_control_loop(&FOCMotor_Left, targetMotorSpeed_Left*10);
         osDelay(3);
@@ -88,6 +88,8 @@ void FOC_RightTask(void const *argument) {
 //        FOC_setAngle(&FOCMotor_Right, targetAngle_right);
 //        FOC_setVelocity(&FOCMotor_Right, targetMotorSpeed_Right);
 //        FOC_current_control_loop(&FOCMotor_Right, targetMotorSpeed_Right*10);
+        FOC_setVelocity_currentControl(&FOCMotor_Right, targetMotorSpeed_Right, 0.4f);
+//        FOC_setAngle_onlyCurrentControl(&FOCMotor_Right, targetAngle_right, 0.6f);
         osDelay(3);
     }
 }
@@ -100,10 +102,9 @@ void ServoTask(void const *argument) {
     osDelay(500);
 
     for (;;) {
-        uart3_printf("%f,%f,%f\n", FOCMotor_Left.angle_pi, FOCMotor_Left.speed, FOCMotor_Left.Iq);
-//        setAngle_270(&Servo_LeftLeg, targetAngle_left);
-//        setAngle_270(&Servo_RightLeg, targetAngle_right);
-        osDelay(5);
+        setAngle_270(&Servo_LeftLeg, targetAngle_left);
+        setAngle_270(&Servo_RightLeg, targetAngle_right);
+        osDelay(300);
     }
 }
 

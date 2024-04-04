@@ -1,0 +1,37 @@
+CMakeFiles/TwisterDriver.elf.dir/UserApp/FOC/FOC_math.c.obj: \
+ E\:\Clion_for_STM32\TwisterDriver\Software\UserApp\FOC\FOC_math.c \
+ E\:\Clion_for_STM32\TwisterDriver\Software\UserApp\FOC\FOC_math.h \
+ E\:\Clion_for_STM32\TwisterDriver\Software\UserApp\FOC\FOC.h \
+ E\:\Clion_for_STM32\TwisterDriver\Software\UserApp\MT6701/MT6701.h \
+ e\:\compiler\arm-none-eabi\include\stdio.h \
+ e\:\compiler\arm-none-eabi\include\_ansi.h \
+ e\:\compiler\arm-none-eabi\include\newlib.h \
+ e\:\compiler\arm-none-eabi\include\_newlib_version.h \
+ e\:\compiler\arm-none-eabi\include\sys\config.h \
+ e\:\compiler\arm-none-eabi\include\machine\ieeefp.h \
+ e\:\compiler\arm-none-eabi\include\sys\features.h \
+ e\:\compiler\arm-none-eabi\include\sys\cdefs.h \
+ e\:\compiler\arm-none-eabi\include\machine\_default_types.h \
+ e\:\compiler\lib\gcc\arm-none-eabi\10.2.1\include\stddef.h \
+ e\:\compiler\lib\gcc\arm-none-eabi\10.2.1\include\stdarg.h \
+ e\:\compiler\arm-none-eabi\include\sys\reent.h \
+ e\:\compiler\arm-none-eabi\include\_ansi.h \
+ e\:\compiler\arm-none-eabi\include\sys\_types.h \
+ e\:\compiler\arm-none-eabi\include\machine\_types.h \
+ e\:\compiler\arm-none-eabi\include\sys\lock.h \
+ e\:\compiler\arm-none-eabi\include\sys\types.h \
+ e\:\compiler\arm-none-eabi\include\sys\_stdint.h \
+ e\:\compiler\arm-none-eabi\include\machine\endian.h \
+ e\:\compiler\arm-none-eabi\include\machine\_endian.h \
+ e\:\compiler\arm-none-eabi\include\sys\select.h \
+ e\:\compiler\arm-none-eabi\include\sys\_sigset.h \
+ e\:\compiler\arm-none-eabi\include\sys\_timeval.h \
+ e\:\compiler\arm-none-eabi\include\sys\timespec.h \
+ e\:\compiler\arm-none-eabi\include\sys\_timespec.h \
+ e\:\compiler\arm-none-eabi\include\sys\_pthreadtypes.h \
+ e\:\compiler\arm-none-eabi\include\sys\sched.h \
+ e\:\compiler\arm-none-eabi\include\machine\types.h \
+ e\:\compiler\arm-none-eabi\include\sys\stdio.h \
+ E\:\Clion_for_STM32\TwisterDriver\Software\UserApp\FOC\hardware_api.h \
+ E\:\Clion_for_STM32\TwisterDriver\Software\UserApp\FOC\my_PID.h \
+ E\:\Clion_for_STM32\TwisterDriver\Software\UserApp\FOC\Filter.h
