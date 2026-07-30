@@ -239,22 +239,27 @@ static void angleIncrease(){
 }
 
 extern float targetMotorSpeed_Left, targetMotorSpeed_Right;
+extern volatile FOC_CONTROL_MODE focControlMode;
 static void speedReduce(){
+    focControlMode = SPEED_CONTROL;
     targetMotorSpeed_Left -= 10.0f;
     targetMotorSpeed_Right -= 10.0f;
 }
 
 static void speedIncrease(){
+    focControlMode = SPEED_CONTROL;
     targetMotorSpeed_Left += 10.0f;
     targetMotorSpeed_Right += 10.0f;
 }
 
 static void speedClean(){
+    focControlMode = SPEED_CONTROL;
     targetMotorSpeed_Left = 0;
     targetMotorSpeed_Right = 0;
 }
 
 static void speedReverse(){
+    focControlMode = SPEED_CONTROL;
     targetMotorSpeed_Left = (-targetMotorSpeed_Left);
     targetMotorSpeed_Right = (-targetMotorSpeed_Right);
 }

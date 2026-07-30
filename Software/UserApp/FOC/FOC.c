@@ -8,6 +8,19 @@ float voltage_power_supply = 12.0f;
 uint32_t cs1_zero_value[3];
 uint32_t cs2_zero_value[3];
 
+static void FOC_disableOutput(FOC_Motor *Motor) {
+    Motor->api_writeDutyCyclePWM(0.0f, 0.0f, 0.0f);
+}
+
+static bool FOC_updateMotorAngle(FOC_Motor *Motor) {
+    if (!Motor->api_getMotorAngle(&Motor->angle_pi, &Motor->angle_f)) {
+        FOC_disableOutput(Motor);
+        return false;
+    }
+
+    return true;
+}
+
 FOC_Motor FOCMotor_Left = {
         .name = "left leg",
         .api_writeDutyCyclePWM = _writeDutyCycle3PWM_1,
@@ -51,7 +64,9 @@ void FOC_alignSensor(FOC_Motor *Motor, int _PP, int _DIR) {
 
     setTorque(Motor, 2, _3PI_2);  //起劲
     HAL_Delay(600);
-    Motor->api_getMotorAngle(&Motor->angle_pi, &Motor->angle_f); //更新传感器数值
+    if (!FOC_updateMotorAngle(Motor)) {
+        return;
+    }
     Motor->zero_electrical_angle = _electricalAngle(Motor, Motor->angle_pi, Motor->PolePair);
     HAL_Delay(100);
     setTorque(Motor, 0, _3PI_2);  //松劲（解除校准）
@@ -136,7 +151,9 @@ float velocityOpenLoop(FOC_Motor *Motor, float target_velocity) {
 
 //================简易接口函数================
 void FOC_setAngle(FOC_Motor *Motor, float Target) {
-    Motor->api_getMotorAngle(&Motor->angle_pi, &Motor->angle_f);
+    if (!FOC_updateMotorAngle(Motor)) {
+        return;
+    }
     Motor->PIDUint.position->Target = _normalizeAngle(Target);;
     float angle_error = _normalizeAngle(Target - Motor->angle_pi * (float)Motor->direct);
 
@@ -158,7 +175,9 @@ void FOC_setAngle(FOC_Motor *Motor, float Target) {
 void FOC_setVelocity(FOC_Motor *Motor, float Target) {
     Motor->PIDUint.speed->Target = Target;
     FOC_getVelocity(Motor);
-    Motor->api_getMotorAngle(&Motor->angle_pi, &Motor->angle_f);
+    if (!FOC_updateMotorAngle(Motor)) {
+        return;
+    }
 
     Motor->Uq = _constrain( FOC_VEL_PID(Motor, (Motor->PIDUint.speed->Target - Motor->PIDUint.speed->Actual)),
                             -voltage_power_supply/2, voltage_power_supply/2);
@@ -172,7 +191,9 @@ void FOC_setVelocity(FOC_Motor *Motor, float Target) {
 }
 
 void FOC_setVelocityAngle(FOC_Motor *Motor, float targetAngle, float speedLimited){
-    Motor->api_getMotorAngle(&Motor->angle_pi, &Motor->angle_f);
+    if (!FOC_updateMotorAngle(Motor)) {
+        return;
+    }
     Motor->PIDUint.position->Target = _normalizeAngle(targetAngle);
     float angle_error = _normalizeAngle(targetAngle - Motor->angle_pi * (float)Motor->direct);
 
@@ -187,7 +208,9 @@ void FOC_setVelocityAngle(FOC_Motor *Motor, float targetAngle, float speedLimite
 }
 
 void FOC_setAngle_onlyCurrentControl(FOC_Motor *Motor, float targetAngle, float currentLimited){
-    Motor->api_getMotorAngle(&Motor->angle_pi, &Motor->angle_f);
+    if (!FOC_updateMotorAngle(Motor)) {
+        return;
+    }
     Motor->PIDUint.position->Target = _normalizeAngle(targetAngle);
     float angle_error = _normalizeAngle(targetAngle - Motor->angle_pi * (float)Motor->direct);
 
@@ -204,7 +227,9 @@ void FOC_setAngle_onlyCurrentControl(FOC_Motor *Motor, float targetAngle, float 
 void FOC_setVelocity_currentControl(FOC_Motor *Motor, float targetSpeed, float currentLimited){
     Motor->PIDUint.speed->Target = targetSpeed;
     FOC_getVelocity(Motor);
-    Motor->api_getMotorAngle(&Motor->angle_pi, &Motor->angle_f);
+    if (!FOC_updateMotorAngle(Motor)) {
+        return;
+    }
     Motor->electrical_angle = _electricalAngle(Motor, Motor->angle_pi, Motor->PolePair);
 
     FOC_current_control_loop(Motor, _constrain( FOC_VEL_PID(Motor, (Motor->PIDUint.speed->Target - Motor->PIDUint.speed->Actual)),
@@ -212,7 +237,9 @@ void FOC_setVelocity_currentControl(FOC_Motor *Motor, float targetSpeed, float c
 }
 
 void FOC_setAngle_currentControl(FOC_Motor *Motor,float targetAngle, float speedLimited, float currentLimited){
-    Motor->api_getMotorAngle(&Motor->angle_pi, &Motor->angle_f);
+    if (!FOC_updateMotorAngle(Motor)) {
+        return;
+    }
     Motor->PIDUint.position->Target = _normalizeAngle(targetAngle);
 
     float angle_error = _normalizeAngle(targetAngle - Motor->angle_pi * (float)Motor->direct);
@@ -234,13 +261,15 @@ void FOC_setAngle_currentControl(FOC_Motor *Motor,float targetAngle, float speed
 }
 
 void FOC_current_control_loop(FOC_Motor *Motor, float target_Iq){
-    Motor->api_getMotorAngle(&Motor->angle_pi, &Motor->angle_f);
+    if (!FOC_updateMotorAngle(Motor)) {
+        return;
+    }
     Motor->electrical_angle = _electricalAngle(Motor, Motor->angle_pi, Motor->PolePair);
     // Current sense
-    Motor->api_getMotorCurrent(Motor->current);
-    Motor->current[0] = Motor->current[0];
-    Motor->current[1] = Motor->current[1];
-    Motor->current[2] = Motor->current[2];
+    if (!Motor->api_getMotorCurrent(Motor->current)) {
+        FOC_disableOutput(Motor);
+        return;
+    }
     FOC_Clarke_Park(Motor->current[0], Motor->current[1], Motor->current[2], Motor->electrical_angle, &Motor->Id, &Motor->Iq);
 
     Motor->Iq = Low_Pass_Filter(Motor->FilterUint.current_q, Motor->Iq, 0.2f);
@@ -275,7 +304,9 @@ float FOC_ANGLE_PID(FOC_Motor *Motor, float error) {
 }
 static float Ts = 3e-3f;
 float FOC_getVelocity(FOC_Motor *Motor) {
-    Motor->api_getMotorAngle(&Motor->angle_pi, &Motor->angle_f);
+    if (!FOC_updateMotorAngle(Motor)) {
+        return Motor->speed;
+    }
     Motor->speedUint.angle_now = Motor->angle_pi;
 
     if(Motor->speedUint.angle_old == 0){
@@ -339,7 +370,8 @@ void FOC_SVPWM(FOC_Motor *Motor, float Uq, float Ud, float angle) {
     // Nice video explaining the SpaceVectorModulation (FOC_SVPWM) algorithm
     // https://www.youtube.com/watch?v=QMSWUMEAejg
 
-    float Uout = sqrt(Ud * Ud + Uq * Uq) / VOLTAGE_LIMIT; // Actually, Uout is a ratio
+    float Uout = sqrt(Ud * Ud + Uq * Uq) / VOLTAGE_LIMIT;
+    Uout = _constrain(Uout, 0.0f, _1_SQRT3);
     angle = _normalizeAngle(angle + atan2(Uq, Ud));
 
     // find the sector we are in currently
@@ -391,6 +423,9 @@ void FOC_SVPWM(FOC_Motor *Motor, float Uq, float Ud, float angle) {
             Tc = 0;
     }
 
-    // Ta, Tb, Tc range [0,1]
+    Ta = _constrain(Ta, 0.0f, 1.0f);
+    Tb = _constrain(Tb, 0.0f, 1.0f);
+    Tc = _constrain(Tc, 0.0f, 1.0f);
+
     Motor->api_writeDutyCyclePWM(Ta, Tb, Tc);
 }

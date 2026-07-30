@@ -5,6 +5,9 @@
 #ifndef FOC_CONTROL_HARDWARE_API_H
 #define FOC_CONTROL_HARDWARE_API_H
 
+#include <stdint.h>
+#include <stdbool.h>
+
 #include "FOC_math.h"
 
 #define CURRENT_GAIN 50.0f
@@ -35,8 +38,8 @@ void _getCurrentZeroValue(uint32_t *cs1_zero_value, uint32_t *cs2_zero_value);
  *
  * @param cs_value pointer of a float array, stored current value
  */
-void _currentGetValue(float *cs_value);
+bool _currentGetValue(float *cs_value);
 
-void _currentGetValue2(float *cs_value);
+bool _currentGetValue2(float *cs_value);
 
 #endif //FOC_CONTROL_HARDWARE_API_H

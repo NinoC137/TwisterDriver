@@ -1,6 +1,7 @@
 #ifndef __MT6701_H__
 #define __MT6701_H__
 
+#include <stdbool.h>
 #include <stdio.h>
 
 #define MT6701_SLAVE_ADDR         0x06 << 1
@@ -10,9 +11,8 @@
 
 #define mt6701_log		uart_printf
 
-void i2c_mt6701_get_angle(float *angle_pi, float *angle_f);
+bool i2c_mt6701_get_angle(float *angle_pi, float *angle_f);
 
-void i2c2_mt6701_get_angle(float *angle_pi, float *angle_f);
+bool i2c2_mt6701_get_angle(float *angle_pi, float *angle_f);
 
 #endif
-

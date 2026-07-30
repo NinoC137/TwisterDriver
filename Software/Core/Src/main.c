@@ -129,30 +129,44 @@ osMessageQId JsonQueueHandle;
 
 void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart){
     if(huart == &huart3){
-        static int uart3_RxFlag, uart3_RxStatus;
+        static uint16_t uart3_RxFlag;
+        static uint8_t uart3_RxStatus;
         switch(uart3_RxStatus){
             case 0:
                 if(uart3Buffer[uart3_RxFlag] == UART_STARTFLAG){
                     uart3_RxFlag++;
                     uart3_RxStatus = 1;
                 }else{
-                    memset(uart3Buffer, 0, sizeof(uart3Buffer));
+                    uart3Buffer[0] = '\0';
                 }
                 break;
             case 1:
-                if(uart3Buffer[uart3_RxFlag] != UART_ENDFLAG){
-                    uart3_RxFlag++;
-                }else{
-                    memset(&uart3Buffer[uart3_RxFlag + 1], 0, sizeof(uart3Buffer) - uart3_RxFlag);
+                if(uart3Buffer[uart3_RxFlag] == UART_ENDFLAG){
+                    t_JsonPackage *JsonPtr;
+
+                    uart3Buffer[uart3_RxFlag + 1] = '\0';
+                    JsonPtr = osPoolAlloc(JsonQ_Mem);
+                    if(JsonPtr != NULL){
+                        memcpy(JsonPtr->JsonString, uart3Buffer, uart3_RxFlag + 1);
+                        JsonPtr->JsonString[uart3_RxFlag + 1] = '\0';
+                        if(osMessagePut(JsonQueueHandle, (uint32_t)JsonPtr, 0) != osOK){
+                            osPoolFree(JsonQ_Mem, JsonPtr);
+                        }
+                    }
+
                     uart3_RxFlag = 0;
                     uart3_RxStatus = 0;
-
-                    t_JsonPackage *JsonPtr = osPoolAlloc(JsonQ_Mem);
-                    memcpy(JsonPtr->JsonString, uart3Buffer, sizeof(uart3Buffer));
-                    osMessagePut(JsonQueueHandle, (uint32_t)JsonPtr, 0);
+                }else if(uart3_RxFlag < sizeof(uart3Buffer) - 2U){
+                    uart3_RxFlag++;
+                }else{
+                    uart3_RxFlag = 0;
+                    uart3_RxStatus = 0;
+                    uart3Buffer[0] = '\0';
                 }
                 break;
             default:
+                uart3_RxFlag = 0;
+                uart3_RxStatus = 0;
                 break;
         }
         HAL_UART_Receive_IT(&huart3, (uint8_t*)&uart3Buffer[uart3_RxFlag], 1);

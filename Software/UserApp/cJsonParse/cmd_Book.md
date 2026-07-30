@@ -25,6 +25,8 @@
 
 ### cmd_setMotorAngle
 
+`MotorAngle_Left` and `MotorAngle_Right` use radians. Receiving this command switches both FOC tasks to position-current control.
+
 > {  	
 > "cmd":2,  	
 > "MotorAngle_Left": 5,    	
@@ -136,15 +138,17 @@
 
 ### cmd_setFOCMode
 
+Only the control modes implemented by the running tasks are accepted: `3` (`SPEED_CONTROL`) and `4` (`POSITION_CONTROL`).
+
 > {  	
 > "cmd":9,     	
-> "FOC_Mode":1   	
+> "FOC_Mode":3
 > }
 
 **返回值:**
 
 > {  	
 > "res":0,     	
-> "cmd":8,     	
->  "NewFOC_Mode":1
+> "cmd":9,
+>  "NewFOC_Mode":3
 > }

@@ -1,6 +1,7 @@
 #ifndef _FOC_H__
 #define _FOC_H__
 
+#include <stdbool.h>
 //FOC模式设定
 #define mode_SPWM 0
 #define mode_SVPWM 1
@@ -65,8 +66,8 @@ typedef struct{
     float shaft_angle;
 
     void (*api_writeDutyCyclePWM)(float dutyCycle_a, float dutyCycle_b, float dutyCycle_c);
-    void (*api_getMotorAngle)(float *angle_Pi, float *angle_f);
-    void (*api_getMotorCurrent)(float *currentArray);
+    bool (*api_getMotorAngle)(float *angle_Pi, float *angle_f);
+    bool (*api_getMotorCurrent)(float *currentArray);
 }FOC_Motor;
 
 typedef enum{

@@ -43,6 +43,9 @@ float targetAngle_left = 60;
 float targetAngle_right = 0;
 float targetMotorSpeed_Left;
 float targetMotorSpeed_Right;
+volatile float targetMotorAngle_Left;
+volatile float targetMotorAngle_Right;
+volatile FOC_CONTROL_MODE focControlMode = SPEED_CONTROL;
 /* USER CODE END PM */
 
 /* Private variables ---------------------------------------------------------*/
@@ -70,7 +73,11 @@ void FOC_LeftTask(void const *argument) {
 //        FOC_setAngle(&FOCMotor_Left, targetAngle_left);
 //        FOC_setVelocity(&FOCMotor_Left, targetMotorSpeed_Left);
 //        FOC_setVelocityAngle(&FOCMotor_Left, targetAngle_left, 20);
-        FOC_setVelocity_currentControl(&FOCMotor_Left, targetMotorSpeed_Left, 0.4f);
+        if (focControlMode == POSITION_CONTROL) {
+            FOC_setAngle_currentControl(&FOCMotor_Left, targetMotorAngle_Left, 20.0f, 0.4f);
+        } else {
+            FOC_setVelocity_currentControl(&FOCMotor_Left, targetMotorSpeed_Left, 0.4f);
+        }
 //        FOC_setAngle_onlyCurrentControl(&FOCMotor_Left, targetAngle_left, 0.6f);
 //        FOC_setAngle_currentControl(&FOCMotor_Left, targetAngle_left, 20, 1.0f);
 //        FOC_current_control_loop(&FOCMotor_Left, targetMotorSpeed_Left*10);
@@ -88,7 +95,11 @@ void FOC_RightTask(void const *argument) {
 //        FOC_setAngle(&FOCMotor_Right, targetAngle_right);
 //        FOC_setVelocity(&FOCMotor_Right, targetMotorSpeed_Right);
 //        FOC_current_control_loop(&FOCMotor_Right, targetMotorSpeed_Right*10);
-        FOC_setVelocity_currentControl(&FOCMotor_Right, targetMotorSpeed_Right, 0.4f);
+        if (focControlMode == POSITION_CONTROL) {
+            FOC_setAngle_currentControl(&FOCMotor_Right, targetMotorAngle_Right, 20.0f, 0.4f);
+        } else {
+            FOC_setVelocity_currentControl(&FOCMotor_Right, targetMotorSpeed_Right, 0.4f);
+        }
 //        FOC_setAngle_onlyCurrentControl(&FOCMotor_Right, targetAngle_right, 0.6f);
         osDelay(3);
     }
@@ -169,4 +180,3 @@ void ButtonTask(void const *argument) {
     }
 }
 /* USER CODE END Application */
-

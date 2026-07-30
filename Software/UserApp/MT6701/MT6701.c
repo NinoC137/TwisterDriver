@@ -37,26 +37,30 @@ void mt6701_delay(unsigned int ms)
 }
 
 // 14Bit角度信息，存储在0x03[13:6]、0x04[5:0]两个寄存器中，高位在前，原始读数0~16383，对应0-360°
-void i2c_mt6701_get_angle(float *angle_pi, float *angle_f)
+bool i2c_mt6701_get_angle(float *angle_pi, float *angle_f)
 {
     int16_t angle;
     uint8_t temp[2];
-    mt6701_read_reg(MT6701_REG_ANGLE_14b, temp, 2);
+    if (mt6701_read_reg(MT6701_REG_ANGLE_14b, temp, 2) != HAL_OK) {
+        return false;
+    }
 
     angle = ((int16_t)temp[0] << 6) | (temp[1] >> 2);
     *angle_f = (float)angle * 360 / 16384;
     *angle_pi = *angle_f / 360.0f * 2.0f * _PI;
+    return true;
 }
 
-void i2c2_mt6701_get_angle(float *angle_pi, float *angle_f)
+bool i2c2_mt6701_get_angle(float *angle_pi, float *angle_f)
 {
     int16_t angle;
     uint8_t temp[2];
-    mt6701_read_reg_2(MT6701_REG_ANGLE_14b, temp, 2);
+    if (mt6701_read_reg_2(MT6701_REG_ANGLE_14b, temp, 2) != HAL_OK) {
+        return false;
+    }
 
     angle = ((int16_t)temp[0] << 6) | (temp[1] >> 2);
     *angle_f = (float)angle * 360 / 16384;
     *angle_pi = *angle_f / 360.0f * 2.0f * _PI;
-
-    *angle_pi = (float)((int)(*angle_f * 100) / 100.0);
+    return true;
 }

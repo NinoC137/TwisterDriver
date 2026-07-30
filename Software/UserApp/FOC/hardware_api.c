@@ -38,24 +38,38 @@ void _initCurrentSample(){
 }
 
 void _getCurrentZeroValue(uint32_t *cs1_zeroValue, uint32_t *cs2_zeroValue){
+    uint32_t cs1_sum[3] = {0};
+    uint32_t cs2_sum[3] = {0};
+
     for(int i = 0; i < 999; i++){
         HAL_ADC_Start(&hadc1);
         HAL_ADC_PollForConversion(&hadc1, 100);
-        cs1_zeroValue[i % 3] = (uint32_t)movingAverageFilter(&moving_filter_cs1ZeroValue, HAL_ADC_GetValue(&hadc1));
+        cs1_sum[i % 3] += HAL_ADC_GetValue(&hadc1);
         HAL_ADC_Start(&hadc2);
         HAL_ADC_PollForConversion(&hadc2, 100);
-        cs2_zeroValue[i % 3] = (uint32_t)movingAverageFilter(&moving_filter_cs2ZeroValue, HAL_ADC_GetValue(&hadc2));
+        cs2_sum[i % 3] += HAL_ADC_GetValue(&hadc2);
+    }
+
+    for(int i = 0; i < 3; i++){
+        cs1_zeroValue[i] = cs1_sum[i] / 333U;
+        cs2_zeroValue[i] = cs2_sum[i] / 333U;
     }
 }
 
-void _currentGetValue(float *cs_value){
+bool _currentGetValue(float *cs_value){
     static LowPass_Filter current_1[3];
     static float currentGained[3];
     for (int i = 0; i < 3; i++) {
         // Enables ADC, starts conversion of regular group.
-        HAL_ADC_Start(&hadc1);
+        if (HAL_ADC_Start(&hadc1) != HAL_OK) {
+            HAL_ADC_Stop(&hadc1);
+            return false;
+        }
         // Wait for regular group conversion to be completed.
-        HAL_ADC_PollForConversion(&hadc1, 100);
+        if (HAL_ADC_PollForConversion(&hadc1, 100) != HAL_OK) {
+            HAL_ADC_Stop(&hadc1);
+            return false;
+        }
         int data = (int)(HAL_ADC_GetValue(&hadc1) - cs1_zero_value[i]);
         // 该函数读取寄存器DR同时自动清除了EOC(End Of unitary Conversation)标志位
         // cs_zero_value需要实际测量得出
@@ -64,16 +78,23 @@ void _currentGetValue(float *cs_value){
     }
     // Stop ADC conversion of regular group, disable ADC peripheral.
     HAL_ADC_Stop(&hadc1);
+    return true;
 }
 
-void _currentGetValue2(float *cs_value){
+bool _currentGetValue2(float *cs_value){
     static LowPass_Filter current_2[3];
     static float currentGained[3];
     for (int i = 0; i < 3; i++) {
         // Enables ADC, starts conversion of regular group.
-        HAL_ADC_Start(&hadc2);
+        if (HAL_ADC_Start(&hadc2) != HAL_OK) {
+            HAL_ADC_Stop(&hadc2);
+            return false;
+        }
         // Wait for regular group conversion to be completed.
-        HAL_ADC_PollForConversion(&hadc2, 100);
+        if (HAL_ADC_PollForConversion(&hadc2, 100) != HAL_OK) {
+            HAL_ADC_Stop(&hadc2);
+            return false;
+        }
         int data = (int)(HAL_ADC_GetValue(&hadc2) - cs2_zero_value[i]);
         // 该函数读取寄存器DR同时自动清除了EOC(End Of unitary Conversation)标志位
         // cs_zero_value需要实际测量得出
@@ -82,4 +103,5 @@ void _currentGetValue2(float *cs_value){
     }
     // Stop ADC conversion of regular group, disable ADC peripheral.
     HAL_ADC_Stop(&hadc2);
+    return true;
 }
